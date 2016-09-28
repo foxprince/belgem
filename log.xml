@@ -1,0 +1,1540 @@
+2016-09-23 17:51:24
+
+REMOTE_ADDR:123.125.71.38Unknown IP
+2016-09-23 17:51:24QUERY_STRING:signature=e013a4e1eb8bc7b8f60f2ab8e0ab3f22857d5817&timestamp=1468598155&nonce=72906850&openid=oLx9ZwFfIAvHuq0Xw11CpBZUTcxI
+2016-09-23 17:51:24valid
+2016-09-23 17:51:24post:
+2016-09-23 21:13:26
+
+REMOTE_ADDR:220.181.108.78Unknown IP
+2016-09-23 21:13:26QUERY_STRING:signature=6d880b51f6b94b123fe09d8e7384f12e439a6324&timestamp=1467628394&nonce=657255772&openid=oLx9ZwMmfjDi3P6Qlkr77HMv7d6M
+2016-09-23 21:13:26valid
+2016-09-23 21:13:26post:
+2016-09-23 23:04:43
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-23 23:04:43QUERY_STRING:signature=fd0d128745731b4071285e99ff44fb173fea2b96&timestamp=1474671882&nonce=2002805357&openid=oLx9ZwJUFSb2w5cVadU4VWnj07kE
+2016-09-23 23:04:43valid
+2016-09-23 23:04:43post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwJUFSb2w5cVadU4VWnj07kE]]></FromUserName>
+<CreateTime>1474671882</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[okm]]></Content>
+<MsgId>6333667505931950209</MsgId>
+</xml>
+2016-09-23 23:04:45get wechat user info:{"subscribe":1,"openid":"oLx9ZwJUFSb2w5cVadU4VWnj07kE","nickname":"比利时钻交所-褚潇","sex":1,"language":"zh_CN","city":"","province":"","country":"比利时","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/hqupWB5g4P8AUy4L0L7VI6g0wYibe0k46uO8v5EU6kuLBqhLRys4qKmQggWSfzbYm6fdhdrTxwyeexppeAhGRdGhHCalqNz7A\/0","subscribe_time":1443442905,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-23 23:04:45 update wechat_name:比利时钻交所-褚潇
+2016-09-23 23:04:46<xml>
+			<ToUserName><![CDATA[oLx9ZwJUFSb2w5cVadU4VWnj07kE]]></ToUserName>
+			<FromUserName><![CDATA[gh_f1bedb342697]]></FromUserName>
+			<CreateTime>1474671883</CreateTime>
+			<MsgType><![CDATA[text]]></MsgType>
+			<Content><![CDATA[]]></Content>
+			<FuncFlag>0</FuncFlag>
+			</xml>
+2016-09-24 06:39:25
+
+REMOTE_ADDR:61.135.190.197Unknown IP
+2016-09-24 06:39:25QUERY_STRING:
+2016-09-24 06:39:25valid
+2016-09-24 06:39:25post:
+2016-09-24 10:08:07
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-24 10:08:07QUERY_STRING:signature=8543f19e56e0616b7a9b5cbc5f14cb88a04dfa4c&timestamp=1474711686&nonce=2050943576&openid=oLx9ZwJUFSb2w5cVadU4VWnj07kE
+2016-09-24 10:08:07valid
+2016-09-24 10:08:07post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwJUFSb2w5cVadU4VWnj07kE]]></FromUserName>
+<CreateTime>1474711686</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[uu]]></Content>
+<MsgId>6333838462810208153</MsgId>
+</xml>
+2016-09-24 10:08:09get wechat user info:{"subscribe":1,"openid":"oLx9ZwJUFSb2w5cVadU4VWnj07kE","nickname":"比利时钻交所-褚潇","sex":1,"language":"zh_CN","city":"","province":"","country":"比利时","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/hqupWB5g4P8AUy4L0L7VI6g0wYibe0k46uO8v5EU6kuLBqhLRys4qKmQggWSfzbYm6fdhdrTxwyeexppeAhGRdGhHCalqNz7A\/0","subscribe_time":1443442905,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-24 10:08:09 update wechat_name:比利时钻交所-褚潇
+2016-09-24 10:08:09<xml>
+			<ToUserName><![CDATA[oLx9ZwJUFSb2w5cVadU4VWnj07kE]]></ToUserName>
+			<FromUserName><![CDATA[gh_f1bedb342697]]></FromUserName>
+			<CreateTime>1474711687</CreateTime>
+			<MsgType><![CDATA[text]]></MsgType>
+			<Content><![CDATA[]]></Content>
+			<FuncFlag>0</FuncFlag>
+			</xml>
+2016-09-24 12:53:13
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-24 12:53:13QUERY_STRING:signature=f6f6cb02e4de3e753405e1603c7af93f23958d47&timestamp=1474721593&nonce=317420594&openid=oLx9ZwA9AwkGXcLBCZsR8iD4pBK0
+2016-09-24 12:53:13valid
+2016-09-24 12:53:13post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwA9AwkGXcLBCZsR8iD4pBK0]]></FromUserName>
+<CreateTime>1474721593</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[KEY_FANCYSHAPE]]></EventKey>
+</xml>
+2016-09-24 12:53:29
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-24 12:53:29QUERY_STRING:signature=ef7af7a0a0ea2f58010789b246ad897066e7d34c&timestamp=1474721609&nonce=1707637693&openid=oLx9ZwA9AwkGXcLBCZsR8iD4pBK0
+2016-09-24 12:53:29valid
+2016-09-24 12:53:29post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwA9AwkGXcLBCZsR8iD4pBK0]]></FromUserName>
+<CreateTime>1474721609</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[KEY_PASSWEBACCOUNT]]></EventKey>
+</xml>
+2016-09-24 15:01:12
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-24 15:01:12QUERY_STRING:signature=a454cc8288781a780a925f9ce1cdd192b14b995d&timestamp=1474729271&nonce=1807451556&openid=oLx9ZwM7aptL5dm13o8KkbdTXnk4
+2016-09-24 15:01:12valid
+2016-09-24 15:01:12post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwM7aptL5dm13o8KkbdTXnk4]]></FromUserName>
+<CreateTime>1474729271</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+2016-09-24 17:44:49
+
+REMOTE_ADDR:220.181.108.107Unknown IP
+2016-09-24 17:44:49QUERY_STRING:signature=54528a1eeddea5b18a6c9d0e78b1db6ede00a6d8&timestamp=1472833330&nonce=180905030&openid=oLx9ZwM8dh4-TBQaSszKhuspGAUU
+2016-09-24 17:44:49valid
+2016-09-24 17:44:49post:
+2016-09-24 18:18:09
+
+REMOTE_ADDR:220.181.108.122Unknown IP
+2016-09-24 18:18:09QUERY_STRING:signature=496f20640f7bb6d06567fa2797c61df204b9472f&timestamp=1469982669&nonce=22086556&openid=oLx9ZwNXthX1MDpGICIGWT_-fnKk
+2016-09-24 18:18:09valid
+2016-09-24 18:18:09post:
+2016-09-24 19:54:46
+
+REMOTE_ADDR:220.181.108.96Unknown IP
+2016-09-24 19:54:46QUERY_STRING:signature=86d0e8662f582974f62da3e9ded92d6237d40295&timestamp=1472197749&nonce=1937080107&openid=oLx9ZwFYG1WWRqz4vX4vh-yIS6u8
+2016-09-24 19:54:46valid
+2016-09-24 19:54:46post:
+2016-09-24 21:08:46
+
+REMOTE_ADDR:123.125.71.48Unknown IP
+2016-09-24 21:08:46QUERY_STRING:signature=35bf014cd2b2c22604d3daedf38c1d1fed4e72e8&timestamp=1473109874&nonce=107207934&openid=oLx9ZwFzoHWgaA6_EDNadYY7NqeE
+2016-09-24 21:08:46valid
+2016-09-24 21:08:46post:
+2016-09-25 02:20:58
+
+REMOTE_ADDR:220.181.108.107Unknown IP
+2016-09-25 02:20:58QUERY_STRING:signature=c113eb31c020865589db08a882a619ccc5b3a82d&timestamp=1473109951&nonce=155242290&openid=oLx9ZwFzoHWgaA6_EDNadYY7NqeE
+2016-09-25 02:20:58valid
+2016-09-25 02:20:58post:
+2016-09-25 04:01:33
+
+REMOTE_ADDR:220.181.108.102Unknown IP
+2016-09-25 04:01:33QUERY_STRING:signature=76fa5a68a41b683a51944b48b6f75429d510e752&timestamp=1473094194&nonce=355934864&openid=oLx9ZwEbM5hts17GmP85dFm9E75M
+2016-09-25 04:01:33valid
+2016-09-25 04:01:33post:
+2016-09-25 06:28:59
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 06:28:59QUERY_STRING:signature=6d6c31b6ec15cddbd8b3b9680a9dec8ef84ab6ad&timestamp=1474784938&nonce=2082987441&openid=oLx9ZwJUFSb2w5cVadU4VWnj07kE
+2016-09-25 06:28:59valid
+2016-09-25 06:28:59post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwJUFSb2w5cVadU4VWnj07kE]]></FromUserName>
+<CreateTime>1474784938</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[hd]]></Content>
+<MsgId>6334153077754590910</MsgId>
+</xml>
+2016-09-25 06:29:01get wechat user info:{"subscribe":1,"openid":"oLx9ZwJUFSb2w5cVadU4VWnj07kE","nickname":"比利时钻交所-褚潇","sex":1,"language":"zh_CN","city":"","province":"","country":"比利时","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/hqupWB5g4P8AUy4L0L7VI6g0wYibe0k46uO8v5EU6kuLBqhLRys4qKmQggWSfzbYm6fdhdrTxwyeexppeAhGRdGhHCalqNz7A\/0","subscribe_time":1443442905,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-25 06:29:01 update wechat_name:比利时钻交所-褚潇
+2016-09-25 06:29:01<xml>
+			<ToUserName><![CDATA[oLx9ZwJUFSb2w5cVadU4VWnj07kE]]></ToUserName>
+			<FromUserName><![CDATA[gh_f1bedb342697]]></FromUserName>
+			<CreateTime>1474784939</CreateTime>
+			<MsgType><![CDATA[text]]></MsgType>
+			<Content><![CDATA[]]></Content>
+			<FuncFlag>0</FuncFlag>
+			</xml>
+2016-09-25 11:16:03
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 11:16:03QUERY_STRING:signature=c759b8de5c7bd879463b7bfe0757b7abad7f466e&timestamp=1474802163&nonce=1086463745&openid=oLx9ZwBPdSYNKzoS7kUs-bsMZOj4
+2016-09-25 11:16:03valid
+2016-09-25 11:16:03post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwBPdSYNKzoS7kUs-bsMZOj4]]></FromUserName>
+<CreateTime>1474802163</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[7000]]></Content>
+<MsgId>6334227058566267221</MsgId>
+</xml>
+2016-09-25 11:16:06get wechat user info:{"subscribe":1,"openid":"oLx9ZwBPdSYNKzoS7kUs-bsMZOj4","nickname":"海天一色","sex":0,"language":"zh_CN","city":"","province":"北京","country":"中国","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/ajNVdqHZLLAkr9LRItnkcNmVF9CiaEtvIxDNpYwibyhia8bEyLqmLotZKTibECAz5xswnTXW6Ty7CJlibRso8z8wphg\/0","subscribe_time":1474469375,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-25 11:16:06 update wechat_name:海天一色
+2016-09-25 11:16:06<xml>
+			<ToUserName><![CDATA[oLx9ZwBPdSYNKzoS7kUs-bsMZOj4]]></ToUserName>
+			<FromUserName><![CDATA[gh_f1bedb342697]]></FromUserName>
+			<CreateTime>1474802163</CreateTime>
+			<MsgType><![CDATA[text]]></MsgType>
+			<Content><![CDATA[Cannot connect to database]]></Content>
+			<FuncFlag>0</FuncFlag>
+			</xml>
+2016-09-25 11:16:17
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 11:16:17QUERY_STRING:signature=516b301ffdb3ca04d65d359a221f21deb68919a1&timestamp=1474802176&nonce=1542015977&openid=oLx9ZwBPdSYNKzoS7kUs-bsMZOj4
+2016-09-25 11:16:17valid
+2016-09-25 11:16:17post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwBPdSYNKzoS7kUs-bsMZOj4]]></FromUserName>
+<CreateTime>1474802176</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[7000欧元]]></Content>
+<MsgId>6334227114400842084</MsgId>
+</xml>
+2016-09-25 11:16:19get wechat user info:{"subscribe":1,"openid":"oLx9ZwBPdSYNKzoS7kUs-bsMZOj4","nickname":"海天一色","sex":0,"language":"zh_CN","city":"","province":"北京","country":"中国","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/ajNVdqHZLLAkr9LRItnkcNmVF9CiaEtvIxDNpYwibyhia8bEyLqmLotZKTibECAz5xswnTXW6Ty7CJlibRso8z8wphg\/0","subscribe_time":1474469375,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-25 11:16:19 update wechat_name:海天一色
+2016-09-25 11:16:19<xml>
+			<ToUserName><![CDATA[oLx9ZwBPdSYNKzoS7kUs-bsMZOj4]]></ToUserName>
+			<FromUserName><![CDATA[gh_f1bedb342697]]></FromUserName>
+			<CreateTime>1474802177</CreateTime>
+			<MsgType><![CDATA[text]]></MsgType>
+			<Content><![CDATA[Cannot connect to database]]></Content>
+			<FuncFlag>0</FuncFlag>
+			</xml>
+2016-09-25 11:16:37
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 11:16:37QUERY_STRING:signature=43809b701e93eb3edbb6e68f8db90022707e7779&timestamp=1474802197&nonce=804007008&openid=oLx9ZwBPdSYNKzoS7kUs-bsMZOj4
+2016-09-25 11:16:37valid
+2016-09-25 11:16:37post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwBPdSYNKzoS7kUs-bsMZOj4]]></FromUserName>
+<CreateTime>1474802197</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[8000欧元]]></Content>
+<MsgId>6334227204595155305</MsgId>
+</xml>
+2016-09-25 11:16:39get wechat user info:{"subscribe":1,"openid":"oLx9ZwBPdSYNKzoS7kUs-bsMZOj4","nickname":"海天一色","sex":0,"language":"zh_CN","city":"","province":"北京","country":"中国","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/ajNVdqHZLLAkr9LRItnkcNmVF9CiaEtvIxDNpYwibyhia8bEyLqmLotZKTibECAz5xswnTXW6Ty7CJlibRso8z8wphg\/0","subscribe_time":1474469375,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-25 11:16:39 update wechat_name:海天一色
+2016-09-25 11:16:39<xml>
+			<ToUserName><![CDATA[oLx9ZwBPdSYNKzoS7kUs-bsMZOj4]]></ToUserName>
+			<FromUserName><![CDATA[gh_f1bedb342697]]></FromUserName>
+			<CreateTime>1474802197</CreateTime>
+			<MsgType><![CDATA[text]]></MsgType>
+			<Content><![CDATA[Cannot connect to database]]></Content>
+			<FuncFlag>0</FuncFlag>
+			</xml>
+2016-09-25 11:16:59
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 11:16:59QUERY_STRING:signature=32bd1dc6fbc6d0c357ede1a6dabcd8e3823ccaad&timestamp=1474802218&nonce=861043198&openid=oLx9ZwBPdSYNKzoS7kUs-bsMZOj4
+2016-09-25 11:16:59valid
+2016-09-25 11:16:59post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwBPdSYNKzoS7kUs-bsMZOj4]]></FromUserName>
+<CreateTime>1474802218</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[KEY_4CS]]></EventKey>
+</xml>
+2016-09-25 11:17:46
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 11:17:46QUERY_STRING:signature=9704328bf7ed9c8a8f95562f42a7f7a8b323beae&timestamp=1474802266&nonce=848738161&openid=oLx9ZwBPdSYNKzoS7kUs-bsMZOj4
+2016-09-25 11:17:46valid
+2016-09-25 11:17:46post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwBPdSYNKzoS7kUs-bsMZOj4]]></FromUserName>
+<CreateTime>1474802266</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[KEY_JEWLERY]]></EventKey>
+</xml>
+2016-09-25 11:19:14
+
+REMOTE_ADDR:199.27.133.110Unknown IP
+2016-09-25 11:19:14QUERY_STRING:
+2016-09-25 11:19:14valid
+2016-09-25 11:19:14post:
+2016-09-25 11:19:27
+
+REMOTE_ADDR:199.27.133.125Unknown IP
+2016-09-25 11:19:27QUERY_STRING:
+2016-09-25 11:19:27valid
+2016-09-25 11:19:27post:
+2016-09-25 11:58:52
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 11:58:52QUERY_STRING:signature=fcab4a37aae416021a239db2c9601095d36e57c6&timestamp=1474804732&nonce=702334499&openid=oLx9ZwN41wWktSL6zGt3G0_h2UCw
+2016-09-25 11:58:52valid
+2016-09-25 11:58:52post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwN41wWktSL6zGt3G0_h2UCw]]></FromUserName>
+<CreateTime>1474804732</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://mp.weixin.qq.com/s?__biz=MjM5MTkzNDIxOA==&mid=209685593&idx=1&sn=da74472433fa1318ccb01817d80a0b1b&scene=18#rd]]></EventKey>
+<MenuId>408328043</MenuId>
+</xml>
+2016-09-25 12:38:08
+
+REMOTE_ADDR:220.181.108.106Unknown IP
+2016-09-25 12:38:08QUERY_STRING:signature=ad249c5b7f314893235be7025b76bd60ce890cdf&timestamp=1472850113&nonce=2025019845&openid=oLx9ZwFw4lvKCKZahKnR2QqaQkLw
+2016-09-25 12:38:08valid
+2016-09-25 12:38:08post:
+2016-09-25 14:43:26
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 14:43:26QUERY_STRING:signature=51bbf24caa3a2d4ba44083a06d43b1c03990d474&timestamp=1474814606&nonce=1553891544&openid=oLx9ZwJCzi1jiLcsDQxIFUGG4g7k
+2016-09-25 14:43:26valid
+2016-09-25 14:43:26post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwJCzi1jiLcsDQxIFUGG4g7k]]></FromUserName>
+<CreateTime>1474814606</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://mp.weixin.qq.com/s?__biz=MjM5MTkzNDIxOA==&mid=209685507&idx=1&sn=67376fd3ff6ee8db7d5129132c462492&scene=18#rd]]></EventKey>
+<MenuId>408328043</MenuId>
+</xml>
+2016-09-25 14:44:29
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 14:44:29QUERY_STRING:signature=59b328c01d00e78a73b6447f6df317d713934323&timestamp=1474814669&nonce=1170422713&openid=oLx9ZwJCzi1jiLcsDQxIFUGG4g7k
+2016-09-25 14:44:29valid
+2016-09-25 14:44:29post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwJCzi1jiLcsDQxIFUGG4g7k]]></FromUserName>
+<CreateTime>1474814669</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://mp.weixin.qq.com/s?__biz=MjM5MTkzNDIxOA==&mid=210299516&idx=1&sn=65cb3b49eca26b501c050ff9ce0b0cca&scene=18#rd]]></EventKey>
+<MenuId>408328043</MenuId>
+</xml>
+2016-09-25 14:46:15
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 14:46:15QUERY_STRING:signature=0d27e81ea6aac768c4ec3f794890160a4c5cd45a&timestamp=1474814773&nonce=2080043607&openid=oLx9ZwJCzi1jiLcsDQxIFUGG4g7k
+2016-09-25 14:46:15valid
+2016-09-25 14:46:15post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwJCzi1jiLcsDQxIFUGG4g7k]]></FromUserName>
+<CreateTime>1474814773</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[KEY_PASSWEBACCOUNT]]></EventKey>
+</xml>
+2016-09-25 14:46:28
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 14:46:28QUERY_STRING:signature=97c436173c9d68c2b53705347fe7dbf3655b449e&timestamp=1474814788&nonce=217889469&openid=oLx9ZwJCzi1jiLcsDQxIFUGG4g7k
+2016-09-25 14:46:28valid
+2016-09-25 14:46:28post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwJCzi1jiLcsDQxIFUGG4g7k]]></FromUserName>
+<CreateTime>1474814788</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://mp.weixin.qq.com/s?__biz=MjM5MTkzNDIxOA==&mid=209685593&idx=1&sn=da74472433fa1318ccb01817d80a0b1b&scene=18#rd]]></EventKey>
+<MenuId>408328043</MenuId>
+</xml>
+2016-09-25 14:47:01
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 14:47:01QUERY_STRING:signature=0cec3998dcf06e48bba5e4c701f1015c22808e70&timestamp=1474814821&nonce=1882986050&openid=oLx9ZwJCzi1jiLcsDQxIFUGG4g7k
+2016-09-25 14:47:01valid
+2016-09-25 14:47:01post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwJCzi1jiLcsDQxIFUGG4g7k]]></FromUserName>
+<CreateTime>1474814821</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[KEY_BUDGET]]></EventKey>
+</xml>
+2016-09-25 14:47:30
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 14:47:30QUERY_STRING:signature=fa0f284619fd6fefd40a686b9430d711e2d120ad&timestamp=1474814850&nonce=685394188&openid=oLx9ZwJCzi1jiLcsDQxIFUGG4g7k
+2016-09-25 14:47:30valid
+2016-09-25 14:47:30post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwJCzi1jiLcsDQxIFUGG4g7k]]></FromUserName>
+<CreateTime>1474814849</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[2000欧元]]></Content>
+<MsgId>6334281544521386664</MsgId>
+</xml>
+2016-09-25 14:47:32get wechat user info:{"subscribe":1,"openid":"oLx9ZwJCzi1jiLcsDQxIFUGG4g7k","nickname":"思晗","sex":2,"language":"zh_CN","city":"哈尔滨","province":"黑龙江","country":"中国","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/anblvjPKYbMicfW80dI665gHEriaWDjcOSwvdBujpgd3qUAibY9O1DRxhMSia0jYe0pOs37zQ18hDAqSvLZGicrxTjw\/0","subscribe_time":1474060671,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-25 14:47:32 update wechat_name:思晗
+2016-09-25 14:47:32<xml>
+			<ToUserName><![CDATA[oLx9ZwJCzi1jiLcsDQxIFUGG4g7k]]></ToUserName>
+			<FromUserName><![CDATA[gh_f1bedb342697]]></FromUserName>
+			<CreateTime>1474814850</CreateTime>
+			<MsgType><![CDATA[text]]></MsgType>
+			<Content><![CDATA[Cannot connect to database]]></Content>
+			<FuncFlag>0</FuncFlag>
+			</xml>
+2016-09-25 14:47:46
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 14:47:46QUERY_STRING:signature=75dc9d8ecfa13d5965df262a2cdef746d1b74039&timestamp=1474814866&nonce=2088259274&openid=oLx9ZwJCzi1jiLcsDQxIFUGG4g7k
+2016-09-25 14:47:46valid
+2016-09-25 14:47:46post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwJCzi1jiLcsDQxIFUGG4g7k]]></FromUserName>
+<CreateTime>1474814866</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[2000 e]]></Content>
+<MsgId>6334281617535830698</MsgId>
+</xml>
+2016-09-25 14:47:48get wechat user info:{"subscribe":1,"openid":"oLx9ZwJCzi1jiLcsDQxIFUGG4g7k","nickname":"思晗","sex":2,"language":"zh_CN","city":"哈尔滨","province":"黑龙江","country":"中国","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/anblvjPKYbMicfW80dI665gHEriaWDjcOSwvdBujpgd3qUAibY9O1DRxhMSia0jYe0pOs37zQ18hDAqSvLZGicrxTjw\/0","subscribe_time":1474060671,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-25 14:47:48 update wechat_name:思晗
+2016-09-25 14:47:48<xml>
+			<ToUserName><![CDATA[oLx9ZwJCzi1jiLcsDQxIFUGG4g7k]]></ToUserName>
+			<FromUserName><![CDATA[gh_f1bedb342697]]></FromUserName>
+			<CreateTime>1474814866</CreateTime>
+			<MsgType><![CDATA[text]]></MsgType>
+			<Content><![CDATA[Cannot connect to database]]></Content>
+			<FuncFlag>0</FuncFlag>
+			</xml>
+2016-09-25 14:48:04
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 14:48:04QUERY_STRING:signature=7e0218ba90f0f07c944b3a90106cc16aa7d4a26c&timestamp=1474814884&nonce=301122074&openid=oLx9ZwJCzi1jiLcsDQxIFUGG4g7k
+2016-09-25 14:48:04valid
+2016-09-25 14:48:04post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwJCzi1jiLcsDQxIFUGG4g7k]]></FromUserName>
+<CreateTime>1474814884</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[5000]]></Content>
+<MsgId>6334281694845242030</MsgId>
+</xml>
+2016-09-25 14:48:06get wechat user info:{"subscribe":1,"openid":"oLx9ZwJCzi1jiLcsDQxIFUGG4g7k","nickname":"思晗","sex":2,"language":"zh_CN","city":"哈尔滨","province":"黑龙江","country":"中国","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/anblvjPKYbMicfW80dI665gHEriaWDjcOSwvdBujpgd3qUAibY9O1DRxhMSia0jYe0pOs37zQ18hDAqSvLZGicrxTjw\/0","subscribe_time":1474060671,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-25 14:48:06 update wechat_name:思晗
+2016-09-25 14:48:06<xml>
+			<ToUserName><![CDATA[oLx9ZwJCzi1jiLcsDQxIFUGG4g7k]]></ToUserName>
+			<FromUserName><![CDATA[gh_f1bedb342697]]></FromUserName>
+			<CreateTime>1474814884</CreateTime>
+			<MsgType><![CDATA[text]]></MsgType>
+			<Content><![CDATA[Cannot connect to database]]></Content>
+			<FuncFlag>0</FuncFlag>
+			</xml>
+2016-09-25 15:47:47
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 15:47:47QUERY_STRING:signature=efc1ea1276be682a6793bb4ae9d1a19c0cd4836f&timestamp=1474818466&nonce=1526806351&openid=oLx9ZwPCHw4NKpm5sWp71jq0rNbU
+2016-09-25 15:47:47valid
+2016-09-25 15:47:47post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwPCHw4NKpm5sWp71jq0rNbU]]></FromUserName>
+<CreateTime>1474818466</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+2016-09-25 15:49:07
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 15:49:07QUERY_STRING:signature=4f26de50a2c85da01781109e56a490dfbe301408&timestamp=1474818547&nonce=1229390539&openid=oLx9ZwJCzi1jiLcsDQxIFUGG4g7k
+2016-09-25 15:49:07valid
+2016-09-25 15:49:07post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwJCzi1jiLcsDQxIFUGG4g7k]]></FromUserName>
+<CreateTime>1474818547</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[KEY_STOCK_REF]]></EventKey>
+</xml>
+2016-09-25 16:46:14
+
+REMOTE_ADDR:220.181.108.141Unknown IP
+2016-09-25 16:46:14QUERY_STRING:signature=9ed0bdc8fb6899f4ab5aa1e7c2cdfbe9fb7141d2&timestamp=1472214232&nonce=1030447793&openid=oLx9ZwHgpJjx8ajApaKCplhMVDzE
+2016-09-25 16:46:14valid
+2016-09-25 16:46:14post:
+2016-09-25 17:39:23
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 17:39:23QUERY_STRING:signature=e0d446c07ca21b7389a0446488f9e78b1e9134b5&timestamp=1474825162&nonce=240115958&openid=oLx9ZwKOKEmIkyOesUCiQbBedqFE
+2016-09-25 17:39:23valid
+2016-09-25 17:39:23post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwKOKEmIkyOesUCiQbBedqFE]]></FromUserName>
+<CreateTime>1474825162</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+2016-09-25 17:39:23referee
+2016-09-25 17:39:25
+2016-09-25 17:39:25{"subscribe":1,"openid":"oLx9ZwKOKEmIkyOesUCiQbBedqFE","nickname":"啦啦啦","sex":2,"language":"zh_CN","city":"","province":"","country":"泽西岛","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/hqupWB5g4Pic50gUiafibVib6soh77Z6NM0ubAU6fXSr4C2EPGnEejs1c5Sdutw7JMj2gCXQquQufRoibsrJ22prz3mrYpgT1EMsC\/0","subscribe_time":1474825162,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-25 17:39:25inert result:1
+2016-09-25 17:39:34
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 17:39:34QUERY_STRING:signature=db3f8a2fd7444c4593ad60fdd3017a536bcf0744&timestamp=1474825173&nonce=2005107405&openid=oLx9ZwKOKEmIkyOesUCiQbBedqFE
+2016-09-25 17:39:34valid
+2016-09-25 17:39:34post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwKOKEmIkyOesUCiQbBedqFE]]></FromUserName>
+<CreateTime>1474825173</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://mp.weixin.qq.com/s?__biz=MjM5MTkzNDIxOA==&mid=209757354&idx=1&sn=9dd5ddd2a5f142d3cde5b8a449993c5f&scene=18#rd]]></EventKey>
+<MenuId>408328043</MenuId>
+</xml>
+2016-09-25 17:39:48
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 17:39:48QUERY_STRING:signature=500c7373f71792af582a70e1402b5f285ac5abdd&timestamp=1474825187&nonce=1777255564&openid=oLx9ZwKOKEmIkyOesUCiQbBedqFE
+2016-09-25 17:39:48valid
+2016-09-25 17:39:48post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwKOKEmIkyOesUCiQbBedqFE]]></FromUserName>
+<CreateTime>1474825187</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[KEY_4CS]]></EventKey>
+</xml>
+2016-09-25 17:40:43
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 17:40:43QUERY_STRING:signature=787ed96ba7edab47cf828246be9550c826d1347f&timestamp=1474825243&nonce=885227784&openid=oLx9ZwGzkzJR97SsQd7uVxnJSJtk
+2016-09-25 17:40:43valid
+2016-09-25 17:40:43post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwGzkzJR97SsQd7uVxnJSJtk]]></FromUserName>
+<CreateTime>1474825243</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+2016-09-25 17:40:43referee
+2016-09-25 17:40:46
+2016-09-25 17:40:46{"subscribe":1,"openid":"oLx9ZwGzkzJR97SsQd7uVxnJSJtk","nickname":"珠宝定制小星星&虫草燕窝三七","sex":0,"language":"zh_CN","city":"","province":"","country":"","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/IbkMoSyicRXq5WZINvBQ7S0CuG2JVATQNOX4VWqn8XejiaxdFKicDrbxMwkGHVUH67AQWHXKFjLrzKAeTWJVahOnBz1FguQib4Yj\/0","subscribe_time":1474825243,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-25 17:40:46inert result:1
+2016-09-25 17:40:49
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 17:40:49QUERY_STRING:signature=67f8c682d64090b03a285c39fbb4803a308c2b08&timestamp=1474825249&nonce=1779033154&openid=oLx9ZwGzkzJR97SsQd7uVxnJSJtk
+2016-09-25 17:40:49valid
+2016-09-25 17:40:49post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwGzkzJR97SsQd7uVxnJSJtk]]></FromUserName>
+<CreateTime>1474825249</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[KEY_4CS]]></EventKey>
+</xml>
+2016-09-25 17:41:42
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 17:41:42QUERY_STRING:signature=c5c1c6ae5b217bc1f638d651a820b1a55d8a7dd5&timestamp=1474825301&nonce=1765449761&openid=oLx9ZwGzkzJR97SsQd7uVxnJSJtk
+2016-09-25 17:41:42valid
+2016-09-25 17:41:42post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwGzkzJR97SsQd7uVxnJSJtk]]></FromUserName>
+<CreateTime>1474825301</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[0.50 h si1 vg vg vg gia]]></Content>
+<MsgId>6334326435519565079</MsgId>
+</xml>
+2016-09-25 17:41:44get wechat user info:{"subscribe":1,"openid":"oLx9ZwGzkzJR97SsQd7uVxnJSJtk","nickname":"珠宝定制小星星&虫草燕窝三七","sex":0,"language":"zh_CN","city":"","province":"","country":"","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/IbkMoSyicRXq5WZINvBQ7S0CuG2JVATQNOX4VWqn8XejiaxdFKicDrbxMwkGHVUH67AQWHXKFjLrzKAeTWJVahOnBz1FguQib4Yj\/0","subscribe_time":1474825243,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-25 17:41:44 update wechat_name:珠宝定制小星星&虫草燕窝三七
+2016-09-25 17:41:44<xml>
+			<ToUserName><![CDATA[oLx9ZwGzkzJR97SsQd7uVxnJSJtk]]></ToUserName>
+			<FromUserName><![CDATA[gh_f1bedb342697]]></FromUserName>
+			<CreateTime>1474825302</CreateTime>
+			<MsgType><![CDATA[text]]></MsgType>
+			<Content><![CDATA[Cannot connect to database]]></Content>
+			<FuncFlag>0</FuncFlag>
+			</xml>
+2016-09-25 17:42:25
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 17:42:25QUERY_STRING:signature=686b057cec3debc04d7e866778a4929bf931040e&timestamp=1474825345&nonce=429637384&openid=oLx9ZwGzkzJR97SsQd7uVxnJSJtk
+2016-09-25 17:42:25valid
+2016-09-25 17:42:25post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwGzkzJR97SsQd7uVxnJSJtk]]></FromUserName>
+<CreateTime>1474825345</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[0.50 h si1]]></Content>
+<MsgId>6334326624498126106</MsgId>
+</xml>
+2016-09-25 17:42:27get wechat user info:{"subscribe":1,"openid":"oLx9ZwGzkzJR97SsQd7uVxnJSJtk","nickname":"珠宝定制小星星&虫草燕窝三七","sex":0,"language":"zh_CN","city":"","province":"","country":"","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/IbkMoSyicRXq5WZINvBQ7S0CuG2JVATQNOX4VWqn8XejiaxdFKicDrbxMwkGHVUH67AQWHXKFjLrzKAeTWJVahOnBz1FguQib4Yj\/0","subscribe_time":1474825243,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-25 17:42:27 update wechat_name:珠宝定制小星星&虫草燕窝三七
+2016-09-25 17:42:27<xml>
+			<ToUserName><![CDATA[oLx9ZwGzkzJR97SsQd7uVxnJSJtk]]></ToUserName>
+			<FromUserName><![CDATA[gh_f1bedb342697]]></FromUserName>
+			<CreateTime>1474825345</CreateTime>
+			<MsgType><![CDATA[text]]></MsgType>
+			<Content><![CDATA[Cannot connect to database]]></Content>
+			<FuncFlag>0</FuncFlag>
+			</xml>
+2016-09-25 17:42:42
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 17:42:42QUERY_STRING:signature=fa352dce2c3290f26420d78758ffa48d6c5ec394&timestamp=1474825362&nonce=571542221&openid=oLx9ZwGzkzJR97SsQd7uVxnJSJtk
+2016-09-25 17:42:42valid
+2016-09-25 17:42:42post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwGzkzJR97SsQd7uVxnJSJtk]]></FromUserName>
+<CreateTime>1474825362</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[KEY_BUDGET]]></EventKey>
+</xml>
+2016-09-25 17:42:59
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 17:42:59QUERY_STRING:signature=532f374653f12228d56a7abdf74756e892c90c2a&timestamp=1474825378&nonce=1627310858&openid=oLx9ZwGzkzJR97SsQd7uVxnJSJtk
+2016-09-25 17:42:59valid
+2016-09-25 17:42:59post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwGzkzJR97SsQd7uVxnJSJtk]]></FromUserName>
+<CreateTime>1474825378</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[6800人民币]]></Content>
+<MsgId>6334326766232046877</MsgId>
+</xml>
+2016-09-25 17:43:01get wechat user info:{"subscribe":1,"openid":"oLx9ZwGzkzJR97SsQd7uVxnJSJtk","nickname":"珠宝定制小星星&虫草燕窝三七","sex":0,"language":"zh_CN","city":"","province":"","country":"","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/IbkMoSyicRXq5WZINvBQ7S0CuG2JVATQNOX4VWqn8XejiaxdFKicDrbxMwkGHVUH67AQWHXKFjLrzKAeTWJVahOnBz1FguQib4Yj\/0","subscribe_time":1474825243,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-25 17:43:01 update wechat_name:珠宝定制小星星&虫草燕窝三七
+2016-09-25 17:43:01<xml>
+			<ToUserName><![CDATA[oLx9ZwGzkzJR97SsQd7uVxnJSJtk]]></ToUserName>
+			<FromUserName><![CDATA[gh_f1bedb342697]]></FromUserName>
+			<CreateTime>1474825379</CreateTime>
+			<MsgType><![CDATA[text]]></MsgType>
+			<Content><![CDATA[Cannot connect to database]]></Content>
+			<FuncFlag>0</FuncFlag>
+			</xml>
+2016-09-25 17:43:11
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 17:43:11QUERY_STRING:signature=b65f8dda93649dd5b22187fa8868c20153cc7d09&timestamp=1474825391&nonce=1930286676&openid=oLx9ZwGzkzJR97SsQd7uVxnJSJtk
+2016-09-25 17:43:11valid
+2016-09-25 17:43:11post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwGzkzJR97SsQd7uVxnJSJtk]]></FromUserName>
+<CreateTime>1474825391</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[KEY_STOCK_REF]]></EventKey>
+</xml>
+2016-09-25 17:44:06
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 17:44:06QUERY_STRING:signature=eaef2c7784a3bc63bfd50a3c575ca2c01a9beedd&timestamp=1474825445&nonce=1119991695&openid=oLx9ZwGzkzJR97SsQd7uVxnJSJtk
+2016-09-25 17:44:06valid
+2016-09-25 17:44:06post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwGzkzJR97SsQd7uVxnJSJtk]]></FromUserName>
+<CreateTime>1474825445</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[KEY_JEWLERY]]></EventKey>
+</xml>
+2016-09-25 17:48:34
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 17:48:34QUERY_STRING:signature=d205ac96a72f971586bd53a19a16a52652bee913&timestamp=1474825713&nonce=686678724&openid=oLx9ZwGzkzJR97SsQd7uVxnJSJtk
+2016-09-25 17:48:34valid
+2016-09-25 17:48:34post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwGzkzJR97SsQd7uVxnJSJtk]]></FromUserName>
+<CreateTime>1474825713</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://mp.weixin.qq.com/s?__biz=MjM5MTkzNDIxOA==&mid=210299516&idx=1&sn=65cb3b49eca26b501c050ff9ce0b0cca&scene=18#rd]]></EventKey>
+<MenuId>408328043</MenuId>
+</xml>
+2016-09-25 17:49:16
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 17:49:16QUERY_STRING:signature=1df5980587945109921473c9f462c9af7c33adb3&timestamp=1474825756&nonce=1015301282&openid=oLx9ZwGzkzJR97SsQd7uVxnJSJtk
+2016-09-25 17:49:16valid
+2016-09-25 17:49:16post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwGzkzJR97SsQd7uVxnJSJtk]]></FromUserName>
+<CreateTime>1474825756</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://mp.weixin.qq.com/s?__biz=MjM5MTkzNDIxOA==&mid=209685507&idx=1&sn=67376fd3ff6ee8db7d5129132c462492&scene=18#rd]]></EventKey>
+<MenuId>408328043</MenuId>
+</xml>
+2016-09-25 17:54:25
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 17:54:25QUERY_STRING:signature=488d8150dc53af67bbf3bd628ad9f794de7e2f30&timestamp=1474826065&nonce=1337015831&openid=oLx9ZwGzkzJR97SsQd7uVxnJSJtk
+2016-09-25 17:54:25valid
+2016-09-25 17:54:25post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwGzkzJR97SsQd7uVxnJSJtk]]></FromUserName>
+<CreateTime>1474826065</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[KEY_4CS]]></EventKey>
+</xml>
+2016-09-25 17:54:31
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 17:54:31QUERY_STRING:signature=5d6a671d6d527a2d9e2c5a8b2d04d722345e29c7&timestamp=1474826071&nonce=2066475572&openid=oLx9ZwGzkzJR97SsQd7uVxnJSJtk
+2016-09-25 17:54:31valid
+2016-09-25 17:54:31post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwGzkzJR97SsQd7uVxnJSJtk]]></FromUserName>
+<CreateTime>1474826071</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[KEY_PASSWEBACCOUNT]]></EventKey>
+</xml>
+2016-09-25 17:54:39
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 17:54:39QUERY_STRING:signature=44ee5a1cc99185e23e593ebdf355ca5d9b24b56b&timestamp=1474826078&nonce=1067624818&openid=oLx9ZwGzkzJR97SsQd7uVxnJSJtk
+2016-09-25 17:54:39valid
+2016-09-25 17:54:39post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwGzkzJR97SsQd7uVxnJSJtk]]></FromUserName>
+<CreateTime>1474826078</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://mp.weixin.qq.com/s?__biz=MjM5MTkzNDIxOA==&mid=209685743&idx=1&sn=6439fb43d695360b84c799078a1ed69b&scene=18#rd]]></EventKey>
+<MenuId>408328043</MenuId>
+</xml>
+2016-09-25 23:54:38
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 23:54:38QUERY_STRING:signature=308ab45e5e04f2da253c48424b034f540f396725&timestamp=1474847678&nonce=1318355313&openid=oLx9ZwH2lPlkKTzng23LqjdpuFyc
+2016-09-25 23:54:38valid
+2016-09-25 23:54:38post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwH2lPlkKTzng23LqjdpuFyc]]></FromUserName>
+<CreateTime>1474847678</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+2016-09-25 23:54:38referee
+2016-09-25 23:54:41
+2016-09-25 23:54:41{"subscribe":1,"openid":"oLx9ZwH2lPlkKTzng23LqjdpuFyc","nickname":"潘立超","sex":1,"language":"zh_CN","city":"","province":"蒂尔堡","country":"荷兰","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/PiajxSqBRaELpEUHdQa9Rqgd1UfPMPkBic8czxcWNUPX283kNiadVkET78DyrmJsQofCiaHaESSy2N12EKlR3I2wJw\/0","subscribe_time":1474847678,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-25 23:54:41inert result:1
+2016-09-25 23:55:03
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-25 23:55:03QUERY_STRING:signature=5e349d6af60273eb28e704320dab54595d3bebb5&timestamp=1474847703&nonce=1348052734&openid=oLx9ZwH2lPlkKTzng23LqjdpuFyc
+2016-09-25 23:55:03valid
+2016-09-25 23:55:03post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwH2lPlkKTzng23LqjdpuFyc]]></FromUserName>
+<CreateTime>1474847703</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[KEY_BUDGET]]></EventKey>
+</xml>
+2016-09-26 00:04:38
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 00:04:38QUERY_STRING:signature=c4e76e7a600f844e089faa99a894ee33f35ea7ef&timestamp=1474848277&nonce=1281367490&openid=oLx9ZwH2lPlkKTzng23LqjdpuFyc
+2016-09-26 00:04:38valid
+2016-09-26 00:04:38post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwH2lPlkKTzng23LqjdpuFyc]]></FromUserName>
+<CreateTime>1474848277</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[你好，我想周二来店砍钻，谢谢。]]></Content>
+<MsgId>6334425116688158391</MsgId>
+</xml>
+2016-09-26 00:04:40get wechat user info:{"subscribe":1,"openid":"oLx9ZwH2lPlkKTzng23LqjdpuFyc","nickname":"潘立超","sex":1,"language":"zh_CN","city":"","province":"蒂尔堡","country":"荷兰","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/PiajxSqBRaELpEUHdQa9Rqgd1UfPMPkBic8czxcWNUPX283kNiadVkET78DyrmJsQofCiaHaESSy2N12EKlR3I2wJw\/0","subscribe_time":1474847678,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-26 00:04:40 update wechat_name:潘立超
+2016-09-26 00:04:40<xml>
+			<ToUserName><![CDATA[oLx9ZwH2lPlkKTzng23LqjdpuFyc]]></ToUserName>
+			<FromUserName><![CDATA[gh_f1bedb342697]]></FromUserName>
+			<CreateTime>1474848278</CreateTime>
+			<MsgType><![CDATA[text]]></MsgType>
+			<Content><![CDATA[Cannot connect to database]]></Content>
+			<FuncFlag>0</FuncFlag>
+			</xml>
+2016-09-26 00:04:44
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 00:04:44QUERY_STRING:signature=3e232eef2b854eec0895b73f91fff85849492b7e&timestamp=1474848284&nonce=699209710&openid=oLx9ZwH2lPlkKTzng23LqjdpuFyc
+2016-09-26 00:04:44valid
+2016-09-26 00:04:44post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwH2lPlkKTzng23LqjdpuFyc]]></FromUserName>
+<CreateTime>1474848283</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[看]]></Content>
+<MsgId>6334425142457962169</MsgId>
+</xml>
+2016-09-26 00:04:46get wechat user info:{"subscribe":1,"openid":"oLx9ZwH2lPlkKTzng23LqjdpuFyc","nickname":"潘立超","sex":1,"language":"zh_CN","city":"","province":"蒂尔堡","country":"荷兰","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/PiajxSqBRaELpEUHdQa9Rqgd1UfPMPkBic8czxcWNUPX283kNiadVkET78DyrmJsQofCiaHaESSy2N12EKlR3I2wJw\/0","subscribe_time":1474847678,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-26 00:04:46 update wechat_name:潘立超
+2016-09-26 00:04:46<xml>
+			<ToUserName><![CDATA[oLx9ZwH2lPlkKTzng23LqjdpuFyc]]></ToUserName>
+			<FromUserName><![CDATA[gh_f1bedb342697]]></FromUserName>
+			<CreateTime>1474848284</CreateTime>
+			<MsgType><![CDATA[text]]></MsgType>
+			<Content><![CDATA[Cannot connect to database]]></Content>
+			<FuncFlag>0</FuncFlag>
+			</xml>
+2016-09-26 01:56:48
+
+REMOTE_ADDR:123.125.71.18Unknown IP
+2016-09-26 01:56:48QUERY_STRING:signature=d487b7c5680616433deaadba8ce0509416741947&timestamp=1467861130&nonce=15748728&openid=oLx9ZwLINNoNPeYtN8zguBaaGoMM
+2016-09-26 01:56:48valid
+2016-09-26 01:56:48post:
+2016-09-26 02:30:08
+
+REMOTE_ADDR:123.125.71.91Unknown IP
+2016-09-26 02:30:08QUERY_STRING:signature=53cae2a7e36d22a32e711aa70d179ae89f3519d6&timestamp=1472416124&nonce=2005112404&openid=oLx9ZwPCHw4NKpm5sWp71jq0rNbU
+2016-09-26 02:30:08valid
+2016-09-26 02:30:08post:
+2016-09-26 05:57:54
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 05:57:54QUERY_STRING:signature=1beb1c868ac8bb3678daa6c8fd454aa11b0b2bea&timestamp=1474869474&nonce=221129817&openid=oLx9ZwJUFSb2w5cVadU4VWnj07kE
+2016-09-26 05:57:54valid
+2016-09-26 05:57:54post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwJUFSb2w5cVadU4VWnj07kE]]></FromUserName>
+<CreateTime>1474869474</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[66184138 ]]></Content>
+<MsgId>6334516157109935197</MsgId>
+</xml>
+2016-09-26 05:57:56get wechat user info:{"subscribe":1,"openid":"oLx9ZwJUFSb2w5cVadU4VWnj07kE","nickname":"比利时钻交所-褚潇","sex":1,"language":"zh_CN","city":"","province":"","country":"比利时","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/hqupWB5g4P8AUy4L0L7VI6g0wYibe0k46uO8v5EU6kuLBqhLRys4qKmQggWSfzbYm6fdhdrTxwyeexppeAhGRdGhHCalqNz7A\/0","subscribe_time":1443442905,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-26 05:57:56 update wechat_name:比利时钻交所-褚潇
+2016-09-26 05:57:56<xml>
+			<ToUserName><![CDATA[oLx9ZwJUFSb2w5cVadU4VWnj07kE]]></ToUserName>
+			<FromUserName><![CDATA[gh_f1bedb342697]]></FromUserName>
+			<CreateTime>1474869474</CreateTime>
+			<MsgType><![CDATA[text]]></MsgType>
+			<Content><![CDATA[Cannot connect to database]]></Content>
+			<FuncFlag>0</FuncFlag>
+			</xml>
+2016-09-26 06:07:01
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 06:07:01QUERY_STRING:signature=b939095459ce929a5da4d1a6377209dc5e0ecd5d&timestamp=1474870021&nonce=744933693&openid=oLx9ZwPYvb479u0damk0ZoKhFJc8
+2016-09-26 06:07:01valid
+2016-09-26 06:07:01post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwPYvb479u0damk0ZoKhFJc8]]></FromUserName>
+<CreateTime>1474870021</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[1.09 e sl1 3ex]]></Content>
+<MsgId>6334518506457046217</MsgId>
+</xml>
+2016-09-26 06:07:03get wechat user info:{"subscribe":1,"openid":"oLx9ZwPYvb479u0damk0ZoKhFJc8","nickname":"Rcc","sex":1,"language":"zh_CN","city":"","province":"北京","country":"中国","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/vesoAGiaP0POk5ricTICgouc72iad1zhJ9K87DlPD21QM4oZxib2bgTiaUhp7rdJsN5T8BYRFdxYM8A7AIu8ia2iccLrhYxUnsZKFIia\/0","subscribe_time":1473948759,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-26 06:07:03 update wechat_name:Rcc
+2016-09-26 06:07:03<xml>
+			<ToUserName><![CDATA[oLx9ZwPYvb479u0damk0ZoKhFJc8]]></ToUserName>
+			<FromUserName><![CDATA[gh_f1bedb342697]]></FromUserName>
+			<CreateTime>1474870021</CreateTime>
+			<MsgType><![CDATA[text]]></MsgType>
+			<Content><![CDATA[Cannot connect to database]]></Content>
+			<FuncFlag>0</FuncFlag>
+			</xml>
+2016-09-26 06:08:29
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 06:08:29QUERY_STRING:signature=d78725d7486071593003b7535c63363ae9fe0355&timestamp=1474870109&nonce=199255630&openid=oLx9ZwPYvb479u0damk0ZoKhFJc8
+2016-09-26 06:08:29valid
+2016-09-26 06:08:29post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwPYvb479u0damk0ZoKhFJc8]]></FromUserName>
+<CreateTime>1474870109</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[1 e sl1 3ex]]></Content>
+<MsgId>6334518884414168285</MsgId>
+</xml>
+2016-09-26 06:08:31get wechat user info:{"subscribe":1,"openid":"oLx9ZwPYvb479u0damk0ZoKhFJc8","nickname":"Rcc","sex":1,"language":"zh_CN","city":"","province":"北京","country":"中国","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/vesoAGiaP0POk5ricTICgouc72iad1zhJ9K87DlPD21QM4oZxib2bgTiaUhp7rdJsN5T8BYRFdxYM8A7AIu8ia2iccLrhYxUnsZKFIia\/0","subscribe_time":1473948759,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-26 06:08:31 update wechat_name:Rcc
+2016-09-26 06:08:31<xml>
+			<ToUserName><![CDATA[oLx9ZwPYvb479u0damk0ZoKhFJc8]]></ToUserName>
+			<FromUserName><![CDATA[gh_f1bedb342697]]></FromUserName>
+			<CreateTime>1474870109</CreateTime>
+			<MsgType><![CDATA[text]]></MsgType>
+			<Content><![CDATA[Cannot connect to database]]></Content>
+			<FuncFlag>0</FuncFlag>
+			</xml>
+2016-09-26 06:09:15
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 06:09:15QUERY_STRING:signature=e236bb7c9b1fb0090c3a0c8ce31a06d0e178cb9b&timestamp=1474870155&nonce=770678993&openid=oLx9ZwPYvb479u0damk0ZoKhFJc8
+2016-09-26 06:09:15valid
+2016-09-26 06:09:15post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwPYvb479u0damk0ZoKhFJc8]]></FromUserName>
+<CreateTime>1474870155</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[1.09 e si1 3ex n]]></Content>
+<MsgId>6334519081982663913</MsgId>
+</xml>
+2016-09-26 06:09:17get wechat user info:{"subscribe":1,"openid":"oLx9ZwPYvb479u0damk0ZoKhFJc8","nickname":"Rcc","sex":1,"language":"zh_CN","city":"","province":"北京","country":"中国","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/vesoAGiaP0POk5ricTICgouc72iad1zhJ9K87DlPD21QM4oZxib2bgTiaUhp7rdJsN5T8BYRFdxYM8A7AIu8ia2iccLrhYxUnsZKFIia\/0","subscribe_time":1473948759,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-26 06:09:17 update wechat_name:Rcc
+2016-09-26 06:09:18<xml>
+			<ToUserName><![CDATA[oLx9ZwPYvb479u0damk0ZoKhFJc8]]></ToUserName>
+			<FromUserName><![CDATA[gh_f1bedb342697]]></FromUserName>
+			<CreateTime>1474870155</CreateTime>
+			<MsgType><![CDATA[text]]></MsgType>
+			<Content><![CDATA[Cannot connect to database]]></Content>
+			<FuncFlag>0</FuncFlag>
+			</xml>
+2016-09-26 06:59:55
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 06:59:55QUERY_STRING:signature=da21e073d71400c0b2068e2769bc371b22982dad&timestamp=1474873194&nonce=1239782517&openid=oLx9ZwMGoAMWRdfIhfNr276bWvpU
+2016-09-26 06:59:55valid
+2016-09-26 06:59:55post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwMGoAMWRdfIhfNr276bWvpU]]></FromUserName>
+<CreateTime>1474873194</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[66184138]]></Content>
+<MsgId>6334532134388277178</MsgId>
+</xml>
+2016-09-26 06:59:57get wechat user info:{"subscribe":1,"openid":"oLx9ZwMGoAMWRdfIhfNr276bWvpU","nickname":"箴言","sex":1,"language":"zh_CN","city":"朝阳","province":"北京","country":"中国","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/hqupWB5g4Pib6pwWqcIpUvGOMklK4GYHr0NyZvGH0UCNjh4Wn7ofRqT7ZA5boyFf5ic3rfMciawTrmWt0zFC6z6XCCiaz2PZ0ldd\/0","subscribe_time":1474609833,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-26 06:59:57 update wechat_name:箴言
+2016-09-26 06:59:57<xml>
+			<ToUserName><![CDATA[oLx9ZwMGoAMWRdfIhfNr276bWvpU]]></ToUserName>
+			<FromUserName><![CDATA[gh_f1bedb342697]]></FromUserName>
+			<CreateTime>1474873195</CreateTime>
+			<MsgType><![CDATA[text]]></MsgType>
+			<Content><![CDATA[Cannot connect to database]]></Content>
+			<FuncFlag>0</FuncFlag>
+			</xml>
+2016-09-26 07:03:36
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 07:03:36QUERY_STRING:signature=6f20c7edf5c2d6921d0e856fc859c25a8ea2a267&timestamp=1474873415&nonce=379190072&openid=oLx9ZwMGoAMWRdfIhfNr276bWvpU
+2016-09-26 07:03:36valid
+2016-09-26 07:03:36post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwMGoAMWRdfIhfNr276bWvpU]]></FromUserName>
+<CreateTime>1474873415</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[66184138]]></Content>
+<MsgId>6334533083576049636</MsgId>
+</xml>
+2016-09-26 07:03:38get wechat user info:{"subscribe":1,"openid":"oLx9ZwMGoAMWRdfIhfNr276bWvpU","nickname":"箴言","sex":1,"language":"zh_CN","city":"朝阳","province":"北京","country":"中国","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/hqupWB5g4Pib6pwWqcIpUvGOMklK4GYHr0NyZvGH0UCNjh4Wn7ofRqT7ZA5boyFf5ic3rfMciawTrmWt0zFC6z6XCCiaz2PZ0ldd\/0","subscribe_time":1474609833,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-26 07:03:38 update wechat_name:箴言
+2016-09-26 07:03:38<xml>
+			<ToUserName><![CDATA[oLx9ZwMGoAMWRdfIhfNr276bWvpU]]></ToUserName>
+			<FromUserName><![CDATA[gh_f1bedb342697]]></FromUserName>
+			<CreateTime>1474873416</CreateTime>
+			<MsgType><![CDATA[text]]></MsgType>
+			<Content><![CDATA[Cannot connect to database]]></Content>
+			<FuncFlag>0</FuncFlag>
+			</xml>
+2016-09-26 07:05:43
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 07:05:43QUERY_STRING:signature=5006545c8259e966f0879833ad2c0881ef1ce152&timestamp=1474873543&nonce=1684492973&openid=oLx9ZwMGoAMWRdfIhfNr276bWvpU
+2016-09-26 07:05:43valid
+2016-09-26 07:05:43post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwMGoAMWRdfIhfNr276bWvpU]]></FromUserName>
+<CreateTime>1474873543</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[66184138]]></Content>
+<MsgId>6334533633331863558</MsgId>
+</xml>
+2016-09-26 07:05:46get wechat user info:{"subscribe":1,"openid":"oLx9ZwMGoAMWRdfIhfNr276bWvpU","nickname":"箴言","sex":1,"language":"zh_CN","city":"朝阳","province":"北京","country":"中国","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/hqupWB5g4Pib6pwWqcIpUvGOMklK4GYHr0NyZvGH0UCNjh4Wn7ofRqT7ZA5boyFf5ic3rfMciawTrmWt0zFC6z6XCCiaz2PZ0ldd\/0","subscribe_time":1474609833,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-26 07:05:46 update wechat_name:箴言
+2016-09-26 07:05:47<xml>
+			<ToUserName><![CDATA[oLx9ZwMGoAMWRdfIhfNr276bWvpU]]></ToUserName>
+			<FromUserName><![CDATA[gh_f1bedb342697]]></FromUserName>
+			<CreateTime>1474873543</CreateTime>
+			<MsgType><![CDATA[text]]></MsgType>
+			<Content><![CDATA[根据您提供的库存编号，我们为您找到了下列钻石:
+库存编号为 66184138: 该钻石为圆形；0.9克拉，I色，净度VS2; 切工，抛光与对称性分别为：VG, VG, VG; 无荧光.  配有 IGI 证书. 价格为 3168欧元 (23588人民币)。市场价:47176人民币。
+如果您有更多问题，欢迎与我们联系。
+客服微信：limeikefu
+电话：+32 (0)3 689 73 94]]></Content>
+			<FuncFlag>0</FuncFlag>
+			</xml>
+2016-09-26 07:34:53
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 07:34:53QUERY_STRING:signature=8a05225aa59d1b55ba54afd170abba0cae174e21&timestamp=1474875292&nonce=534069157&openid=oLx9ZwJUFSb2w5cVadU4VWnj07kE
+2016-09-26 07:34:53valid
+2016-09-26 07:34:53post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwJUFSb2w5cVadU4VWnj07kE]]></FromUserName>
+<CreateTime>1474875292</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[SCAN]]></Event>
+<EventKey><![CDATA[2248]]></EventKey>
+<Ticket><![CDATA[gQHY8DoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL3ZUc2xSUzNtUnQ0LXB2ejdFUmZyAAIEjM/oVwMEAAAAAA==]]></Ticket>
+</xml>
+2016-09-26 08:04:06
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 08:04:06QUERY_STRING:signature=86dcd28714f79fb4c049ba8b4a75945c399440f3&timestamp=1474877045&nonce=335073266&openid=oLx9ZwJUFSb2w5cVadU4VWnj07kE
+2016-09-26 08:04:06valid
+2016-09-26 08:04:06post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwJUFSb2w5cVadU4VWnj07kE]]></FromUserName>
+<CreateTime>1474877045</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[66184138 ]]></Content>
+<MsgId>6334548674307335075</MsgId>
+</xml>
+2016-09-26 08:04:08get wechat user info:{"subscribe":1,"openid":"oLx9ZwJUFSb2w5cVadU4VWnj07kE","nickname":"比利时钻交所-褚潇","sex":1,"language":"zh_CN","city":"","province":"","country":"比利时","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/hqupWB5g4P8AUy4L0L7VI6g0wYibe0k46uO8v5EU6kuLBqhLRys4qKmQggWSfzbYm6fdhdrTxwyeexppeAhGRdGhHCalqNz7A\/0","subscribe_time":1443442905,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-26 08:04:08 update wechat_name:比利时钻交所-褚潇
+2016-09-26 08:04:09<xml>
+			<ToUserName><![CDATA[oLx9ZwJUFSb2w5cVadU4VWnj07kE]]></ToUserName>
+			<FromUserName><![CDATA[gh_f1bedb342697]]></FromUserName>
+			<CreateTime>1474877046</CreateTime>
+			<MsgType><![CDATA[text]]></MsgType>
+			<Content><![CDATA[根据您提供的库存编号，我们为您找到了下列钻石:
+库存编号为 66184138: 该钻石为圆形；0.9克拉，I色，净度VS2; 切工，抛光与对称性分别为：VG, VG, VG; 无荧光.  配有 IGI 证书. 价格为 3168欧元 (23588人民币)。市场价:47176人民币。
+如果您有更多问题，欢迎与我们联系。
+客服微信：limeikefu
+电话：+32 (0)3 689 73 94]]></Content>
+			<FuncFlag>0</FuncFlag>
+			</xml>
+2016-09-26 08:04:51
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 08:04:51QUERY_STRING:signature=981c8ac21687f26ce059713548fd52d37fb81589&timestamp=1474877091&nonce=646045662&openid=oLx9ZwJUFSb2w5cVadU4VWnj07kE
+2016-09-26 08:04:51valid
+2016-09-26 08:04:51post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwJUFSb2w5cVadU4VWnj07kE]]></FromUserName>
+<CreateTime>1474877091</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://mp.weixin.qq.com/s?__biz=MjM5MTkzNDIxOA==&mid=209757354&idx=1&sn=9dd5ddd2a5f142d3cde5b8a449993c5f&scene=18#rd]]></EventKey>
+<MenuId>408328043</MenuId>
+</xml>
+2016-09-26 08:05:02
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 08:05:02QUERY_STRING:signature=0fec1a7ac97445333a94fd1d50987733a50d09af&timestamp=1474877102&nonce=1177925213&openid=oLx9ZwJUFSb2w5cVadU4VWnj07kE
+2016-09-26 08:05:02valid
+2016-09-26 08:05:02post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwJUFSb2w5cVadU4VWnj07kE]]></FromUserName>
+<CreateTime>1474877102</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[KEY_PASSWEBACCOUNT]]></EventKey>
+</xml>
+2016-09-26 08:48:09
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 08:48:09QUERY_STRING:signature=c41485b2773ba09e925f1680b253532e12d60f2b&timestamp=1474879689&nonce=1969390952&openid=oLx9ZwDBjsJaRFv-5Ih42R0BdKOk
+2016-09-26 08:48:09valid
+2016-09-26 08:48:09post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwDBjsJaRFv-5Ih42R0BdKOk]]></FromUserName>
+<CreateTime>1474879689</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+2016-09-26 08:48:09referee
+2016-09-26 08:48:11
+2016-09-26 08:48:11{"subscribe":1,"openid":"oLx9ZwDBjsJaRFv-5Ih42R0BdKOk","nickname":"卉💗","sex":2,"language":"zh_CN","city":"","province":"科隆","country":"德国","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/anblvjPKYbML2JHYYOcoDWzGamGDNJjJyTxEu8bylTwTwkJWy4VicG4wn3kgwoQMHY565Cmgz6uibqILQxSZ4FTQ\/0","subscribe_time":1474879689,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-26 08:48:11inert result:1
+2016-09-26 08:48:15
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 08:48:15QUERY_STRING:signature=81150293d2df0c745e86a501a3ba75cedb19a91c&timestamp=1474879695&nonce=1790784631&openid=oLx9ZwDBjsJaRFv-5Ih42R0BdKOk
+2016-09-26 08:48:15valid
+2016-09-26 08:48:15post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwDBjsJaRFv-5Ih42R0BdKOk]]></FromUserName>
+<CreateTime>1474879695</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://mp.weixin.qq.com/s?__biz=MjM5MTkzNDIxOA==&mid=209685743&idx=1&sn=6439fb43d695360b84c799078a1ed69b&scene=18#rd]]></EventKey>
+<MenuId>408328043</MenuId>
+</xml>
+2016-09-26 08:49:08
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 08:49:08QUERY_STRING:signature=1750911a4224323d1efc68a478d53fb0a375b97a&timestamp=1474879748&nonce=336578300&openid=oLx9ZwDBjsJaRFv-5Ih42R0BdKOk
+2016-09-26 08:49:08valid
+2016-09-26 08:49:08post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwDBjsJaRFv-5Ih42R0BdKOk]]></FromUserName>
+<CreateTime>1474879748</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[怎么预约呢]]></Content>
+<MsgId>6334560283603937013</MsgId>
+</xml>
+2016-09-26 08:49:11get wechat user info:{"subscribe":1,"openid":"oLx9ZwDBjsJaRFv-5Ih42R0BdKOk","nickname":"卉💗","sex":2,"language":"zh_CN","city":"","province":"科隆","country":"德国","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/anblvjPKYbML2JHYYOcoDWzGamGDNJjJyTxEu8bylTwTwkJWy4VicG4wn3kgwoQMHY565Cmgz6uibqILQxSZ4FTQ\/0","subscribe_time":1474879689,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-26 08:49:11 update wechat_name:卉💗
+2016-09-26 08:49:11<xml>
+			<ToUserName><![CDATA[oLx9ZwDBjsJaRFv-5Ih42R0BdKOk]]></ToUserName>
+			<FromUserName><![CDATA[gh_f1bedb342697]]></FromUserName>
+			<CreateTime>1474879748</CreateTime>
+			<MsgType><![CDATA[text]]></MsgType>
+			<Content><![CDATA[]]></Content>
+			<FuncFlag>0</FuncFlag>
+			</xml>
+2016-09-26 11:40:22
+
+REMOTE_ADDR:123.125.71.55Unknown IP
+2016-09-26 11:40:22QUERY_STRING:signature=75fb4fcd2e117587c21a158fb335c0ed4ce182ac&timestamp=1472171597&nonce=1884491991&openid=oLx9ZwDfBjT9pdIXNBLCMSnUlXfo
+2016-09-26 11:40:22valid
+2016-09-26 11:40:22post:
+2016-09-26 12:33:44
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 12:33:44QUERY_STRING:signature=da7c092b42be333cca7490153890ea0d8fb495fb&timestamp=1474893218&nonce=1864871958&openid=oLx9ZwN88dr2-xlIW2sbmJ0QI4k4
+2016-09-26 12:33:44valid
+2016-09-26 12:33:44post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwN88dr2-xlIW2sbmJ0QI4k4]]></FromUserName>
+<CreateTime>1474893218</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+2016-09-26 12:33:44referee
+2016-09-26 12:33:46
+2016-09-26 12:33:46{"subscribe":1,"openid":"oLx9ZwN88dr2-xlIW2sbmJ0QI4k4","nickname":"海青🌻🌻","sex":2,"language":"zh_CN","city":"","province":"","country":"意大利","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/vesoAGiaP0POk5ricTICgouThNia3hdOHOK0ZaUZrQlGgMhEx08SQgFQr961THQX6Fyezx4nfjAzNpR2LnGtahRWc85l2hzEzKa\/0","subscribe_time":1474893218,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-26 12:33:46inert result:1
+2016-09-26 12:34:18
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 12:34:18QUERY_STRING:signature=d9544faead366f32d5ae7ff984df69ecc2c71e9b&timestamp=1474893258&nonce=554822240&openid=oLx9ZwLjR46HvwfeWO2jP7GAdU3k
+2016-09-26 12:34:18valid
+2016-09-26 12:34:18post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwLjR46HvwfeWO2jP7GAdU3k]]></FromUserName>
+<CreateTime>1474893257</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+2016-09-26 12:34:18referee
+2016-09-26 12:34:20
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 12:34:20QUERY_STRING:signature=a046e9233b87cb1a2d418ddae69b4422214661fa&timestamp=1474893259&nonce=989843166&openid=oLx9ZwN88dr2-xlIW2sbmJ0QI4k4
+2016-09-26 12:34:20valid
+2016-09-26 12:34:20post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwN88dr2-xlIW2sbmJ0QI4k4]]></FromUserName>
+<CreateTime>1474893259</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://mp.weixin.qq.com/s?__biz=MjM5MTkzNDIxOA==&mid=210299516&idx=1&sn=65cb3b49eca26b501c050ff9ce0b0cca&scene=18#rd]]></EventKey>
+<MenuId>408328043</MenuId>
+</xml>
+2016-09-26 12:34:20
+2016-09-26 12:34:20{"subscribe":1,"openid":"oLx9ZwLjR46HvwfeWO2jP7GAdU3k","nickname":"海🐲","sex":1,"language":"zh_CN","city":"","province":"热那亚","country":"意大利","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/Q3auHgzwzM4amWg3ZTsT22icgdM7H9EicBMl7gJKFYkhVdGKJ6T0PwPOzpMZOzibcjvpcZXTAmdjicoRc0XWl38NFRVzFqEy03ovDib6hEDUlkzk\/0","subscribe_time":1474893257,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-26 12:34:20inert result:1
+2016-09-26 12:35:37
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 12:35:37QUERY_STRING:signature=60df10d479a23f169a76266599cbf75bf14dd0b5&timestamp=1474893336&nonce=1847516932&openid=oLx9ZwN88dr2-xlIW2sbmJ0QI4k4
+2016-09-26 12:35:37valid
+2016-09-26 12:35:37post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwN88dr2-xlIW2sbmJ0QI4k4]]></FromUserName>
+<CreateTime>1474893336</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[KEY_STOCK_REF]]></EventKey>
+</xml>
+2016-09-26 12:36:08
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 12:36:08QUERY_STRING:signature=ad3ef99e20c730b9f869994d0042e86d7d42cf8a&timestamp=1474893367&nonce=123749975&openid=oLx9ZwN88dr2-xlIW2sbmJ0QI4k4
+2016-09-26 12:36:08valid
+2016-09-26 12:36:08post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwN88dr2-xlIW2sbmJ0QI4k4]]></FromUserName>
+<CreateTime>1474893367</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[KEY_JEWLERY]]></EventKey>
+</xml>
+2016-09-26 12:38:38
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 12:38:38QUERY_STRING:signature=d89a9f8aa4d921bbb5f8409290a2a1d9a2d55a99&timestamp=1474893518&nonce=1509923090&openid=oLx9ZwN88dr2-xlIW2sbmJ0QI4k4
+2016-09-26 12:38:38valid
+2016-09-26 12:38:38post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwN88dr2-xlIW2sbmJ0QI4k4]]></FromUserName>
+<CreateTime>1474893518</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[KEY_FANCYSHAPE]]></EventKey>
+</xml>
+2016-09-26 12:39:12
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 12:39:12QUERY_STRING:signature=dbdb52764298e2066cf80520dde76c3d7b6ad7f6&timestamp=1474893552&nonce=935722915&openid=oLx9ZwN88dr2-xlIW2sbmJ0QI4k4
+2016-09-26 12:39:12valid
+2016-09-26 12:39:12post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwN88dr2-xlIW2sbmJ0QI4k4]]></FromUserName>
+<CreateTime>1474893552</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://mp.weixin.qq.com/s?__biz=MjM5MTkzNDIxOA==&mid=209757354&idx=1&sn=9dd5ddd2a5f142d3cde5b8a449993c5f&scene=18#rd]]></EventKey>
+<MenuId>408328043</MenuId>
+</xml>
+2016-09-26 13:02:19
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 13:02:19QUERY_STRING:signature=0c329150c44458be5626dae8b50cc5a639f25da0&timestamp=1474894938&nonce=1361824545&openid=oLx9ZwMGoAMWRdfIhfNr276bWvpU
+2016-09-26 13:02:19valid
+2016-09-26 13:02:19post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwMGoAMWRdfIhfNr276bWvpU]]></FromUserName>
+<CreateTime>1474894938</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[13]]></Content>
+<MsgId>6334625524157167900</MsgId>
+</xml>
+2016-09-26 13:02:21get wechat user info:{"subscribe":1,"openid":"oLx9ZwMGoAMWRdfIhfNr276bWvpU","nickname":"箴言","sex":1,"language":"zh_CN","city":"朝阳","province":"北京","country":"中国","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/hqupWB5g4Pib6pwWqcIpUvGOMklK4GYHr0NyZvGH0UCNjh4Wn7ofRqT7ZA5boyFf5ic3rfMciawTrmWt0zFC6z6XCCiaz2PZ0ldd\/0","subscribe_time":1474609833,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-26 13:02:21 update wechat_name:箴言
+2016-09-26 13:02:23<xml>
+			<ToUserName><![CDATA[oLx9ZwMGoAMWRdfIhfNr276bWvpU]]></ToUserName>
+			<FromUserName><![CDATA[gh_f1bedb342697]]></FromUserName>
+			<CreateTime>1474894939</CreateTime>
+			<MsgType><![CDATA[text]]></MsgType>
+			<Content><![CDATA[非常抱歉，我们没有找到符合与您所提供的库存编号相对应的钻石。\n\n]]></Content>
+			<FuncFlag>0</FuncFlag>
+			</xml>
+2016-09-26 13:02:28
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 13:02:28QUERY_STRING:signature=81ba9e9a22d78af369fb5cfcaf3103076efd53c6&timestamp=1474894948&nonce=495335106&openid=oLx9ZwMGoAMWRdfIhfNr276bWvpU
+2016-09-26 13:02:28valid
+2016-09-26 13:02:28post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwMGoAMWRdfIhfNr276bWvpU]]></FromUserName>
+<CreateTime>1474894948</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[KEY_PASSWEBACCOUNT]]></EventKey>
+</xml>
+2016-09-26 13:23:03
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 13:23:03QUERY_STRING:signature=f18a18e0b06ab03ab70242a4812df878c1e9a6dc&timestamp=1474896183&nonce=754109725&openid=oLx9ZwFdqCjl6Z_kTu9j1dyZHOUw
+2016-09-26 13:23:03valid
+2016-09-26 13:23:03post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwFdqCjl6Z_kTu9j1dyZHOUw]]></FromUserName>
+<CreateTime>1474896183</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[SCAN]]></Event>
+<EventKey><![CDATA[2248]]></EventKey>
+<Ticket><![CDATA[gQHY8DoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL3ZUc2xSUzNtUnQ0LXB2ejdFUmZyAAIEjM/oVwMEAAAAAA==]]></Ticket>
+</xml>
+2016-09-26 13:28:21
+
+REMOTE_ADDR:220.181.108.153Unknown IP
+2016-09-26 13:28:21QUERY_STRING:signature=e195bbb81112bae2c1aabb00df0204d266506d29&timestamp=1469350306&nonce=1801311568&openid=oLx9ZwM1H8JaArua7tVZAPNysK8E
+2016-09-26 13:28:21valid
+2016-09-26 13:28:21post:
+2016-09-26 13:48:46
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 13:48:46QUERY_STRING:signature=ad1c454bf3f36dd70fdfc3965c0d853c12eccf13&timestamp=1474897726&nonce=1009214136&openid=oLx9ZwN88dr2-xlIW2sbmJ0QI4k4
+2016-09-26 13:48:46valid
+2016-09-26 13:48:46post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwN88dr2-xlIW2sbmJ0QI4k4]]></FromUserName>
+<CreateTime>1474897726</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[KEY_STOCK_REF]]></EventKey>
+</xml>
+2016-09-26 13:48:57
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 13:48:57QUERY_STRING:signature=ece43fbde62df9479e1e3024a54d96f6aa46db00&timestamp=1474897736&nonce=2041396838&openid=oLx9ZwN88dr2-xlIW2sbmJ0QI4k4
+2016-09-26 13:48:57valid
+2016-09-26 13:48:57post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwN88dr2-xlIW2sbmJ0QI4k4]]></FromUserName>
+<CreateTime>1474897736</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[K850105924]]></Content>
+<MsgId>6334637541475662797</MsgId>
+</xml>
+2016-09-26 13:48:59get wechat user info:{"subscribe":1,"openid":"oLx9ZwN88dr2-xlIW2sbmJ0QI4k4","nickname":"海青🌻🌻","sex":2,"language":"zh_CN","city":"","province":"","country":"意大利","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/vesoAGiaP0POk5ricTICgouThNia3hdOHOK0ZaUZrQlGgMhEx08SQgFQr961THQX6Fyezx4nfjAzNpR2LnGtahRWc85l2hzEzKa\/0","subscribe_time":1474893218,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-26 13:48:59 update wechat_name:海青🌻🌻
+2016-09-26 13:49:00<xml>
+			<ToUserName><![CDATA[oLx9ZwN88dr2-xlIW2sbmJ0QI4k4]]></ToUserName>
+			<FromUserName><![CDATA[gh_f1bedb342697]]></FromUserName>
+			<CreateTime>1474897737</CreateTime>
+			<MsgType><![CDATA[text]]></MsgType>
+			<Content><![CDATA[根据您提供的库存编号，我们为您找到了下列钻石:
+库存编号为 K850105924: 该钻石为圆形；1.28克拉，D色，净度VVS2; 切工，抛光与对称性分别为：EX, EX, EX; 无荧光.  配有 GIA 证书. 价格为 15558欧元 (115819人民币)。市场价:231638人民币。
+如果您有更多问题，欢迎与我们联系。
+客服微信：limeikefu
+电话：+32 (0)3 689 73 94]]></Content>
+			<FuncFlag>0</FuncFlag>
+			</xml>
+2016-09-26 13:55:45
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 13:55:45QUERY_STRING:signature=438bf578bbc86ad44982bd7a8d99215f8e8aba07&timestamp=1474898144&nonce=101074192&openid=oLx9ZwFdqCjl6Z_kTu9j1dyZHOUw
+2016-09-26 13:55:45valid
+2016-09-26 13:55:45post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwFdqCjl6Z_kTu9j1dyZHOUw]]></FromUserName>
+<CreateTime>1474898144</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[SCAN]]></Event>
+<EventKey><![CDATA[2248]]></EventKey>
+<Ticket><![CDATA[gQHY8DoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL3ZUc2xSUzNtUnQ0LXB2ejdFUmZyAAIEjM/oVwMEAAAAAA==]]></Ticket>
+</xml>
+2016-09-26 15:19:18
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 15:19:18QUERY_STRING:signature=12658367909595106eabceaf84038079ad248d4c&timestamp=1474903157&nonce=653496079&openid=oLx9ZwJHt6mSSfSA4U7DlbHoiz4o
+2016-09-26 15:19:18valid
+2016-09-26 15:19:18post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwJHt6mSSfSA4U7DlbHoiz4o]]></FromUserName>
+<CreateTime>1474903157</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+2016-09-26 15:19:18referee
+2016-09-26 15:19:20
+2016-09-26 15:19:20{"subscribe":1,"openid":"oLx9ZwJHt6mSSfSA4U7DlbHoiz4o","nickname":"马小淘","sex":2,"language":"zh_CN","city":"朝阳","province":"北京","country":"中国","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/PiajxSqBRaEKJVyb1MOSia2C3iaOKAaknW1YIGF82elrUWqLZXnWJy8EGamoJa7DREpEWFvAr9zgQKqcYgQuq0TPQ\/0","subscribe_time":1474903157,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-26 15:19:20inert result:1
+2016-09-26 16:33:20
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 16:33:20QUERY_STRING:signature=1805643d73ce3366b63f1c507ad5e0326370791a&timestamp=1474907600&nonce=747011337&openid=oLx9ZwOMWtEkzbh3UZ2KsATpph_Y
+2016-09-26 16:33:20valid
+2016-09-26 16:33:20post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwOMWtEkzbh3UZ2KsATpph_Y]]></FromUserName>
+<CreateTime>1474907599</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+2016-09-26 16:33:20referee
+2016-09-26 16:33:22
+2016-09-26 16:33:22{"subscribe":1,"openid":"oLx9ZwOMWtEkzbh3UZ2KsATpph_Y","nickname":"叶乐","sex":2,"language":"zh_CN","city":"","province":"","country":"法国","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/ajNVdqHZLLCvkic3of2YMCuXOVJbHEq3WeJXSSEL3SIgfhUBg8GjZ0LcAWwYl20lxQ7rUILXcdXF71yZH3hTPicOHqSw9sT7s9w0cHhFXicoxM\/0","subscribe_time":1474907599,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-26 16:33:22inert result:1
+2016-09-26 16:37:11
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 16:37:11QUERY_STRING:signature=5e1705bd1a1102edacefc32bcbb8784d09af8cdd&timestamp=1474907831&nonce=513770267&openid=oLx9ZwOMWtEkzbh3UZ2KsATpph_Y
+2016-09-26 16:37:11valid
+2016-09-26 16:37:11post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwOMWtEkzbh3UZ2KsATpph_Y]]></FromUserName>
+<CreateTime>1474907831</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[SCAN]]></Event>
+<EventKey><![CDATA[2298]]></EventKey>
+<Ticket><![CDATA[gQFs7zoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xLzlqdFRVZXptUGQ1RU9MZmlaeGZyAAIERU7pVwMEAAAAAA==]]></Ticket>
+</xml>
+2016-09-26 19:28:21
+
+REMOTE_ADDR:220.181.108.156Unknown IP
+2016-09-26 19:28:21QUERY_STRING:signature=b14267423fa66aa4f717dfc11b1376ce73cbce36&timestamp=1470103289&nonce=2132465983&openid=oLx9ZwLvDnDRMDXEvpsr2yYHjydA
+2016-09-26 19:28:21valid
+2016-09-26 19:28:21post:
+2016-09-26 19:36:03
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-26 19:36:03QUERY_STRING:signature=df4400a9e11783cad24bafc3ffc835f000c952b7&timestamp=1474918563&nonce=1273502867&openid=oLx9ZwJUFSb2w5cVadU4VWnj07kE
+2016-09-26 19:36:03valid
+2016-09-26 19:36:03post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwJUFSb2w5cVadU4VWnj07kE]]></FromUserName>
+<CreateTime>1474918563</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[us]]></Content>
+<MsgId>6334726992759538205</MsgId>
+</xml>
+2016-09-26 19:36:06get wechat user info:{"subscribe":1,"openid":"oLx9ZwJUFSb2w5cVadU4VWnj07kE","nickname":"比利时钻交所-褚潇","sex":1,"language":"zh_CN","city":"","province":"","country":"比利时","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/vesoAGiaP0PPBbAf8Th0mPtwsXcveghsjoc4uyfRurtmREdp6Kg95g18xlAok2AgnxS2Qa4TnoO2icaONw9XicONpgNzM1Og2Eh\/0","subscribe_time":1443442905,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-26 19:36:06 update wechat_name:比利时钻交所-褚潇
+2016-09-26 19:36:06<xml>
+			<ToUserName><![CDATA[oLx9ZwJUFSb2w5cVadU4VWnj07kE]]></ToUserName>
+			<FromUserName><![CDATA[gh_f1bedb342697]]></FromUserName>
+			<CreateTime>1474918563</CreateTime>
+			<MsgType><![CDATA[text]]></MsgType>
+			<Content><![CDATA[]]></Content>
+			<FuncFlag>0</FuncFlag>
+			</xml>
+2016-09-27 00:26:41
+
+REMOTE_ADDR:220.181.108.76Unknown IP
+2016-09-27 00:26:41QUERY_STRING:signature=e11a96506931d56c3d3f6248ccff6241eccb7442&timestamp=1473109888&nonce=1540890679&openid=oLx9ZwFzoHWgaA6_EDNadYY7NqeE
+2016-09-27 00:26:41valid
+2016-09-27 00:26:41post:
+2016-09-27 03:40:30
+
+REMOTE_ADDR:123.125.71.38Unknown IP
+2016-09-27 03:40:30QUERY_STRING:signature=2db5f483b5b9a7ced0f66e58d9de53f90374425f&timestamp=1467785668&nonce=1734497111&openid=oLx9ZwPp36sYzf-JfFBwtKuKNQvQ
+2016-09-27 03:40:30valid
+2016-09-27 03:40:30post:
+2016-09-27 04:57:32
+
+REMOTE_ADDR:220.181.108.77Unknown IP
+2016-09-27 04:57:32QUERY_STRING:signature=cd10bb5cc2a15eaf131ade5948fb131d844fcb15&timestamp=1473018030&nonce=298525797&openid=oLx9ZwKFSLXfn6se9x6-dTxMTlIw
+2016-09-27 04:57:32valid
+2016-09-27 04:57:32post:
+2016-09-27 07:08:50
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-27 07:08:50QUERY_STRING:signature=0e89c2d7c45c3ea651f7b899edd8b57605d9c2c8&timestamp=1474960129&nonce=158462667&openid=oLx9ZwP8EF4Cn5ZFMzUfCTfP76wI
+2016-09-27 07:08:50valid
+2016-09-27 07:08:50post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwP8EF4Cn5ZFMzUfCTfP76wI]]></FromUserName>
+<CreateTime>1474960129</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[KEY_4CS]]></EventKey>
+</xml>
+2016-09-27 07:09:02
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-27 07:09:02QUERY_STRING:signature=519c7c0b11f5143b1ef886bad3e009c4006dff6b&timestamp=1474960141&nonce=921869382&openid=oLx9ZwP8EF4Cn5ZFMzUfCTfP76wI
+2016-09-27 07:09:02valid
+2016-09-27 07:09:02post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwP8EF4Cn5ZFMzUfCTfP76wI]]></FromUserName>
+<CreateTime>1474960141</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://mp.weixin.qq.com/s?__biz=MjM5MTkzNDIxOA==&mid=209685593&idx=1&sn=da74472433fa1318ccb01817d80a0b1b&scene=18#rd]]></EventKey>
+<MenuId>408328043</MenuId>
+</xml>
+2016-09-27 07:09:20
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-27 07:09:20QUERY_STRING:signature=a509dd541dba23edd23cb4db513d8db288d45b37&timestamp=1474960159&nonce=229626260&openid=oLx9ZwP8EF4Cn5ZFMzUfCTfP76wI
+2016-09-27 07:09:20valid
+2016-09-27 07:09:20post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwP8EF4Cn5ZFMzUfCTfP76wI]]></FromUserName>
+<CreateTime>1474960159</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://mp.weixin.qq.com/s?__biz=MjM5MTkzNDIxOA==&mid=209685743&idx=1&sn=6439fb43d695360b84c799078a1ed69b&scene=18#rd]]></EventKey>
+<MenuId>408328043</MenuId>
+</xml>
+2016-09-27 07:09:44
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-27 07:09:44QUERY_STRING:signature=3b7ba51af290ca20d7a26e65aa34d3f9f677c29d&timestamp=1474960183&nonce=920487524&openid=oLx9ZwP8EF4Cn5ZFMzUfCTfP76wI
+2016-09-27 07:09:44valid
+2016-09-27 07:09:44post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwP8EF4Cn5ZFMzUfCTfP76wI]]></FromUserName>
+<CreateTime>1474960183</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://mp.weixin.qq.com/s?__biz=MjM5MTkzNDIxOA==&mid=210299516&idx=1&sn=65cb3b49eca26b501c050ff9ce0b0cca&scene=18#rd]]></EventKey>
+<MenuId>408328043</MenuId>
+</xml>
+2016-09-27 07:10:36
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-27 07:10:36QUERY_STRING:signature=8885a8e93bf4a9732fb0aa30811c728cf8bf50f0&timestamp=1474960236&nonce=344141827&openid=oLx9ZwP8EF4Cn5ZFMzUfCTfP76wI
+2016-09-27 07:10:36valid
+2016-09-27 07:10:36post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwP8EF4Cn5ZFMzUfCTfP76wI]]></FromUserName>
+<CreateTime>1474960236</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://mp.weixin.qq.com/s?__biz=MjM5MTkzNDIxOA==&mid=209685507&idx=1&sn=67376fd3ff6ee8db7d5129132c462492&scene=18#rd]]></EventKey>
+<MenuId>408328043</MenuId>
+</xml>
+2016-09-27 07:11:58
+
+REMOTE_ADDR:199.27.133.23Unknown IP
+2016-09-27 07:11:58QUERY_STRING:
+2016-09-27 07:11:58valid
+2016-09-27 07:11:58post:
+2016-09-27 08:17:13
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-27 08:17:13QUERY_STRING:signature=3927d50f2afb99cb6664ee167a04af3fee3fd4bb&timestamp=1474964233&nonce=1817237914&openid=oLx9ZwJUFSb2w5cVadU4VWnj07kE
+2016-09-27 08:17:13valid
+2016-09-27 08:17:13post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwJUFSb2w5cVadU4VWnj07kE]]></FromUserName>
+<CreateTime>1474964233</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[gg]]></Content>
+<MsgId>6334923143915958078</MsgId>
+</xml>
+2016-09-27 08:17:15get wechat user info:{"subscribe":1,"openid":"oLx9ZwJUFSb2w5cVadU4VWnj07kE","nickname":"比利时钻交所-褚潇","sex":1,"language":"zh_CN","city":"","province":"","country":"比利时","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/vesoAGiaP0PPBbAf8Th0mPtwsXcveghsjoc4uyfRurtmREdp6Kg95g18xlAok2AgnxS2Qa4TnoO2icaONw9XicONpgNzM1Og2Eh\/0","subscribe_time":1443442905,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-27 08:17:15 update wechat_name:比利时钻交所-褚潇
+2016-09-27 08:17:16<xml>
+			<ToUserName><![CDATA[oLx9ZwJUFSb2w5cVadU4VWnj07kE]]></ToUserName>
+			<FromUserName><![CDATA[gh_f1bedb342697]]></FromUserName>
+			<CreateTime>1474964233</CreateTime>
+			<MsgType><![CDATA[text]]></MsgType>
+			<Content><![CDATA[]]></Content>
+			<FuncFlag>0</FuncFlag>
+			</xml>
+2016-09-27 14:06:37
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-27 14:06:37QUERY_STRING:signature=5158213d1f9d5fe41c01319ee725264f65ef9e58&timestamp=1474985196&nonce=1639988276&openid=oLx9ZwPO16T5FborVjozyMTCPnA8
+2016-09-27 14:06:37valid
+2016-09-27 14:06:37post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwPO16T5FborVjozyMTCPnA8]]></FromUserName>
+<CreateTime>1474985196</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://mp.weixin.qq.com/s?__biz=MjM5MTkzNDIxOA==&mid=210299516&idx=1&sn=65cb3b49eca26b501c050ff9ce0b0cca&scene=18#rd]]></EventKey>
+<MenuId>408328043</MenuId>
+</xml>
+2016-09-28 04:18:13
+
+REMOTE_ADDR:199.27.133.20Unknown IP
+2016-09-28 04:18:13QUERY_STRING:
+2016-09-28 04:18:13valid
+2016-09-28 04:18:13post:
+2016-09-28 04:20:42
+
+REMOTE_ADDR:61.135.190.72Unknown IP
+2016-09-28 04:20:42QUERY_STRING:
+2016-09-28 04:20:42valid
+2016-09-28 04:20:42post:
+2016-09-28 10:24:14
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-28 10:24:14QUERY_STRING:signature=c9628bcd75acb6959d3c2277505788817e8177e6&timestamp=1475058254&nonce=2136808095&openid=oLx9ZwInmSifec_VMW5nttLeFBvA
+2016-09-28 10:24:14valid
+2016-09-28 10:24:14post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwInmSifec_VMW5nttLeFBvA]]></FromUserName>
+<CreateTime>1475058253</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[二维码/:bye]]></Content>
+<MsgId>6335326956741148625</MsgId>
+</xml>
+2016-09-28 10:24:16get wechat user info:{"subscribe":1,"openid":"oLx9ZwInmSifec_VMW5nttLeFBvA","nickname":"水之馨","sex":2,"language":"zh_CN","city":"","province":"","country":"法国","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/IbkMoSyicRXq5WZINvBQ7SibgCtKpV8yr2HZEkibY1VA5a1gsj7skekMI0WNntvNP3uZrKOE4NTXW7V9xkv4H6VicCVywcZgjy8r\/0","subscribe_time":1454666111,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-28 10:24:16 update wechat_name:水之馨
+2016-09-28 10:24:16<xml>
+			<ToUserName><![CDATA[oLx9ZwInmSifec_VMW5nttLeFBvA]]></ToUserName>
+			<FromUserName><![CDATA[gh_f1bedb342697]]></FromUserName>
+			<CreateTime>1475058254</CreateTime>
+			<MsgType><![CDATA[text]]></MsgType>
+			<Content><![CDATA[]]></Content>
+			<FuncFlag>0</FuncFlag>
+			</xml>
+2016-09-28 11:20:42
+
+REMOTE_ADDR:123.125.71.80Unknown IP
+2016-09-28 11:20:42QUERY_STRING:signature=6cfad94961a51d50b51b2be82d7ace84f3747e64&timestamp=1472303265&nonce=1979263711&openid=oLx9ZwNl49aH0LDMdZwF13K8IVyk
+2016-09-28 11:20:42valid
+2016-09-28 11:20:42post:
+2016-09-28 11:23:48
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-28 11:23:48QUERY_STRING:signature=3b670da9fcc7bf842db2694ffe0142c4c66dc285&timestamp=1475061828&nonce=140019944&openid=oLx9ZwJE2Zr6AXCxKcGGbIQgMbjY
+2016-09-28 11:23:48valid
+2016-09-28 11:23:48post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwJE2Zr6AXCxKcGGbIQgMbjY]]></FromUserName>
+<CreateTime>1475061827</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+2016-09-28 11:23:48referee
+2016-09-28 11:23:50
+2016-09-28 11:23:50{"subscribe":1,"openid":"oLx9ZwJE2Zr6AXCxKcGGbIQgMbjY","nickname":"姜琳","sex":2,"language":"zh_CN","city":"青岛","province":"山东","country":"中国","headimgurl":"http:\/\/wx.qlogo.cn\/mmopen\/hqupWB5g4Pic50gUiafibVib6mhlcibQsJEfepz3JqUmLBXM45QTiboAMd18MvEiblCbEx7Z05icC6qujyaFk2GuezkpVLdOHL5nqnLo\/0","subscribe_time":1475061827,"remark":"","groupid":0,"tagid_list":[]}
+2016-09-28 11:23:50inert result:1
+2016-09-28 12:25:15
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-28 12:25:15QUERY_STRING:signature=1d5531d4fc876cd03a4fe937ebca2247dbfab13f&timestamp=1475065514&nonce=376894665&openid=oLx9ZwInmSifec_VMW5nttLeFBvA
+2016-09-28 12:25:15valid
+2016-09-28 12:25:15post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwInmSifec_VMW5nttLeFBvA]]></FromUserName>
+<CreateTime>1475065514</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[SCAN]]></Event>
+<EventKey><![CDATA[1367]]></EventKey>
+<Ticket><![CDATA[gQGF8DoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL2xqc0JLZkxtbmQ3a1B0ZG9OUmZyAAIEs5vrVwMEAAAAAA==]]></Ticket>
+</xml>
+2016-09-28 12:26:01
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-28 12:26:01QUERY_STRING:signature=538ec652ced61cfbd73f80e0370ccff89389daf4&timestamp=1475065561&nonce=1173696865&openid=oLx9ZwInmSifec_VMW5nttLeFBvA
+2016-09-28 12:26:01valid
+2016-09-28 12:26:01post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwInmSifec_VMW5nttLeFBvA]]></FromUserName>
+<CreateTime>1475065561</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[SCAN]]></Event>
+<EventKey><![CDATA[1367]]></EventKey>
+<Ticket><![CDATA[gQGF8DoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL2xqc0JLZkxtbmQ3a1B0ZG9OUmZyAAIEs5vrVwMEAAAAAA==]]></Ticket>
+</xml>
+2016-09-28 12:26:14
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-28 12:26:14QUERY_STRING:signature=668fcbabfe7a014d14afd1b33d71c66e6ad6b918&timestamp=1475065574&nonce=161144940&openid=oLx9ZwInmSifec_VMW5nttLeFBvA
+2016-09-28 12:26:14valid
+2016-09-28 12:26:14post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwInmSifec_VMW5nttLeFBvA]]></FromUserName>
+<CreateTime>1475065574</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[KEY_BUDGET]]></EventKey>
+</xml>
+2016-09-28 13:05:27
+
+REMOTE_ADDR:162.158.179.129Unknown IP
+2016-09-28 13:05:27QUERY_STRING:signature=c0748ce57cc89fc7c98ed68827ce84f69e7d1e6a&timestamp=1475067926&nonce=1706843153&openid=oLx9ZwInmSifec_VMW5nttLeFBvA
+2016-09-28 13:05:27valid
+2016-09-28 13:05:27post:<xml><ToUserName><![CDATA[gh_f1bedb342697]]></ToUserName>
+<FromUserName><![CDATA[oLx9ZwInmSifec_VMW5nttLeFBvA]]></FromUserName>
+<CreateTime>1475067926</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://mp.weixin.qq.com/s?__biz=MjM5MTkzNDIxOA==&mid=209685507&idx=1&sn=67376fd3ff6ee8db7d5129132c462492&scene=18#rd]]></EventKey>
+<MenuId>408328043</MenuId>
+</xml>
+2016-09-28 13:39:20
+
+REMOTE_ADDR:220.181.108.160Unknown IP
+2016-09-28 13:39:20QUERY_STRING:signature=1ada987b78563df10bc7b8fe2fc0b4f7a6649ee7&timestamp=1467519739&nonce=1938587492&openid=oLx9ZwBYOQA0ezT7hpGQRcrdxhsg
+2016-09-28 13:39:20valid
+2016-09-28 13:39:20post:
