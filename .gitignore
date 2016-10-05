@@ -1,4 +1,6 @@
 .project
+.ftpquota
 .buildpath
 .settings
 log.xml
+action.log
