@@ -80,6 +80,7 @@ class wechatCallbackapiTest {
 						$conn->query ( "SET NAMES 'utf8'" );
 						$sql_check_user = 'SELECT qrcode FROM clients_list WHERE wechat_open_id = "' . $fromUsername . '"';
 						foreach ( $conn->query ( $sql_check_user ) as $r_u ) {
+							;
 						}
 						if ($r_user ['qrcode']) {
 							$content [] = array (
