@@ -91,7 +91,7 @@ class wechatCallbackapiTest {
 									"Url" => "http://www.lumiagem.com/_admin/qrcode/" . $r_u ['qrcode'] 
 							);
 							$result = $this->transmitNews ( $postObj, $content );
-							echo $resultStr;
+							echo $result;
 							exit ();
 						} else {
 							$contentStr = '您尚未被分配动态二维码，请联系我们的客服：limeikefu，申请专属二维码。';
