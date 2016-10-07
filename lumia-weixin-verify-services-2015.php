@@ -1,8 +1,5 @@
 <?php
 include_once ('log.php');
-?>
-<?php
-
 /**
  * wechat php test
  */
