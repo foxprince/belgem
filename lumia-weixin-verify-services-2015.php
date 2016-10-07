@@ -76,18 +76,19 @@ class wechatCallbackapiTest {
 						$contentStr = '<a href="https://drive.google.com/folderview?id=0B1PdwXeXM9pXfm5CVHJTeThMUDQ1MEh6QkQ1QzZvUS0xNW56dkpPSDZyUVc3WFU0RzVQWDg&usp=sharing">点击查看精美首饰款式 所有的戒托有现货或者可以订制</a>';
 					} else if ($thebutton == "KEY_QRCODE") {
 						$content = array ();
+						require_once ('includes/connection_user.php');
 						$conn = dbConnect ( 'write', 'pdo' );
 						$conn->query ( "SET NAMES 'utf8'" );
-						$sql_check_user = 'SELECT qrcode FROM clients_list WHERE wechat_open_id = "' . $fromUsername . '"';
+						$sql_check_user = 'SELECT id,qrcode FROM clients_list WHERE wechat_open_id = "' . $fromUsername . '"';
 						foreach ( $conn->query ( $sql_check_user ) as $r_u ) {
 							;
 						}
-						if ($r_user ['qrcode']) {
+						if ($r_u ['qrcode']) {
 							$content [] = array (
 									"Title" => "动态二维码",
 									"Description" => "您在利美钻石的专属动态二维码，可以发给您的朋友共享",
-									"PicUrl" => "http://www.lumiagem.com/_admin/qrcode/" . $r_u ['qrcode'],
-									"Url" => "http://www.lumiagem.com/cn/myQrcode.php" 
+									"PicUrl" => "http://www.lumiagem.com/_admin/qrcode/" . $r_u ['id'] . "_200x200.jpg",
+									"Url" => "http://www.lumiagem.com/_admin/qrcode/" . $r_u ['qrcode'] 
 							);
 							$result = $this->transmitNews ( $postObj, $content );
 							echo $resultStr;
