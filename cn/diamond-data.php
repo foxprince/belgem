@@ -152,31 +152,31 @@ $sorting=$_POST['sorting'];
 
 
 switch ($sorting){
-	
+
 	case "weight":
 	$query_sorting =' ORDER BY carat '.$sorting_direction;
 	break;
-	
+
 	case "color":
 	$query_sorting =' ORDER BY color '.$sorting_direction;
 	break;
-	
+
 	case "clarity":
 	$query_sorting =' ORDER BY clarity_number '.$sorting_direction;
 	break;
-	
+
 	case "cut":
 	$query_sorting =' ORDER BY cut_number '.$sorting_direction;
 	break;
-	
+
 	case "price":
 	$query_sorting =' ORDER BY price '.$sorting_direction;
 	break;
-	
+
 	default:
 	$query_sorting =' ORDER BY price '.$sorting_direction;
 	break;
-	
+
 }
 
 
@@ -221,12 +221,13 @@ if(isset($error[2])) exit($error[2]);
 $r=0;
 foreach($stmt as $row){
 	$r++;
-	
+
 ?>
 <tr class="<?php echo $r; ?> valueline sourse_<?php echo $row['source']; ?>" title="<?php echo $row['stock_ref']; ?>">
 <td width="38" style="width:38px;" align="center"><input type="checkbox" class="selectcheckbox" id="check_<?php echo $row['stock_ref']; ?>" onchange="makeorder('<?php echo $row['stock_ref']; ?>')" />
 <?php if($superAdmin){?>
-<button class="deleterulesbtn" onclick="chgVisiable(<?php echo $row['stock_ref'].','.$row['visiable']; ?>)" id="visiable-<?php echo $row['stock_ref']; ?>"><?php echo $row['visiable']==1?'隐藏':'取消隐藏'; ?></button><?php } ?>
+<button class="deleterulesbtn" onclick="chgVisiable(<?php echo $row['stock_ref'].','.$row['visiable']; ?>)"
+        id="visiable-<?php echo $row['stock_ref']; ?>"><?php echo $row['visiable']==1?'隐藏':'取消隐藏'; ?></button><?php } ?>
 </td>
 
 <td align="center" class="ref_number" style="width:80px;">
@@ -253,49 +254,49 @@ switch ($row['shape']){
 	case "BR":
 	$pic_where="01.gif";
 	break;
-	
+
 	case "CU":
 	$pic_where="12.gif";
 	break;
-	
+
 	case "EM":
 	$pic_where="10.gif";
 	break;
-	
+
 	case "AS":
 	$pic_where="10.gif";
 	break;
-	
+
 	case "HS":
 	$pic_where="08.gif";
 	break;
-	
+
 	case "MQ":
 	$pic_where="05.gif";
 	break;
-	
-	
+
+
 	case "OV":
 	$pic_where="11.gif";
 	break;
-	
-	
+
+
 	case "PR":
 	$pic_where="03.gif";
 	break;
-	
+
 	case "PS":
 	$pic_where="02.gif";
 	break;
-	
+
 	case "RAD":
 	$pic_where="06.gif";
 	break;
-	
+
 	case "TRI":
 	$pic_where="04.gif";
 	break;
-	
+
 	default:
 	$pic_where="01.gif";
 }
@@ -396,7 +397,7 @@ if($row['source']=='RAPNET'){
 <?php
     echo $row['price'];
 ?>
-</span> 
+</span>
 <?php
 }
 
@@ -408,7 +409,7 @@ foreach($stmt_c as $row_c){
 	$gbp=$row_c['USD_GBP'];
 	$cny=$row_c['USD_CNY'];
 }
-?> 
+?>
 
 </td>
 
@@ -472,7 +473,7 @@ for ($x=1; $x<=10; $x++) {
 <button class="gotopagebtn<?php echo $crr_class; ?>" onclick="choosethispage('<?php echo $p; ?>')"><?php echo $p; ?></button>
 <?php
 	}
-} 
+}
 ?>
 页
 
