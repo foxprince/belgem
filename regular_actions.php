@@ -272,8 +272,6 @@ while(! feof($file)){
 				}else{
 					$percentage=0;
 				}
-				if(($CashPricePercentage!=''||$PricePercentage!='')&&$percentage==0)
-					echo $DiamondID.':cash percentage:'.$CashPricePercentage.',PricePercentage:'.$PricePercentage.',percentage:'.$percentage.'---------------- the total price <br>';
 				if($percentage==0)
 					echo $DiamondID.':cash percentage:'.$CashPricePercentage.',PricePercentage:'.$PricePercentage.',percentage:'.$percentage.'---------------- the total price <br>';
 					
