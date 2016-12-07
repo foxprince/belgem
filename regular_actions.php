@@ -274,6 +274,9 @@ while(! feof($file)){
 				}
 				if(($CashPricePercentage!=''||$PricePercentage!='')&&$percentage==0)
 					echo $DiamondID.':cash percentage:'.$CashPricePercentage.',PricePercentage:'.$PricePercentage.',percentage:'.$percentage.'---------------- the total price <br>';
+				if($percentage==0)
+					echo $DiamondID.':cash percentage:'.$CashPricePercentage.',PricePercentage:'.$PricePercentage.',percentage:'.$percentage.'---------------- the total price <br>';
+					
 				$raw_price=$percentage;//te put in the database raw_price
 				$raw_price_retail=$raw_price_total;//for retail raw price(without the ratio)
 				
@@ -453,7 +456,7 @@ foreach($conn->query($sql_gothroug) as $row){
 	$crr_dia=$row['stock_ref'];
 	$ordered_by=$row['ordered_by'];
 	$wholesale_ordered_by=$row['wholesale_ordered_by'];
-	echo 'checing: '.$crr_dia;
+	//echo 'checking: '.$crr_dia;
 	if(!in_array($crr_dia, $records_from_rapnet)){
 		if(($ordered_by!=NULL && $ordered_by!='') || ($wholesale_ordered_by!='' && $wholesale_ordered_by!=NULL)){
 			$sql_update_sold='UPDATE diamonds SET status = "SOLD" WHERE stock_ref = "'.$crr_dia.'"';
