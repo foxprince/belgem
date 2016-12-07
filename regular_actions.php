@@ -222,9 +222,9 @@ while(! feof($file)){
 			$records_from_rapnet[]=$DiamondID;
 			
 			if (in_array($DiamondID, $records_in_db)) {
-				echo '<br>*************** found in db: '.$DiamondID.' do nothing';
+				//echo '<br>*************** found in db: '.$DiamondID.' do nothing';
 			}else{
-				echo '<br>not in db: '.$DiamondID.' now insert ::<br>';
+				//echo '<br>not in db: '.$DiamondID.' now insert ::<br>';
 				
 				
 				$sellername=$crr_row_content_array[$sellername_col_num];
@@ -272,6 +272,7 @@ while(! feof($file)){
 				}else{
 					$percentage=0;
 				}
+				echo $DiamondID.':percentage price:'.$percentage.'---------------- the total price <br>';
 				
 				$raw_price=$percentage;//te put in the database raw_price
 				$raw_price_retail=$raw_price_total;//for retail raw price(without the ratio)
@@ -368,12 +369,12 @@ while(! feof($file)){
 				$retail_price=processPrice($Weight, $Color, $Clarity, $cut, $polish, $symmetry, $Lab, $shape, $FluorescenceIntensity, $raw_price_total, 0, 'rapnet', 'retail');
 				
 				
-				echo 'rapnet price:'.$raw_price_total.'---------------- the total price <br>';
-				echo 'agency price:'.$price.'---------------- the total price <br>';
-				echo 'retail price:'.$retail_price.'---------------- the total price <br>';
+				//echo $DiamondID.':rapnet price:'.$raw_price_total.'---------------- the total price <br>';
+				//echo $DiamondID.':agency price:'.$price.'---------------- the total price <br>';
+				//echo $DiamondID.':retail price:'.$retail_price.'---------------- the total price <br>';
 			//	echo '网上价格：'.$TotalCashPrice.'---------------- the total price cash <br> '.$DiamondID;
 				
-				echo '<br>++++++++++++++++++++++++++<br><br>++++++++++++++++++++++++++<br>';
+				//echo '<br>++++++++++++++++++++++++++<br><br>++++++++++++++++++++++++++<br>';
 				/**/
 				
 
@@ -406,18 +407,13 @@ while(! feof($file)){
 				$stmt->bindParam(':price', $price, PDO::PARAM_INT);
 							
 				$stmt->bindParam(':from_company', $sellername, PDO::PARAM_STR);
-							
 				$stmt->bindParam(':clarity_number', $clarity_number, PDO::PARAM_STR);
 				$stmt->bindParam(':cut_number', $cut_number, PDO::PARAM_STR);
-							
 				$stmt->bindParam(':source', $source, PDO::PARAM_STR);
-				
-				
 				$stmt->execute();
 				$OK=$stmt->rowCount();
 				/**/
-				
-				echo '<br>inserted: '.$DiamondID.'<br>';
+				//echo '<br>inserted: '.$DiamondID.'<br>';
 				}else{
 				echo '<br>inserted NO !!!: no price for this diamond :'.$DiamondID.'<br>';
 				}
@@ -425,12 +421,7 @@ while(! feof($file)){
 			}
 			
 		}
-		
-		
-		
 	}
-	
-	
 	$crr_row++;
 }
 
