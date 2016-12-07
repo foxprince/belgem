@@ -272,8 +272,8 @@ while(! feof($file)){
 				}else{
 					$percentage=0;
 				}
-				echo $DiamondID.':percentage price:'.$percentage.'---------------- the total price <br>';
-				
+				if(($CashPricePercentage!=''||$PricePercentage!='')&&$percentage==0)
+					echo $DiamondID.':cash percentage:'.$CashPricePercentage.',PricePercentage:'.$PricePercentage.',percentage:'.$percentage.'---------------- the total price <br>';
 				$raw_price=$percentage;//te put in the database raw_price
 				$raw_price_retail=$raw_price_total;//for retail raw price(without the ratio)
 				
@@ -467,7 +467,7 @@ foreach($conn->query($sql_gothroug) as $row){
 		}
 		
 	}else{
-		echo ' in array. stays.<br>';
+		//echo ' in array. stays.<br>';
 	}
 }
 
