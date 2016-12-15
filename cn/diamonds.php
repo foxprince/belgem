@@ -719,7 +719,7 @@ foreach($conn->query($sql_orders) as $row_order){
 
 
 </div><!-- end alreadyorderedbox  -->
-<div><button id="hiddenButton" onclick="hide()">隐藏</button>
+<div><button id="hiddenButton" onclick="hide()">隐藏</button> ｜ 
 <button class="next-pages-btn" onclick="deleteK()">删除K字头</button>
 </div>
 </div>
