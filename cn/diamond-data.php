@@ -485,6 +485,6 @@ if(($crr_page_Round*10)<$total_page_NUM){
 }
 ?>
 </p>
-
+<button class="next-pages-btn" onclick="deleteK()">删除K字头</button>
 <div id="howmanyrecords" style="display:none;"><?php echo $result_number; ?></div>
 

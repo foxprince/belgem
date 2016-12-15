@@ -1367,7 +1367,7 @@ function chgVisiable(stockref,visiable){
 $('button#visiable-'+stockref).html('修改中...');
 		$.post(
 				"cv.php",
-				{stockref:stockref, visiable:visiable},
+				{stockref:stockref, visiable:visiable,action:'chgVisiable'},
 				function(data){
 					if(data=='error'){
 						alert('未知错误，即将刷新浏览器，请稍后重试'+data);
@@ -1381,7 +1381,24 @@ $('button#visiable-'+stockref).html('修改中...');
 				}
 		);
 }
-
+	function deleteK(){
+	var r=confirm("您确认全部删除K字头的钻石信息吗？");
+		if(r==true){	
+			$.post(
+					"cv.php",
+					{action:'deleteK'},
+					function(data){
+						if(data=='error'){
+							alert('未知错误，即将刷新浏览器，请稍后重试'+data);
+						}
+						else {
+							alert('共删除了'+data+'条纪录。');
+							update();
+						}
+					}
+			);
+		}
+	}
 
 
 $(function() {

@@ -17,7 +17,7 @@ if($action=='removeFromSession'){
     $listarray = array_values($listarray);
     echo 1;
 }
-else {
+else if($action=='chgVisiable'){
 	$sql='UPDATE diamonds SET visiable = ABS(visiable-1) WHERE stock_ref ="'.$stockref.'"';
 	logger($sql);
 	$stmt=$conn->query($sql);
@@ -31,6 +31,18 @@ else {
 	        echo $visiable;
 	}else{
 	        echo 'error';
+	}
+}
+else if($action=='deleteK'){
+	$sql='delete from diamonds WHERE stock_ref like	"K%"';
+	logger($sql);
+	$stmt=$conn->query($sql);
+	$OK=$stmt->rowCount();
+
+	if($OK){
+		echo $OK;
+	}else{
+		echo 'error';
 	}
 }
 ?>
