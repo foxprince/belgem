@@ -18,7 +18,7 @@ function processPrice($thecarat, $thecolor, $theclarity, $thecut, $thepolish, $t
 		}
 	}
 	
-	$rawprice_with_discount=$very_raw_price*(100-$discount)/100;
+	//$rawprice_with_discount=$very_raw_price*(100-$discount)/100;
 	
 	$sql_rules='SELECT * FROM price_settings_'.$source.'_'.$target.' ORDER BY id ASC';
 	$stmt=$conn->query($sql_rules);
@@ -104,17 +104,14 @@ function processPrice($thecarat, $thecolor, $theclarity, $thecut, $thepolish, $t
 			
 		}
 	}
-	
-	if(isset($final_price)){
-		return $final_price;
-	}else{
+	if(!isset($final_price)){
 		if($target=='retail'){
-			return ($very_raw_price*(100+$sellerdiscount-$discount)/100*1.3);
+			$final_price=($very_raw_price*(100+$sellerdiscount-$discount)/100*1.3);
 		}else{
-			return ($very_raw_price*(100+$sellerdiscount-$discount)/100*1.2);
+			$final_price=($very_raw_price*(100+$sellerdiscount-$discount)/100*1.2);
 		}
 		//return 'contact for price';
 	}
-	
+	return $final_price*$thecarat;
 }
 ?>
