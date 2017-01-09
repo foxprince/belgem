@@ -1,5 +1,5 @@
 <?php
-if ($_SESSION ['username'] == 'super001') {
+if ($_SESSION ['account_level'] == '0') {
 	$superAdmin = true;
 } else {
 	$superAdmin = false;
@@ -218,7 +218,7 @@ if ($superAdmin) {
 
 
 <?php
-if ($username == 'super001') {
+if ($superAdmin) {
 	?>
 <td align="center" style="width: 59px;">公司名</td>
 <?php

@@ -3,7 +3,7 @@ session_start();
 if(!isset($_SESSION['username'])){
 	exit('');
 }
-if($_SESSION['username']=='super001'){
+if($_SESSION ['account_level']=='0'){
 	$superAdmin=true;
 }else{
 	$superAdmin=false;
