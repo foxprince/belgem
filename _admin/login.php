@@ -10,7 +10,7 @@ if (isset ( $_POST ['login'] ) && isset ( $_POST ['pwd'] )) {
 	$conn = dbConnect ( 'write', 'pdo' );
 	$conn->query ( "SET NAMES 'utf8'" );
 	
-	$sql = 'SELECT * FROM users WHERE disable=0 and user_name = "' . $username . '" AND pass_word = "' . $password . '"';
+	$sql = 'SELECT * FROM users WHERE disable=0 and user_name = binary "' . $username . '" AND pass_word = binary "' . $password . '"';
 	$stmt = $conn->query ( $sql );
 	$userexits = $stmt->rowCount ();
 	
