@@ -113,7 +113,7 @@ function processPrice($thecarat, $thecolor, $theclarity, $thecut, $thepolish, $t
 		}
 	}
 	$final_price=$very_raw_price*(100+$sellerdiscount-$discount)/100*$crr_rule_value;
-	logger('price of '.$thecertificate.' calu : '.$very_raw_price.'*(100+'.$sellerdiscount+'-'.$discount.')/100*'.$crr_rule_value.'*'.$thecarat);
+	//logger($source.' '.$target.' price of '.$thecertificate.' calu : '.$very_raw_price.'*(100+'.$sellerdiscount.'-'.$discount.')/100*'.$crr_rule_value.'*'.$thecarat);
 	return $final_price*$thecarat;
 }
 ?>
