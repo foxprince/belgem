@@ -366,8 +366,8 @@ while(! feof($file)){
 				
 				
 				
-				$price=processPrice($Weight, $Color, $Clarity, $cut, $polish, $symmetry, $Lab, $shape, $FluorescenceIntensity, $raw_price_total, 0, 'rapnet', 'agency');
-				$retail_price=processPrice($Weight, $Color, $Clarity, $cut, $polish, $symmetry, $Lab, $shape, $FluorescenceIntensity, $raw_price_total, 0, 'rapnet', 'retail');
+				$price=processPrice($Weight, $Color, $Clarity, $cut, $polish, $symmetry, $Lab, $shape, $FluorescenceIntensity, $raw_price_total, $percentage, 'rapnet', 'agency');
+				$retail_price=processPrice($Weight, $Color, $Clarity, $cut, $polish, $symmetry, $Lab, $shape, $FluorescenceIntensity, $raw_price_total, $percentage, 'rapnet', 'retail');
 				
 				
 				//echo $DiamondID.':rapnet price:'.$raw_price_total.'---------------- the total price <br>';
