@@ -90,23 +90,23 @@ function processPrice($thecarat, $thecolor, $theclarity, $thecut, $thepolish, $t
 			/*if($thecarat>$crr_rule_weight_from && $thecarat<=$crr_rule_weight_to && in_array($thecolor, $crr_rule_color_array) && in_array($theclarity, $crr_rule_clarity_array) && in_array($thecut, $crr_rule_cut_array) && in_array($thepolish, $crr_rule_polish_array) && in_array($thesymmetry, $crr_rule_symmetry_array) && in_array($thecertificate, $crr_rule_certificate_array) && in_array($thefluo, $crr_rule_fluo_array) && in_array($theshape, $crr_rule_shape_array)){
 				$final_price=$rawprice_with_discount*$crr_rule_value;
 			}*/
-			if($theshape=='BR'){
-				if($thecarat>$crr_rule_weight_from && $thecarat<=$crr_rule_weight_to && in_array($thecolor, $crr_rule_color_array) && in_array($theclarity, $crr_rule_clarity_array) && in_array($thecut, $crr_rule_cut_array) && in_array($thepolish, $crr_rule_polish_array) && in_array($thesymmetry, $crr_rule_symmetry_array) && in_array($thefluo, $crr_rule_fluo_array) && in_array($theshape, $crr_rule_shape_array) && in_array($thecertificate, $crr_rule_certificate_array)){
-					$crr_rule_value=$r['the_para_value'];
-					break;
-					//$final_price=$very_raw_price*(100+$sellerdiscount-$discount)/100*$crr_rule_value;
-				}
-			}else{
+// 			if($theshape=='BR'){
+// 				if($thecarat>$crr_rule_weight_from && $thecarat<=$crr_rule_weight_to && in_array($thecolor, $crr_rule_color_array) && in_array($theclarity, $crr_rule_clarity_array) && in_array($thecut, $crr_rule_cut_array) && in_array($thepolish, $crr_rule_polish_array) && in_array($thesymmetry, $crr_rule_symmetry_array) && in_array($thefluo, $crr_rule_fluo_array) && in_array($theshape, $crr_rule_shape_array) && in_array($thecertificate, $crr_rule_certificate_array)){
+// 					$crr_rule_value=$r['the_para_value'];
+// 					break;
+// 				}
+// 			}else{
 				if($thecarat>$crr_rule_weight_from && $thecarat<=$crr_rule_weight_to && in_array($thecolor, $crr_rule_color_array) && in_array($theclarity, $crr_rule_clarity_array) && in_array($thepolish, $crr_rule_polish_array) && in_array($thesymmetry, $crr_rule_symmetry_array) && in_array($thefluo, $crr_rule_fluo_array) && in_array($theshape, $crr_rule_shape_array) && in_array($thecertificate, $crr_rule_certificate_array)){
 					$crr_rule_value=$r['the_para_value'];
 					break;
 					//$final_price=$very_raw_price*(100+$sellerdiscount-$discount)/100*$crr_rule_value;
 				}
-			}
+			//}
 			
 		}
 	}
 	if(!isset($crr_rule_value)){
+		echo 'not set rule for '.$thecarat.'<br/>';
 		if($target=='retail'){
 			$crr_rule_value=1.3;
 		}else{
