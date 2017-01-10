@@ -277,37 +277,6 @@ while(! feof($file)){
 					
 				$raw_price=$percentage;//te put in the database raw_price
 				$raw_price_retail=$raw_price_total;//for retail raw price(without the ratio)
-				
-				
-				
-				
-				/*
-				if($Weight>=0.9){
-					$price=round((1.18*$raw_price_retail));
-				}else{
-					$price=round((1.2*$raw_price_retail));
-				}
-				
-				if($Weight<=0.89){
-					$price_ratio_r=1.35;
-				}else if($Weight>0.89 && $Weight<=1.99){
-					$price_ratio_r=1.3;
-				}else if($Weight>1.99 && $Weightt<=2.99){
-					$price_ratio_r=1.2;
-				}else if($Weight>2.99){
-					$price_ratio_r=1.15;
-				}
-				
-				
-				
-				$price_ratio_r=1.3;
-				
-				
-				$retail_price=$raw_price_retail*$price_ratio_r;
-				*/
-				
-				
-				
 				$clarity_number='-';
 				$cut_number='-';
 				
@@ -366,11 +335,11 @@ while(! feof($file)){
 				
 				
 				
-				$price=processPrice(1, $Color, $Clarity, $cut, $polish, $symmetry, $Lab, $shape, $FluorescenceIntensity, $raw_price_total, 0, 'rapnet', 'agency');
-				$retail_price=processPrice(1, $Color, $Clarity, $cut, $polish, $symmetry, $Lab, $shape, $FluorescenceIntensity, $raw_price_total, 0, 'rapnet', 'retail');
+				$price=processPrice($Weight, $Color, $Clarity, $cut, $polish, $symmetry, $Lab, $shape, $FluorescenceIntensity, $raw_price_total, 0, 'rapnet', 'agency');
+				$retail_price=processPrice($Weight, $Color, $Clarity, $cut, $polish, $symmetry, $Lab, $shape, $FluorescenceIntensity, $raw_price_total, 0, 'rapnet', 'retail');
 				
 				
-				echo $DiamondID.':rapnet price:'.$raw_price_total.'-';
+				echo $DiamondID.',weight:'.$Weight.':rapnet price:'.$raw_price_total.'-';
 				echo ':agency price:'.$price.'-';
 				echo ':retail price:'.$retail_price.'<br>';
 			//	echo '网上价格：'.$TotalCashPrice.'---------------- the total price cash <br> '.$DiamondID;
