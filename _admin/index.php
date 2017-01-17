@@ -553,6 +553,7 @@ if('GIA'==$thelab){
 </td>
 <td>
 <?php if($crr_searching_price=="price"){echo $row['price'];}else if ($crr_searching_price=="retail_price"){echo $row['retail_price'];}?>
+（<?php echo $row['raw_price']; ?>）
 </td>
 <td>
 <?php
