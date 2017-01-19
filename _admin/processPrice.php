@@ -24,7 +24,8 @@ function processPrice($thecarat, $thecolor, $theclarity, $thecut, $thepolish, $t
 	$sql_rules='SELECT * FROM price_settings_'.$source.'_'.$target.' ORDER BY id ASC';
 	$stmt=$conn->query($sql_rules);
 	$rulesfound=$stmt->rowCount();
-	
+	if($thecolor>'M')
+		$thecolor = 'M';
 	if($rulesfound){
 		foreach($stmt as $r){
 			$crr_rule_weight_from=$r['carat_from'];
@@ -38,8 +39,9 @@ function processPrice($thecarat, $thecolor, $theclarity, $thecut, $thepolish, $t
 			$crr_rule_certificate_raw=$r['certificate'];
 			$crr_rule_fluo_raw=$r['fluo'];
 			$crr_rule_shape_raw=$r['shape'];
-			
-			
+			$crr_rule_weight_from=floatval($crr_rule_weight_from);
+			$crr_rule_weight_to=floatval($crr_rule_weight_to);
+			$thecarat=floatval($thecarat);
 			if(isset($crr_rule_color_array)){
 				unset($crr_rule_color_array);
 			}
@@ -90,22 +92,23 @@ function processPrice($thecarat, $thecolor, $theclarity, $thecut, $thepolish, $t
 			/*if($thecarat>$crr_rule_weight_from && $thecarat<=$crr_rule_weight_to && in_array($thecolor, $crr_rule_color_array) && in_array($theclarity, $crr_rule_clarity_array) && in_array($thecut, $crr_rule_cut_array) && in_array($thepolish, $crr_rule_polish_array) && in_array($thesymmetry, $crr_rule_symmetry_array) && in_array($thecertificate, $crr_rule_certificate_array) && in_array($thefluo, $crr_rule_fluo_array) && in_array($theshape, $crr_rule_shape_array)){
 				$final_price=$rawprice_with_discount*$crr_rule_value;
 			}*/
-// 			if($theshape=='BR'){
-// 				if($thecarat>$crr_rule_weight_from && $thecarat<=$crr_rule_weight_to && in_array($thecolor, $crr_rule_color_array) && in_array($theclarity, $crr_rule_clarity_array) && in_array($thecut, $crr_rule_cut_array) && in_array($thepolish, $crr_rule_polish_array) && in_array($thesymmetry, $crr_rule_symmetry_array) && in_array($thefluo, $crr_rule_fluo_array) && in_array($theshape, $crr_rule_shape_array) && in_array($thecertificate, $crr_rule_certificate_array)){
-// 					$crr_rule_value=$r['the_para_value'];
-// 					break;
-// 				}
-// 			}else{
-				if($thecarat>$crr_rule_weight_from && $thecarat<=$crr_rule_weight_to && in_array($thecolor, $crr_rule_color_array) && in_array($theclarity, $crr_rule_clarity_array) && in_array($thepolish, $crr_rule_polish_array) && in_array($thesymmetry, $crr_rule_symmetry_array) && in_array($thefluo, $crr_rule_fluo_array) && in_array($theshape, $crr_rule_shape_array) && in_array($thecertificate, $crr_rule_certificate_array)){
+ 			if($theshape=='BR'){
+ 				if($thecarat>=$crr_rule_weight_from && $thecarat<=$crr_rule_weight_to && in_array($thecolor, $crr_rule_color_array) && in_array($theclarity, $crr_rule_clarity_array) && in_array($thecut, $crr_rule_cut_array) && in_array($thepolish, $crr_rule_polish_array) && in_array($thesymmetry, $crr_rule_symmetry_array) && in_array($thefluo, $crr_rule_fluo_array) && in_array($theshape, $crr_rule_shape_array) && in_array($thecertificate, $crr_rule_certificate_array)){
+ 					$crr_rule_value=$r['the_para_value'];
+ 					break;
+ 				}
+ 			}else{
+				if($thecarat>=$crr_rule_weight_from && $thecarat<=$crr_rule_weight_to && in_array($thecolor, $crr_rule_color_array) && in_array($theclarity, $crr_rule_clarity_array) && in_array($thepolish, $crr_rule_polish_array) && in_array($thesymmetry, $crr_rule_symmetry_array) && in_array($thefluo, $crr_rule_fluo_array) && in_array($theshape, $crr_rule_shape_array) && in_array($thecertificate, $crr_rule_certificate_array)){
 					$crr_rule_value=$r['the_para_value'];
 					break;
 				}
-			//}
+			}
 			
 		}
 	}
 	if(!isset($crr_rule_value)){
-		echo 'not set rule for '.$thecarat.'<br/>';
+		echo 'not set rule for '.$thecarat.','.$thecolor.','.$theclarity.','.$thecut.','.$thepolish.','.$thesymmetry.','.$thecertificate.','.$theshape.','.$thefluo.','.$source.','.$target.'<br/>';
+		logger($thecarat.','.$thecolor.','.$theclarity.','.$thecut.','.$thepolish.','.$thesymmetry.','.$thecertificate.','.$theshape.','.$thefluo.','.$rawprice.','.$sellerdiscount.','.$source.','.$target);
 		if($target=='retail'){
 			$crr_rule_value=1.3;
 		}else{
