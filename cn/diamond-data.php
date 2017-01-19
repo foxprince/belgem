@@ -398,10 +398,11 @@ if($row['source']=='RAPNET'){
     echo $row['price'];
 ?>
 </span>
+</td>
 <?php
 }
 
-
+if($_SESSION['username']!='gnkf'){
 $sql_currency='SELECT * FROM convert_currency';
 $stmt_c=$conn->query($sql_currency);
 foreach($stmt_c as $row_c){
@@ -411,7 +412,6 @@ foreach($stmt_c as $row_c){
 }
 ?>
 
-</td>
 
 <td align="center">
 <span class="valuetxt" style="width:70px;"><?php echo round($row['price']*$eur); ?></span>
@@ -424,7 +424,7 @@ foreach($stmt_c as $row_c){
 <td align="center">
 <span class="valuetxt" style="width:70px;"><?php echo round($row['price']*$gbp); ?></span>
 </td>
-
+<?php }?>
 <td width="30" style="width:28px; overflow:hidden; white-space:normal;" class="companyname" id="c_name_dia_<?php echo $row['stock_ref']; ?>">
 
 <?php
