@@ -372,33 +372,24 @@ if($superAdmin&&$_SESSION['username']!='gnkf'){
 <?php echo $row['price']; ?>
 </span>
 
-<?php
-if($row['source']=='RAPNET'){
-?>
-<br />
-<span style="font-size:10px;">
-(原价:<?php echo $row['raw_price']; ?>)
-</span>
-<?php
-}else{
-?>
-<br />
-<span style="font-size:10px;">
-(折扣:<?php echo $row['raw_price']; ?>)
-</span>
-<?php
-}
-?>
+	<?php
+	if($row['source']=='RAPNET'){
+	?>
+	<br />
+	<span style="font-size:10px;">
+	(原价:<?php echo $row['raw_price']; ?>)
+	</span>
+	<?php
+	}else{
+	?>
+	<br />
+	<span style="font-size:10px;">
+	(折扣:<?php echo $row['raw_price']; ?>)
+	</span>
+	<?php
+	}
+	?>
 
-<?php
-}else{
-?>
-<span class="valuetxt" style="width:70px;">
-<?php
-    echo $row['price'];
-?>
-</span>
-</td>
 <?php
 }
 
