@@ -416,12 +416,14 @@ if($account_level==0){
 <td width="78">证书</td>
 <td width="68" >
 价格($)
+	<?php if($_SESSION['username']!='gnkf'){?>
 	<form action="" method="post" id="pricefilterform" class="hideforprint">
 	<select name="filter_price" id="filter_price">
 	<option value="price" <?php if($crr_searching_price=="price") {echo 'selected="selected"';} ?>>批发价</option>
 	<option value="retail_price" <?php if($crr_searching_price=="retail_price") {echo 'selected="selected"';} ?>>零售价</option>
 	</select>
 	</form>
+	<?php }?>
 </td>
 <td width="68"> 预定人
 	<form action="" method="post" id="userfilterform" class="hideforprint">
