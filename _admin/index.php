@@ -50,7 +50,7 @@ if(isset($_POST['filter_user']) && $_POST['filter_user']!='all'){
 if(isset($_POST['filter_price'])){
 	$crr_searching_price=$_POST['filter_price'];
 }else{
-	$crr_searching_price="price";
+	$crr_searching_price="retail_price";
 }
 
 ?>
