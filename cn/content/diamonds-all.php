@@ -207,11 +207,11 @@ if ($superAdmin) {
 	?>
 <td align="center" style="width: 72px;">零售价格($)</td>
 <?php } ?>
-<td align="center" style="width: 72px;"><img class="iconarrow" id="arrow_sorting_price" width="8"
+<?php if($_SESSION['username']!='gnkf'){ ?>
+        <td align="center" style="width: 72px;"><img class="iconarrow" id="arrow_sorting_price" width="8"
           src="../images/site_elements/arrow-down.png" />
           <button type="button" class="sortbtn" title="点击排序" style="background-color: #FFF; color: #000;"
             onclick="sorting_price()">价格($)</button></td>
-        <?php if($_SESSION['username']!='gnkf'){ ?>
         <td align="center" style="width: 72px;">价格(€)</td>
         <td align="center" style="width: 72px;">价格(¥)</td>
         <td align="center" style="width: 72px;">价格(£)</td>

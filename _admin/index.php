@@ -470,7 +470,7 @@ if($account_level==0){
 </thead>
 <tbody>
 <?php	
-	$sql_orders='SELECT diamonds.id, diamonds.stock_ref, stock_num_rapnet, shape, carat, color, fancy_color, clarity, grading_lab, certificate_number, cut_grade, polish, symmetry, fluorescence_intensity, raw_price_retail, price, retail_price,diamonds.from_company, diamonds.ordered_time, paid_amount, comment, source, status, users.user_name, users.real_name, users.account_level, users.given_by FROM diamonds, users WHERE diamonds.ordered_by IS NOT NULL AND diamonds.ordered_by <> "" AND diamonds.ordered_by = users.user_name AND diamonds.order_sent IS NULL '.$companyfiltercondition.$userfiltercondition.' ORDER BY ordered_time DESC';
+	$sql_orders='SELECT diamonds.id, diamonds.stock_ref, stock_num_rapnet, shape, carat, color, fancy_color, clarity, grading_lab, certificate_number, cut_grade, polish, symmetry, fluorescence_intensity, raw_price_retail, price, raw_price,retail_price,diamonds.from_company, diamonds.ordered_time, paid_amount, comment, source, status, users.user_name, users.real_name, users.account_level, users.given_by FROM diamonds, users WHERE diamonds.ordered_by IS NOT NULL AND diamonds.ordered_by <> "" AND diamonds.ordered_by = users.user_name AND diamonds.order_sent IS NULL '.$companyfiltercondition.$userfiltercondition.' ORDER BY ordered_time DESC';
 	$counter=0;
 	foreach($conn->query($sql_orders) as $row){
 		$counter++;

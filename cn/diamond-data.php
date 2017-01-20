@@ -366,7 +366,7 @@ if($superAdmin){
 <?php } ?>
 <td align="center">
 <?php
-if($superAdmin){
+if($superAdmin&&$_SESSION['username']!='gnkf'){
 ?>
 <span class="valuetxt" style="width:70px;">
 <?php echo $row['price']; ?>
