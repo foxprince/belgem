@@ -510,6 +510,8 @@ if($stock_ref_label_found){
 			$_SESSION['col_raw_price_total']=$iii;
 		}else if($crr_label=='Back -%') {
 			$_SESSION['col_percentage']=$iii;
+		}else if($crr_label=='SYM') {
+			$_SESSION['col_symmetry']=$iii;
 		}
 		/*else if((strpos($crr_label,'list') !== false) ){
 				$_SESSION['col_raw_price_total']=$iii;//----------------------//
@@ -781,28 +783,6 @@ for($iiii_ori_discount = 1; $iiii_ori_discount<=$total_cols; $iiii_ori_discount+
 ###############################################
 ###############################################
 
-if($_SESSION['col_therawprice']<0){
-	$all_label_found=false;
-?>
-<p class="label-choosing-para">
-原价含原有折扣：
-<select name="label-therawprice">
-<option value="-">请选择：</option>
-<?php
-for($iiii = 1; $iiii<=$total_cols; $iiii++){
-	$crr_label=trim($data->raw($row_label,$iiii));
-?>
-<option value="<?php echo $iiii; ?>"><?php echo $crr_label; ?></option>
-<?php
-}	
-?>
-</select>
-</p>
-<?php
-}
-###############################################
-###############################################
-###############################################
 
 if($_SESSION['col_certificate_number']<0){
 	$all_label_found=false;
