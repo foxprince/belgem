@@ -502,7 +502,7 @@ if($stock_ref_label_found){
 				$_SESSION['col_cut_grade']=$iii;//----------------------//
 		}else if((strpos($crr_label,'polish') !== false)){
 				$_SESSION['col_polish']=$iii;//----------------------//
-		}else if((strpos($crr_label,'symmetry') !== false)){
+		}else if((strpos($crr_label,'sym') !== false)){
 				$_SESSION['col_symmetry']=$iii;//----------------------//
 		}else if((strpos($crr_label,'fluo') !== false)){
 				$_SESSION['col_fluorescence_intensity']=$iii;//----------------------//
