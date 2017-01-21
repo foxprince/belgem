@@ -143,9 +143,9 @@ if(!isset($_SESSION['col_fluorescence_intensity']) || $new_file_uploaded){
 if(!isset($_SESSION['col_percentage']) || $new_file_uploaded){
 	$_SESSION['col_percentage']=-8;//----------------------12
 }//
-if(!isset($_SESSION['col_therawprice']) || $new_file_uploaded){
-	$_SESSION['col_therawprice']=-8;//----------------------13
-}//
+//if(!isset($_SESSION['col_therawprice']) || $new_file_uploaded){
+	//$_SESSION['col_therawprice']=-8;//----------------------13
+//}
 if(!isset($_SESSION['col_raw_price_total']) || $new_file_uploaded){
 	$_SESSION['col_raw_price_total']=-8;//----------------------14
 }//
@@ -506,13 +506,18 @@ if($stock_ref_label_found){
 				$_SESSION['col_symmetry']=$iii;//----------------------//
 		}else if((strpos($crr_label,'fluo') !== false)){
 				$_SESSION['col_fluorescence_intensity']=$iii;//----------------------//
-		}else if((strpos($crr_label,'list') !== false) ){
+		}else if($crr_label=='List') {
+			$_SESSION['col_raw_price_total']=$iii;
+		}else if($crr_label=='Back -%') {
+			$_SESSION['col_percentage']=$iii;
+		}
+		/*else if((strpos($crr_label,'list') !== false) ){
 				$_SESSION['col_raw_price_total']=$iii;//----------------------//
 		}else if((strpos($crr_label,'back') !== false)){
 				$_SESSION['col_percentage']=$iii;//----------------------//
 		}else if(strpos($crr_label,'msp') !== false){
 				$_SESSION['col_therawprice']=$iii;//----------------------//
-		}else if((strpos($crr_label,'certificate no') !== false) || (strpos($crr_label,'certi') !== false && strpos($crr_label,'no') !== false)){
+		}*/else if((strpos($crr_label,'certificate no') !== false) || (strpos($crr_label,'certi') !== false && strpos($crr_label,'no') !== false)){
 				$_SESSION['col_certificate_number']=$iii;//----------------------
 		}
 	}

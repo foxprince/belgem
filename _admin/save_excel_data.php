@@ -46,7 +46,7 @@ $col_polish=$_SESSION['col_polish'];
 $col_symmetry=$_SESSION['col_symmetry'];
 $col_fluorescence_intensity=$_SESSION['col_fluorescence_intensity'];
 $col_percentage=$_SESSION['col_percentage'];
-$col_therawprice=$_SESSION['col_therawprice'];
+//$col_therawprice=$_SESSION['col_therawprice'];
 $col_raw_price_total=$_SESSION['col_raw_price_total'];
 
 
