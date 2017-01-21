@@ -506,11 +506,11 @@ if($stock_ref_label_found){
 				$_SESSION['col_symmetry']=$iii;//----------------------//
 		}else if((strpos($crr_label,'fluo') !== false)){
 				$_SESSION['col_fluorescence_intensity']=$iii;//----------------------//
-		}else if($crr_label=='List') {
+		}else if($crr_label=='list') {
 			$_SESSION['col_raw_price_total']=$iii;
-		}else if($crr_label=='Back -%') {
+		}else if($crr_label=='back -%') {
 			$_SESSION['col_percentage']=$iii;
-		}else if($crr_label=='SYM') {
+		}else if($crr_label=='sym') {
 			$_SESSION['col_symmetry']=$iii;
 		}
 		/*else if((strpos($crr_label,'list') !== false) ){
