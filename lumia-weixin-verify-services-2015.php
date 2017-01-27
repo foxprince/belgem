@@ -236,7 +236,7 @@ class wechatCallbackapiTest {
 						$msgType = "text";
 						$contentStr = "感谢您关注比利时利美珠宝首饰公司!" . $feedbackwebpass;
 						if($referee=='1118')
-							$contentStr = $contentStr." 您已经成功参加德淘网17年新年活动。";
+							$contentStr = $contentStr." \n您已扫描成功，获得Lumia利美钻石提供的150欧电子优惠卷，本次电子优惠扫码活动有效期截止到2月1日。持有效电子优惠卷的朋友可在2017年7月28日前购买Lumia指定产品，0.7克拉到0.79克拉时出示此优惠卷，即可享受立减优惠。";
 						$resultStr = sprintf ( $textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr );
 						echo $resultStr;
 					}
