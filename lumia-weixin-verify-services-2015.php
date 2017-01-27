@@ -235,6 +235,8 @@ class wechatCallbackapiTest {
 						
 						$msgType = "text";
 						$contentStr = "感谢您关注比利时利美珠宝首饰公司!" . $feedbackwebpass;
+						if($referee=='1118')
+							$contentStr = $contentStr." 您已经成功参加德淘网17年新年活动。";
 						$resultStr = sprintf ( $textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr );
 						echo $resultStr;
 					}
