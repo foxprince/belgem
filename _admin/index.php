@@ -414,6 +414,21 @@ if($account_level==0){
 <td width="88">切工</td>
 <td width="58">荧光</td>
 <td width="78">证书</td>
+<td width="128">钻石所在公司
+	<form action="" method="post" id="companyfilterform" class="hideforprint">
+	<select name="filter_company" id="filter_company" >
+	<option value="all" <?php if($crr_company=="all") {echo 'selected="selected"';} ?>>全部</option>
+	<?php
+	//fetch all the companies
+	foreach($conn->query('SELECT DISTINCT from_company FROM diamonds ') as $row_company){
+	?>
+	<option value="<?php echo $row_company['from_company']; ?>" <?php if($crr_company==$row_company['from_company']) {echo 'selected="selected"';} ?>><?php echo $row_company['from_company']; ?></option>
+	<?php
+	}
+	?>
+	</select>
+	</form>
+</td>
 <td width="68" >
 价格($)
 	<?php if($_SESSION['username']!='gnkf'){?>
@@ -451,21 +466,6 @@ if($account_level==0){
 </td>
 <td width="88">预定时间</td>
 <td width="88">原价</td>
-<td width="128">钻石所在公司
-	<form action="" method="post" id="companyfilterform" class="hideforprint">
-	<select name="filter_company" id="filter_company" >
-	<option value="all" <?php if($crr_company=="all") {echo 'selected="selected"';} ?>>全部</option>
-	<?php
-	//fetch all the companies
-	foreach($conn->query('SELECT DISTINCT from_company FROM diamonds ') as $row_company){
-	?>
-	<option value="<?php echo $row_company['from_company']; ?>" <?php if($crr_company==$row_company['from_company']) {echo 'selected="selected"';} ?>><?php echo $row_company['from_company']; ?></option>
-	<?php
-	}
-	?>
-	</select>
-	</form>
-</td>
 <td width="68">所属总代理</td>
 <td class="lastcell">操作</td>
 </tr>
@@ -557,19 +557,6 @@ if('GIA'==$thelab){
 <?php if($crr_searching_price=="price"){echo $row['price'];}else if ($crr_searching_price=="retail_price"){echo $row['retail_price'];}?>
 （<?php echo $row['raw_price']; ?>）
 </td>
-<td>
-<?php
-if($row['account_level']<=1){
-	echo $row['real_name'];
-}else{
-	foreach($conn->query('SELECT real_name FROM users WHERE user_name = "'.$row['given_by'].'"') as $row_mainagent){
-		echo $row_mainagent['real_name'];
-	}
-}
-?>
-</td>
-<td><?php echo $row['ordered_time']; ?></td>
-<td><?php echo $row['raw_price_retail']; ?></td>
 <?php
 if($row['from_company']=='-' || $row['from_company']=='' || $row['from_company']==NULL){
 	if($row['source']=='EXCEL'){
@@ -587,6 +574,20 @@ if($row['from_company']=='-' || $row['from_company']=='' || $row['from_company']
 <?php
 }
 ?>
+<td>
+<?php
+if($row['account_level']<=1){
+	echo $row['real_name'];
+}else{
+	foreach($conn->query('SELECT real_name FROM users WHERE user_name = "'.$row['given_by'].'"') as $row_mainagent){
+		echo $row_mainagent['real_name'];
+	}
+}
+?>
+</td>
+<td><?php echo $row['ordered_time']; ?></td>
+<td><?php echo $row['raw_price_retail']; ?></td>
+
 <td><?php echo $row['real_name']; ?></td>
 <td class="lastcell" style="overflow:hidden;">
 已付：<input id="paid_<?php echo $row['stock_ref']; ?>" type="text" class="paidfield" title="<?php echo $row['paid_amount']; ?>" style="width:65px;" value="<?php echo $row['paid_amount']; ?>" />$<span style="display:none;" id="ori_price_<?php echo $row['stock_ref']; ?>"><?php echo $row['price']; ?></span>
