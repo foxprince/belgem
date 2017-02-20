@@ -553,10 +553,6 @@ if('GIA'==$thelab){
 ?>
 <a target="_blank" style="color:#000; font-size:9px;" href="<?php echo $certi_link; ?>"><?php echo $certi_num; ?></a>
 </td>
-<td>
-<?php if($crr_searching_price=="price"){echo $row['price'];}else if ($crr_searching_price=="retail_price"){echo $row['retail_price'];}?>
-（<?php echo $row['raw_price']; ?>）
-</td>
 <?php
 if($row['from_company']=='-' || $row['from_company']=='' || $row['from_company']==NULL){
 	if($row['source']=='EXCEL'){
@@ -574,6 +570,10 @@ if($row['from_company']=='-' || $row['from_company']=='' || $row['from_company']
 <?php
 }
 ?>
+<td>
+<?php if($crr_searching_price=="price"){echo $row['price'];}else if ($crr_searching_price=="retail_price"){echo $row['retail_price'];}?>
+（<?php echo $row['raw_price']; ?>）
+</td>
 <td>
 <?php
 if($row['account_level']<=1){
