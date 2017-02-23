@@ -391,8 +391,8 @@ if($superAdmin&&$_SESSION['username']!='gnkf'){
 	?>
 
 <?php
-}
-
+}?></td>
+<?php
 if($_SESSION['username']!='gnkf'){
 $sql_currency='SELECT * FROM convert_currency';
 $stmt_c=$conn->query($sql_currency);

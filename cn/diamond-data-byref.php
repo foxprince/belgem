@@ -4,10 +4,10 @@ session_start ();
 if (! isset ( $_SESSION ['username'] )) {
 	exit ( '' );
 }
-if ($_SESSION ['username'] == 'super001') {
-	$superAdmin = true;
-} else {
-	$superAdmin = false;
+if($_SESSION ['account_level']=='0'){
+	$superAdmin=true;
+}else{
+	$superAdmin=false;
 }
 
 if (! isset ( $_POST ['stockref'] )) {
@@ -22,13 +22,6 @@ require_once ('../includes/connection.php');
 $conn = dbConnect ( 'write', 'pdo' );
 $conn->query ( "SET NAMES 'utf8'" );
 
-$sql_currency = 'SELECT * FROM convert_currency';
-$stmt_c = $conn->query ( $sql_currency );
-foreach ( $stmt_c as $row_c ) {
-	$eur = $row_c ['USD_EUR'];
-	$gbp = $row_c ['USD_GBP'];
-	$cny = $row_c ['USD_CNY'];
-}
 
 $sql_crr = 'SELECT * FROM diamonds WHERE stock_ref = "' . $crr_search . '" OR certificate_number = "' . $crr_search . '" OR stock_num_rapnet = "' . $crr_search . '"';
 
@@ -188,7 +181,7 @@ foreach ( $listarray as $ref ) {
 <?php } ?>
 <td align="center">
 <?php
-			if ($superAdmin) {
+if($superAdmin&&$_SESSION['username']!='gnkf'){
 				?>
 <span class="valuetxt" style="width: 70px;">
 <?php echo $row['price']; ?>
@@ -220,9 +213,17 @@ foreach ( $listarray as $ref ) {
 </span>
 <?php
 			}
-			
 			?>
-
+<?php
+if($_SESSION['username']!='gnkf'){
+$sql_currency='SELECT * FROM convert_currency';
+$stmt_c=$conn->query($sql_currency);
+foreach($stmt_c as $row_c){
+	$eur=$row_c['USD_EUR'];
+	$gbp=$row_c['USD_GBP'];
+	$cny=$row_c['USD_CNY'];
+}
+?>
 </td>
     <td align="center"><span class="valuetxt" style="width: 70px;"><?php echo round($row['price']*$eur); ?></span></td>
     <td align="center"><span class="valuetxt" style="width: 70px;"><?php echo round($row['price']*$cny); ?></span></td>
@@ -230,7 +231,7 @@ foreach ( $listarray as $ref ) {
     <td width="30" style="width: 28px; overflow: hidden; white-space: normal;" class="companyname"
       id="c_name_dia_<?php echo $row['stock_ref']; ?>">
 
-<?php
+<?php }
 			if ($superAdmin) {
 				?>
 
