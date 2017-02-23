@@ -465,7 +465,7 @@ if($account_level==0){
 	</form>
 </td>
 <td width="88">预定时间</td>
-<td width="88">原价</td>
+<?php if($_SESSION['username']!='gnkf'){?><td width="88">原价</td><?php } ?>
 <td width="68">所属总代理</td>
 <td class="lastcell">操作</td>
 </tr>
@@ -586,7 +586,8 @@ if($row['account_level']<=1){
 ?>
 </td>
 <td><?php echo $row['ordered_time']; ?></td>
-<td><?php echo $row['raw_price_retail']; ?></td>
+<?php if($_SESSION['username']!='gnkf'){?><td><?php echo $row['raw_price_retail']; ?></td><?php } ?>
+
 
 <td><?php echo $row['real_name']; ?></td>
 <td class="lastcell" style="overflow:hidden;">
