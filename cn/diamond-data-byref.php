@@ -204,15 +204,7 @@ if($superAdmin&&$_SESSION['username']!='gnkf'){
 				?>
 
 <?php
-			} else {
-				?>
-<span class="valuetxt" style="width: 70px;">
-<?php
-				echo $row ['price'];
-				?>
-</span>
-<?php
-			}
+			} 
 			?>
 <?php
 if($_SESSION['username']!='gnkf'){
