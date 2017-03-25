@@ -89,6 +89,7 @@ div.footer-inner {
 
 </script>
 <!--百度seo自动推送 -->
+<script>
 (function(){
     var bp = document.createElement('script');
     var curProtocol = window.location.protocol.split(':')[0];

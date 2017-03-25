@@ -32,6 +32,7 @@ if(isset($crr_page) && $crr_page=='jewelry'){
   ga('send', 'pageview');
 
 </script>
+<script>
 <!--百度seo自动推送 -->
 (function(){
     var bp = document.createElement('script');
