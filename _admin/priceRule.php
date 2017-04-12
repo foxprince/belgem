@@ -526,8 +526,8 @@ if(isset($disc_message)){
 </form>
 </div>
 
-<span id="source" title="<?php $_GET['source']?>"></span>
-<span id="target" title="<?php $_GET['target']?>"></span>
+<span id="source" title="<?php echo $_GET['source'];?>"></span>
+<span id="target" title="<?php echo $_GET['target'];?>"></span>
 
 <div id="conditionbox">
 <h3>已有规则</h3>
