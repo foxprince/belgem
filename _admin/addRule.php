@@ -68,7 +68,7 @@ if($maxnumfound){
 }
 
 
-$sql='INSERT INTO price_settings (source,sale_to,carat_from, carat_to, color, clarity, cut, symmetry, polish, fluo, certificate, shape, the_para_value, priority) VALUES (:source,:target,:carat_from, :carat_to, :color, :clarity, :cut, :symmetry, :polish, :fluo, :certificate, :shape, :the_para_value, :priority)';
+$sql='INSERT INTO price_settings (source,target,carat_from, carat_to, color, clarity, cut, symmetry, polish, fluo, certificate, shape, the_para_value, priority) VALUES (:source,:target,:carat_from, :carat_to, :color, :clarity, :cut, :symmetry, :polish, :fluo, :certificate, :shape, :the_para_value, :priority)';
 $stmt=$conn->prepare($sql);	  
 $stmt->bindParam(':source', $source, PDO::PARAM_STR);
 $stmt->bindParam(':target', $target, PDO::PARAM_STR);

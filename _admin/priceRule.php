@@ -254,9 +254,6 @@ img.shapeicon{
 
 <script type="text/javascript">
 $(document).ready(function(){
-	var source=$('#source').attr('title');
-	var target=$('#target').attr('title');
-	alert($source+'==='+$target);	
 });
 
 function switchShapeChoice(crrid, crrvalue){
@@ -445,7 +442,7 @@ function updateRule(ruleID){
 	if(idoftherule=='new'){
 		$.post(
 				"addRule.php", 
-				{source:$source, target:$target, carat_from: $carat_from, carat_to: $carat_to, color: $color, clarity: $clarity, shape: $shape, cut: $cut, polish: $polish, symmetry: $symmetry, certificate: $certificate, fluo: $fluo, the_para_value:$the_para_value}, 
+				{source:$('#source').attr('title'), target:$('#target').attr('title'), carat_from: $carat_from, carat_to: $carat_to, color: $color, clarity: $clarity, shape: $shape, cut: $cut, polish: $polish, symmetry: $symmetry, certificate: $certificate, fluo: $fluo, the_para_value:$the_para_value}, 
 				function(data){
 					if(data=='ok'){
 						$('button#modifyrules-'+idoftherule).html('保存成功！');
@@ -459,7 +456,7 @@ function updateRule(ruleID){
 	}else{
 		$.post(
 				"updateRule.php", 
-				{source:$source, target:$target, recordid:idoftherule, carat_from: $carat_from, carat_to: $carat_to, color: $color, clarity: $clarity, shape: $shape, cut: $cut, polish: $polish, symmetry: $symmetry, certificate: $certificate, fluo: $fluo, the_para_value:$the_para_value}, 
+				{source:$('#source').attr('title'), target:$('#target').attr('title'), recordid:idoftherule, carat_from: $carat_from, carat_to: $carat_to, color: $color, clarity: $clarity, shape: $shape, cut: $cut, polish: $polish, symmetry: $symmetry, certificate: $certificate, fluo: $fluo, the_para_value:$the_para_value}, 
 				function(data){
 					if(data=='ok'){
 						$('button#modifyrules-'+idoftherule).html('保存成功！');
@@ -480,7 +477,7 @@ function deleteRule(ruleID){
 		$('button#deleterules-'+idoftherule).html('处理中...');
 		$.post(
 				"deleteRule.php", 
-				{source:$source, target:$target, recordid:idoftherule}, 
+				{source:$('#source').attr('title'), target:$('#target').attr('title'), recordid:idoftherule}, 
 				function(data){
 					if(data=='ok'){
 						$('button#deleterules-'+idoftherule).html('删除成功！');
