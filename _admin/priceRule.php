@@ -334,7 +334,8 @@ function switchFluoChoice(crrid, crrvalue){
 
 function updateRule(ruleID){
 	
-	
+	var source=$('#source').attr('title');
+	var target=$('#target').attr('title')
 	var idoftherule=ruleID;
 	
 	var $carat_from=$('input#weightfrom_for_'+idoftherule).val();
@@ -525,7 +526,8 @@ if(isset($disc_message)){
 </form>
 </div>
 
-
+<span id="source" title="<?php $_GET['source']?>"></span>
+<span id="target" title="<?php $_GET['target']?>"></span>
 
 <div id="conditionbox">
 <h3>已有规则</h3>
