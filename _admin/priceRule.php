@@ -606,7 +606,7 @@ if(in_array("CU", $crr_shape_choice_array)){
 
 
 <p class="weightchoice-box"><label>重量：</label> <input id="weightfrom_for_<?php echo $rr['id']; ?>" class="weightfromvalue emph" type="text" value="<?php echo $rr['carat_from']; ?>" /> - <input id="weightto_for_<?php echo $rr['id']; ?>" class="weighttovalue emph" type="text" value="<?php echo $rr['carat_to']; ?>" /> ct</p>
-<?php if(!_GET('color')){?>
+<?php if(!$_GET['color']){?>
 <div class="theouterbox-color"><label>颜色：</label>
 
 <?php
