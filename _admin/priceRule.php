@@ -359,7 +359,7 @@ function updateRule(ruleID){
 		$color+=crr_color;
 		colorchoiceCounter++;
 	});
-	
+	$color+=$('#fancy').attr('title');
 	var claritychoiceCounter=0;
 	$('.claritychoicebox_'+idoftherule+' > span.chosen').each(function(){
 		var crr_clarity=$(this).attr('title');
@@ -606,7 +606,7 @@ if(in_array("CU", $crr_shape_choice_array)){
 
 
 <p class="weightchoice-box"><label>重量：</label> <input id="weightfrom_for_<?php echo $rr['id']; ?>" class="weightfromvalue emph" type="text" value="<?php echo $rr['carat_from']; ?>" /> - <input id="weightto_for_<?php echo $rr['id']; ?>" class="weighttovalue emph" type="text" value="<?php echo $rr['carat_to']; ?>" /> ct</p>
-
+<?php if(!_GET('color')){?>
 <div class="theouterbox-color"><label>颜色：</label>
 
 <?php
@@ -668,9 +668,11 @@ if(in_array("M", $crr_color_choice_array)){
 <span class="color-switch-btn<?php echo $crr_color_K_Chosen ?>" title="K" onclick="switchColorChoice(<?php echo $rr['id']; ?>, 'K')">K</span>
 <span class="color-switch-btn<?php echo $crr_color_L_Chosen ?>" title="L" onclick="switchColorChoice(<?php echo $rr['id']; ?>, 'L')">L</span>
 <span class="color-switch-btn<?php echo $crr_color_M_Chosen ?>" title="M" onclick="switchColorChoice(<?php echo $rr['id']; ?>, 'M')">M</span>
-
-
+<span id="fancy" />
 </div><!-- end colorchoicebox -->
+<?php }else{?>
+<span id="fancy" title="fancy"/>
+<?php }?>	
 </div><!-- END theouterbox-color -->
 
 
