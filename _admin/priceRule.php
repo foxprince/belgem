@@ -534,8 +534,8 @@ if(isset($disc_message)){
 <?php
 $sql_rules='SELECT * FROM price_settings where source="'.$source.'" and target="'.$target.'"';
 if($_GET['color'])
-	$sql_rules += ' and color="FANCY"';
-$sql_rules += ' ORDER BY priority ASC';
+	$sql_rules =$sql_rules. ' and color="FANCY"';
+$sql_rules = $sql_rules.' ORDER BY priority ASC';
 $stmt_rules=$conn->query($sql_rules);
 $rulesfound=$stmt_rules->rowCount();
 
