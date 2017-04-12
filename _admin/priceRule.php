@@ -254,10 +254,10 @@ img.shapeicon{
 
 <script type="text/javascript">
 $(document).ready(function(){
-	
+	var source=$('#source').attr('title');
+	var target=$('#target').attr('title');
+	alert($source+'==='+$target);	
 });
-var source=$('#source').attr('title');
-var target=$('#target').attr('title');
 
 function switchShapeChoice(crrid, crrvalue){
 	var crr_id=crrid;
