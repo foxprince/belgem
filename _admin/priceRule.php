@@ -256,6 +256,8 @@ img.shapeicon{
 $(document).ready(function(){
 	
 });
+var source=$('#source').attr('title');
+var target=$('#target').attr('title');
 
 function switchShapeChoice(crrid, crrvalue){
 	var crr_id=crrid;
@@ -334,8 +336,6 @@ function switchFluoChoice(crrid, crrvalue){
 
 function updateRule(ruleID){
 	
-	var source=$('#source').attr('title');
-	var target=$('#target').attr('title');
 	var idoftherule=ruleID;
 	
 	var $carat_from=$('input#weightfrom_for_'+idoftherule).val();
