@@ -57,7 +57,7 @@ $the_para_value=$_POST['the_para_value'];
 
 $maxnum=88;
 
-$sql_max_records='SELECT COUNT(*) AS totalrules FROM price_settings_'.$source.'_'.$target;
+$sql_max_records='SELECT COUNT(*) AS totalrules FROM price_settings where source="'.$source.'" and target="'.$target.'"';
 $stmt_mum=$conn->query($sql_max_records);
 $maxnumfound=$stmt_mum->rowcount();
 
@@ -68,8 +68,10 @@ if($maxnumfound){
 }
 
 
-$sql='INSERT INTO price_settings_'.$source.'_'.$target.' (carat_from, carat_to, color, clarity, cut, symmetry, polish, fluo, certificate, shape, the_para_value, priority) VALUES (:carat_from, :carat_to, :color, :clarity, :cut, :symmetry, :polish, :fluo, :certificate, :shape, :the_para_value, :priority)';
+$sql='INSERT INTO price_settings (source,sale_to,carat_from, carat_to, color, clarity, cut, symmetry, polish, fluo, certificate, shape, the_para_value, priority) VALUES (:source,:target,:carat_from, :carat_to, :color, :clarity, :cut, :symmetry, :polish, :fluo, :certificate, :shape, :the_para_value, :priority)';
 $stmt=$conn->prepare($sql);	  
+$stmt->bindParam(':source', $source, PDO::PARAM_STR);
+$stmt->bindParam(':target', $target, PDO::PARAM_STR);
 $stmt->bindParam(':carat_from', $carat_from, PDO::PARAM_STR);
 $stmt->bindParam(':carat_to', $carat_to, PDO::PARAM_STR);
 $stmt->bindParam(':color', $color, PDO::PARAM_STR);

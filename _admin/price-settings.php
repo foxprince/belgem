@@ -121,9 +121,13 @@ include('navi.php');
 
 
 
-<a class="thebigbtn" href="price-settings-retail.php">零售网站价格管理</a>
+<a class="thebigbtn" href="priceRule.php?source=excel&saleTo=retail">零售网站价格管理-EXCEL数据</a>
+<a class="thebigbtn" href="priceRule.php?source=rapnet&saleTo=retail">零售网站价格管理-RAPNET数据</a>
+<a class="thebigbtn" href="priceRule.php?source=fancy&saleTo=retail">零售网站价格管理-彩钻数据</a>
 
-<a class="thebigbtn" href="price-settings-agency.php">代购网站价格管理</a>
+<a class="thebigbtn" href="priceRule.php?source=excel&saleTo=agency">代购网站价格管理-EXCEL数据</a>
+<a class="thebigbtn" href="priceRule.php?source=rapnet&saleTo=agency">代购网站价格管理-RAPNET数据</a>
+<a class="thebigbtn" href="priceRule.php?source=fancy&saleTo=agency">零售网站价格管理-彩钻数据</a>
 
 <a class="thebigbtn" href="price-currency.php">汇率设定</a>
 

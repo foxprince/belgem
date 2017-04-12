@@ -44,7 +44,7 @@ $source=$_POST['source'];
 $target=$_POST['target'];
 $recordid=$_POST['recordid'];
 
-$sql='DELETE FROM price_settings_'.$source.'_'.$target.' WHERE id = '.$recordid;
+$sql='DELETE FROM price_settings where id = '.$recordid;
 $stmt=$conn->query($sql);
 $deleted=$stmt->rowcount();
 

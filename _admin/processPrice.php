@@ -21,7 +21,7 @@ function processPrice($thecarat, $thecolor, $theclarity, $thecut, $thepolish, $t
 
 	//$rawprice_with_discount=$very_raw_price*(100-$discount)/100;
 
-	$sql_rules='SELECT * FROM price_settings_'.$source.'_'.$target.' ORDER BY id ASC';
+	$sql_rules='SELECT * FROM price_settings where source="'.$source.'" and target="'.$target.'" ORDER BY id ASC';
 	$stmt=$conn->query($sql_rules);
 	$rulesfound=$stmt->rowCount();
 	if($thecolor>'M')
