@@ -532,7 +532,10 @@ if(isset($disc_message)){
   <ul id="existingrules">
   
 <?php
-$sql_rules='SELECT * FROM price_settings where source="'.$source.'" and target="'.$target.'" ORDER BY priority ASC';
+$sql_rules='SELECT * FROM price_settings where source="'.$source.'" and target="'.$target.'"';
+if($_GET['color'])
+	$sql_rules += ' and color="FANCY"';
+$sql_rules += ' ORDER BY priority ASC';
 $stmt_rules=$conn->query($sql_rules);
 $rulesfound=$stmt_rules->rowCount();
 
@@ -668,7 +671,7 @@ if(in_array("M", $crr_color_choice_array)){
 <span class="color-switch-btn<?php echo $crr_color_K_Chosen ?>" title="K" onclick="switchColorChoice(<?php echo $rr['id']; ?>, 'K')">K</span>
 <span class="color-switch-btn<?php echo $crr_color_L_Chosen ?>" title="L" onclick="switchColorChoice(<?php echo $rr['id']; ?>, 'L')">L</span>
 <span class="color-switch-btn<?php echo $crr_color_M_Chosen ?>" title="M" onclick="switchColorChoice(<?php echo $rr['id']; ?>, 'M')">M</span>
-<span id="fancy" />
+<span id="fancy" ></span>
 </div><!-- end colorchoicebox -->
 <?php }else{?>
 <span id="fancy" title="FANCY"/>
