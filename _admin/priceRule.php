@@ -673,10 +673,10 @@ if(in_array("M", $crr_color_choice_array)){
 <span class="color-switch-btn<?php echo $crr_color_M_Chosen ?>" title="M" onclick="switchColorChoice(<?php echo $rr['id']; ?>, 'M')">M</span>
 <span id="fancy" ></span>
 </div><!-- end colorchoicebox -->
+</div><!-- END theouterbox-color -->
 <?php }else{?>
 <span id="fancy" title="FANCY"/>
 <?php }?>	
-</div><!-- END theouterbox-color -->
 
 
 
@@ -987,7 +987,7 @@ if(in_array("None", $crr_fluo_choice_array)){
 
 
 <p class="weightchoice-box"><label>重量：</label> <input id="weightfrom_for_new" class="weightfromvalue emph" type="text" value="" /> - <input id="weightto_for_new" class="weighttovalue emph" type="text" value="" /> ct</p>
-
+<?php if(!$_GET['color']){?>
 <div class="theouterbox-color"><label>颜色：</label>
 <div class="colorchoicebox colorchoicebox_new">
 
@@ -1002,10 +1002,12 @@ if(in_array("None", $crr_fluo_choice_array)){
 <span class="color-switch-btn" title="L" onclick="switchColorChoice('new', 'L')">L</span>
 <span class="color-switch-btn" title="M" onclick="switchColorChoice('new', 'M')">M</span>
 
-
+<span id="fancy" ></span>
 </div><!-- end colorchoicebox -->
 </div><!-- END theouterbox-color -->
-
+<?php }else{?>
+<span id="fancy" title="FANCY"/>
+<?php }?>
 
 
 <div class="theouterbox-clarity"><label>净度：</label>
