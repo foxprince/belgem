@@ -335,7 +335,7 @@ function switchFluoChoice(crrid, crrvalue){
 function updateRule(ruleID){
 	
 	var source=$('#source').attr('title');
-	var target=$('#target').attr('title')
+	var target=$('#target').attr('title');
 	var idoftherule=ruleID;
 	
 	var $carat_from=$('input#weightfrom_for_'+idoftherule).val();
