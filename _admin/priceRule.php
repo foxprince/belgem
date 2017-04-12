@@ -671,7 +671,7 @@ if(in_array("M", $crr_color_choice_array)){
 <span id="fancy" />
 </div><!-- end colorchoicebox -->
 <?php }else{?>
-<span id="fancy" title="fancy"/>
+<span id="fancy" title="FANCY"/>
 <?php }?>	
 </div><!-- END theouterbox-color -->
 
