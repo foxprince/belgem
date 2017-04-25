@@ -805,7 +805,8 @@ if(preg_match($pattern_ref, $crr_message)){
 			$thefeedbackcontentforwechatuser='抱歉，我们无法找到符合您要求的钻石，请调整挑选条件并重试。'.'\n\n'.$holidaymessage;;
 		}
 	}else{
-		exit();
+		$thefeedbackcontentforwechatuser='欢迎关注利美钻石，我们有24小时客服随时为您提供服务，欢迎添加（ 客服号:limeikefu ）';
+		//exit();
 	}	
 }
 //logger($thefeedbackcontentforwechatuser);
