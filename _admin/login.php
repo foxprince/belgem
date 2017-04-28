@@ -3,8 +3,8 @@ $error = '';
 if (isset ( $_POST ['login'] ) && isset ( $_POST ['pwd'] )) {
 	// echo $_POST['login'];
 	session_start ();
-	$username = $_POST ['login'];
-	$password = $_POST ['pwd'];
+	$username = addslashes($_POST ['login']);
+	$password = addslashes($_POST ['pwd']);
 	
 	require_once ('../includes/connection.php');
 	$conn = dbConnect ( 'write', 'pdo' );
