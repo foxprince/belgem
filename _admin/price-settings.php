@@ -92,10 +92,10 @@ div#maincontent{
 }
 a.thebigbtn{
 	display:inline-block;
-	padding:58px 128px;
+	padding:38px 108px;
 	background-color:#333;
 	color:#FFF;
-	font-size:18px;
+	font-size:14px;
 	margin-right:20px;
 	text-decoration:none;
 }
@@ -129,7 +129,7 @@ include('navi.php');
 <a class="thebigbtn" href="priceRule.php?source=excel&target=agency">代购网站价格管理-EXCEL数据</a>
 <a class="thebigbtn" href="priceRule.php?source=rapnet&target=agency">代购网站价格管理-RAPNET数据</a>
 <a class="thebigbtn" href="priceRule.php?source=excel&target=agency&color=fancy">代购网站价格管理--彩钻EXCEL数据</a>
-<a class="thebigbtn" href="priceRule.php?source=rapnet&target=agency&color=fancy">代购网站价格管理--彩钻EXCEL数据</a>
+<a class="thebigbtn" href="priceRule.php?source=rapnet&target=agency&color=fancy">代购网站价格管理--彩钻RAPNET数据</a>
 <hr/>
 <a class="thebigbtn" href="price-currency.php">汇率设定</a>
 
