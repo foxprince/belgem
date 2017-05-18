@@ -1,7 +1,7 @@
 <?php
 //======================onlineserver====================================
 
-function dbConnect_dia($usertype='write', $connectionType = 'pdo') {
+function dbConnect($usertype='write', $connectionType = 'pdo') {
   $host = 'localhost';
   $db = 'sihui_belgem';
   if ($usertype  == 'read') {
@@ -27,7 +27,7 @@ function dbConnect_dia($usertype='write', $connectionType = 'pdo') {
 /**/
 //=====================localserver==================================
 /*
-function dbConnect_dia($usertype='write', $connectionType = 'pdo') {
+function dbConnect($usertype='write', $connectionType = 'pdo') {
   $host = 'localhost';
   $db = 'belgem';
   if ($usertype  == 'read') {
