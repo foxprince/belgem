@@ -1,8 +1,6 @@
 <?php
 include_once ('log.php');
 require_once ('includes/connection.php');
-$conn = dbConnect ( 'write', 'pdo' );
-$conn->query ( "SET NAMES 'utf8'" );
 
 /**
  * wechat php test
@@ -26,6 +24,8 @@ class wechatCallbackapiTest {
 	}
 	public function responseMsg() {
 		// get post data, May be due to the different environments
+		$conn = dbConnect ( 'write', 'pdo' );
+		$conn->query ( "SET NAMES 'utf8'" );
 		$postStr = $GLOBALS ["HTTP_RAW_POST_DATA"];
 		logger ( "post:" . $postStr );
 		// extract post data
