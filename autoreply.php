@@ -17,7 +17,7 @@ $feedback_message=-1;//to record if the matching diamond id is found or not, 0 m
 ########################################
 ########################################
 require_once ('includes/connection.php');
-$dia_conn=dbConnect('write','pdo');
+$conn=dbConnect('write','pdo');
 ########################################
 ########################################
 ###### done! connected to the database #
@@ -31,7 +31,7 @@ if(preg_match($pattern_ref, $crr_message)){
 	
 
 	$sql='SELECT * FROM diamonds WHERE stock_ref = "'.$crr_message.'" AND status = "AVAILABLE"';
-	$stmt_dia=$dia_conn->query($sql);
+	$stmt_dia=$conn->query($sql);
 	$found_dia=$stmt_dia->rowCount();
 	
 	if($found_dia){
@@ -71,7 +71,7 @@ if(preg_match($pattern_ref, $crr_message)){
 		}
 		
 		$sql_currency='SELECT * FROM convert_currency';
-		$stmt_currency=$dia_conn->query($sql_currency);
+		$stmt_currency=$conn->query($sql_currency);
 		foreach($stmt_currency as $row_currency){
 			$USD_EUR=$row_currency['USD_EUR'];
 			$USD_GBP=$row_currency['USD_GBP'];
@@ -157,7 +157,7 @@ if(preg_match($pattern_ref, $crr_message)){
 			$str_price_unit = trim(str_replace($queryprice, "", $crr_message));
 			
 			$sql_currency='SELECT * FROM convert_currency';
-			foreach($dia_conn->query($sql_currency) as $row_currency){
+			foreach($conn->query($sql_currency) as $row_currency){
 				$USD_EUR=$row_currency['USD_EUR'];
 				$USD_GBP=$row_currency['USD_GBP'];
 				$USD_CNY=$row_currency['USD_CNY'];
@@ -186,16 +186,16 @@ if(preg_match($pattern_ref, $crr_message)){
 				$sql_price_goodprice='SELECT * FROM diamonds WHERE shape = "BR" AND (color = "D" OR color = "E" OR color = "F" OR color = "G"  OR color = "H" OR color = "I") AND (clarity = "SI1" OR clarity = "SI2" OR clarity = "VS1" OR clarity = "VS2") AND ((cut_grade = "VG" AND polish = "VG") OR (symmetry = "VG" AND cut_grade = "VG") OR (symmetry = "VG" AND polish = "VG")) AND retail_price BETWEEN '.$searchprice1.' AND '.$searchprice2.' AND status = "AVAILABLE" ORDER BY price ASC LIMIT 1';
 				$sql_price_lowprice='SELECT * FROM diamonds WHERE shape = "BR" AND (color = "J" OR color = "K" OR color = "G"  OR color = "H" OR color = "I") AND (clarity = "SI1" OR clarity = "SI2" OR clarity = "VS1" OR clarity = "VS2") AND ((cut_grade = "G") OR (symmetry = "G") OR (polish = "G")) AND retail_price BETWEEN '.$searchprice1.' AND '.$searchprice2.' AND status = "AVAILABLE" ORDER BY price ASC LIMIT 1';
 				
-				$stmt_price_perfect=$dia_conn->query($sql_price_perfect);
+				$stmt_price_perfect=$conn->query($sql_price_perfect);
 				$found_price_perfect=$stmt_price_perfect->rowCount();
 				
-				$stmt_price_size=$dia_conn->query($sql_price_size);
+				$stmt_price_size=$conn->query($sql_price_size);
 				$found_price_size=$stmt_price_size->rowCount();
 				
-				$stmt_price_goodprice=$dia_conn->query($sql_price_goodprice);
+				$stmt_price_goodprice=$conn->query($sql_price_goodprice);
 				$found_price_goodprice=$stmt_price_goodprice->rowCount();
 				
-				$stmt_price_lowprice=$dia_conn->query($sql_price_lowprice);
+				$stmt_price_lowprice=$conn->query($sql_price_lowprice);
 				$found_price_lowprice=$stmt_price_lowprice->rowCount();
 				
 				$thefeedbackcontentforwechatuser=$holidaymessage.'根据您的价位，我们为您推荐如下钻石：\n\n';
@@ -691,10 +691,10 @@ if(preg_match($pattern_ref, $crr_message)){
 		
 		$sql_4c='SELECT * FROM diamonds WHERE shape= "'.$r_shape.'" AND carat >= "'.$r_size1.'" AND carat < "'.$r_size2.'" '.$r_color_q.' AND '.$r_clarity_q.$sql_part_cut.$sql_part_polish.$sql_part_symm.'AND grading_lab = "'.$r_lab.'" AND status = "AVAILABLE" ORDER BY price ASC LIMIT 5';
 		
-		$stmt_4c=$dia_conn->query($sql_4c);
+		$stmt_4c=$conn->query($sql_4c);
 		$found_4c=$stmt_4c->rowCount();
 		
-		$error=$dia_conn->errorInfo();
+		$error=$conn->errorInfo();
 		if(isset($error[2])) {
 			//$thefeedbackcontentforwechatuser=$error[2];
 			$thefeedbackcontentforwechatuser='非常抱歉，发生未知错误，请重试。'.$error[2];
@@ -736,7 +736,7 @@ if(preg_match($pattern_ref, $crr_message)){
 				$price=$r['retail_price'];
 		
 				$sql_currency='SELECT * FROM convert_currency';
-				$stmt_currency=$dia_conn->query($sql_currency);
+				$stmt_currency=$conn->query($sql_currency);
 				foreach($stmt_currency as $row_currency){
 					$USD_EUR=$row_currency['USD_EUR'];
 					$USD_GBP=$row_currency['USD_GBP'];
