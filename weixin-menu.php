@@ -43,6 +43,16 @@ $data = '{
                "url":"http://mp.weixin.qq.com/s?__biz=MjM5MTkzNDIxOA==&mid=209685593&idx=1&sn=da74472433fa1318ccb01817d80a0b1b&scene=18#rd"
             },
 			{
+               "type":"view",
+               "name":"钻石史上第一家钻石交易所",
+               "url":"https://mp.weixin.qq.com/s?__biz=MzIyNzA2NjE1OQ==&mid=2653291300&idx=3&sn=c240c9c30367937bc106e733c7a387bb"
+            },
+			{
+               "type":"view",
+               "name":"比利时安特卫普的钻石街",
+               "url":"https://mp.weixin.qq.com/s?__biz=MzIyNzA2NjE1OQ==&mid=2653291300&idx=2&sn=af4aef8c359e4fd1bf79008ffe5efea3"
+            },
+			{
                "type":"click",
                "name":"我的二维码",
                "key":"KEY_QRCODE"
