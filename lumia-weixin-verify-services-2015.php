@@ -1,5 +1,9 @@
 <?php
 include_once ('log.php');
+require_once ('includes/connection.php');
+$conn = dbConnect ( 'write', 'pdo' );
+$conn->query ( "SET NAMES 'utf8'" );
+
 /**
  * wechat php test
  */
@@ -59,7 +63,21 @@ class wechatCallbackapiTest {
 				// #################################################################################### if the event is menu click, do the action here and fini
 				// ####################################################################################
 				// ####################################################################################
-				if ($theevent == 'CLICK') {
+				if ($theevent == 'SCAN'){
+					$sql_check_user = 'SELECT id, website_username, website_password FROM clients_list WHERE wechat_open_id = "' . $fromUsername . '"';
+					$stmt_user = $conn->query ( $sql_check_user );
+					$found_user = $stmt_user->rowCount ();
+					if ($found_user) {
+						foreach ( $stmt_user as $r_user ) {
+							$theuserid = $r_user ['id'];
+							$website_username = $r_user ['website_username'];
+							$website_password = $r_user ['website_password'];
+						}
+							
+						$contentStr = '您用来登录利美网站的用户名：' . $website_username . '  密码：' . $website_password;
+					}
+				}
+				else if ($theevent == 'CLICK') {
 					$thebutton = $postObj->EventKey;
 					$msgType = "text";
 					$contentStr = "系统升级中...请稍后";
@@ -76,9 +94,6 @@ class wechatCallbackapiTest {
 						$contentStr = '<a href="https://drive.google.com/folderview?id=0B1PdwXeXM9pXfm5CVHJTeThMUDQ1MEh6QkQ1QzZvUS0xNW56dkpPSDZyUVc3WFU0RzVQWDg&usp=sharing">点击查看精美首饰款式 所有的戒托有现货或者可以订制</a>';
 					} else if ($thebutton == "KEY_QRCODE") {
 						$content = array ();
-						require_once ('includes/connection.php');
-						$conn = dbConnect ( 'write', 'pdo' );
-						$conn->query ( "SET NAMES 'utf8'" );
 						$sql_check_user = 'SELECT id,qrcode FROM clients_list WHERE wechat_open_id = "' . $fromUsername . '"';
 						foreach ( $conn->query ( $sql_check_user ) as $r_u ) {
 							;
@@ -98,9 +113,6 @@ class wechatCallbackapiTest {
 						}
 					} else if ($thebutton == "KEY_PASSWEBACCOUNT") {
 						$contentStr = '系统尚未找到您的用户名和密码';
-						require_once ('includes/connection.php');
-						$conn = dbConnect ( 'write', 'pdo' );
-						$conn->query ( "SET NAMES 'utf8'" );
 						$sql_check_user = 'SELECT id, website_username, website_password FROM clients_list WHERE wechat_open_id = "' . $fromUsername . '"';
 						$stmt_user = $conn->query ( $sql_check_user );
 						$found_user = $stmt_user->rowCount ();

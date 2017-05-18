@@ -16,56 +16,8 @@ $feedback_message=-1;//to record if the matching diamond id is found or not, 0 m
 ###### 0 connect to the database #######
 ########################################
 ########################################
-function dbConnect($usertype='write', $connectionType = 'pdo') {
-  $host = 'localhost';
-  $db = 'sihui_limei';
-  if ($usertype  == 'read') {
-	$user = 'sihui_liu';
-	$pwd = 'p@ss0Day!';
-  } elseif ($usertype == 'write') {
-	$user = 'sihui_liu';
-	$pwd = 'p@ss0Day!';
-  } else {
-	exit('Unrecognized connection type');
-  }
-  if ($connectionType == 'mysqli') {
-	return new mysqli($host, $user, $pwd, $db) or die ('Cannot open database');
-  } else {
-    try {
-      return new PDO("mysql:host=$host;dbname=$db", $user, $pwd);
-    } catch (PDOException $e) {
-      echo 'Cannot connect to database';
-      exit;
-    }
-  }
-}
-$conn=dbConnect('write','pdo');
-$conn->query("SET NAMES 'utf8'");
-
-function dia_dbConnect($usertype='write', $connectionType = 'pdo') {
-	$host = 'localhost';
-	$db = 'sihui_belgem';
-	if ($usertype  == 'read') {
-	$user = 'sihui_liu';
-	$pwd = 'p@ss0Day!';
-	} elseif ($usertype == 'write') {
-	$user = 'sihui_liu';
-	$pwd = 'p@ss0Day!';
-	} else {
-	exit('Unrecognized connection type');
-	}
-	if ($connectionType == 'mysqli') {
-	return new mysqli($host, $user, $pwd, $db) or die ('Cannot open database');
-	} else {
-	try {
-	  return new PDO("mysql:host=$host;dbname=$db", $user, $pwd);
-	} catch (PDOException $e) {
-	  echo 'Cannot connect to database';
-	  exit;
-	}
-	}
-}
-$dia_conn=dia_dbConnect('write','pdo');
+require_once ('includes/connection.php');
+$dia_conn=dbConnect('write','pdo');
 ########################################
 ########################################
 ###### done! connected to the database #
@@ -805,8 +757,7 @@ if(preg_match($pattern_ref, $crr_message)){
 			$thefeedbackcontentforwechatuser='抱歉，我们无法找到符合您要求的钻石，请调整挑选条件并重试。'.'\n\n'.$holidaymessage;;
 		}
 	}else{
-		$thefeedbackcontentforwechatuser='欢迎关注利美钻石，我们有24小时客服随时为您提供服务，欢迎添加（ 客服号:limeikefu ）或致电 +32 (0)3 689 73 94
-	';
+		$thefeedbackcontentforwechatuser='欢迎关注利美钻石，我们有24小时客服随时为您提供服务，欢迎添加（ 客服号:limeikefu ）或致电 +32 (0)3 689 73 94';
 		//exit();
 	}	
 }
