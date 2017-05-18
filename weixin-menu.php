@@ -14,7 +14,7 @@ $data = '{
             },
             {
                "type":"view",
-               "name":"安特卫普...",
+               "name":"为什么安特卫普会成为世界钻石之都",
                "url":"http://mp.weixin.qq.com/s?__biz=MjM5MTkzNDIxOA==&mid=209757354&idx=1&sn=9dd5ddd2a5f142d3cde5b8a449993c5f&scene=18#rd"
             },
             {
