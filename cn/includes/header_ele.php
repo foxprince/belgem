@@ -1,6 +1,6 @@
 <?php
 if(isset($crr_page) && $crr_page=='jewelry'){
-	require_once('../includes/connection-retail.php');
+	require_once('../includes/connection.php');
 	$conn=dbConnect('write','pdo');
 	$conn->query("SET NAMES 'utf8'");
 }else{

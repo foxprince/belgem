@@ -38,7 +38,7 @@ if(isset($_GET['toemail'])){
 	logger($reply_feedback);
 }
 else if(isset($_GET['update'])){
-	require_once('includes/connection_user.php');        #
+	require_once('includes/connection.php');        #
 	$conn=dbConnect('write','pdo');                      # database connected here 
 	$conn->query("SET NAMES 'utf8'"); 
 	$sql="SELECT wechat_open_id FROM clients_list where 1=1";

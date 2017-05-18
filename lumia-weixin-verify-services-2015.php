@@ -76,7 +76,7 @@ class wechatCallbackapiTest {
 						$contentStr = '<a href="https://drive.google.com/folderview?id=0B1PdwXeXM9pXfm5CVHJTeThMUDQ1MEh6QkQ1QzZvUS0xNW56dkpPSDZyUVc3WFU0RzVQWDg&usp=sharing">点击查看精美首饰款式 所有的戒托有现货或者可以订制</a>';
 					} else if ($thebutton == "KEY_QRCODE") {
 						$content = array ();
-						require_once ('includes/connection_user.php');
+						require_once ('includes/connection.php');
 						$conn = dbConnect ( 'write', 'pdo' );
 						$conn->query ( "SET NAMES 'utf8'" );
 						$sql_check_user = 'SELECT id,qrcode FROM clients_list WHERE wechat_open_id = "' . $fromUsername . '"';
@@ -98,7 +98,7 @@ class wechatCallbackapiTest {
 						}
 					} else if ($thebutton == "KEY_PASSWEBACCOUNT") {
 						$contentStr = '系统尚未找到您的用户名和密码';
-						require_once ('includes/connection_user.php');
+						require_once ('includes/connection.php');
 						$conn = dbConnect ( 'write', 'pdo' );
 						$conn->query ( "SET NAMES 'utf8'" );
 						$sql_check_user = 'SELECT id, website_username, website_password FROM clients_list WHERE wechat_open_id = "' . $fromUsername . '"';
@@ -125,7 +125,7 @@ class wechatCallbackapiTest {
 				// ####################################################################################END MENU EVENT
 				// ####################################################################################
 				
-				require_once ('includes/connection_user.php');
+				require_once ('includes/connection.php');
 				$conn = dbConnect ( 'write', 'pdo' );
 				$conn->query ( "SET NAMES 'utf8'" );
 				
@@ -257,7 +257,7 @@ class wechatCallbackapiTest {
 			// ################################################################################################################################################
 			
 			// #####################################################
-			require_once ('includes/connection_user.php'); //
+			require_once ('includes/connection.php'); //
 			$conn = dbConnect ( 'write', 'pdo' ); // database connected here
 			$conn->query ( "SET NAMES 'utf8'" ); //
 			                                     // #####################################################
