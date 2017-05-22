@@ -1,12 +1,9 @@
 <?php
 include_once ('log.php');
 require_once ('includes/connection.php');
-
-/**
- * wechat php test
- */
+$conn = dbConnect ( 'write', 'pdo' );
+$conn->query ( "SET NAMES 'utf8'" );
 traceHttp ();
-// define your token
 define ( "TOKEN", "lumia123weixin" );
 $wechatObj = new wechatCallbackapiTest ();
 $wechatObj->valid ();
@@ -14,123 +11,97 @@ $wechatObj->responseMsg ();
 class wechatCallbackapiTest {
 	public function valid() {
 		$echoStr = $_GET ["echostr"];
-		logger ( "valid" );
-		
-		// valid signature , option
 		if ($this->checkSignature ()) {
 			echo $echoStr;
-			// exit;
 		}
+	}
+	private function scan($fromUsername) {
+		$sql_check_user = 'SELECT id, website_username, website_password FROM clients_list WHERE wechat_open_id = "' . $fromUsername . '"';
+		$stmt_user = $conn->query ( $sql_check_user );
+		$found_user = $stmt_user->rowCount ();
+		if ($found_user) {
+			foreach ( $stmt_user as $r_user ) {
+				$theuserid = $r_user ['id'];
+				$website_username = $r_user ['website_username'];
+				$website_password = $r_user ['website_password'];
+			}
+			$contentStr = '您用来登录利美网站的用户名：' . $website_username . '  密码：' . $website_password;
+		}
+		return $contentStr;
+	}
+	private function click($fromUsername,$postObj) {
+		$thebutton = $postObj->EventKey;
+		$msgType = "text";
+		$contentStr = "系统升级中...请稍后";
+		if ($thebutton == "KEY_BUDGET") {
+			$contentStr = '1. 输入您的预算金额，比如 "5000 欧元" "5000 美金" “50000 人民币” “5000 英镑”（有无空格均可） 我们推荐适合此预算的钻石。如果不输入货币单位，那么默认为欧元。 2. 您的预算金额，用货币英文的首字母也可以 "5000 e", "5000 d", "50000 y", "5000 p" 大小写无所谓，有无空格均可。 euro dollar yuan pound.';
+		} else if ($thebutton == "KEY_STOCK_REF") {
+			$contentStr = '输入您预先得知的库存编号，我们返回此编号钻石的价格和详细信息给您。比如 54183419 如何得知库存编号？ 在我们官网的精品钻石栏目里（http://www.lumiagem.com ）可以查看所有的库存钻石，每颗钻石都有相应编号。如果你想了解相应钻石的价格和详细信息，则需要用库存编号来这个微信里查询。';
+		} else if ($thebutton == "KEY_4CS") {
+			$contentStr = '1. 输入您要查找的钻石参数， 格式为“0.75 f vvs1 ex ex ex” 我们返回“0.75克拉， f色，vvs1净度 切工excellent 打磨excellent 对称 excellent”的钻石报价给您。输入大小写都可以的。 颜色：D~K; 净度： fl, if, vvs1, vvs2, vs1, vs2, si1, si2; 切工打磨对称： ex vg gd； 2. 如果钻石某项参数您都可以接受，可以用-代替 比如钻石的打磨用-代替即可。“1.20 g si2 vg - vg” 3. 证书：GIA HRD IGI 需要查证书的话加在最后, 如 “0.75 f vvs1 ex ex ex gia”';
+		} else if ($thebutton == "KEY_FANCYSHAPE") {
+			$contentStr = '异形钻查询：输入您要查找的钻石参数， 格式为“gz 0.75 f vvs1 ex ex” 我们返回“公主方 0.75克拉， f色，vvs1净度 打磨excellent 对称 excellent”的钻石。 注意异形钻只有对称和打磨没有切工的参数。 两字母用首字母拼音：公主方钻石gz、祖母绿形（长方）钻石zm、水滴形（梨形）钻石sd、心形钻xx、椭圆钻ty、橄榄形钻石gl、雷蒂恩形ld、枕形钻石zx';
+		} else if ($thebutton == "KEY_JEWLERY") {
+			$contentStr = '<a href="https://drive.google.com/folderview?id=0B1PdwXeXM9pXfm5CVHJTeThMUDQ1MEh6QkQ1QzZvUS0xNW56dkpPSDZyUVc3WFU0RzVQWDg&usp=sharing">点击查看精美首饰款式 所有的戒托有现货或者可以订制</a>';
+		} else if ($thebutton == "KEY_QRCODE") {
+			$content = array ();
+			$sql_check_user = 'SELECT id,qrcode FROM clients_list WHERE wechat_open_id = "' . $fromUsername . '"';
+			foreach ( $conn->query ( $sql_check_user ) as $r_u ) {
+				;
+			}
+			if ($r_u ['qrcode']) {
+				$content [] = array (
+						"Title" => "动态二维码",
+						"Description" => "您在利美钻石的专属动态二维码，可以发给您的朋友共享",
+						"PicUrl" => "http://www.lumiagem.com/_admin/qrcode/" . $r_u ['id'] . "_200x200.jpg",
+						"Url" => "http://www.lumiagem.com/_admin/qrcode/" . $r_u ['qrcode']
+				);
+				$result = $this->transmitNews ( $postObj, $content );
+				echo $result;
+				exit ();
+			} else {
+				$contentStr = '您尚未被分配动态二维码，请联系我们的客服：limeikefu，申请专属二维码。';
+			}
+		} else if ($thebutton == "KEY_PASSWEBACCOUNT") {
+			$contentStr = '系统尚未找到您的用户名和密码';
+			$sql_check_user = 'SELECT id, website_username, website_password FROM clients_list WHERE wechat_open_id = "' . $fromUsername . '"';
+			$stmt_user = $conn->query ( $sql_check_user );
+			$found_user = $stmt_user->rowCount ();
+			if ($found_user) {
+				foreach ( $stmt_user as $r_user ) {
+					$theuserid = $r_user ['id'];
+					$website_username = $r_user ['website_username'];
+					$website_password = $r_user ['website_password'];
+				}
+				$contentStr = '您用来登录利美网站的用户名：' . $website_username . '  密码：' . $website_password;
+			}
+		}
+		$resultStr = sprintf ( $textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr );
+		return $resultStr;
+		//exit ();
 	}
 	public function responseMsg() {
 		// get post data, May be due to the different environments
-		$conn = dbConnect ( 'write', 'pdo' );
-		$conn->query ( "SET NAMES 'utf8'" );
 		$postStr = $GLOBALS ["HTTP_RAW_POST_DATA"];
 		logger ( "post:" . $postStr );
-		// extract post data
 		if (! empty ( $postStr )) {
-			/*
-			 * libxml_disable_entity_loader is to prevent XML eXternal Entity Injection,
-			 * the best way is to check the validity of xml by yourself
-			 */
 			libxml_disable_entity_loader ( true );
 			$postObj = simplexml_load_string ( $postStr, 'SimpleXMLElement', LIBXML_NOCDATA );
 			$fromUsername = $postObj->FromUserName;
 			$toUsername = $postObj->ToUserName;
 			$keyword = trim ( $postObj->Content );
-			
 			$MsgType = $postObj->MsgType;
-			
 			$time = time ();
-			$textTpl = "<xml>
-			<ToUserName><![CDATA[%s]]></ToUserName>
-			<FromUserName><![CDATA[%s]]></FromUserName>
-			<CreateTime>%s</CreateTime>
-			<MsgType><![CDATA[%s]]></MsgType>
-			<Content><![CDATA[%s]]></Content>
-			</xml>";
-			
-			// ################################################################################################################################################
-			// ################################################################################################################################################
-			// ############ first of all, check if this is an event, if it's an subscription event, do the necessary here #######################
-			// ################################################################################################################################################
-			// ################################################################################################################################################
+			$textTpl = "<xml> <ToUserName><![CDATA[%s]]></ToUserName> <FromUserName><![CDATA[%s]]></FromUserName> <CreateTime>%s</CreateTime> <MsgType><![CDATA[%s]]></MsgType> <Content><![CDATA[%s]]></Content> </xml>";
+			//  first of all, check if this is an event, if it's an subscription event, do the necessary here 
 			if ($MsgType == 'event') {
 				$theevent = $postObj->Event;
-				// ####################################################################################
-				// ####################################################################################
-				// #################################################################################### if the event is menu click, do the action here and fini
-				// ####################################################################################
-				// ####################################################################################
+				// if the event is menu click, do the action here and fini
 				if ($theevent == 'SCAN'){
-					$sql_check_user = 'SELECT id, website_username, website_password FROM clients_list WHERE wechat_open_id = "' . $fromUsername . '"';
-					$stmt_user = $conn->query ( $sql_check_user );
-					$found_user = $stmt_user->rowCount ();
-					if ($found_user) {
-						foreach ( $stmt_user as $r_user ) {
-							$theuserid = $r_user ['id'];
-							$website_username = $r_user ['website_username'];
-							$website_password = $r_user ['website_password'];
-						}
-							
-						$contentStr = '您用来登录利美网站的用户名：' . $website_username . '  密码：' . $website_password;
-					}
+					echo scan($fromUsername); exit;
 				}
 				else if ($theevent == 'CLICK') {
-					$thebutton = $postObj->EventKey;
-					$msgType = "text";
-					$contentStr = "系统升级中...请稍后";
-					if ($thebutton == "KEY_BUDGET") {
-						$contentStr = '1. 输入您的预算金额，比如 "5000 欧元" "5000 美金" “50000 人民币” “5000 英镑”（有无空格均可） 我们推荐适合此预算的钻石。如果不输入货币单位，那么默认为欧元。 2. 您的预算金额，用货币英文的首字母也可以 "5000 e", "5000 d", "50000 y", "5000 p" 大小写无所谓，有无空格均可。 euro dollar yuan pound.';
-					} else if ($thebutton == "KEY_STOCK_REF") {
-						$contentStr = '输入您预先得知的库存编号，我们返回此编号钻石的价格和详细信息给您。比如 54183419 如何得知库存编号？ 在我们官网的精品钻石栏目里（http://www.lumiagem.com ）可以查看所有的库存钻石，每颗钻石都有相应编号。如果你想了解相应钻石的价格和详细信息，则需要用库存编号来这个微信里查询。';
-					} else if ($thebutton == "KEY_4CS") {
-						$contentStr = '
-1. 输入您要查找的钻石参数， 格式为“0.75 f vvs1 ex ex ex” 我们返回“0.75克拉， f色，vvs1净度 切工excellent 打磨excellent 对称 excellent”的钻石报价给您。输入大小写都可以的。 颜色：D~K; 净度： fl, if, vvs1, vvs2, vs1, vs2, si1, si2; 切工打磨对称： ex vg gd； 2. 如果钻石某项参数您都可以接受，可以用-代替 比如钻石的打磨用-代替即可。“1.20 g si2 vg - vg” 3. 证书：GIA HRD IGI 需要查证书的话加在最后, 如 “0.75 f vvs1 ex ex ex gia”';
-					} else if ($thebutton == "KEY_FANCYSHAPE") {
-						$contentStr = '异形钻查询：输入您要查找的钻石参数， 格式为“gz 0.75 f vvs1 ex ex” 我们返回“公主方 0.75克拉， f色，vvs1净度 打磨excellent 对称 excellent”的钻石。 注意异形钻只有对称和打磨没有切工的参数。 两字母用首字母拼音：公主方钻石gz、祖母绿形（长方）钻石zm、水滴形（梨形）钻石sd、心形钻xx、椭圆钻ty、橄榄形钻石gl、雷蒂恩形ld、枕形钻石zx';
-					} else if ($thebutton == "KEY_JEWLERY") {
-						$contentStr = '<a href="https://drive.google.com/folderview?id=0B1PdwXeXM9pXfm5CVHJTeThMUDQ1MEh6QkQ1QzZvUS0xNW56dkpPSDZyUVc3WFU0RzVQWDg&usp=sharing">点击查看精美首饰款式 所有的戒托有现货或者可以订制</a>';
-					} else if ($thebutton == "KEY_QRCODE") {
-						$content = array ();
-						$sql_check_user = 'SELECT id,qrcode FROM clients_list WHERE wechat_open_id = "' . $fromUsername . '"';
-						foreach ( $conn->query ( $sql_check_user ) as $r_u ) {
-							;
-						}
-						if ($r_u ['qrcode']) {
-							$content [] = array (
-									"Title" => "动态二维码",
-									"Description" => "您在利美钻石的专属动态二维码，可以发给您的朋友共享",
-									"PicUrl" => "http://www.lumiagem.com/_admin/qrcode/" . $r_u ['id'] . "_200x200.jpg",
-									"Url" => "http://www.lumiagem.com/_admin/qrcode/" . $r_u ['qrcode'] 
-							);
-							$result = $this->transmitNews ( $postObj, $content );
-							echo $result;
-							exit ();
-						} else {
-							$contentStr = '您尚未被分配动态二维码，请联系我们的客服：limeikefu，申请专属二维码。';
-						}
-					} else if ($thebutton == "KEY_PASSWEBACCOUNT") {
-						$contentStr = '系统尚未找到您的用户名和密码';
-						$sql_check_user = 'SELECT id, website_username, website_password FROM clients_list WHERE wechat_open_id = "' . $fromUsername . '"';
-						$stmt_user = $conn->query ( $sql_check_user );
-						$found_user = $stmt_user->rowCount ();
-						
-						if ($found_user) {
-							foreach ( $stmt_user as $r_user ) {
-								$theuserid = $r_user ['id'];
-								$website_username = $r_user ['website_username'];
-								$website_password = $r_user ['website_password'];
-							}
-							
-							$contentStr = '您用来登录利美网站的用户名：' . $website_username . '  密码：' . $website_password;
-						}
-					}
-					
-					$resultStr = sprintf ( $textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr );
-					echo $resultStr;
-					exit ();
+					echo click($fromUsername,$postObj);exit;
 				}
 				// ####################################################################################
 				// ####################################################################################
