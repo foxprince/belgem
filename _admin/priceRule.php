@@ -507,7 +507,7 @@ include('navi.php');
 <div id="maincontent">
 
 
-<h2>价格设定：<?php echo $target=='agency'?"代购":'零售'; ?>网站价格 由<?php echo $source; ?>提取的数据</h2>
+<h2><?php echo $color=='fancy'?"彩钻":'白钻'; ?>价格设定：<?php echo $target=='agency'?"代购":'零售'; ?>网站价格 由<?php echo $source; ?>提取的数据</h2>
 
 <div id="box-general-ratio-discount">
 <form action="" method="post">
