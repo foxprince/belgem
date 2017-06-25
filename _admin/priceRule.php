@@ -53,13 +53,13 @@ $stmt_disc=$conn->query($sql_discount);
 $disc_num=$stmt_disc->rowCount();
 if($disc_num){
 	foreach($conn->query($sql_discount) as $rd){
-		if($source=='excel'&target=='retail')
+		if($source=='excel'&$target=='retail')
 			$general_discount=abs($rd['excel_discount_retail']);
-		else if($source=='excel'&target=='agency')
+		else if($source=='excel'&$target=='agency')
 			$general_discount=abs($rd['excel_discount_agency']);
-		if($source=='rapnet'&target=='retail')
+		if($source=='rapnet'&$target=='retail')
 			$general_discount=abs($rd['rapnet_discount_retail']);
-		else if($source=='rapnet'&target=='agency')
+		else if($source=='rapnet'&$target=='agency')
 			$general_discount=abs($rd['rapnet_discount_agency']);
 			
 	}
