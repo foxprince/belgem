@@ -53,7 +53,15 @@ $stmt_disc=$conn->query($sql_discount);
 $disc_num=$stmt_disc->rowCount();
 if($disc_num){
 	foreach($conn->query($sql_discount) as $rd){
-		$general_discount=abs($rd['rapnet_discount_agency']);
+		if($source=='excel'&target=='retail')
+			$general_discount=abs($rd['excel_discount_retail']);
+		else if($source=='excel'&target=='agency')
+			$general_discount=abs($rd['excel_discount_agency']);
+		if($source=='rapnet'&target=='retail')
+			$general_discount=abs($rd['rapnet_discount_retail']);
+		else if($source=='rapnet'&target=='agency')
+			$general_discount=abs($rd['rapnet_discount_agency']);
+			
 	}
 }
 
@@ -65,7 +73,7 @@ if(isset($_POST['discount_percentage'])){
 	if($thenew_disc_num==$general_discount){
 		$disc_message='折扣数额没有更改';
 	}else{
-		$sql_disc_update='UPDATE price_discount SET rapnet_discount_agency = '.$thenew_disc_num;
+		$sql_disc_update='UPDATE price_discount SET '.$source.'_discount_'.$target.' = '.$thenew_disc_num;
 		$stmt_disc_update=$conn->query($sql_disc_update);
 		$disc_updated=$stmt_disc_update->rowCount();
 		if($disc_updated){
