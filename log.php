@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('Asia/Shanghai');
 function traceHttp() {
 	logger ( "\n\nREMOTE_ADDR:" . $_SERVER ["REMOTE_ADDR"] . (strstr ( $_SERVER ["REMOTE_ADDR"], '101.226' ) ? " FROM WeiXin" : "Unknown IP") );
 	logger ( "QUERY_STRING:" . $_SERVER ["QUERY_STRING"] );

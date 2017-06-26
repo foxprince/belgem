@@ -26,7 +26,7 @@ function processPrice($thecarat, $thecolor, $theclarity, $thecut, $thepolish, $t
 	$rulesfound=$stmt->rowCount();
 	if($thecolor>'M')
 		$thecolor = 'M';
-		if($rulesfound){
+	if($rulesfound){
 			foreach($stmt as $r){
 				$crr_rule_weight_from=$r['carat_from'];
 				$crr_rule_weight_to=$r['carat_to'];

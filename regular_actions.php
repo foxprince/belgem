@@ -1,14 +1,8 @@
 <?php
-##################################################################################################
-##################################################################################################
 ###################### download the data and save it to the csv file #############################
-##################################################################################################
-##################################################################################################
-
 //1 - Authenticate with TechNet. The authentication ticket will be stored in $auth_ticket. Note this MUST be HTTPS.
 $auth_url = "https://technet.rapaport.com/HTTP/Authenticate.aspx";
 $post_string = "username=90733&password=" . urlencode("G4n8m4G9");
-
 //create HTTP POST request with curl:
 $request = curl_init($auth_url); // initiate curl object
 curl_setopt($request, CURLOPT_HEADER, 0); // set to 0 to eliminate header info from response
@@ -18,13 +12,9 @@ curl_setopt($request, CURLOPT_SSL_VERIFYPEER, FALSE); // uncomment this line if 
 $auth_ticket = curl_exec($request); // execute curl post and store results in $auth_ticket
 curl_close ($request);
 
-
 //2 - prepare HTTP request for data.
-
 $feed_url = "http://technet.rapaport.com/HTTP/DLS/GetFile.aspx";
 $feed_url .= "?ticket=".$auth_ticket; //add authentication ticket:
-
-
 //prepare to save response as file.
 $fp = fopen('rapnetfeed.csv', 'wb');
 if ($fp == FALSE)
@@ -32,7 +22,6 @@ if ($fp == FALSE)
 echo "File not opened";
 exit;
 }
-
 //create HTTP GET request with curl 
 $request = curl_init($feed_url); // initiate curl object
 curl_setopt($request, CURLOPT_FILE, $fp); //Ask cURL to write the contents to a file
@@ -44,33 +33,21 @@ curl_exec($request); // execute curl post
 curl_close ($request); // close curl object 
 fclose($fp); //close file;
 
-
-//Special thanks to David Meyers for helping me to create the sample file. \\ :-) // 
-
 echo '***<br>data file download successful...now read the data...<br>***<br><br><br>';
-
-
 $status='file downloaded-trying to insert';
-
-##################################################################################################
-##################################################################################################
 ################ read the csv file and save the data to the database #############################
-##################################################################################################
-##################################################################################################
 require_once('includes/connection.php');
 $conn=dbConnect('write','pdo');
 $conn->query("SET NAMES 'utf8'");
-
 ########################################################################### log
 $sql_log='INSERT INTO dataupdate_log (status) VALUES (:status)';##### log
 		##### log##### log##### log##### log##### log##### log##### log##### log##### log
 			##### log##### log##### log##### log##### log##### log##### log##### log##### log
 $stmt_log=$conn->prepare($sql_log);	  ##### log##### log##### log##### log##### log
-$stmt_log->bindParam(':status', $status, PDO::PARAM_STR);##### log##### log##### log
-					##### log##### log##### log##### log##### log##### log##### log##### log
-$stmt_log->execute();##### log##### log##### log##### log##### log##### log##### log
+$stmt_log->execute(array(
+		'status'=> $status
+));
 ###########################################################################
-
 
 // first first delete the imcomplete records
 if(isset($_GET['newprice']) && $_GET['newprice']=='tobeupdated'){
@@ -81,9 +58,6 @@ if(isset($_GET['newprice']) && $_GET['newprice']=='tobeupdated'){
 	$del_incomplete_num=$stmt_del_incomplete->rowCount();
 	echo '<br>deleted records with wrong price: '.$del_incomplete_num;
 }
-
-
-
 // first put the existing records in an array
 $records_in_db=array();
 $sql_ids='SELECT stock_ref FROM diamonds WHERE source = "RAPNET"';
@@ -91,7 +65,6 @@ $stmt_ids=$conn->query($sql_ids);
 foreach($stmt_ids as $row_id){
 	$records_in_db[]=$row_id['stock_ref'];
 }
-
 
 
 $file = fopen("rapnetfeed.csv","r");
@@ -134,13 +107,9 @@ require_once('_admin/processPrice.php');
 echo '<br><br>***<br>check downloaded records piece by piece now<br>***<br><br>';
 
 while(! feof($file)){
-	
 	$crr_row_content_array=fgetcsv($file);
-	
 	if($Shape_col_num<=0 && $Color_col_num<=0 && $Clarity_col_num<=0 && $crr_row<9){
-		
 		## store the correct col number to the vars
-		
 		foreach($crr_row_content_array as $col_title){
 			if($col_title=='Seller Name'){
 				$sellername_col_num=$col_counter;
@@ -195,10 +164,8 @@ while(! feof($file)){
 			}else if($col_title=='Diamond ID'){
 				$DiamondID_col_num=$col_counter;
 			}
-			
 			$col_counter++;
 		}
-		
 	}else{
 		
 		## get the records and save to the database line by line
@@ -206,27 +173,12 @@ while(! feof($file)){
 		if($Shape_col_num<0 || $Color_col_num<0 || $Clarity_col_num<0 || $sellername_col_num<0 || $DiamondID_col_num<0){
 			exit('error :: no table title found');
 		}else{
-			########################################################################################
-			########################################################################################
-			########################################################################################
-			##################### the action of saving the data ####################################
-			########################################################################################
-			########################################################################################
-			########################################################################################
-			
 			$DiamondID=$crr_row_content_array[$DiamondID_col_num];
-			
-			
-			
-			
 			$records_from_rapnet[]=$DiamondID;
-			
 			if (in_array($DiamondID, $records_in_db)) {
 				//echo '<br>*************** found in db: '.$DiamondID.' do nothing';
 			}else{
 				//echo '<br>not in db: '.$DiamondID.' now insert ::<br>';
-				
-				
 				$sellername=$crr_row_content_array[$sellername_col_num];
 				$RapNetAccountID=$crr_row_content_array[$RapNetAccountID_col_num];
 				//echo '<br>NameCode :'.$crr_row_content_array[$NameCode_col_num];
@@ -280,7 +232,6 @@ while(! feof($file)){
 				$clarity_number='-';
 				$cut_number='-';
 				
-				
 				if($cut=='Excellent'){
 					$cut = 'EX';
 				}else if($cut=='Very Good'){
@@ -332,62 +283,71 @@ while(! feof($file)){
 				}else if($shape=='Asscher'){
 					$shape='AS';
 				}
-				
-				
-				
 				$price=processPrice($Weight, $Color, $Clarity, $cut, $polish, $symmetry, $Lab, $shape, $FluorescenceIntensity, $raw_price_total, 0, 'rapnet', 'agency');
 				$retail_price=processPrice($Weight, $Color, $Clarity, $cut, $polish, $symmetry, $Lab, $shape, $FluorescenceIntensity, $raw_price_total, 0, 'rapnet', 'retail');
-				
-				
 				echo $DiamondID.',weight:'.$Weight.':rapnet price:'.$raw_price_total.'-';
 				echo ':agency price:'.$price.'-';
-				echo ':retail price:'.$retail_price.'<br>';
+				echo ':retail price:'.$retail_price;
 			//	echo '网上价格：'.$TotalCashPrice.'---------------- the total price cash <br> '.$DiamondID;
 				
 				//echo '<br>++++++++++++++++++++++++++<br><br>++++++++++++++++++++++++++<br>';
 				/**/
-				
-
-				
-				
+				$insertTotal = 0;
 				if($price>0 && $retail_price>0){
-				$sql_insert='INSERT INTO diamonds (stock_ref, stock_num_rapnet, shape, carat, color, fancy_color, clarity, grading_lab, certificate_number, cut_grade, polish, symmetry, fluorescence_intensity, country, raw_price, raw_price_retail, price, retail_price, from_company, clarity_number, cut_number, added_at, source) VALUES (:stock_ref, :stock_num_rapnet, :shape, :carat, :color, :fancy_color, :clarity, :grading_lab, :certificate_number, :cut_grade, :polish, :symmetry, :fluorescence_intensity, :country, :raw_price, :raw_price_retail, :price, :retail_price, :from_company, :clarity_number, :cut_number, NOW(), :source)';
-		
-			
-				$stmt=$conn->prepare($sql_insert);	  
-				
-				$stmt->bindParam(':stock_ref', $DiamondID, PDO::PARAM_STR);
-				$stmt->bindParam(':stock_num_rapnet', $StockNumber, PDO::PARAM_STR);
-				$stmt->bindParam(':shape', $shape, PDO::PARAM_STR);
-				$stmt->bindParam(':carat', $Weight, PDO::PARAM_STR);
-				$stmt->bindParam(':color', $Color, PDO::PARAM_STR);
-				$stmt->bindParam(':fancy_color', $fancy_color_dominant_color, PDO::PARAM_STR);
-				$stmt->bindParam(':clarity', $Clarity, PDO::PARAM_STR);
-				$stmt->bindParam(':grading_lab', $Lab, PDO::PARAM_STR);
-				$stmt->bindParam(':certificate_number', $CertificateNumber, PDO::PARAM_STR);
-				$stmt->bindParam(':cut_grade', $cut, PDO::PARAM_STR);
-				$stmt->bindParam(':polish', $polish, PDO::PARAM_STR);
-				$stmt->bindParam(':symmetry', $symmetry, PDO::PARAM_STR);
-				$stmt->bindParam(':fluorescence_intensity', $FluorescenceIntensity, PDO::PARAM_STR);
-				$stmt->bindParam(':country', $Country, PDO::PARAM_STR);
-				
-				$stmt->bindParam(':raw_price', $percentage, PDO::PARAM_STR);	
-				$stmt->bindParam(':raw_price_retail', $raw_price_retail, PDO::PARAM_STR);
-				$stmt->bindParam(':retail_price', $retail_price, PDO::PARAM_STR);	
-				$stmt->bindParam(':price', $price, PDO::PARAM_INT);
-							
-				$stmt->bindParam(':from_company', $sellername, PDO::PARAM_STR);
-				$stmt->bindParam(':clarity_number', $clarity_number, PDO::PARAM_STR);
-				$stmt->bindParam(':cut_number', $cut_number, PDO::PARAM_STR);
-				$stmt->bindParam(':source', $source, PDO::PARAM_STR);
-				$stmt->execute();
-				$OK=$stmt->rowCount();
-				/**/
-				//echo '<br>inserted: '.$DiamondID.'<br>';
+					$sql_insert='INSERT INTO diamonds (stock_ref, stock_num_rapnet, shape, carat, color, fancy_color, clarity, grading_lab, certificate_number, cut_grade, polish, symmetry, fluorescence_intensity, country, raw_price, raw_price_retail, price, retail_price, from_company, clarity_number, cut_number, added_at, source) VALUES (:stock_ref, :stock_num_rapnet, :shape, :carat, :color, :fancy_color, :clarity, :grading_lab, :certificate_number, :cut_grade, :polish, :symmetry, :fluorescence_intensity, :country, :raw_price, :raw_price_retail, :price, :retail_price, :from_company, :clarity_number, :cut_number, NOW(), :source)';
+					$stmt=$conn->prepare($sql_insert);	  
+// 					$stmt->bindParam(':stock_ref', $DiamondID, PDO::PARAM_STR);
+// 					$stmt->bindParam(':stock_num_rapnet', $StockNumber, PDO::PARAM_STR);
+// 					$stmt->bindParam(':shape', $shape, PDO::PARAM_STR);
+// 					$stmt->bindParam(':carat', $Weight, PDO::PARAM_STR);
+// 					$stmt->bindParam(':color', $Color, PDO::PARAM_STR);
+// 					$stmt->bindParam(':fancy_color', $fancy_color_dominant_color, PDO::PARAM_STR);
+// 					$stmt->bindParam(':clarity', $Clarity, PDO::PARAM_STR);
+// 					$stmt->bindParam(':grading_lab', $Lab, PDO::PARAM_STR);
+// 					$stmt->bindParam(':certificate_number', $CertificateNumber, PDO::PARAM_STR);
+// 					$stmt->bindParam(':cut_grade', $cut, PDO::PARAM_STR);
+// 					$stmt->bindParam(':polish', $polish, PDO::PARAM_STR);
+// 					$stmt->bindParam(':symmetry', $symmetry, PDO::PARAM_STR);
+// 					$stmt->bindParam(':fluorescence_intensity', $FluorescenceIntensity, PDO::PARAM_STR);
+// 					$stmt->bindParam(':country', $Country, PDO::PARAM_STR);
+// 					$stmt->bindParam(':raw_price', $percentage, PDO::PARAM_STR);	
+// 					$stmt->bindParam(':raw_price_retail', $raw_price_retail, PDO::PARAM_STR);
+// 					$stmt->bindParam(':retail_price', $retail_price, PDO::PARAM_STR);	
+// 					$stmt->bindParam(':price', $price, PDO::PARAM_INT);
+// 					$stmt->bindParam(':from_company', $sellername, PDO::PARAM_STR);
+// 					$stmt->bindParam(':clarity_number', $clarity_number, PDO::PARAM_STR);
+// 					$stmt->bindParam(':cut_number', $cut_number, PDO::PARAM_STR);
+// 					$stmt->bindParam(':source', $source, PDO::PARAM_STR);
+// 					$stmt->execute();
+					$stmt->execute(array(
+							'stock_ref'=>$DiamondID,
+							'stock_num_rapnet'=>$StockNumber,
+							'shape'=>$shape,
+							'carat'=>$Weight,
+							'color'=>$Color,
+							'fancy_color'=>$fancy_color_dominant_color,
+							'clarity'=>$Clarity,
+							'grading_lab'=>$Lab,
+							'certificate_number'=>$CertificateNumber,
+							'cut_grade'=>$cut,
+							'polish'=>$polish,
+							'symmetry'=>$symmetry,
+							'fluorescence_intensity'=>$FluorescenceIntensity,
+							'country'=>$Country,
+							'raw_price'=>$percentage,
+							'raw_price_retail'=>$raw_price_retail,
+							'retail_price'=>$retail_price,
+							'price'=>$price,
+							'from_company'=>$sellername,
+							'clarity_number'=>$clarity_number,
+							'cut_number'=>$cut_number,
+							'source'=>$source
+					));
+					$OK=$stmt->rowCount();$insertTotal++;
+					echo ' inserted: '.$OK.'  :  '.$DiamondID.'<br>';
 				}else{
-				echo '<br>inserted NO !!!: no price for this diamond :'.$DiamondID.'<br>';
+					echo ' inserted NO !!!: no price for this diamond :'.$DiamondID.'<br>';
 				}
-				
 			}
 			
 		}
@@ -396,8 +356,6 @@ while(! feof($file)){
 }
 
 fclose($file);
-
-
 
 $status='inserting fini, not delete yet';
 
@@ -412,7 +370,7 @@ $status='inserting fini, not delete yet';
 echo 'finish inserting, now deleting...<br><br><br>-------------------------<br><br><br>';
 //print_r($diamond_ids);
 
-echo '  -- <br><br><br> -- <br><br><br>';
+echo 'records_from_rapnet:'.$records_from_rapnet;
 
 
 

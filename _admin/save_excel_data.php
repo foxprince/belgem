@@ -25,10 +25,10 @@ $account_level=$_SESSION['account_level'];
 
 
 
-if(!isset($_POST['confirmed']) || !isset($_POST['crr_turn'])){
+if(!isset($_REQUEST['confirmed']) || !isset($_REQUEST['crr_turn'])){
 	exit('NO PERMISSION');
 }
-if($_POST['confirmed']!="YES"){
+if($_REQUEST['confirmed']!="YES"){
 	exit('NO PERMISSION');
 }
 

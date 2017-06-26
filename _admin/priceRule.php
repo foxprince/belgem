@@ -278,9 +278,7 @@ function switchColorChoice(crrid, crrvalue){
 	var crr_id=crrid;
 	var crr_value=crrvalue;
 	var crr_ele=$('div.colorchoicebox_'+crr_id+' span.color-switch-btn[title="'+crr_value+'"]');
-	
 	crr_ele.toggleClass('chosen');
-	
 	$('button#modifyrules-'+crr_id).html('保存更改');
 }
 
@@ -365,7 +363,8 @@ function updateRule(ruleID){
 		$color+=crr_color;
 		colorchoiceCounter++;
 	});
-	$color+=$('#fancy').attr('title');
+	if(typeof($("#fancy").attr("title"))!="undefined") 
+		$color+=$('#fancy').attr('title');
 	var claritychoiceCounter=0;
 	$('.claritychoicebox_'+idoftherule+' > span.chosen').each(function(){
 		var crr_clarity=$(this).attr('title');
@@ -497,10 +496,16 @@ function deleteRule(ruleID){
 		);
 	}
 }
-function updatedata(){
+function updateRapnetData(){
 	r=confirm('只有新价格规则制定后才有必要刷新数据，确定刷新？');
 	if(r){
-		window.open('http://happyeurope.eu/regular_actions.php?newprice=tobeupdated', '_blank');
+		window.open('../regular_actions.php?newprice=tobeupdated', '_blank');
+	}
+}
+function updateExcelData(){
+	r=confirm('只有新价格规则制定后才有必要刷新数据，确定刷新？');
+	if(r){
+		window.open('./save_excel_data.php?confirmed=YES&crr_turn=yes', '_blank');
 	}
 }
 </script>
@@ -1113,7 +1118,8 @@ if(in_array("None", $crr_fluo_choice_array)){
 </div>
 
 <div id="updatingdatabtnbox" style="margin:120px 0 0 0; padding:15px;">
-<button id="update_data_btn" target="_blank" onclick="updatedata()">刷新数据</button>
+<button id="update_data_btn" target="_blank" onclick="updateRapnetData()">刷新RAPNET数据</button>
+<button id="update_data_btn" target="_blank" onclick="updateExcelData()">刷新EXCEL数据</button>
 <p style="font-size:12px; padding-left:0px; margin-bottom:35px;"><span style="color:#F00;">注：</span>制定新规则以后要点击刷新数据才能生效</p>
 </div>
 
