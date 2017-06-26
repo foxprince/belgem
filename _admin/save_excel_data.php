@@ -306,11 +306,7 @@ for ($i = 1; $i <= $totalrow; $i++) {
 			}
 			
 			$source='EXCEL';
-			
-			
 			$sql_insert='INSERT INTO diamonds (id, stock_ref, shape, carat, color, fancy_color, clarity, grading_lab, certificate_number, cut_grade, polish, symmetry, fluorescence_intensity, country, raw_price, raw_price_retail, price, retail_price, from_company, clarity_number, cut_number, added_at, source) VALUES (:id, :stock_ref, :shape, :carat, :color, :fancy_color, :clarity, :grading_lab, :certificate_number, :cut_grade, :polish, :symmetry, :fluorescence_intensity, :country, :raw_price, :raw_price_retail, :price, :retail_price, :from_company, :clarity_number, :cut_number, NOW(), :source)';
-
-	
 			$stmt=$conn->prepare($sql_insert);	  
 			
 			$stmt->bindParam(':id', $available_line, PDO::PARAM_INT);
@@ -335,14 +331,12 @@ for ($i = 1; $i <= $totalrow; $i++) {
 			$stmt->bindParam(':clarity_number', $clarity_number, PDO::PARAM_STR);
 			$stmt->bindParam(':cut_number', $cut_number, PDO::PARAM_STR);
 			$stmt->bindParam(':source', $source, PDO::PARAM_STR);			
-			
-			
-			
 			$stmt->execute();
 			$OK=$stmt->rowCount();
 			
 			$error=$conn->errorInfo();
 			$log.='<br/>result:'.$OK.',id:'.$available_line.' --shape:'.$shape.' --stock_ref: '.$stock_ref_raw.' --cert_num:'.$certificate_number.'err:'.mysql_errno();
+			logger($log);
 			if(isset($error[2])){
 				//echo($error[2]);
 				$feedbackmessage.="<br />EXCEL文件中第 $i 条纪录导入数据库出现未知错误。";
