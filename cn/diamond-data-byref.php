@@ -68,7 +68,7 @@ foreach ( $listarray as $ref ) {
     <td width="38" style="width: 38px;" align="center"><input type="checkbox" class="selectcheckbox"
       id="check_<?php echo $row['stock_ref']; ?>" onchange="makeorder('<?php echo $row['stock_ref']; ?>')" />
       <?php if($superAdmin){?>
-<button class="deleterulesbtn" onclick="chgVisiable(<?php echo $row['stock_ref'].','.$row['visiable']; ?>)"
+<button class="deleterulesbtn" onclick="chgVisiable('\''.<?php echo $row['stock_ref'].'\','.$row['visiable']; ?>)"
         id="visiable-<?php echo $row['stock_ref']; ?>"><?php echo $row['visiable']==1?'隐藏':'取消隐藏'; ?></button><?php } ?>
 </td>
     <td align="center" class="ref_number" style="width: 80px;"><span class="valuetxt"
