@@ -39,6 +39,14 @@ if(isset($_POST['filter_company']) && $_POST['filter_company']!='all'){
 	$companyfiltercondition='';
 	$crr_company="all";
 }
+if(isset($_REQUEST['filter_orderDate']) && $_REQUEST['filter_orderDate']!='all'){
+	$crr_orderDate=$_REQUEST['filter_orderDate'];
+	$orderDate=$_REQUEST['filter_orderDate'];
+	$orderDateCondition=' AND DATE_FORMAT(diamonds.order_time,\'%Y-%m-%d\')  = "'.$orderDate.'" ';
+}else{
+	$companyfiltercondition='';
+	$crr_company="all";
+}
 if(isset($_POST['filter_user']) && $_POST['filter_user']!='all'){
 	$crr_searching_user=$_POST['filter_user'];
 	//$thefromcompany=$_POST['filter_user'];
@@ -169,6 +177,9 @@ $(document).ready(function(){
 	});
 	$('#filter_company').change(function(){
 		$('form#companyfilterform').submit();
+	});
+	$('#filter_orderDate').change(function(){
+		$('form#orderDateForm').submit();
 	});
 	$('#filter_user').change(function(){
 		$('form#userfilterform').submit();
@@ -397,6 +408,13 @@ include('navi.php');
 <img style="width:20px; position:relative; top:3px; left:-3px;" src="../images/print.ico" />打印布局</button>
 <button onclick="operationmode()" id="normalmodebtn">操作布局</button>
 <button id="deleteChecked" onclick="cancelorder()"><img title="取消" style="width:20px; position:relative; top:3px; left:-3px;" src="../images/delete.png" />删除选中</button>
+<form action="" method="post" id="orderDateForm" class="hideforprint">
+<select name="filter_orderDate">
+	<option value="all">全部</option>
+	<?php foreach($conn->query('select distinct  DATE_FORMAT(ordered_time,\'%Y-%m-%d\') as d from diamonds where ordered_time is not null order by d desc') as $row_orderDate){?>
+		<option value="<?php echo $row_orderDate['d'];?>" <?php if($crr_orderDate==$row_orderDate['d']) {echo 'selected="selected"';} ?>><?php echo $row_orderDate['d'];?></option>
+	<?php }?>
+</select></form>
 </p>
 <?php
 if($account_level==0){
@@ -472,7 +490,12 @@ if($account_level==0){
 </thead>
 <tbody>
 <?php	
-	$sql_orders='SELECT diamonds.id, diamonds.stock_ref, stock_num_rapnet, shape, carat, color, fancy_color, clarity, grading_lab, certificate_number, cut_grade, polish, symmetry, fluorescence_intensity, raw_price_retail, price, raw_price,retail_price,diamonds.from_company, diamonds.ordered_time, paid_amount, comment, source, status, users.user_name, users.real_name, users.account_level, users.given_by FROM diamonds, users WHERE diamonds.ordered_by IS NOT NULL AND diamonds.ordered_by <> "" AND diamonds.ordered_by = users.user_name AND diamonds.order_sent IS NULL '.$companyfiltercondition.$userfiltercondition.' ORDER BY ordered_time DESC';
+	$sql_orders='SELECT diamonds.id, diamonds.stock_ref, stock_num_rapnet, shape, carat, color, fancy_color, clarity, 
+		grading_lab, certificate_number, cut_grade, polish, symmetry, fluorescence_intensity, raw_price_retail, price, 
+		raw_price,retail_price,diamonds.from_company, diamonds.ordered_time, paid_amount, comment, source, status, 
+		users.user_name, users.real_name, users.account_level, users.given_by 
+		FROM diamonds, users WHERE diamonds.ordered_by IS NOT NULL AND diamonds.ordered_by <> "" 
+		AND diamonds.ordered_by = users.user_name AND diamonds.order_sent IS NULL '.$companyfiltercondition.$userfiltercondition.$orderDateCondition.' ORDER BY ordered_time DESC';
 	$counter=0;
 	foreach($conn->query($sql_orders) as $row){
 		$counter++;
@@ -809,7 +832,8 @@ function hidefinido(){
 <td width="158" class="lastcell">订单状态</td>
 </tr>
 <?php
-$sql_orders='SELECT diamonds.id, diamonds.stock_ref, shape, carat, color, fancy_color, clarity, grading_lab, certificate_number, cut_grade, polish, symmetry, fluorescence_intensity, price, diamonds.from_company, diamonds.ordered_time, paid_amount, order_sent, comment, status, users.user_name, users.real_name, users.account_level, users.given_by FROM diamonds, users WHERE diamonds.ordered_by IS NOT NULL AND diamonds.ordered_by <> "" AND diamonds.ordered_by = users.user_name AND diamonds.ordered_by = "'.$username.'" ORDER BY ordered_time DESC';
+$sql_orders='SELECT diamonds.id, diamonds.stock_ref, shape, carat, color, fancy_color, clarity, grading_lab, certificate_number, cut_grade, polish, symmetry, fluorescence_intensity, price, diamonds.from_company, diamonds.ordered_time, paid_amount, order_sent, comment, status, users.user_name, users.real_name, users.account_level, users.given_by FROM 
+		diamonds, users WHERE diamonds.ordered_by IS NOT NULL AND diamonds.ordered_by <> "" AND diamonds.ordered_by = users.user_name AND diamonds.ordered_by = "'.$username.'" ORDER BY ordered_time DESC';
 $counter=0;
 	foreach($conn->query($sql_orders) as $row){
 		$counter++;
