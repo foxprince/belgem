@@ -43,7 +43,8 @@ if(isset($_POST['filter_company']) && $_POST['filter_company']!='all'){
 if(isset($_REQUEST['filter_orderDate']) && $_REQUEST['filter_orderDate']!='all'){
 	$crr_orderDate=$_REQUEST['filter_orderDate'];
 	$orderDate=$_REQUEST['filter_orderDate'];
-	$orderDateCondition=' AND DATE_FORMAT(diamonds.ordered_time,\'%Y-%m-%d\')  = "'.$orderDate.'" ';
+	//$orderDateCondition=' AND DATE_FORMAT(diamonds.ordered_time,\'%Y-%m-%d\')  = "'.$orderDate.'" ';
+	$orderDateCondition=' AND diamonds.ordered_time  = "'.$orderDate.'" ';
 }else{
 	$orderDateCondition='';
 	$crr_orderDate="all";
@@ -415,7 +416,7 @@ include('navi.php');
 <button id="deleteChecked" onclick="cancelorder()"><img title="取消" style="width:20px; position:relative; top:3px; left:-3px;" src="../images/delete.png" />删除选中</button>
 预定日期：<select name="filter_orderDate" onchange="filterOrderDate(this.options[this.options.selectedIndex].value)">
 	<option value="all">全部</option>
-	<?php foreach($conn->query('select distinct  DATE_FORMAT(ordered_time,\'%Y-%m-%d\') as d from diamonds where ordered_time is not null order by d desc') as $row_orderDate){?>
+	<?php foreach($conn->query('select distinct  ordered_time as d from diamonds where ordered_time is not null order by d desc') as $row_orderDate){?>
 	<option value="<?php echo $row_orderDate['d'];?>" <?php if($crr_orderDate==$row_orderDate['d']) {echo 'selected="selected"';} ?>><?php echo $row_orderDate['d'];?></option>
 	<?php }?>
 </select>
