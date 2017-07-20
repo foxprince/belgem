@@ -28,6 +28,7 @@ if($_SESSION['authenticated']!='SiHui'){
 }
 $username=$_SESSION['username'];
 $account_level=$_SESSION['account_level'];
+require_once('../log.php');
 require_once('../includes/connection.php');
 $conn=dbConnect('write','pdo');
 $conn->query("SET NAMES 'utf8'");
@@ -42,10 +43,10 @@ if(isset($_POST['filter_company']) && $_POST['filter_company']!='all'){
 if(isset($_REQUEST['filter_orderDate']) && $_REQUEST['filter_orderDate']!='all'){
 	$crr_orderDate=$_REQUEST['filter_orderDate'];
 	$orderDate=$_REQUEST['filter_orderDate'];
-	$orderDateCondition=' AND DATE_FORMAT(diamonds.order_time,\'%Y-%m-%d\')  = "'.$orderDate.'" ';
+	$orderDateCondition=' AND DATE_FORMAT(diamonds.ordered_time,\'%Y-%m-%d\')  = "'.$orderDate.'" ';
 }else{
-	$companyfiltercondition='';
-	$crr_company="all";
+	$orderDateCondition='';
+	$crr_orderDate="all";
 }
 if(isset($_POST['filter_user']) && $_POST['filter_user']!='all'){
 	$crr_searching_user=$_POST['filter_user'];
@@ -179,6 +180,7 @@ $(document).ready(function(){
 		$('form#companyfilterform').submit();
 	});
 	$('#filter_orderDate').change(function(){
+		console.log('dd');
 		$('form#orderDateForm').submit();
 	});
 	$('#filter_user').change(function(){
@@ -199,7 +201,10 @@ $(document).ready(function(){
 	getDiaStock();
 	$('#orderTable').DataTable();
 });
-
+function filterOrderDate(orderDate) {
+	console.log(orderDate);
+	window.location.href="index.php?filter_orderDate="+orderDate;
+}
 function formcomplete(){
 	if($.trim($('#title').val())==''){
 		alert('没有标题！');
@@ -408,13 +413,12 @@ include('navi.php');
 <img style="width:20px; position:relative; top:3px; left:-3px;" src="../images/print.ico" />打印布局</button>
 <button onclick="operationmode()" id="normalmodebtn">操作布局</button>
 <button id="deleteChecked" onclick="cancelorder()"><img title="取消" style="width:20px; position:relative; top:3px; left:-3px;" src="../images/delete.png" />删除选中</button>
-<form action="" method="post" id="orderDateForm" class="hideforprint">
-<select name="filter_orderDate">
+预定日期：<select name="filter_orderDate" onchange="filterOrderDate(this.options[this.options.selectedIndex].value)">
 	<option value="all">全部</option>
 	<?php foreach($conn->query('select distinct  DATE_FORMAT(ordered_time,\'%Y-%m-%d\') as d from diamonds where ordered_time is not null order by d desc') as $row_orderDate){?>
-		<option value="<?php echo $row_orderDate['d'];?>" <?php if($crr_orderDate==$row_orderDate['d']) {echo 'selected="selected"';} ?>><?php echo $row_orderDate['d'];?></option>
+	<option value="<?php echo $row_orderDate['d'];?>" <?php if($crr_orderDate==$row_orderDate['d']) {echo 'selected="selected"';} ?>><?php echo $row_orderDate['d'];?></option>
 	<?php }?>
-</select></form>
+</select>
 </p>
 <?php
 if($account_level==0){
@@ -496,6 +500,7 @@ if($account_level==0){
 		users.user_name, users.real_name, users.account_level, users.given_by 
 		FROM diamonds, users WHERE diamonds.ordered_by IS NOT NULL AND diamonds.ordered_by <> "" 
 		AND diamonds.ordered_by = users.user_name AND diamonds.order_sent IS NULL '.$companyfiltercondition.$userfiltercondition.$orderDateCondition.' ORDER BY ordered_time DESC';
+	logger($sql_orders);
 	$counter=0;
 	foreach($conn->query($sql_orders) as $row){
 		$counter++;
