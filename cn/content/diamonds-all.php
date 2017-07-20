@@ -1200,7 +1200,7 @@ function searchbystockref(){
 <script type="text/javascript">
 $(document).ready(function(){
 	$("#checkAll").click(function(){
-	     $(".selectcheckbox").attr("checked",$(this).attr("checked"));
+		$('.selectcheckbox').not(this).prop('checked', this.checked);
 	});
     $("#stockreftosearch").keydown(function(e){
       var curKey = e.which;

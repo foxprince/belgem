@@ -224,7 +224,7 @@ foreach($stmt as $row){
 
 ?>
 <tr class="<?php echo $r; ?> valueline sourse_<?php echo $row['source']; ?>" title="<?php echo $row['stock_ref']; ?>">
-<td width="38" style="width:38px;" align="center"><input type="checkbox" class="selectcheckbox" id="check_<?php echo $row['stock_ref']; ?>" onchange="makeorder('<?php echo $row['stock_ref']; ?>')" />
+<td width="38" style="width:38px;" align="center"><input type="checkbox" class="selectcheckbox" name="checkbox" id="check_<?php echo $row['stock_ref']; ?>" onchange="makeorder('<?php echo $row['stock_ref']; ?>')" />
 <?php if($superAdmin){?>
 <button class="deleterulesbtn" onclick="chgVisiable(<?php echo '\''.$row['stock_ref'].'\','.$row['visiable']; ?>)"
         id="visiable-<?php echo $row['stock_ref']; ?>"><?php echo $row['visiable']==1?'隐藏':'取消隐藏'; ?></button><?php } ?>
