@@ -1200,7 +1200,19 @@ function searchbystockref(){
 <script type="text/javascript">
 $(document).ready(function(){
 	$("#checkAll").click(function(){
-		$('.selectcheckbox').not(this).prop('checked', this.checked);
+		var c = this.checked;
+		$("input.selectcheckbox").each(function(){
+			var crr_obj=$(this);
+			crr_obj.prop('checked', c);
+			var crr_id_raw=crr_obj.attr('id');
+			var crr_ref=crr_id_raw.replace('check_', '');
+			if(c) {
+				makeorder(crr_ref);
+			}
+			else {
+				$('span#order_'+crr_ref).remove();
+			}
+		}); 
 	});
     $("#stockreftosearch").keydown(function(e){
       var curKey = e.which;
