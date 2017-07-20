@@ -188,7 +188,7 @@ if ($_SESSION ['account_level'] == '0') {
     <table cellpadding="2" cellspacing="0" border="0"
       style="border-style: solid; border-width: 1px; border-color: #666;">
       <tr class="t_h">
-        <td align="center" class="1st_col" style="width: 37px;">预定</td>
+        <td align="center" class="1st_col" style="width: 37px;"><input id="checkAll" type="checkbox" />预定</td>
         <td align="center" class="1st_col" style="width: 80px;">库存编号</td>
         <td align="center" style="width: 41px;">形状</td>
         <td align="center" style="width: 38px;"><img class="iconarrow" id="arrow_sorting_weight" width="8"
@@ -1199,6 +1199,9 @@ function searchbystockref(){
 </script>
 <script type="text/javascript">
 $(document).ready(function(){
+	$("#checkAll").click(function(){
+	     $(".selectcheckbox").attr("checked",$(this).attr("checked"));
+	});
     $("#stockreftosearch").keydown(function(e){
       var curKey = e.which;
       if(curKey == 13){
