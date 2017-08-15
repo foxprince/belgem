@@ -41,14 +41,16 @@ if($account_level!=0){
 }
 $source=$_GET['source'];
 $target=$_GET['target'];
-
+$color="white";
+if($_GET['color'])
+	$color = $_GET['color'];
 require_once('../includes/connection.php');
 $conn=dbConnect('write','pdo');
 $conn->query("SET NAMES 'utf8'");
 
 
 
-$sql_discount='SELECT * FROM price_discount';
+$sql_discount='SELECT * FROM price_discount where color="'.$color.'"';
 $stmt_disc=$conn->query($sql_discount);
 $disc_num=$stmt_disc->rowCount();
 if($disc_num){
@@ -73,7 +75,7 @@ if(isset($_POST['discount_percentage'])){
 	if($thenew_disc_num==$general_discount){
 		$disc_message='折扣数额没有更改';
 	}else{
-		$sql_disc_update='UPDATE price_discount SET '.$source.'_discount_'.$target.' = '.$thenew_disc_num;
+		$sql_disc_update='UPDATE price_discount SET '.$source.'_discount_'.$target.' = '.$thenew_disc_num .' where color="'.$color.'"';
 		$stmt_disc_update=$conn->query($sql_disc_update);
 		$disc_updated=$stmt_disc_update->rowCount();
 		if($disc_updated){
@@ -532,6 +534,7 @@ if(isset($disc_message)){
 }
 ?>
 <label>总折扣(-x%)：</label> <span class="emph">-</span> <input name="discount_percentage" class="emph" style="position:relative; width:38px;" type="text" value="<?php echo 	$general_discount; ?>" /> <span class="emph">%</span> (请只添数字，不要添负号和百分号)
+<input type="hidden" name="color" value="<?php echo $color;?>"/>
 <input type="submit" value="提交" class="buttontoclick" />
 </form>
 </div>

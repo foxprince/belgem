@@ -88,11 +88,11 @@ h1{
 	margin-top:0px;
 }
 div#maincontent{
-	padding-left:120px;
+	padding-left:20px;
 }
 a.thebigbtn{
 	display:inline-block;
-	padding:38px 108px;
+	padding:20px 50px;
 	background-color:#333;
 	color:#FFF;
 	font-size:14px;
@@ -102,6 +102,17 @@ a.thebigbtn{
 a.thebigbtn:hover{
 	background-color:#000;
 }
+.box{
+		width: 800px;
+		border: 1px solid;
+	}
+	.box-left{
+		width: 400px;
+		float: left;
+	}
+	.box-right{
+		margin-left: 100px;
+	}
 </style>
 <script src="http://edecenter.com/lab/jquery-1.11.2.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -115,29 +126,24 @@ a.thebigbtn:hover{
 <?php
 include('navi.php');
 ?>
-<div id="maincontent">
+<div id="maincontent" class="box">
 
-
-
-
-
+<div class="box-left">
 <a class="thebigbtn" href="priceRule.php?source=excel&target=retail">零售网站价格管理-EXCEL数据</a>
 <a class="thebigbtn" href="priceRule.php?source=rapnet&target=retail">零售网站价格管理-RAPNET数据</a>
 <a class="thebigbtn" href="priceRule.php?source=excel&target=retail&color=fancy">零售网站价格管理-彩钻EXCEL数据</a>
 <a class="thebigbtn" href="priceRule.php?source=rapnet&target=retail&color=fancy">零售网站价格管理-彩钻RAPNET数据</a>
-
+</div>
+<div class="box-right">
 <a class="thebigbtn" href="priceRule.php?source=excel&target=agency">代购网站价格管理-EXCEL数据</a>
 <a class="thebigbtn" href="priceRule.php?source=rapnet&target=agency">代购网站价格管理-RAPNET数据</a>
 <a class="thebigbtn" href="priceRule.php?source=excel&target=agency&color=fancy">代购网站价格管理--彩钻EXCEL数据</a>
 <a class="thebigbtn" href="priceRule.php?source=rapnet&target=agency&color=fancy">代购网站价格管理--彩钻RAPNET数据</a>
+</div>
 <hr/>
+<div>
 <a class="thebigbtn" href="price-currency.php">汇率设定</a>
-
-
-
-
-
-
+</div>
 </div>
 
 
