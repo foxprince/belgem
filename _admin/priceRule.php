@@ -3,6 +3,7 @@
 
 /*===================session========================*/
 session_start();
+require_once('../log.php');
 
 if(isset($_POST['logout'])){
 	if(isset($_SESSION['authenticated'])){
@@ -553,6 +554,7 @@ if($color=='fancy')
 else 
 	$sql_rules .= ' and color<>"'.$color.'"';
 $sql_rules = $sql_rules.' ORDER BY priority ASC';
+logger($sql_rules);
 $stmt_rules=$conn->query($sql_rules);
 $rulesfound=$stmt_rules->rowCount();
 
