@@ -99,7 +99,7 @@ if(isset($_POST['discount_percentage'])){
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>管理界面:价格管理</title>
 <link rel="stylesheet" href="adminstyle.css">
-<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+<link rel="stylesheet" href="../styles/jquery-ui.css" />
 <style>
 body{
 	font-family:'Microsoft Yahei', 微软雅黑, STHeiti, simsun, Arial, sans-serif;
@@ -259,8 +259,8 @@ img.shapeicon{
 	width:26px;
 }
 </style>
-<script src="http://edecenter.com/lab/jquery-1.11.2.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script src="../js/jquery-1.11.2.min.js"></script>
+<script src="../js/jquery-ui.min.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -366,7 +366,7 @@ function updateRule(ruleID){
 		colorchoiceCounter++;
 	});
 	if(typeof($("#fancy").attr("title"))!="undefined") 
-		$color+=$('#fancy').attr('title');
+		$color=$('#fancy').attr('title');
 	var claritychoiceCounter=0;
 	$('.claritychoicebox_'+idoftherule+' > span.chosen').each(function(){
 		var crr_clarity=$(this).attr('title');
@@ -548,8 +548,10 @@ if(isset($disc_message)){
   
 <?php
 $sql_rules='SELECT * FROM price_settings where source="'.$source.'" and target="'.$target.'"';
-if($_GET['color'])
-	$sql_rules =$sql_rules. ' and color="FANCY"';
+if($color=='fancy') 
+	$sql_rules .= ' and color="'.$color.'"';
+else 
+	$sql_rules .= ' and color<>"'.$color.'"';
 $sql_rules = $sql_rules.' ORDER BY priority ASC';
 $stmt_rules=$conn->query($sql_rules);
 $rulesfound=$stmt_rules->rowCount();
@@ -690,7 +692,7 @@ if(in_array("M", $crr_color_choice_array)){
 </div><!-- end colorchoicebox -->
 </div><!-- END theouterbox-color -->
 <?php }else{?>
-<span id="fancy" title="FANCY"/>
+<span id="fancy" title="fancy"/>
 <?php }?>	
 
 
@@ -1021,7 +1023,7 @@ if(in_array("None", $crr_fluo_choice_array)){
 </div><!-- end colorchoicebox -->
 </div><!-- END theouterbox-color -->
 <?php }else{?>
-<span id="fancy" title="FANCY"/>
+<span id="fancy" title="fancy"/>
 <?php }?>
 
 

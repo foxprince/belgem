@@ -70,7 +70,7 @@ $conn->query("SET NAMES 'utf8'");
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>管理界面:交易历史纪录</title>
 <link rel="stylesheet" href="adminstyle.css">
-<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+<link rel="stylesheet" href="../styles/jquery-ui.css" />
 <style>
 body{
 	font-family:'Microsoft Yahei', 微软雅黑, STHeiti, simsun, Arial, sans-serif;
@@ -114,8 +114,8 @@ a.thebigbtn:hover{
 		margin-left: 100px;
 	}
 </style>
-<script src="http://edecenter.com/lab/jquery-1.11.2.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script src="../js/jquery-1.11.2.min.js"></script>
+<script src="../js/jquery-ui.min.js"></script>
 
 
 
@@ -129,15 +129,15 @@ include('navi.php');
 <div id="maincontent" class="box">
 
 <div class="box-left">
-<a class="thebigbtn" href="priceRule.php?source=excel&target=retail">零售网站价格管理-EXCEL数据</a>
-<a class="thebigbtn" href="priceRule.php?source=rapnet&target=retail">零售网站价格管理-RAPNET数据</a>
-<a class="thebigbtn" href="priceRule.php?source=excel&target=retail&color=fancy">零售网站价格管理-彩钻EXCEL数据</a>
+<a class="thebigbtn" href="priceRule.php?source=excel&target=retail">零售网站价格管理-白钻--EXCEL数据</a>
+<a class="thebigbtn" href="priceRule.php?source=rapnet&target=retail">零售网站价格管理-白钻RAPNET数据</a>
+<a class="thebigbtn" href="priceRule.php?source=excel&target=retail&color=fancy">零售网站价格管理-彩钻--EXCEL数据</a>
 <a class="thebigbtn" href="priceRule.php?source=rapnet&target=retail&color=fancy">零售网站价格管理-彩钻RAPNET数据</a>
 </div>
 <div class="box-right">
-<a class="thebigbtn" href="priceRule.php?source=excel&target=agency">代购网站价格管理-EXCEL数据</a>
-<a class="thebigbtn" href="priceRule.php?source=rapnet&target=agency">代购网站价格管理-RAPNET数据</a>
-<a class="thebigbtn" href="priceRule.php?source=excel&target=agency&color=fancy">代购网站价格管理--彩钻EXCEL数据</a>
+<a class="thebigbtn" href="priceRule.php?source=excel&target=agency">代购网站价格管理-白钻--EXCEL数据</a>
+<a class="thebigbtn" href="priceRule.php?source=rapnet&target=agency">代购网站价格管理-白钻RAPNET数据</a>
+<a class="thebigbtn" href="priceRule.php?source=excel&target=agency&color=fancy">代购网站价格管理--彩钻--EXCEL数据</a>
 <a class="thebigbtn" href="priceRule.php?source=rapnet&target=agency&color=fancy">代购网站价格管理--彩钻RAPNET数据</a>
 </div>
 <hr/>
