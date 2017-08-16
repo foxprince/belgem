@@ -552,7 +552,7 @@ $sql_rules='SELECT * FROM price_settings where source="'.$source.'" and target="
 if($color=='fancy') 
 	$sql_rules .= ' and color="'.$color.'"';
 else 
-	$sql_rules .= ' and color<>"'.$color.'"';
+	$sql_rules .= ' and color<>"fancy"';
 $sql_rules = $sql_rules.' ORDER BY priority ASC';
 logger($sql_rules);
 $stmt_rules=$conn->query($sql_rules);
