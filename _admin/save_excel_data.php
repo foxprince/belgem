@@ -22,13 +22,8 @@ if($_SESSION['authenticated']!='SiHui'){
 
 $username=$_SESSION['username'];
 $account_level=$_SESSION['account_level'];
-
-
-
-if(!isset($_REQUEST['confirmed']) || !isset($_REQUEST['crr_turn'])){
-	exit('NO PERMISSION');
-}
 if($_REQUEST['confirmed']!="YES"){
+	echo $_REQUEST['confirmed'];
 	exit('NO PERMISSION');
 }
 

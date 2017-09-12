@@ -432,10 +432,11 @@ function waitingIimerIndi(){
 <button type="button" id="exceluploadbtn" onclick="excelupload()" style="font-size:18px; background-color:#06F; padding:15px 68px; border-width:1px; color:#FFF;">上传</button>
 </form>
 <script type="text/javascript">
-function excelupload(){	
+function excelupload(){	alert('dd');
 	$('#excelform').submit();
 	$('#exceluploadbtn').attr('disabled','disabled');
 	$('#exceluploadbtn').html('上传中...');
+	console.log('uppppppp');
 }
 </script>
 
@@ -561,7 +562,7 @@ if($_SESSION['col_carat']<0){
 <option value="-">请选择：</option>
 <?php
 for($iiii = 1; $iiii<=$total_cols; $iiii++){
-	$crr_label=trim($data->raw($row_label,$iiii));
+	$crr_label=trim($data->val($row_label,$iiii));
 ?>
 <option value="<?php echo $iiii; ?>"><?php echo $crr_label; ?></option>
 <?php
@@ -581,6 +582,25 @@ if($_SESSION['col_grading_lab']<0){
 <p class="label-choosing-para">
 证书(grading lab)：
 <select name="label-grading_lab">
+<option value="-">请选择：</option>
+<?php
+for($iiii = 1; $iiii<=$total_cols; $iiii++){
+	$crr_label=trim($data->val($row_label,$iiii));
+?>
+<option value="<?php echo $iiii; ?>"><?php echo $crr_label; ?></option>
+<?php
+}	
+?>
+</select>
+</p>
+<?php
+}
+if($_SESSION['col_certificate_number']<0){
+	$all_label_found=false;
+	?>
+<p class="label-choosing-para">
+证书编号：
+<select name="label-certificate_number">
 <option value="-">请选择：</option>
 <?php
 for($iiii = 1; $iiii<=$total_cols; $iiii++){
@@ -784,25 +804,7 @@ for($iiii_ori_discount = 1; $iiii_ori_discount<=$total_cols; $iiii_ori_discount+
 ###############################################
 
 
-if($_SESSION['col_certificate_number']<0){
-	$all_label_found=false;
-?>
-<p class="label-choosing-para">
-证书编号：
-<select name="label-certificate_number">
-<option value="-">请选择：</option>
-<?php
-for($iiii = 1; $iiii<=$total_cols; $iiii++){
-	$crr_label=trim($data->raw($row_label,$iiii));
-?>
-<option value="<?php echo $iiii; ?>"><?php echo $crr_label; ?></option>
-<?php
-}	
-?>
-</select>
-</p>
-<?php
-}
+
 ###############################################
 ###############################################
 ###############################################
