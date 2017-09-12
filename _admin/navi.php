@@ -28,37 +28,37 @@
 <?php
 if($account_level==0){
 ?>
-<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="users.php">用户管理</a>
+<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/_admin/users.php">用户管理</a>
 
-<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="index.php">订单处理</a>
+<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/_admin/index.php">订单处理</a>
 
-<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="history.php">交易历史记录</a>
+<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/_admin/history.php">交易历史记录</a>
 
-<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="historyaccount.php">管理历史记录</a>
+<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/_admin/historyaccount.php">管理历史记录</a>
 
-<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="import_excel.php">产品管理</a>
+<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/_admin/import_excel.php">产品管理</a>
 
-<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="price-settings.php">价格管理</a>
-<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="invoice/list.html">发票管理</a>
+<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/_admin/price-settings.php">价格管理</a>
+<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/_admin/invoice/invoice.php">发票管理</a>
 
-<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="../">回到网站</a>
+<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/">回到网站</a>
 <?php
 }else if($account_level==1){
 ?>
-<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="users.php">用户管理</a>
+<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/_admin/users.php">用户管理</a>
 
-<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="index.php">订单处理</a>
+<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/_admin/index.php">订单处理</a>
 
-<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="history.php">历史记录</a>
+<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/_admin/history.php">历史记录</a>
 
-<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="../">回到网站</a>
+<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/">回到网站</a>
 <?php
 }else{
 ?>
 
-<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="index.php">订单处理</a>
+<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/_admin/index.php">订单处理</a>
 
-<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="../">回到网站</a>
+<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/">回到网站</a>
 <?php
 }
 ?>
