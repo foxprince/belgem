@@ -1,9 +1,6 @@
 <?php
 date_default_timezone_set("Asia/Shanghai");
 include_once '../log.php';
-require 'mail/PHPMailerAutoload.php';
-require("mail/class.phpmailer.php");
-require("mail/class.smtp.php");
 if(!isset($conn)){
 	require_once('../includes/connection.php');
 	$conn=dbConnect('write','pdo');

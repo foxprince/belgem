@@ -39,6 +39,7 @@ if($account_level==0){
 <a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="import_excel.php">产品管理</a>
 
 <a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="price-settings.php">价格管理</a>
+<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="invoice/list.html">发票管理</a>
 
 <a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="../">回到网站</a>
 <?php
