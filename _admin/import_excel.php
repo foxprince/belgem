@@ -276,7 +276,7 @@ p.label-choosing-para{
 	width: 500px;
 }
 </style>
-<script src="http://edecenter.com/lab/jquery-1.11.2.min.js"></script>
+<script src="/js/jquery-1.11.2.min.js"></script>
 </head>
 
 <body>

@@ -169,7 +169,7 @@ button#normalmodebtn{
 	display:none;
 }
 </style>
-<script src="http://edecenter.com/lab/jquery-1.11.2.min.js"></script>
+<script src="/js/jquery-1.11.2.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
 
 <script type="text/javascript">

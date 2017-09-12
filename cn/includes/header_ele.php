@@ -12,9 +12,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta content="BELGEM" name="description">
 <link href="../styles/main.css?v=<?php echo strtotime('now'); ?>" media="screen" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="http://edecenter.com/lab/jquery-ui.css" />
-<script src="http://edecenter.com/lab/jquery-1.11.2.min.js"></script>
-<script src="http://edecenter.com/lab/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="/styles/jquery-ui.css" />
+<script src="/js/jquery-1.11.2.min.js"></script>
+<script src="/js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="../jscontrol.js?v=<?php echo strtotime('now'); ?>"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
