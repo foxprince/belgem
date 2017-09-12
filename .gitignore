@@ -7,3 +7,5 @@ action.log
 /rapnetfeed.csv
 /log.txt
 /test.sql
+file.xls
+.DS_Store
