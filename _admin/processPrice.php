@@ -1,5 +1,5 @@
 <?php
-require_once('./log.php');
+require_once('../log.php');
 function processPrice($thecarat, $thecolor, $theclarity, $thecut, $thepolish, $thesymmetry, $thecertificate, $theshape, $thefluo, $rawprice, $sellerdiscount, $source, $target){
 	global $conn;
 

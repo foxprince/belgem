@@ -432,7 +432,7 @@ function waitingIimerIndi(){
 <button type="button" id="exceluploadbtn" onclick="excelupload()" style="font-size:18px; background-color:#06F; padding:15px 68px; border-width:1px; color:#FFF;">上传</button>
 </form>
 <script type="text/javascript">
-function excelupload(){	alert('dd');
+function excelupload(){	
 	$('#excelform').submit();
 	$('#exceluploadbtn').attr('disabled','disabled');
 	$('#exceluploadbtn').html('上传中...');
