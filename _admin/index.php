@@ -71,6 +71,7 @@ if(isset($_POST['filter_price'])){
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>管理界面</title>
 <link rel="stylesheet" href="./adminstyle.css">
+<link rel="stylesheet" href="../styles/jquery-ui.css">
 <link rel="stylesheet" href="../styles/multi-select.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
 
@@ -422,7 +423,7 @@ include('navi.php');
 	<?php foreach($conn->query('select distinct  ordered_time as d from diamonds where ordered_time is not null order by d desc') as $row_orderDate){?>
 	<option value='"<?php echo $row_orderDate['d'];?>"' <?php if($crr_orderDate==$row_orderDate['d']) {echo 'selected="selected"';} ?>><?php echo $row_orderDate['d'];?></option>
 	<?php }?>
-</select><button id="filterOrderBtn" onclick="filterOrderDate()"></button>
+</select><button id="filterOrderBtn" onclick="filterOrderDate()" value="筛选">筛选</button>
 </p>
 <?php
 if($account_level==0){
