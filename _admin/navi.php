@@ -1,4 +1,4 @@
-<div class="headerbox">
+<div id="headerbox" class="headerbox">
 <div class="header">
 
 <a id="logolinker" href="/"><img id="logo" src="http://happyeurope.eu/images/belgemlogo.png" /></a>
@@ -68,6 +68,6 @@ if($account_level==0){
 
 
 
-<form class="logout" action="" method="post" style="position:absolute; top:5px; right:0px; width:80px;"> 
+<form id="logoutForm"class="logout" action="" method="post" style="position:absolute; top:5px; right:0px; width:80px;"> 
      <input type="submit" name="logout" id="logout" value="logout">
 </form>

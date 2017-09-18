@@ -402,6 +402,9 @@ function printingmode(){
 		$('button#normalmodebtn').show();
 	});
 	$('.paidfield').hide();
+	$('#headerbox').hide();$('#logoutForm').hide();
+	$('tr').find('th:eq(0)').hide(); $('tr').find('td:eq(0)').hide();
+	$('tr').find('th:eq(16)').hide(); $('tr').find('td:eq(16)').hide();
 	$('div#maincontent').css('margin-left',20);
 }
 function operationmode(){
@@ -410,6 +413,10 @@ function operationmode(){
 		$('button#printingmodebtn').show();
 	});
 	$('div#maincontent').removeAttr('style');
+	$('.paidfield').show();
+	$('#headerbox').show();$('#logoutForm').show();
+	$('tr').find('th:eq(0)').show(); $('tr').find('td:eq(0)').show();
+	$('tr').find('th:eq(16)').show(); $('tr').find('td:eq(16)').show();
 }
 $('#orderDateSelect').multiselect();
 </script>
