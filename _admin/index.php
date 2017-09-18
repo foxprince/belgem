@@ -70,6 +70,7 @@ if(isset($_POST['filter_price'])){
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>管理界面</title>
+<link rel="stylesheet" href="./adminstyle.css">
 <link rel="stylesheet" href="../styles/multi-select.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
 
