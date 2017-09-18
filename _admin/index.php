@@ -393,6 +393,7 @@ function printingmode(){
 		$('button#printingmodebtn').hide();
 		$('button#normalmodebtn').show();
 	});
+	$('.paidfield').hide();
 	$('div#maincontent').css('margin-left',20);
 }
 function operationmode(){
@@ -430,9 +431,9 @@ if($account_level==0){
 <td ><input type="checkbox" id="checkAll"/>全选</td>
 <td width="68">钻石ID</td>
 <td width="48">Stock #</td>
-<td width="30">形状</td>
+<td width="30">Shp</td>
 <td width="38">重量</td>
-<td width="38">颜色</td>
+<td width="38">Col</td>
 <td width="38">净度</td>
 <td width="88">切工</td>
 <td width="58">荧光</td>
@@ -489,7 +490,7 @@ if($account_level==0){
 </td>
 <td width="88">预定时间</td>
 <?php if($_SESSION['username']!='gnkf'){?><td width="88">原价</td><?php } ?>
-<td width="68">所属总代理</td>
+<td width="68">Agent</td>
 <td class="lastcell">操作</td>
 </tr>
 </thead>
