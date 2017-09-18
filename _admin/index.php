@@ -421,7 +421,7 @@ include('navi.php');
 预定日期：<select multiple="multiple" id="orderDateSelect"  name="filter_orderDate" >
 	<option value="all">全部</option>
 	<?php foreach($conn->query('select distinct  ordered_time as d from diamonds where ordered_time is not null order by d desc') as $row_orderDate){?>
-	<option value='"<?php echo $row_orderDate['d'];?>"' <?php if($crr_orderDate==$row_orderDate['d']) {echo 'selected="selected"';} ?>><?php echo $row_orderDate['d'];?></option>
+	<option value='"<?php echo $row_orderDate['d'];?>"' <?php if(strpos($crr_orderDate, $row_orderDate['d'])) {echo 'selected="selected"';} ?>><?php echo $row_orderDate['d'];?></option>
 	<?php }?>
 </select><button id="filterOrderBtn" onclick="filterOrderDate()" value="筛选">筛选</button>
 </p>
