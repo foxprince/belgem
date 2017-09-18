@@ -42,9 +42,10 @@ if(isset($_POST['filter_company']) && $_POST['filter_company']!='all'){
 }
 if(isset($_REQUEST['filter_orderDate']) && $_REQUEST['filter_orderDate']!='all'){
 	$crr_orderDate=$_REQUEST['filter_orderDate'];
+	logger($crr_orderDate);
 	$orderDate=$_REQUEST['filter_orderDate'];
 	//$orderDateCondition=' AND DATE_FORMAT(diamonds.ordered_time,\'%Y-%m-%d\')  = "'.$orderDate.'" ';
-	$orderDateCondition=' AND diamonds.ordered_time  = "'.$orderDate.'" ';
+	$orderDateCondition=' AND diamonds.ordered_time in ('.$orderDate.')';
 }else{
 	$orderDateCondition='';
 	$crr_orderDate="all";
@@ -69,9 +70,8 @@ if(isset($_POST['filter_price'])){
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>管理界面</title>
-<link rel="stylesheet" href="adminstyle.css">
+<link rel="stylesheet" href="../styles/multi-select.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
-
 
 <style>
 body{
@@ -169,8 +169,9 @@ button#normalmodebtn{
 	display:none;
 }
 </style>
-<script src="/js/jquery-1.11.2.min.js"></script>
+<script src="../js/jquery-1.11.2.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+<script src="../js/jquery.multi-select.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -202,9 +203,8 @@ $(document).ready(function(){
 	getDiaStock();
 	$('#orderTable').DataTable();
 });
-function filterOrderDate(orderDate) {
-	console.log(orderDate);
-	window.location.href="index.php?filter_orderDate="+orderDate;
+function filterOrderDate() {
+	window.location.href="index.php?filter_orderDate="+$('#orderDateSelect').val();
 }
 function formcomplete(){
 	if($.trim($('#title').val())==''){
@@ -403,6 +403,7 @@ function operationmode(){
 	});
 	$('div#maincontent').removeAttr('style');
 }
+$('#orderDateSelect').multiSelect();
 </script>
 </head>
 <body>
@@ -415,12 +416,12 @@ include('navi.php');
 <img style="width:20px; position:relative; top:3px; left:-3px;" src="../images/print.ico" />打印布局</button>
 <button onclick="operationmode()" id="normalmodebtn">操作布局</button>
 <button id="deleteChecked" onclick="cancelorder()"><img title="取消" style="width:20px; position:relative; top:3px; left:-3px;" src="../images/delete.png" />删除选中</button>
-预定日期：<select name="filter_orderDate" onchange="filterOrderDate(this.options[this.options.selectedIndex].value)">
+预定日期：<select multiple="multiple" id="orderDateSelect"  name="filter_orderDate" >
 	<option value="all">全部</option>
 	<?php foreach($conn->query('select distinct  ordered_time as d from diamonds where ordered_time is not null order by d desc') as $row_orderDate){?>
-	<option value="<?php echo $row_orderDate['d'];?>" <?php if($crr_orderDate==$row_orderDate['d']) {echo 'selected="selected"';} ?>><?php echo $row_orderDate['d'];?></option>
+	<option value='"<?php echo $row_orderDate['d'];?>"' <?php if($crr_orderDate==$row_orderDate['d']) {echo 'selected="selected"';} ?>><?php echo $row_orderDate['d'];?></option>
 	<?php }?>
-</select>
+</select><button id="filterOrderBtn" onclick="filterOrderDate()"></button>
 </p>
 <?php
 if($account_level==0){
