@@ -72,7 +72,9 @@ if(isset($_POST['filter_price'])){
 <title>管理界面</title>
 <link rel="stylesheet" href="./adminstyle.css">
 <link rel="stylesheet" href="../styles/jquery-ui.css">
-<link rel="stylesheet" href="../styles/multi-select.css">
+<!-- <link rel="stylesheet" href="../styles/multi-select.css"> -->
+<link rel="stylesheet" href="../styles/jquery.multiselect.css">
+
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
 
 <style>
@@ -172,8 +174,12 @@ button#normalmodebtn{
 }
 </style>
 <script src="../js/jquery-1.11.2.min.js"></script>
+<script src="../js/jquery-ui.min.js"></script>
+
 <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-<script src="../js/jquery.multi-select.js"></script>
+<!-- <script src="../js/jquery.multi-select.js"></script> -->
+<script src="../js/jquery.multiselect.js"></script>
+
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -405,7 +411,7 @@ function operationmode(){
 	});
 	$('div#maincontent').removeAttr('style');
 }
-$('#orderDateSelect').multiSelect();
+$('#orderDateSelect').multiselect();
 </script>
 </head>
 <body>
