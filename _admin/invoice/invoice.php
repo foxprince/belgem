@@ -12,7 +12,9 @@ include('../navi.php');
 <hr />
 <div id="maincontent" style="padding-bottom:50px;">
 <?php
-include('list.html');
+$url = "http://localhost:8000/cn/invoice/list.html";
+$contents = file_get_contents($url); 
+echo $contents;
 ?>
 </div>
 </body>
