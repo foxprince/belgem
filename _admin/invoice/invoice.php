@@ -12,7 +12,7 @@ include('../navi.php');
 <hr />
 <div id="maincontent" style="padding-bottom:50px;">
 <?php
-$url = "http://localhost:8000/cn/invoice/list.html";
+$url = "http://www.lumiagem.com/cn/invoice/list.html";
 $contents = file_get_contents($url); 
 echo $contents;
 ?>
