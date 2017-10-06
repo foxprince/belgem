@@ -12,10 +12,11 @@ include('../navi.php');
 <hr />
 <div id="maincontent" style="padding-bottom:50px;">
 <?php
-$url = "http://www.lumiagem.com/cn/invoice/list.html";
-$contents = file_get_contents($url); 
-echo $contents;
+//$url = "http://www.lumiagem.com/cn/invoice/list.html";
+//$contents = file_get_contents($url); 
+//echo $contents;
 ?>
+include('list.html');
 </div>
 </body>
 </html>
