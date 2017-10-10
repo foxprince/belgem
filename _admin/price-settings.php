@@ -144,6 +144,12 @@ include('navi.php');
 <div>
 <a class="thebigbtn" href="price-currency.php">汇率设定</a>
 </div>
+<hr/>
+<div id="updatingdatabtnbox" style="margin:10px 0 0 0; padding:15px;">
+<button id="update_data_btn" target="_blank" onclick="updateRapnetData()">刷新RAPNET数据</button>
+<button id="update_data_btn" target="_blank" onclick="updateExcelData()">刷新EXCEL数据</button>
+<p style="font-size:12px; padding-left:0px; margin-bottom:35px;"><span style="color:#F00;">注：</span>制定新规则以后要点击刷新数据才能生效</p>
+</div>
 </div>
 
 
@@ -153,6 +159,19 @@ include('navi.php');
 </div>
 </div>
 
-
+<script>
+function updateRapnetData(){
+	r=confirm('只有新价格规则制定后才有必要刷新数据，确定刷新？');
+	if(r){
+		window.open('../regular_actions.php?newprice=tobeupdated', '_blank');
+	}
+}
+function updateExcelData(){
+	r=confirm('只有新价格规则制定后才有必要刷新数据，确定刷新？');
+	if(r){
+		window.open('./save_excel_data.php?confirmed=YES&crr_turn=yes', '_blank');
+	}
+}
+</script>
 </body>
 </html>

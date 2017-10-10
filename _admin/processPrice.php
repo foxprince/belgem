@@ -1,11 +1,9 @@
 <?php
-require_once('../log.php');
+require_once('log.php');
+set_time_limit (600);
 function processPrice($thecarat, $thecolor, $theclarity, $thecut, $thepolish, $thesymmetry, $thecertificate, $theshape, $thefluo, $rawprice, $sellerdiscount, $source, $target){
 	global $conn;
-
 	$very_raw_price=$rawprice;
-
-
 	$sql_discount='SELECT * FROM price_discount';
 	foreach($conn->query($sql_discount) as $r_d){
 		if($source=='rapnet' && $target=='agency'){
@@ -18,9 +16,7 @@ function processPrice($thecarat, $thecolor, $theclarity, $thecut, $thepolish, $t
 			$discount=$r_d['excel_discount_retail'];
 		}
 	}
-
 	//$rawprice_with_discount=$very_raw_price*(100-$discount)/100;
-
 	$sql_rules='SELECT * FROM price_settings where source="'.$source.'" and target="'.$target.'" ORDER BY id ASC';
 	$stmt=$conn->query($sql_rules);
 	$rulesfound=$stmt->rowCount();
@@ -109,19 +105,18 @@ if(!isset($crr_rule_value)){
 	echo 'not set rule for '.$thecarat.','.$thecolor.','.$theclarity.','.$thecut.','.$thepolish.','.$thesymmetry.','.$thecertificate.','.$theshape.','.$thefluo.','.$source.','.$target.'<br/>';
 	logger('not set rule for '.$thecarat.'<br/>');
 	logger($thecarat.','.$thecolor.','.$theclarity.','.$thecut.','.$thepolish.','.$thesymmetry.','.$thecertificate.','.$theshape.','.$thefluo.','.$rawprice.','.$sellerdiscount.','.$source.','.$target);
-
 	if($target=='retail'){
-		$crr_rule_value=1.3;
+		$crr_rule_value=1.35;
 	}else{
 		$crr_rule_value=1.2;
 	}
 }
 $final_price=$very_raw_price*(100+$sellerdiscount-$discount)/100*$crr_rule_value;
-//echo($source.' '.$target.' price of calu : '.$very_raw_price.'*(100+'.$sellerdiscount.'-'.$discount.')/100*'.$crr_rule_value.'*'.$thecarat.'<br/>');
+echo($source.' '.$target.' price of '.$thecertificate.' calu : '.$very_raw_price.'*(100+'.$sellerdiscount.'-'.$discount.')/100*'.$crr_rule_value.'*'.$thecarat);
 logger($source.' '.$target.' price of '.$thecertificate.' calu : '.$very_raw_price.'*(100+'.$sellerdiscount.'-'.$discount.')/100*'.$crr_rule_value.'*'.$thecarat);
 if($source=='rapnet')
 	return $final_price;
-	else
-		return $final_price*$thecarat;
+else
+	return $final_price*$thecarat;
 }
 ?>

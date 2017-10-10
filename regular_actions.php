@@ -285,9 +285,9 @@ while(! feof($file)){
 				}
 				$price=processPrice($Weight, $Color, $Clarity, $cut, $polish, $symmetry, $Lab, $shape, $FluorescenceIntensity, $raw_price_total, 0, 'rapnet', 'agency');
 				$retail_price=processPrice($Weight, $Color, $Clarity, $cut, $polish, $symmetry, $Lab, $shape, $FluorescenceIntensity, $raw_price_total, 0, 'rapnet', 'retail');
-				echo $DiamondID.',weight:'.$Weight.':rapnet price:'.$raw_price_total.'-';
-				echo ':agency price:'.$price.'-';
-				echo ':retail price:'.$retail_price;
+				//echo $DiamondID.',weight:'.$Weight.':rapnet price:'.$raw_price_total.'-';
+				//echo ':agency price:'.$price.'-';
+				//echo ':retail price:'.$retail_price;
 			//	echo '网上价格：'.$TotalCashPrice.'---------------- the total price cash <br> '.$DiamondID;
 				
 				//echo '<br>++++++++++++++++++++++++++<br><br>++++++++++++++++++++++++++<br>';
