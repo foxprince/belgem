@@ -4,7 +4,7 @@ set_time_limit (600);
 function processPrice($thecarat, $thecolor, $theclarity, $thecut, $thepolish, $thesymmetry, $thecertificate, $theshape, $thefluo, $rawprice, $sellerdiscount, $source, $target){
 	global $conn;
 	$very_raw_price=$rawprice;
-	$sql_discount='SELECT * FROM price_discount';
+	$sql_discount='SELECT * FROM price_discount where color="'.($thecolor=="fancy"?"fancy":"white").'"';
 	foreach($conn->query($sql_discount) as $r_d){
 		if($source=='rapnet' && $target=='agency'){
 			$discount=$r_d['rapnet_discount_agency'];
