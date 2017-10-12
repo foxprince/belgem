@@ -492,12 +492,12 @@ if($_REQUEST['action']) {
 			break;
 		case "invoiceNo":
 			$transactionNo = 1;
-			$sql_dia='SELECT count(*) as t FROM transaction where type="invoice"';
+			$sql_dia='select max(invoice_no) as t from transaction';
 			foreach($conn->query($sql_dia) as $r_r){
 				$transactionNo=$r_r['t']+1;
 			}
-			$transactionStr=  date('Y').sprintf('%04s', $transactionNo);
-			echo $transactionStr;
+			//$transactionStr=  date('Y').sprintf('%04s', $transactionNo);
+			echo $transactionNo;
 			break;
 		case "appointmentMake":
 			$diaId=$_REQUEST['diaId'];
