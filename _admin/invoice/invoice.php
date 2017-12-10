@@ -17,7 +17,7 @@ include('../navi.php');
 //$url = "http://www.lumiagem.com/cn/invoice/list.html";
 //$contents = file_get_contents($url); 
 //echo $contents;
-include('list.php');
+include('list.html');
 ?>
 
 </div>
