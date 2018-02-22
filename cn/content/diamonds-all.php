@@ -5,6 +5,7 @@ if ($_SESSION ['account_level'] == '0') {
 	$superAdmin = false;
 }
 ?>
+<?php require_once('/_admin/log.php');?>
 <div id="filter_box">
   <div id="filter_box_inner">
     <div class="filter_line">
@@ -1326,7 +1327,7 @@ function makeorder(theRef){
 		"../_admin/saveorder.php",
 		{stock_ref: refnumber},
 		function(data){
-			//alert(data);
+			logger("save order result:".data);
 			if($.trim(data)=='OK'){
 				alert('ordered');
 			}else{
