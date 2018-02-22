@@ -5,7 +5,7 @@ if ($_SESSION ['account_level'] == '0') {
 	$superAdmin = false;
 }
 ?>
-<?php require_once('../../log.php');?>
+<?php require_once('../../../log.php');?>
 <div id="filter_box">
   <div id="filter_box_inner">
     <div class="filter_line">
