@@ -469,7 +469,7 @@ for ($i = 1; $i <= 8; $i++) {
 			
 			//echo "第".$i."行，第".$ii.'列：'.$searchforRow_LabelofLotID.' ----- <br>';
 			
-			if((strpos($searchforRow_LabelofLotID,'Stock ID') !== false)||(strpos($searchforRow_LabelofLotID,'lotid') !== false) || (strpos($searchforRow_LabelofLotID,'lot id') !== false) || ((strpos($searchforRow_LabelofLotID,'stock') !== false) && (strpos($searchforRow_LabelofLotID,'ref') !== false))){
+			if((strpos($searchforRow_LabelofLotID,'stock id') !== false)||(strpos($searchforRow_LabelofLotID,'lotid') !== false) || (strpos($searchforRow_LabelofLotID,'lot id') !== false) || ((strpos($searchforRow_LabelofLotID,'stock') !== false) && (strpos($searchforRow_LabelofLotID,'ref') !== false))){
 				$stock_ref_label_found=true;
 				if(isset($_SESSION['authenticated'])){
 					$_SESSION['col_stock_ref']=$ii;
