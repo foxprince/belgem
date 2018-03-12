@@ -598,7 +598,11 @@ function closeWechatbox(){
 	$('div#wechatscanbox').fadeOut('fast');
 }
 function hide(){
-    $("#order_basket").fadeOut('slow');
+    $("#order_basket").fadeOut('slow');$("#orderBtn").attr("onclick","showOrder()");
+    $("#orderBtn").text('显示购物车');
+}
+function showOrder(){
+    $("#order_basket").fadeIn('slow');$("#orderBtn").text('隐藏购物车');$("#orderBtn").attr("onclick","hide()");
 }
 </script>
 <title>精品钻石</title>
@@ -696,7 +700,7 @@ if($permit){
 
 </div>
 <button id="makeorderbtn" onClick="confirmorder()" style="font-size:18px; color:#FFF; background-color:#960; padding:3px 12px; border-width:1px;">预定</button>
-
+<button id="hiddenButton" onclick="hide()">隐藏</button> 
 <div id="alreadyorderedbox" style="position:relative; margin-top:5px; border-top-style:solid; border-width:1px; border-color:#06F; padding-top:8px;">
 已经预定:<br>
 <div id="alreadyordered">

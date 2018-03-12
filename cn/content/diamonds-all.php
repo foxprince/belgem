@@ -173,7 +173,7 @@ if ($_SESSION ['account_level'] == '0') {
       <div class="filter_line_inner" id="filter_line_stockref" style="left: 0;">
         <span class="filter_title" style="display: inline-block; position: relative;">按库存编号/证书编号查询</span> <input
           name="stockreftosearch" id="stockreftosearch" style="width: 128px; position: relative; margin-left: 25px;" />
-        <button id="stockrefbtn" onclick="searchbystockref()">查找</button>
+        <button id="stockrefbtn" onclick="searchbystockref()">查找</button><button id="orderBtn" onclick="hide()">隐藏购物车</button>
       </div>
     </div>
     <p id="filtertab">筛选结果</p>

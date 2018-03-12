@@ -41,10 +41,7 @@ if(isset($_POST['stock_ref'])){
 			$stock_ref=	$_sref;
 			$sql_UPDATE='UPDATE diamonds SET ordered_by = "'.$username.'", ordered_time = NOW() WHERE stock_ref = "'.$stock_ref.'" ';
 		logger($sql_UPDATE);	
-			
-			
 			$stmt=$conn->query($sql_UPDATE);	  
-			
 			$insertOK=$stmt->rowCount();
 			if(!$insertOK){
 				$OK=false;
