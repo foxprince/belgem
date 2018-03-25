@@ -39,14 +39,12 @@ if($account_level==0&&$_SESSION['username']!='gnkf'){
 <a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/_admin/import_excel.php">产品管理</a>
 
 <a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/_admin/price-settings.php">价格管理</a>
-<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="http://www.lumiagem.com/cn/invoice/list.php" target="_blank">发票管理</a>
 <a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="http://www.lumiagem.com/cn/jewMng/ivtMng.html" target="_blank">首饰管理</a>
 <a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/">回到网站</a>
 <?php
 }else if($account_level==0&&$_SESSION['username']=='gnkf'){
 ?>
 <a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/_admin/index.php">订单处理</a>
-<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="http://www.lumiagem.com/cn/invoice/list.php" target="_blank">发票管理</a>
 <a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="http://www.lumiagem.com/cn/jewMng/ivtMng.html" target="_blank">首饰管理</a>
 <a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/">回到网站</a>
 <?php
