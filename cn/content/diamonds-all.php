@@ -163,7 +163,7 @@ if ($_SESSION ['account_level'] == '0') {
         <ul><li>
         <select multiple="multiple" id="fromCompanySelect"  name="filter_fromCompany" onchange="filterFromCompany()">
 			<option value="all">全部</option>
-			<?php foreach($conn->query('select distinct  from_company as d from diamonds ') as $row_orderDate){?>
+			<?php foreach($conn->query('select distinct  from_company as d from diamonds order by from_company') as $row_orderDate){?>
 			<option value='"<?php echo $row_orderDate['d'];?>"' <?php if(strpos($crr_orderDate, $row_orderDate['d'])) {echo 'selected="selected"';} ?>><?php echo $row_orderDate['d'];?></option>
 			<?php }?>
 		</select></li></ul>
