@@ -158,6 +158,16 @@ if ($_SESSION ['account_level'] == '0') {
           <li class="filter_clarity" id="filter_certiGIA" onclick="filter_certi('GIA')">GIA</li>
         </ul>
       </div>
+      <div class="filter_line_inner" id="filter_line_lab" style="border-width: 1px;">
+        <span class="filter_title">公司:</span>
+        <ul><li>
+        <select multiple="multiple" id="fromCompanySelect"  name="filter_fromCompany" onchange="filterFromCompany()">
+			<option value="all">全部</option>
+			<?php foreach($conn->query('select distinct  from_company as d from diamonds ') as $row_orderDate){?>
+			<option value='"<?php echo $row_orderDate['d'];?>"' <?php if(strpos($crr_orderDate, $row_orderDate['d'])) {echo 'selected="selected"';} ?>><?php echo $row_orderDate['d'];?></option>
+			<?php }?>
+		</select></li></ul>
+      </div>
     </div>
     <div class="filter_line">
       <div class="filter_line_inner" id="filter_line_symm" style="border-width: 1px;">
@@ -339,8 +349,7 @@ var $sorting_price_direction = 'ASC';
 var $sorting_direction = 'ASC';
 
 var $crr_page=1;
-
-
+var $fromCompany;
 function filter_shape(theshape){
 	var $theshape=theshape;
 	var $or='';
@@ -887,6 +896,12 @@ function filter_sym(thegrade){
 //filter certificate =============================
 //filter certificate =============================
 //filter certificate =============================
+function filterFromCompany() {
+	$fromCompany = ""+$('#fromCompanySelect').val();
+	if($fromCompany=="all")
+		$fromCompany = null;
+	update();
+}
 function filter_certi(thelab){
 	var $thecerti=thelab;
 	var $or='';
@@ -1103,7 +1118,7 @@ function update(){
 	$('div#loading_indi').fadeIn('fast');
 	$.post(
 		"diamond-data.php",
-		{shape:$shape, color:$color, clarity:$clarity, cut:$cut, polish:$polish, sym:$sym, fluo:$fluo, certi:$certi, weight_from:$weight_from, weight_to:$weight_to, price_from:$price_from, price_to:$price_to, featured: $featured, sorting:$sorting, sorting_direction:$sorting_direction, crr_page:$crr_page},
+		{fromCompany:$fromCompany, shape:$shape, color:$color, clarity:$clarity, cut:$cut, polish:$polish, sym:$sym, fluo:$fluo, certi:$certi, weight_from:$weight_from, weight_to:$weight_to, price_from:$price_from, price_to:$price_to, featured: $featured, sorting:$sorting, sorting_direction:$sorting_direction, crr_page:$crr_page},
 		function(data){
 			var contentLoaded=data;
 			//alert(data);

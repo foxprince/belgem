@@ -99,6 +99,13 @@ if($_POST['certi']==''){
 	$and=' AND ';
 }
 
+if($_POST['fromCompany']==''){
+	$query_fromCompany='';
+}else{
+	$query_fromCompany=$and.' from_company in ('.$_POST['fromCompany'].')';
+	$and=' AND ';
+}
+
 if($_POST['weight_from']==''&&$_POST['weight_to']==''){
 	$query_weight_from=0;$query_weight_to=100;
 }else if($_POST['weight_from']==''&&$_POST['weight_to']!=''){
@@ -187,8 +194,10 @@ switch ($sorting){
 require_once('../includes/connection.php');
 $conn=dbConnect('write','pdo');
 $conn->query("SET NAMES 'utf8'");
+include_once('../log.php');
 
-$sql_count='SELECT COUNT(*) AS num FROM diamonds WHERE'.$query_shape.$query_color.$query_clarity.$query_cut.$query_polish.$query_sym.$query_fluo.$query_certi.$and.'(carat >= '.$query_weight_from.' AND carat <= '.$query_weight_to.') AND (price BETWEEN '.$query_price_from.' AND '.$query_price_to.') AND status = "AVAILABLE" '.$featured;
+$sql_count='SELECT COUNT(*) AS num FROM diamonds WHERE'.$query_fromCompany.$query_shape.$query_color.$query_clarity.$query_cut.$query_polish.$query_sym.$query_fluo.$query_certi.$and.'(carat >= '.$query_weight_from.' AND carat <= '.$query_weight_to.') AND (price BETWEEN '.$query_price_from.' AND '.$query_price_to.') AND status = "AVAILABLE" '.$featured;
+logger($query_fromCompany.$sql_count);
 if(!$superAdmin)
 	$sql_count = $sql_count.' AND visiable=1';
 foreach($conn->query($sql_count) as $num){
@@ -196,11 +205,10 @@ foreach($conn->query($sql_count) as $num){
 }
 /**/
 
-$sql='SELECT * FROM diamonds WHERE'.$query_shape.$query_color.$query_clarity.$query_cut.$query_polish.$query_sym.$query_fluo.$query_certi.$and.'(carat >= '.$query_weight_from.' AND carat <= '.$query_weight_to.') AND (price BETWEEN '.$query_price_from.' AND '.$query_price_to.') AND status = "AVAILABLE" '.$featured;
+$sql='SELECT * FROM diamonds WHERE'.$query_fromCompany.$query_shape.$query_color.$query_clarity.$query_cut.$query_polish.$query_sym.$query_fluo.$query_certi.$and.'(carat >= '.$query_weight_from.' AND carat <= '.$query_weight_to.') AND (price BETWEEN '.$query_price_from.' AND '.$query_price_to.') AND status = "AVAILABLE" '.$featured;
 if(!$superAdmin)
 	$sql_ = $sql.' AND visiable=1';
 $sql = $sql.' '.$query_sorting.' LIMIT '.$startfrom.', 35';
-include_once('../log.php');
 logger($sql);
 //exit($sql);
 
