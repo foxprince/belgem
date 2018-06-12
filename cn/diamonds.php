@@ -338,7 +338,7 @@ div.filter_line_inner{
 	position:relative;	
 }
 div#filter_line_clarity, div#filter_line_color, div#filter_line_symm, div#filter_line_polish, div#filter_line_cut{
-	width:328px;
+	width:auto;
 }
 div#filter_line_price, div#filter_line_weight{
 	padding: 0px 0 0px 85px;

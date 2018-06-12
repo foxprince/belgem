@@ -9,6 +9,7 @@ if ($_SESSION ['account_level'] == '0') {
 <div id="filter_box">
   <div id="filter_box_inner">
     <div class="filter_line">
+    	  <div class="filter_line_inner" id="filter_line_color" style="border-width: 1px;">
       <span class="filter_title" id="filter_title_shape">形状<br />shape
       </span>
       <ul class="fileber_shape_outer">
@@ -31,6 +32,20 @@ if ($_SESSION ['account_level'] == '0') {
         <li class="filter_shape" id="filter_shapeCU" onclick="filter_shape('CU')"><img
           src="../images/site_elements/icons/12.gif" /></li>
       </ul>
+      </div>
+      <div class="filter_line_inner" id="filter_line_color" style="width:400px;border-width: 1px;">
+        <span class="filter_title">公司:</span>
+        <ul><li>
+        <select multiple="multiple" id="fromCompanySelect"  style="width:350px;border-width: 1px;" name="filter_fromCompany" onchange="filterFromCompany()">
+			<?php foreach($conn->query('select distinct  from_company as d from diamonds order by from_company') as $row_orderDate){?>
+			<option value='"<?php echo $row_orderDate['d'];?>"' <?php if(strpos($crr_orderDate, $row_orderDate['d'])) {echo 'selected="selected"';} ?>><?php echo $row_orderDate['d'];?></option>
+			<?php }?>
+		</select></li></ul>
+	<script src="/js/multiple-select.js"></script>
+    <script>
+        $('select').multipleSelect();
+    </script>
+      </div>
     </div>
     <div class="filter_line">
       <div class="filter_line_inner" id="filter_line_color" style="border-width: 1px;">
@@ -158,16 +173,7 @@ if ($_SESSION ['account_level'] == '0') {
           <li class="filter_clarity" id="filter_certiGIA" onclick="filter_certi('GIA')">GIA</li>
         </ul>
       </div>
-      <div class="filter_line_inner" id="filter_line_lab" style="border-width: 1px;">
-        <span class="filter_title">公司:</span>
-        <ul><li>
-        <select multiple="multiple" id="fromCompanySelect"  name="filter_fromCompany" onchange="filterFromCompany()">
-			<option value="all">全部</option>
-			<?php foreach($conn->query('select distinct  from_company as d from diamonds order by from_company') as $row_orderDate){?>
-			<option value='"<?php echo $row_orderDate['d'];?>"' <?php if(strpos($crr_orderDate, $row_orderDate['d'])) {echo 'selected="selected"';} ?>><?php echo $row_orderDate['d'];?></option>
-			<?php }?>
-		</select></li></ul>
-      </div>
+      
     </div>
     <div class="filter_line">
       <div class="filter_line_inner" id="filter_line_symm" style="border-width: 1px;">

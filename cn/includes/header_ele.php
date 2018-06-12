@@ -13,6 +13,7 @@
 <meta content="BELGEM" name="description">
 <link href="../styles/main.css?v=<?php echo strtotime('now'); ?>" media="screen" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="/styles/jquery-ui.css" />
+<link href="/styles/multiple-select.css" rel="stylesheet"/>
 <script src="/js/jquery-1.11.2.min.js"></script>
 <script src="/js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="../jscontrol.js?v=<?php echo strtotime('now'); ?>"></script>
