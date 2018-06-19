@@ -688,7 +688,6 @@ include_once('includes/footer.php');
 
 <div id="bgbox">
 <div id="bginner">
-<img style="width:100%;" src="../images/background_image9.jpg" />
 </div>
 </div>
 <?php

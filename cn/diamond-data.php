@@ -188,7 +188,8 @@ switch ($sorting){
 
 
 
-
+$queryClause = $query_shape.$query_fromCompany.$query_color.$query_clarity.$query_cut.$query_polish.$query_sym.$query_fluo.$query_certi.$and.'(carat >= '.$query_weight_from.' AND carat <= '.$query_weight_to.') AND (price BETWEEN '.$query_price_from.' AND '.$query_price_to.') AND status = "AVAILABLE" '.$featured;
+$_SESSION['queryClause']=$queryClause;
 //$query_sorting =' ORDER BY price ASC';
 
 require_once('../includes/connection.php');
@@ -196,7 +197,7 @@ $conn=dbConnect('write','pdo');
 $conn->query("SET NAMES 'utf8'");
 include_once('../log.php');
 
-$sql_count='SELECT COUNT(*) AS num FROM diamonds WHERE'.$query_shape.$query_fromCompany.$query_color.$query_clarity.$query_cut.$query_polish.$query_sym.$query_fluo.$query_certi.$and.'(carat >= '.$query_weight_from.' AND carat <= '.$query_weight_to.') AND (price BETWEEN '.$query_price_from.' AND '.$query_price_to.') AND status = "AVAILABLE" '.$featured;
+$sql_count='SELECT COUNT(*) AS num FROM diamonds WHERE'.$queryClause;
 logger($query_fromCompany.$sql_count);
 if(!$superAdmin)
 	$sql_count = $sql_count.' AND visiable=1';
@@ -205,7 +206,7 @@ foreach($conn->query($sql_count) as $num){
 }
 /**/
 
-$sql='SELECT * FROM diamonds WHERE'.$query_shape.$query_fromCompany.$query_color.$query_clarity.$query_cut.$query_polish.$query_sym.$query_fluo.$query_certi.$and.'(carat >= '.$query_weight_from.' AND carat <= '.$query_weight_to.') AND (price BETWEEN '.$query_price_from.' AND '.$query_price_to.') AND status = "AVAILABLE" '.$featured;
+$sql='SELECT * FROM diamonds WHERE'.$queryClause;
 if(!$superAdmin)
 	$sql_ = $sql.' AND visiable=1';
 $sql = $sql.' '.$query_sorting.' LIMIT '.$startfrom.', 35';

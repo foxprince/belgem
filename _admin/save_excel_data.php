@@ -125,6 +125,8 @@ for ($i = 1; $i <= $totalrow; $i++) {
 	
 	//$fancy_color=trim($data->val($i,7));//??????
 	$fancy_color='-';//??????
+	if(strlen($color)>1&&substr($color,0,1)=='F')
+		$fancy_color=substr($color,strlen($color)-1);
 	
 	$clarity=trim($data->val($i,$col_clarity));
 	$grading_lab=trim($data->val($i,$col_grading_lab));

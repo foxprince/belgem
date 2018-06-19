@@ -90,7 +90,7 @@ try {
 	$new_file_uploaded=true;
 
 } catch (RuntimeException $e) {
-
+	echo $e;
     echo $e->getMessage();
 
 }

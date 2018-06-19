@@ -36,7 +36,7 @@ if ($_SESSION ['account_level'] == '0') {
       <div class="filter_line_inner" id="filter_line_color" style="width:400px;border-width: 1px;">
         <span class="filter_title">公司:</span>
         <ul><li>
-        <select multiple="multiple" id="fromCompanySelect"  style="width:350px;border-width: 1px;" name="filter_fromCompany" onchange="filterFromCompany()">
+        <select multiple="multiple" id="fromCompanySelect"  style="width:350px;border-width: 1px;" name="filter_fromCompany" >
 			<?php foreach($conn->query('select distinct  from_company as d from diamonds order by from_company') as $row_orderDate){?>
 			<option value='"<?php echo $row_orderDate['d'];?>"' <?php if(strpos($crr_orderDate, $row_orderDate['d'])) {echo 'selected="selected"';} ?>><?php echo $row_orderDate['d'];?></option>
 			<?php }?>
@@ -356,6 +356,12 @@ var $sorting_direction = 'ASC';
 
 var $crr_page=1;
 var $fromCompany;
+function filterFromCompany() {
+	$fromCompany = ""+$('#fromCompanySelect').val();
+	if($fromCompany=="all"||$fromCompany=="null")
+		$fromCompany = null;
+	update();
+}
 function filter_shape(theshape){
 	var $theshape=theshape;
 	var $or='';
@@ -902,12 +908,7 @@ function filter_sym(thegrade){
 //filter certificate =============================
 //filter certificate =============================
 //filter certificate =============================
-function filterFromCompany() {
-	$fromCompany = ""+$('#fromCompanySelect').val();
-	if($fromCompany=="all")
-		$fromCompany = null;
-	update();
-}
+
 function filter_certi(thelab){
 	var $thecerti=thelab;
 	var $or='';
@@ -1137,8 +1138,9 @@ function update(){
 			diamondlistpagenavi(howmanyrecords);
 			arrowDirection();
 			addlisteners();
-			fetchCompanies();
+			//fetchCompanies();
 			update_selected();
+			//更新公司列表
 		}
 	);
 }
@@ -1191,6 +1193,17 @@ function update_selected(){
 
 function fetchCompanies(){
 	//company doesn't need to fetch anymore
+	$.get("/action.php?action=distinctCompany",
+		function(data){
+			$('#fromCompanySelect').empty();
+			var array = data.split(",")
+			for(j = 0,len=array.length; j < len-1; j++) {
+				console.log(array[j]);
+				//$("#fromCompanySelect").append("<option value="+array[j]+">"+array[j]+"</option>");
+			}
+			
+		}
+	);
 }
 
 function searchbystockref(){
@@ -1213,7 +1226,7 @@ function searchbystockref(){
 			diamondlistpagenavi(howmanyrecords);
 			arrowDirection();
 			addlisteners();
-			fetchCompanies();
+			//fetchCompanies();
 			update_selected();
 		}
 	);
@@ -1221,6 +1234,7 @@ function searchbystockref(){
 </script>
 <script type="text/javascript">
 $(document).ready(function(){
+	$("#fromCompanySelect").change(function() { filterFromCompany(); });
 	$("#checkAll").click(function(){
 		var c = this.checked;
 		$("input.selectcheckbox").each(function(){
