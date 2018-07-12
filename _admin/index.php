@@ -403,6 +403,7 @@ function printingmode(){
 	});
 	$('.paidfield').hide();
 	$('#headerbox').hide();$('#logoutForm').hide();
+	$('#contentNavi').hide();
 	$('tr').find('th:eq(0)').hide(); $('tr').find('td:eq(0)').hide();
 	$('tr').find('th:eq(16)').hide(); $('tr').find('td:eq(16)').hide();
 	$('div#maincontent').css('margin-left',20);
@@ -426,7 +427,7 @@ $('#orderDateSelect').multiselect();
 include('navi.php');
 ?>
 <div id="maincontent">
-<p><span style="font-size:18px; font-weight:bold; display:inline-block; margin-right:35px;">订单管理</span>
+<p id="contentNavi"><span style="font-size:18px; font-weight:bold; display:inline-block; margin-right:35px;">订单管理</span>
 <button onclick="printingmode()" id="printingmodebtn">
 <img style="width:20px; position:relative; top:3px; left:-3px;" src="../images/print.ico" />打印布局</button>
 <button onclick="operationmode()" id="normalmodebtn">操作布局</button>

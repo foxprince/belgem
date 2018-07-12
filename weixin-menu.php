@@ -10,7 +10,7 @@ $data = '{
            {
                "type":"view",
                "name":"来访预约",
-               "url":"http://mp.weixin.qq.com/s?__biz=MjM5MTkzNDIxOA==&mid=209685743&idx=1&sn=6439fb43d695360b84c799078a1ed69b&scene=18#rd"
+               "url":"https://mp.weixin.qq.com/s?__biz=MzIyNzA2NjE1OQ==&mid=2653292260&idx=3&sn=f6ae6153032a87fd8fbc6ecf846f8d48&chksm=f3b44ea4c4c3c7b2cfbae3be71174772e7ffaf9faf530fe2c87ce016d588ff14a6ad801eda66&scene=21#wechat_redirect"
             },
             {
                "type":"view",
@@ -20,7 +20,7 @@ $data = '{
             {
                "type":"view",
                "name":"常见问题",
-               "url":"http://mp.weixin.qq.com/s?__biz=MjM5MTkzNDIxOA==&mid=210299516&idx=1&sn=65cb3b49eca26b501c050ff9ce0b0cca&scene=18#rd"
+               "url":"https://mp.weixin.qq.com/s/alv3deeAYZJr7aHiLJoUcA"
             },
 			{
                "type":"click",
