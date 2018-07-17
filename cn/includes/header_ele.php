@@ -17,6 +17,7 @@
 <script src="/js/jquery-1.11.2.min.js"></script>
 <script src="/js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="../jscontrol.js?v=<?php echo strtotime('now'); ?>"></script>
+<!--  
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -26,7 +27,6 @@
   ga('send', 'pageview');
 </script>
 <script></script>
-<!--百度seo自动推送 -->
 (function(){
     var bp = document.createElement('script');
     var curProtocol = window.location.protocol.split(':')[0];
@@ -39,5 +39,5 @@
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();
-</script>
+</script>-->
 <link rel="shortcut icon" href="../images/site_elements/icon.ico" />
