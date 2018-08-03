@@ -38,7 +38,7 @@ $conn->query("SET NAMES 'utf8'");
 if(isset($_POST['stock_ref']) && isset($_POST['amount'])){
 	$stock_ref=$_POST['stock_ref'];
 	$amount=$_POST['amount'];
-	$sql_UPDATE='UPDATE diamonds SET paid_amount = '.$amount.', paid_at = NOW() WHERE stock_ref = "'.$stock_ref.'" ';
+	$sql_UPDATE='UPDATE diamonds SET paid_amount = "'.$amount.'", paid_at = NOW() WHERE stock_ref = "'.$stock_ref.'" ';
 	
 	
 	
