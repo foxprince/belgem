@@ -143,9 +143,9 @@ if(!isset($_SESSION['col_fluorescence_intensity']) || $new_file_uploaded){
 if(!isset($_SESSION['col_percentage']) || $new_file_uploaded){
 	$_SESSION['col_percentage']=-8;//----------------------12
 }//
-//if(!isset($_SESSION['col_therawprice']) || $new_file_uploaded){
-	//$_SESSION['col_therawprice']=-8;//----------------------13
-//}
+if(!isset($_SESSION['col_fancy_price']) || $new_file_uploaded){
+	$_SESSION['col_fancy_price']=-8;//----------------------13
+}
 if(!isset($_SESSION['col_raw_price_total']) || $new_file_uploaded){
 	$_SESSION['col_raw_price_total']=-8;//----------------------14
 }//
@@ -186,7 +186,7 @@ if(isset($_POST['label-percentage'])){
 	$_SESSION['col_percentage']=$_POST['label-percentage'];//10
 }	
 if(isset($_POST['label-therawprice'])){
-	$_SESSION['col_therawprice']=$_POST['label-therawprice'];//12
+	$_SESSION['col_fancy_price']=$_POST['label-therawprice'];//12
 }	
 if(isset($_POST['label-raw_price_total'])){
 	$_SESSION['col_raw_price_total']=$_POST['label-raw_price_total'];//13
@@ -513,13 +513,13 @@ if($stock_ref_label_found){
 			$_SESSION['col_percentage']=$iii;
 		}else if($crr_label=='sym') {
 			$_SESSION['col_symmetry']=$iii;
+		}else if(strpos($crr_label,'msp total') !== false){
+				$_SESSION['col_fancy_price']=$iii;//----------------------//
 		}
 		/*else if((strpos($crr_label,'list') !== false) ){
 				$_SESSION['col_raw_price_total']=$iii;//----------------------//
 		}else if((strpos($crr_label,'back') !== false)){
 				$_SESSION['col_percentage']=$iii;//----------------------//
-		}else if(strpos($crr_label,'msp') !== false){
-				$_SESSION['col_therawprice']=$iii;//----------------------//
 		}*/else if((strpos($crr_label,'certificate no') !== false) || (strpos($crr_label,'certi') !== false && strpos($crr_label,'no') !== false)){
 				$_SESSION['col_certificate_number']=$iii;//----------------------
 		}

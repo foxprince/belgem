@@ -720,7 +720,7 @@ function hidefinido(){
 <td width="128" class="lastcell">订单状态</td>
 </tr>
 <?php
-$sql_orders='SELECT diamonds.id, diamonds.stock_ref, shape, carat, color, fancy_color, clarity, grading_lab, certificate_number, cut_grade, polish, symmetry, fluorescence_intensity, price, diamonds.from_company, diamonds.ordered_time, paid_amount, order_sent, comment, status, users.user_name, users.real_name, users.account_level, users.given_by FROM diamonds, users WHERE diamonds.ordered_by IS NOT NULL AND diamonds.ordered_by <> "" AND diamonds.ordered_by = users.user_name AND (diamonds.ordered_by = "'.$username.'" OR (diamonds.ordered_by = users.user_name AND users.given_by = "'.$username.'")) ORDER BY ordered_time DESC';
+$sql_orders='SELECT diamonds.id, diamonds.stock_ref, shape, carat, color, fancy_color, clarity, grading_lab, certificate_number, cut_grade, polish, symmetry, fluorescence_intensity, price, diamonds.from_company, diamonds.ordered_time, paid_amount, order_sent, comment, status, users.user_name, users.real_name, users.account_level, users.given_by FROM diamonds, users WHERE diamonds.ordered_by IS NOT NULL AND diamonds.ordered_by <> "" AND diamonds.ordered_by = users.user_name AND (diamonds.ordered_by = "'.$username.'" OR (diamonds.ordered_by = users.user_name AND users.given_by = "'.$username.'")) ORDER BY diamonds.ordered_time DESC';
 $counter=0;
 	foreach($conn->query($sql_orders) as $row){
 		$counter++;
