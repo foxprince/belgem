@@ -67,7 +67,12 @@ $conn->query("SET NAMES 'utf8'");
 $sql_del='DELETE FROM diamonds WHERE ordered_by IS NULL AND wholesale_ordered_by IS NULL AND source <> "RAPNET"';
 $stmt_del=$conn->query($sql_del);
 $deleted=$stmt_del->rowCount();
-
+$records_in_db=array();
+$sql_ids='SELECT stock_ref FROM diamonds WHERE source <> "RAPNET"';
+$stmt_ids=$conn->query($sql_ids);
+foreach($stmt_ids as $row_id){
+	$records_in_db[]=$row_id['stock_ref'];
+}
 $sql_data_importing_status='UPDATE datafile_importing_status SET added = 0, passed = 0, proceeded = 0, status = "BUSY" WHERE id = 1';
 $stmt_status=$conn->query($sql_data_importing_status);
 $dia_ids_array=array();
@@ -79,8 +84,10 @@ for ($i = 1; $i <= $totalrow; $i++) {
 	if(trim($stock_ref_raw)==''){
 		$stock_ref_raw=$data->val($i,$col_stock_ref);
 	}
-	
 	$stock_ref='K'.trim($stock_ref_raw);
+	if (in_array($stock_ref, $records_in_db)) {
+		continue;
+	}
 	$shape=trim($data->val($i,$col_shape));
 	$carat=$data->raw($i,$col_carat);
 	if(trim($carat)==''){
