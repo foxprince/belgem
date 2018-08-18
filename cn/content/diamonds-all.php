@@ -7,7 +7,27 @@ if ($_SESSION ['account_level'] == '0') {
 ?>
 <?php require_once('../_admin/log.php');?>
 <div id="filter_box">
-  <div id="filter_box_inner">
+  <div id="dia_filter_box" class="filter_box_inner">
+    <div class="filter_line">
+    	  <div class="filter_line_inner" id="filter_line_color" style="border-width: 1px;">
+      	<button type="button" id="btn_dia" class="btn_selected">白钻</button>
+      	<button type="button" id="btn_dia_fancy">彩钻</button>
+      </div>
+      <div class="filter_line_inner" id="filter_line_color" style="width:400px;border-width: 1px;">
+        <span class="filter_title">公司:<br/>comp</span>
+        <ul><li>
+        <select multiple="multiple" id="fromCompanySelect"  style="width:350px;border-width: 1px;" name="filter_fromCompany" >
+			<?php foreach($conn->query('select distinct  from_company as d from diamonds order by from_company') as $row_orderDate){?>
+			<option value='"<?php echo $row_orderDate['d'];?>"' <?php if(strpos($crr_orderDate, $row_orderDate['d'])) {echo 'selected="selected"';} ?>><?php echo $row_orderDate['d'];?></option>
+			<?php }?>
+		</select></li></ul>
+	<script src="/js/multiple-select.js"></script>
+    <script>
+        $('select').multipleSelect();
+    </script>
+      </div>
+    </div>
+    <div id="dia_choose_box" style="display: block">
     <div class="filter_line">
     	  <div class="filter_line_inner" id="filter_line_color" style="border-width: 1px;">
       <span class="filter_title" id="filter_title_shape">形状<br />shape
@@ -33,20 +53,24 @@ if ($_SESSION ['account_level'] == '0') {
           src="../images/site_elements/icons/12.gif" /></li>
       </ul>
       </div>
-      <div class="filter_line_inner" id="filter_line_color" style="width:400px;border-width: 1px;">
-        <span class="filter_title">公司:</span>
-        <ul><li>
-        <select multiple="multiple" id="fromCompanySelect"  style="width:350px;border-width: 1px;" name="filter_fromCompany" >
-			<?php foreach($conn->query('select distinct  from_company as d from diamonds order by from_company') as $row_orderDate){?>
-			<option value='"<?php echo $row_orderDate['d'];?>"' <?php if(strpos($crr_orderDate, $row_orderDate['d'])) {echo 'selected="selected"';} ?>><?php echo $row_orderDate['d'];?></option>
-			<?php }?>
-		</select></li></ul>
-	<script src="/js/multiple-select.js"></script>
-    <script>
-        $('select').multipleSelect();
-    </script>
+      <div class="filter_line_inner" style="border-width: 1px;">
+        <span class="filter_title" style="top: -5px;">价格(美元)<br />price($)
+        </span>
+        <div id="filter_line_price">
+          <input type="text" id="price_from" class="inputChg" value="50" /> - <input type="text" id="price_to" class="inputChg" value="999999" />
+          <!--  <div id="slider-range" style="display: inline-block; width: 108px; margin-left: 25px;"></div>-->
+        </div>
+      </div>
+      <div class="filter_line_inner" style="border-width: 1px;"> 
+        <span class="filter_title" style="top: -4px;">重量<br />carat
+        </span>
+        <div id="filter_line_weight">
+          <input type="text" id="weight_from" class="inputChg" value="0.01" /> - <input type="text" id="weight_to" class="inputChg" value="50" />
+          <!--  <div id="slider-range-weight" style="display: inline-block; width: 188px; margin-left: 25px;"></div>-->
+        </div>
       </div>
     </div>
+    
     <div class="filter_line">
       <div class="filter_line_inner" id="filter_line_color" style="border-width: 1px;">
         <span class="filter_title">颜色<br />color
@@ -64,29 +88,6 @@ if ($_SESSION ['account_level'] == '0') {
           <li class="filter_color" id="filter_colorM" onclick="filter_color('M')">M</li>
         </ul>
       </div>
-      <div class="filter_line_inner">
-        <span class="filter_title" style="top: -4px;">重量<br />carat
-        </span>
-        <div id="filter_line_weight">
-          <input type="text" id="weight_from" value="0.01" /> - <input type="text" id="weight_to" value="50" />
-          <div id="slider-range-weight" style="display: inline-block; width: 188px; margin-left: 25px;"></div>
-          <button type="button" id="btn_weight">更新结果</button>
-          <!--
-
-<select id="weight_from">
-<option value="-">所有</option>
-<option value="0.9">小于 0.9</option>
-<option value="1.5">0.9 - 1.49</option>
-<option value="2.0">1.5 - 1.99</option>
-<option value="2.5">2.00 - 2.49</option>
-<option value="3.0">2.50 - 2.99</option>
-<option value="big">大于 3.0</option>
-</select>
--->
-        </div>
-      </div>
-    </div>
-    <div class="filter_line">
       <div class="filter_line_inner" id="filter_line_clarity" style="border-width: 1px;">
         <span class="filter_title">净度<br />clarity
         </span>
@@ -102,32 +103,15 @@ if ($_SESSION ['account_level'] == '0') {
         </ul>
       </div>
       <div class="filter_line_inner">
-        <span class="filter_title" style="top: -5px;">价格(美元)<br />price($)
+        <span class="filter_title">荧光<br />fluo
         </span>
-        <div id="filter_line_price">
-          <input type="text" id="price_from" value="50" /> - <input type="text" id="price_to" value="999999" />
-          <div id="slider-range" style="display: inline-block; width: 188px; margin-left: 25px;"></div>
-          <button type="button" id="btn_price">更新结果</button>
-          <!--
-
-<select id="price_from">
-<option value="-">所有</option>
-<option value="100">小于 100</option>
-<option value="200">100 - 200</option>
-<option value="300">200 - 300</option>
-<option value="500">300 - 500</option>
-<option value="800">500 - 800</option>
-<option value="1000">800 - 1000</option>
-<option value="1200">1000 - 1200</option>
-<option value="1500">1200 - 1500</option>
-<option value="2000">1500 - 2000</option>
-<option value="3000">2000 - 3000</option>
-<option value="5000">3000 - 5000</option>
-<option value="big">大于 5000</option>
-</select>
-
--->
-        </div>
+        <ul>
+          <li class="filter_clarity" id="filter_fluoVST" onclick="filter_fluo('VST')">极强</li>
+          <li class="filter_clarity" id="filter_fluoSTG" onclick="filter_fluo('STG')">强</li>
+          <li class="filter_clarity" id="filter_fluoMED" onclick="filter_fluo('MED')">中</li>
+          <li class="filter_clarity" id="filter_fluoFNT" onclick="filter_fluo('FNT')">弱</li>
+          <li class="filter_clarity" id="filter_fluoNON" onclick="filter_fluo('NON')">无</li>
+        </ul>
       </div>
     </div>
     <div class="filter_line">
@@ -141,19 +125,6 @@ if ($_SESSION ['account_level'] == '0') {
           <li class="filter_clarity" id="filter_cutF" onclick="filter_cut('F')">F</li>
         </ul>
       </div>
-      <div class="filter_line_inner">
-        <span class="filter_title">荧光<br />fluo
-        </span>
-        <ul>
-          <li class="filter_clarity" id="filter_fluoVST" onclick="filter_fluo('VST')">极强</li>
-          <li class="filter_clarity" id="filter_fluoSTG" onclick="filter_fluo('STG')">强</li>
-          <li class="filter_clarity" id="filter_fluoMED" onclick="filter_fluo('MED')">中</li>
-          <li class="filter_clarity" id="filter_fluoFNT" onclick="filter_fluo('FNT')">弱</li>
-          <li class="filter_clarity" id="filter_fluoNON" onclick="filter_fluo('NON')">无</li>
-        </ul>
-      </div>
-    </div>
-    <div class="filter_line">
       <div class="filter_line_inner" id="filter_line_polish" style="border-width: 1px;">
         <span class="filter_title">抛光<br />polish
         </span>
@@ -164,18 +135,6 @@ if ($_SESSION ['account_level'] == '0') {
           <li class="filter_clarity" id="filter_polishF" onclick="filter_polish('F')">F</li>
         </ul>
       </div>
-      <div class="filter_line_inner" id="filter_line_lab" style="border-width: 1px;">
-        <span class="filter_title">证书<br />Certi
-        </span>
-        <ul>
-          <li class="filter_clarity" id="filter_certiIGI" onclick="filter_certi('IGI')">IGI</li>
-          <li class="filter_clarity" id="filter_certiHRD" onclick="filter_certi('HRD')">HRD</li>
-          <li class="filter_clarity" id="filter_certiGIA" onclick="filter_certi('GIA')">GIA</li>
-        </ul>
-      </div>
-      
-    </div>
-    <div class="filter_line">
       <div class="filter_line_inner" id="filter_line_symm" style="border-width: 1px;">
         <span class="filter_title">对称性<br />sym
         </span>
@@ -186,6 +145,20 @@ if ($_SESSION ['account_level'] == '0') {
           <li class="filter_clarity" id="filter_symF" onclick="filter_sym('F')">F</li>
         </ul>
       </div>
+      <div class="filter_line_inner" id="filter_line_symm" style="border-width: 1px;">
+        <button type="button" id="btn_3ex" >3EX</button>
+      </div>
+    </div>
+    <div class="filter_line">
+      <div class="filter_line_inner" id="filter_line_lab" style="border-width: 1px;">
+        <span class="filter_title">证书<br />Certi
+        </span>
+        <ul>
+          <li class="filter_clarity" id="filter_certiIGI" onclick="filter_certi('IGI')">IGI</li>
+          <li class="filter_clarity" id="filter_certiHRD" onclick="filter_certi('HRD')">HRD</li>
+          <li class="filter_clarity" id="filter_certiGIA" onclick="filter_certi('GIA')">GIA</li>
+        </ul>
+      </div>
       <div class="filter_line_inner" id="filter_line_stockref" style="left: 0;">
         <span class="filter_title" style="display: inline-block; position: relative;">按库存编号/证书编号查询</span> <input
           name="stockreftosearch" id="stockreftosearch" style="width: 128px; position: relative; margin-left: 25px;" />
@@ -194,6 +167,10 @@ if ($_SESSION ['account_level'] == '0') {
     </div>
     <p id="filtertab">筛选结果</p>
   </div>
+  </div>
+  <div id="dia_fancy_box" style="display:none">
+  </div>
+    
 </div>
 <div class="main_contentbox" id="diamondscontentbox">
   <div id="tableheader">
@@ -258,9 +235,6 @@ if ($superAdmin) {
 </div>
 <script type="text/javascript">
 var $featured='NO';
-
-
-
 var $shapeBR=false;
 var $shapePS=false;
 var $shapePR=false;
@@ -270,10 +244,7 @@ var $shapeOV=false;
 var $shapeEM=false;
 var $shapeRAD=false;
 var $shapeCU=false;
-
 var $shape = '';
-
-
 var $colorD = false;
 var $colorE = false;
 var $colorF = false;
@@ -284,11 +255,7 @@ var $colorJ = false;
 var $colorK = false;
 var $colorL = false;
 var $colorM = false;
-
 var $color = '';
-
-
-
 var $clarityFL = false;
 var $clarityIF = false;
 var $clarityWS1 = false;
@@ -297,9 +264,7 @@ var $clarityVS1 = false;
 var $clarityVS2 = false;
 var $claritySI1 = false;
 var $claritySI2 = false;
-
 var $clarity = '';
-
 //======================= cut ==========================
 var $cutEX=false;
 var $cutVG=false;
@@ -337,11 +302,7 @@ var $fluoSTG=false;
 var $fluoMED=false;
 var $fluoFNT=false;
 var $fluoNON=false;
-
 var $fluo='';
-
-
-
 var $weight_from = '';
 var $weight_to = '';
 var $price_from = '';
@@ -1121,6 +1082,10 @@ function arrowDirection(){
 }
 
 function update(){
+	$weight_from=$('#weight_from').val();
+	$weight_to=$('#weight_to').val();
+	$price_from=$('#price_from').val();
+	$price_to=$('#price_to').val();
 	nowworkingonfilter=true;
 	$('div#loading_indi').fadeIn('fast');
 	$.post(
@@ -1452,8 +1417,45 @@ $('button#visiable-'+stockref).html('修改中...');
 		}
 	}
 
-
+$allEX=false;
+$diaChoose=true;
+$diaFancyChoose=false;
 $(function() {
+	$("#btn_dia_fancy").click(function(){
+		$("#btn_dia_fancy").addClass("btn_selected");
+		$("#dia_choose_box").hide();
+		$("#dia_fancy_box").show();
+		$("#btn_dia").removeClass("btn_selected");
+	});
+	$("#btn_dia").click(function(){
+		$("#btn_dia_fancy").removeClass("btn_selected");
+		$("#dia_choose_box").show();
+		$("#dia_fancy_box").hide();
+		$("#btn_dia").addClass("btn_selected");
+	});
+	$(".inputChg").change(function(){
+		update();
+	});
+	$("#btn_3ex").click(function(){
+		if($allEX){
+			$allEX=false;
+			$('#btn_3ex').removeClass('btn_selected');
+			$cut=' cut_grade in("EX","VG","G","F")';
+			$sym=' symmetry in("EX","VG","G","F")';
+			$polish=' polish in("EX","VG","G","F")';
+			$('.filter_clarity').removeClass('btn-active');
+		}else{
+			$allEX=true;
+			$('#btn_3ex').addClass('btn_selected');
+			$cut=' cut_grade = "EX" ';
+			$sym=' symmetry = "EX" ';
+			$polish=' polish = "EX" ';
+			$('.filter_clarity').removeClass('btn-active');
+			$('#filter_cutEX').addClass('btn-active');$('#filter_symEX').addClass('btn-active');
+			$('#filter_polishEX').addClass('btn-active');
+		}
+		update();
+	});
     $( "#slider-range-weight" ).slider({
       range: true,
 	  step: 0.1,
@@ -1464,6 +1466,9 @@ $(function() {
         //$( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
 		$('#weight_from').val(ui.values[ 0 ]);
 		$('#weight_to').val(ui.values[ 1 ]);
+		$weight_from=$('#weight_from').val();
+		$weight_to=$('#weight_to').val();
+		update();
       }
     });
   });
@@ -1479,6 +1484,9 @@ $(function() {
         //$( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
 		$('#price_from').val(ui.values[ 0 ]);
 		$('#price_to').val(ui.values[ 1 ]);
+		$price_from=$('#price_from').val();
+		$price_to=$('#price_to').val();
+		update();
       }
     });
   });

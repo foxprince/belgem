@@ -59,7 +59,14 @@ div#tableheader, div#diamondsdata{
 	margin-left:35px;
 }
 
-
+.btn_selected {
+	font-size: 18px;
+    color: #FFF;
+    background-color: #960;
+    margin: 1px 15px;
+    padding: 3px 12px;
+    border-width: 1px;
+}
 #filter_box{
 	margin-bottom:5px;
 	padding-bottom:25px;
@@ -332,11 +339,12 @@ div.filter_line{
 div.filter_line_inner{
 	display:inline-block;
 	padding-right:15px;
+	border-width: 1px;
 	border-right-style:solid;
-	border-width:0px;
 	border-color:#FFF;
 	position:relative;	
 }
+
 div#filter_line_clarity, div#filter_line_color, div#filter_line_symm, div#filter_line_polish, div#filter_line_cut{
 	width:auto;
 }
@@ -355,6 +363,7 @@ div#filter_line_price button, div#filter_line_weight button{
 	background-color:#FFF;
 	border:none;
 }
+
 div.filter_line ul{
 	margin:0 0 0 45px;
 }

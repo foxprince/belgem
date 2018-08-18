@@ -24,8 +24,13 @@ $data = '{
             },
 			{
                "type":"click",
-               "name":"登录网站",
+               "name":"用户名密码",
                "key":"KEY_PASSWEBACCOUNT"
+            },
+			{
+               "type":"view",
+               "name":"登录网站",
+               "url":"http://www.lumiagem.com/m/"
             }]
        },
 

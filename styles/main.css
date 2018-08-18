@@ -87,7 +87,7 @@ a.locationindicator:hover{
 	position:relative;
 	background-color:#fff;
 	/*background-color:rgba(248,245,235,.9);*/
-	background-image:url(../images/b.jpg);
+	/*background-image:url(../images/b.jpg);*/
 	background-repeat:repeat-x;
 }
 
