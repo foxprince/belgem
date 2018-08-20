@@ -404,7 +404,6 @@ li.filter_shape{
 	text-align:center;
 }
 li.filter_color{
-	width:12px;
 	text-align:center;
 }
 li.filter_clarity{
