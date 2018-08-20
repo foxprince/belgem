@@ -119,30 +119,30 @@ if ($_SESSION ['account_level'] == '0') {
         <span class="filter_title">切工<br />cut
         </span>
         <ul>
-          <li class="filter_clarity" id="filter_cutEX" onclick="filter_cut('EX')">EX</li>
-          <li class="filter_clarity" id="filter_cutVG" onclick="filter_cut('VG')">VG</li>
-          <li class="filter_clarity" id="filter_cutG" onclick="filter_cut('G')">G</li>
-          <li class="filter_clarity" id="filter_cutF" onclick="filter_cut('F')">F</li>
+          <li class="filter_3ex filter_clarity" id="filter_cutEX" onclick="filter_cut('EX')">EX</li>
+          <li class="filter_3ex filter_clarity" id="filter_cutVG" onclick="filter_cut('VG')">VG</li>
+          <li class="filter_3ex filter_clarity" id="filter_cutG" onclick="filter_cut('G')">G</li>
+          <li class="filter_3ex filter_clarity" id="filter_cutF" onclick="filter_cut('F')">F</li>
         </ul>
       </div>
       <div class="filter_line_inner" id="filter_line_polish" style="border-width: 1px;">
         <span class="filter_title">抛光<br />polish
         </span>
         <ul>
-          <li class="filter_clarity" id="filter_polishEX" onclick="filter_polish('EX')">EX</li>
-          <li class="filter_clarity" id="filter_polishVG" onclick="filter_polish('VG')">VG</li>
-          <li class="filter_clarity" id="filter_polishG" onclick="filter_polish('G')">G</li>
-          <li class="filter_clarity" id="filter_polishF" onclick="filter_polish('F')">F</li>
+          <li class="filter_3ex filter_clarity" id="filter_polishEX" onclick="filter_polish('EX')">EX</li>
+          <li class="filter_3ex filter_clarity" id="filter_polishVG" onclick="filter_polish('VG')">VG</li>
+          <li class="filter_3ex filter_clarity" id="filter_polishG" onclick="filter_polish('G')">G</li>
+          <li class="filter_3ex filter_clarity" id="filter_polishF" onclick="filter_polish('F')">F</li>
         </ul>
       </div>
       <div class="filter_line_inner" id="filter_line_symm" style="border-width: 1px;">
         <span class="filter_title">对称性<br />sym
         </span>
         <ul>
-          <li class="filter_clarity" id="filter_symEX" onclick="filter_sym('EX')">EX</li>
-          <li class="filter_clarity" id="filter_symVG" onclick="filter_sym('VG')">VG</li>
-          <li class="filter_clarity" id="filter_symG" onclick="filter_sym('G')">G</li>
-          <li class="filter_clarity" id="filter_symF" onclick="filter_sym('F')">F</li>
+          <li class="filter_3ex filter_clarity" id="filter_symEX" onclick="filter_sym('EX')">EX</li>
+          <li class="filter_3ex filter_clarity" id="filter_symVG" onclick="filter_sym('VG')">VG</li>
+          <li class="filter_3ex filter_clarity" id="filter_symG" onclick="filter_sym('G')">G</li>
+          <li class="filter_3ex filter_clarity" id="filter_symF" onclick="filter_sym('F')">F</li>
         </ul>
       </div>
       <div class="filter_line_inner" id="filter_line_symm" style="border-width: 1px;">
@@ -1574,14 +1574,14 @@ $(function() {
 			$cut=' cut_grade in("EX","VG","G","F")';
 			$sym=' symmetry in("EX","VG","G","F")';
 			$polish=' polish in("EX","VG","G","F")';
-			$('.filter_clarity').removeClass('btn-active');
+			$('.filter_3ex').removeClass('btn-active');
 		}else{
 			$allEX=true;
 			$('#btn_3ex').addClass('btn_selected');
 			$cut=' cut_grade = "EX" ';
 			$sym=' symmetry = "EX" ';
 			$polish=' polish = "EX" ';
-			$('.filter_clarity').removeClass('btn-active');
+			$('.filter_3ex').removeClass('btn-active');
 			$('#filter_cutEX').addClass('btn-active');$('#filter_symEX').addClass('btn-active');
 			$('#filter_polishEX').addClass('btn-active');
 		}
