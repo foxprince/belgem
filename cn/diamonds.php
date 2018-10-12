@@ -682,12 +682,7 @@ if($permit){
 <p><img style="width:128px;" src="http://lumiagem.com/images/site_elements/wechat_scan.jpg"></p>
 </div>
 </div>
-
-
 </div>
-
-
-
 
 <?php
 include_once('includes/footer.php');
@@ -731,7 +726,9 @@ foreach($conn->query($sql_orders) as $row_order){
 
 </div><!-- end alreadyorderedbox  -->
 <div><button id="hiddenButton" onclick="hide()">隐藏</button> ｜ 
+<?php if($_SESSION['username']=='superadmin'){ ?>
 <button class="next-pages-btn" onclick="deleteK()">删除K字头</button>
+<?php }?>
 </div>
 </div>
 

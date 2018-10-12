@@ -53,6 +53,10 @@ $stmt_log->execute(array(
 if(isset($_GET['newprice']) && $_GET['newprice']=='tobeupdated'){
 	echo '<br><br>***<br>checking if there are bad records in the database, if yes, delete<br>***<br>';
 	//$sql_del_imcomplete='DELETE FROM diamonds WHERE ordered_by IS NULL AND wholesale_ordered_by IS NULL AND source = "RAPNET"';
+	$sql_bak='insert into diamonds_history select * from diamonds WHERE  source = "RAPNET" and visiable!=1';
+	$stmt_bak = $conn->prepare ( $sql_bak );
+	$stmt_bak->execute();
+	
 	$sql_del_imcomplete='DELETE FROM diamonds WHERE  source = "RAPNET" and visiable!=1';
 	$stmt_del_incomplete=$conn->query($sql_del_imcomplete);
 	$del_incomplete_num=$stmt_del_incomplete->rowCount();

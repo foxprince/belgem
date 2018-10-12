@@ -63,7 +63,9 @@ require_once('../includes/connection.php');
 $conn=dbConnect('write','pdo');
 $conn->query("SET NAMES 'utf8'");
 ###delete the old first
-
+$sql_bak='insert into diamonds_history select * from diamonds WHERE  ordered_by IS NULL AND wholesale_ordered_by IS NULL AND source <> "RAPNET"';
+$stmt_bak = $conn->prepare ( $sql_bak );
+$stmt_bak->execute();
 $sql_del='DELETE FROM diamonds WHERE ordered_by IS NULL AND wholesale_ordered_by IS NULL AND source <> "RAPNET"';
 $stmt_del=$conn->query($sql_del);
 $deleted=$stmt_del->rowCount();

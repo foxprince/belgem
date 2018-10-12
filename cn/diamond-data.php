@@ -485,6 +485,8 @@ if(($crr_page_Round*10)<$total_page_NUM){
 }
 ?>
 </p>
+<?php if($_SESSION['username']=='super001'){ ?>
 <button class="next-pages-btn" onclick="deleteK()">删除K字头</button>
+<?php }?>
 <div id="howmanyrecords" style="display:none;"><?php echo $result_number; ?></div>
 
