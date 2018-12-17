@@ -123,7 +123,6 @@ for ($i = 1; $i <= $totalrow; $i++) {
 		$fancy_color=substr($color,strlen($color)-1);
 		$raw_price_total=trim($data->raw($i,$col_fancy_price));
 	}
-	
 	$raw_price_total_proceeded=str_replace(',', '', $raw_price_total);
 	//echo $raw_price_total001.'===========';
 	
@@ -135,7 +134,11 @@ for ($i = 1; $i <= $totalrow; $i++) {
 	if($percentage==NULL || $percentage==''){
 		$percentage=0;
 	}
-	$raw_price_total_novalue=$raw_price_total_proceeded*($percentage+100)/100;//for retail raw price(without the ratio)
+	if(strlen($color)>1&&substr($color,0,1)=='F')
+		$raw_price_total_novalue = $raw_price_total_proceeded;
+	else
+		$raw_price_total_novalue=$raw_price_total_proceeded*($percentage+100)/100;//for retail raw price(without the ratio)
+	
 	$price=processPrice($carat, $color, $clarity, $cut_grade, $polish, $symmetry, $grading_lab, $shape, $fluorescence_intensity, $raw_price_total_proceeded, $percentage, 'excel', 'agency');
 	$retail_price=processPrice($carat, $color, $clarity, $cut_grade, $polish, $symmetry, $grading_lab, $shape, $fluorescence_intensity, $raw_price_total_proceeded, $percentage, 'excel', 'retail');
 	$from_company='-';
