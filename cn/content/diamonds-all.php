@@ -934,10 +934,6 @@ function filter_polish(thegrade){
 	update();
 }
 
-//filter symmetry =============================
-//filter symmetry =============================
-//filter symmetry =============================
-//filter symmetry =============================
 function filter_sym(thegrade){
 	var $thesymgrade=thegrade;
 	var $or='';
@@ -996,11 +992,6 @@ function filter_sym(thegrade){
 	update();
 }
 
-//filter certificate =============================
-//filter certificate =============================
-//filter certificate =============================
-//filter certificate =============================
-
 function filter_certi(thelab){
 	var $thecerti=thelab;
 	var $or='';
@@ -1020,7 +1011,7 @@ function filter_certi(thelab){
 			$('#filter_certiGIA').removeClass('btn-active');
 		}else{
 			$certiGIA=true;
-			$('#filter_certiGIA').addClass('btn-active');
+			$('#filter_certiGIA').addClass('btn-active');console.log($('#filter_certiGIA').hasClass('btn-active'));
 		}
 	}else if($thecerti=='HRD'){
 		if($certiHRD){
@@ -1048,10 +1039,6 @@ function filter_certi(thelab){
 	update();
 }
 
-//filter FLUO =============================
-//filter FLUO =============================
-//filter FLUO =============================
-//filter FLUO =============================
 function filter_fluo(thegrade){
 	var $thefluo=thegrade;
 	var $or='';
@@ -1241,7 +1228,6 @@ function update(){
 	);
 }
 
-
 function choosethispage(page){
 	$crr_page=page;
 	update();
@@ -1249,8 +1235,6 @@ function choosethispage(page){
 
 var crrlistnavipage=0;
 var $intotalhowmanyrecords=0;
-
-
 function diamondlistpagenavi(howmanyrecords){
 	$intotalhowmanyrecords=howmanyrecords;
 	$('span#diapagenavi').empty();
@@ -1266,8 +1250,6 @@ function diamondlistpagenavi(howmanyrecords){
 		}
 	}
 }
-
-
 
 function update_selected(){
 	orderlist=[];
@@ -1432,11 +1414,6 @@ if ($username == 'super001' && isset ( $allowdisableselection )) {
 
 }
 
-
-
-
-
-
 function makeorder(theRef){
 	<?php
 	if ($username == 'super001' && isset ( $allowdisableselection )) {
@@ -1557,12 +1534,15 @@ $(function() {
 		$("#dia_choose_box").hide();
 		$("#dia_fancy_box").show();
 		$("#btn_dia").removeClass("btn_selected");
+		$color='length(color)>1 and color like "F%"';
+		update();
 	});
 	$("#btn_dia").click(function(){
 		$("#btn_dia_fancy").removeClass("btn_selected");
 		$("#dia_choose_box").show();
 		$("#dia_fancy_box").hide();
 		$("#btn_dia").addClass("btn_selected");
+		update();
 	});
 	$(".inputChg").change(function(){
 		update();

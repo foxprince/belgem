@@ -168,9 +168,7 @@ td.seedetail{
 }
 tr.details{
 	display:none;
-	
 }
-
 .t_h td{
 	color: #333;
 	width: 36px;
@@ -192,7 +190,6 @@ tr.details{
 	text-align:left;
 	background-color:#FFF;
 }
-
 .detailsbox td{
 	border-style:solid;
 	border-top:none;
@@ -205,13 +202,6 @@ img.iconarrow{
 	position:relative;
 	left:-3px;
 }
-
-
-
-
-
-
-
 
 p.details_txt{
 	padding:3px 20px;
@@ -238,12 +228,6 @@ p.commentbox, p.stars{
 	margin:5px 0;
 }
 
-
-
-
-
-
-
 div.picbox{
 	display:inline-block;
 	width:138px;
@@ -268,9 +252,6 @@ button.sortbtn{
 	margin:0;
 	padding:0;
 }
-
-
-
 
 div.imagescontainer{
 	padding:0;

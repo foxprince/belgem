@@ -149,17 +149,10 @@ if(isset($_POST['crr_page'])){
 }
 
 $startfrom=($crr_page-1)*35;
-
-
-
-
 $sorting_direction=$_POST['sorting_direction'];
-
 $sorting=$_POST['sorting'];
 
-
 switch ($sorting){
-
 	case "weight":
 	$query_sorting =' ORDER BY carat '.$sorting_direction;
 	break;
@@ -185,8 +178,6 @@ switch ($sorting){
 	break;
 
 }
-
-
 
 $queryClause = $query_shape.$query_fromCompany.$query_color.$query_clarity.$query_cut.$query_polish.$query_sym.$query_fluo.$query_certi.$and.'(carat >= '.$query_weight_from.' AND carat <= '.$query_weight_to.') AND (price BETWEEN '.$query_price_from.' AND '.$query_price_to.') AND status = "AVAILABLE" '.$featured;
 $_SESSION['queryClause']=$queryClause;
