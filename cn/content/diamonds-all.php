@@ -33,23 +33,23 @@ if ($_SESSION ['account_level'] == '0') {
       <span class="filter_title" id="filter_title_shape">形状<br />shape
       </span>
       <ul class="fileber_shape_outer">
-        <li class="filter_shape" id="filter_shapeBR" onclick="filter_shape('BR')"><img
+        <li class="filter_clarity filter_shape" id="filter_shapeBR" onclick="filter_shape('BR')"><img
           src="../images/site_elements/icons/01.gif" /></li>
-        <li class="filter_shape" id="filter_shapePS" onclick="filter_shape('PS')"><img
+        <li class="filter_clarity filter_shape" id="filter_shapePS" onclick="filter_shape('PS')"><img
           src="../images/site_elements/icons/02.gif" /></li>
-        <li class="filter_shape" id="filter_shapePR" onclick="filter_shape('PR')"><img
+        <li class="filter_clarity filter_shape" id="filter_shapePR" onclick="filter_shape('PR')"><img
           src="../images/site_elements/icons/03.gif" /></li>
-        <li class="filter_shape" id="filter_shapeHS" onclick="filter_shape('HS')"><img
+        <li class="filter_clarity filter_shape" id="filter_shapeHS" onclick="filter_shape('HS')"><img
           src="../images/site_elements/icons/08.gif" /></li>
-        <li class="filter_shape" id="filter_shapeMQ" onclick="filter_shape('MQ')"><img
+        <li class="filter_clarity filter_shape" id="filter_shapeMQ" onclick="filter_shape('MQ')"><img
           src="../images/site_elements/icons/05.gif" /></li>
-        <li class="filter_shape" id="filter_shapeOV" onclick="filter_shape('OV')"><img
+        <li class="filter_clarity filter_shape" id="filter_shapeOV" onclick="filter_shape('OV')"><img
           src="../images/site_elements/icons/11.gif" /></li>
-        <li class="filter_shape" id="filter_shapeEM" onclick="filter_shape('EM')"><img
+        <li class="filter_clarity filter_shape" id="filter_shapeEM" onclick="filter_shape('EM')"><img
           src="../images/site_elements/icons/10.gif" /></li>
-        <li class="filter_shape" id="filter_shapeRAD" onclick="filter_shape('RAD')"><img
+        <li class="filter_clarity filter_shape" id="filter_shapeRAD" onclick="filter_shape('RAD')"><img
           src="../images/site_elements/icons/06.gif" /></li>
-        <li class="filter_shape" id="filter_shapeCU" onclick="filter_shape('CU')"><img
+        <li class="filter_clarity filter_shape" id="filter_shapeCU" onclick="filter_shape('CU')"><img
           src="../images/site_elements/icons/12.gif" /></li>
       </ul>
       </div>
@@ -76,16 +76,16 @@ if ($_SESSION ['account_level'] == '0') {
         <span class="filter_title">颜色<br />color
         </span>
         <ul>
-          <li class="filter_color" id="filter_colorD" onclick="filter_color('D')">D</li>
-          <li class="filter_color" id="filter_colorE" onclick="filter_color('E')">E</li>
-          <li class="filter_color" id="filter_colorF" onclick="filter_color('F')">F</li>
-          <li class="filter_color" id="filter_colorG" onclick="filter_color('G')">G</li>
-          <li class="filter_color" id="filter_colorH" onclick="filter_color('H')">H</li>
-          <li class="filter_color" id="filter_colorI" onclick="filter_color('I')">I</li>
-          <li class="filter_color" id="filter_colorJ" onclick="filter_color('J')">J</li>
-          <li class="filter_color" id="filter_colorK" onclick="filter_color('K')">K</li>
-          <li class="filter_color" id="filter_colorL" onclick="filter_color('L')">L</li>
-          <li class="filter_color" id="filter_colorM" onclick="filter_color('M')">M</li>
+          <li class="filter_clarity filter_color" id="filter_colorD" onclick="filter_color('D')">D</li>
+          <li class="filter_clarity filter_color" id="filter_colorE" onclick="filter_color('E')">E</li>
+          <li class="filter_clarity filter_color" id="filter_colorF" onclick="filter_color('F')">F</li>
+          <li class="filter_clarity filter_color" id="filter_colorG" onclick="filter_color('G')">G</li>
+          <li class="filter_clarity filter_color" id="filter_colorH" onclick="filter_color('H')">H</li>
+          <li class="filter_clarity filter_color" id="filter_colorI" onclick="filter_color('I')">I</li>
+          <li class="filter_clarity filter_color" id="filter_colorJ" onclick="filter_color('J')">J</li>
+          <li class="filter_clarity filter_color" id="filter_colorK" onclick="filter_color('K')">K</li>
+          <li class="filter_clarity filter_color" id="filter_colorL" onclick="filter_color('L')">L</li>
+          <li class="filter_clarity filter_color" id="filter_colorM" onclick="filter_color('M')">M</li>
         </ul>
       </div>
       <div class="filter_line_inner" id="filter_line_clarity" style="border-width: 1px;">
@@ -174,23 +174,23 @@ if ($_SESSION ['account_level'] == '0') {
       <span class="filter_title" id="filter_title_shape">形状<br />shape
       </span>
       <ul class="fileber_shape_outer">
-        <li class="filter_shape" id="filter_shapeBR" onclick="filter_shape('BR')"><img
+        <li class="filter_clarity filter_shape" id="filter_shapeBR" onclick="filter_shape('BR')"><img
           src="../images/site_elements/icons/01.gif" /></li>
-        <li class="filter_shape" id="filter_shapePS" onclick="filter_shape('PS')"><img
+        <li class="filter_clarity filter_shape" id="filter_shapePS" onclick="filter_shape('PS')"><img
           src="../images/site_elements/icons/02.gif" /></li>
-        <li class="filter_shape" id="filter_shapePR" onclick="filter_shape('PR')"><img
+        <li class="filter_clarity filter_shape" id="filter_shapePR" onclick="filter_shape('PR')"><img
           src="../images/site_elements/icons/03.gif" /></li>
-        <li class="filter_shape" id="filter_shapeHS" onclick="filter_shape('HS')"><img
+        <li class="filter_clarity filter_shape" id="filter_shapeHS" onclick="filter_shape('HS')"><img
           src="../images/site_elements/icons/08.gif" /></li>
-        <li class="filter_shape" id="filter_shapeMQ" onclick="filter_shape('MQ')"><img
+        <li class="filter_clarity filter_shape" id="filter_shapeMQ" onclick="filter_shape('MQ')"><img
           src="../images/site_elements/icons/05.gif" /></li>
-        <li class="filter_shape" id="filter_shapeOV" onclick="filter_shape('OV')"><img
+        <li class="filter_clarity filter_shape" id="filter_shapeOV" onclick="filter_shape('OV')"><img
           src="../images/site_elements/icons/11.gif" /></li>
-        <li class="filter_shape" id="filter_shapeEM" onclick="filter_shape('EM')"><img
+        <li class="filter_clarity filter_shape" id="filter_shapeEM" onclick="filter_shape('EM')"><img
           src="../images/site_elements/icons/10.gif" /></li>
-        <li class="filter_shape" id="filter_shapeRAD" onclick="filter_shape('RAD')"><img
+        <li class="filter_clarity filter_shape" id="filter_shapeRAD" onclick="filter_shape('RAD')"><img
           src="../images/site_elements/icons/06.gif" /></li>
-        <li class="filter_shape" id="filter_shapeCU" onclick="filter_shape('CU')"><img
+        <li class="filter_clarity filter_shape" id="filter_shapeCU" onclick="filter_shape('CU')"><img
           src="../images/site_elements/icons/12.gif" /></li>
       </ul>
       </div>
@@ -217,11 +217,11 @@ if ($_SESSION ['account_level'] == '0') {
         <span class="filter_title">颜色<br />cut
         </span>
         <ul>
-          <li class="filter_clarity" id="filter_cutEX" onclick="filter_cut('EX')">黄</li>
-          <li class="filter_clarity" id="filter_cutVG" onclick="filter_cut('VG')">红</li>
-          <li class="filter_clarity" id="filter_cutG" onclick="filter_cut('G')">粉</li>
-          <li class="filter_clarity" id="filter_cutF" onclick="filter_cut('F')">绿</li>
-          <li class="filter_clarity" id="filter_cutF" onclick="filter_cut('F')">蓝</li>
+          <li class="filter_clarity filter_fancy_color" fancy="Y" >黄</li>
+          <li class="filter_clarity filter_fancy_color" fancy="R" >红</li>
+          <li class="filter_clarity filter_fancy_color" fancy="P" >粉</li>
+          <li class="filter_clarity filter_fancy_color" fancy="G" >绿</li>
+          <li class="filter_clarity filter_fancy_color" fancy="B" >蓝</li>
         </ul>
       </div>
       <div class="filter_line_inner" id="filter_line_polish" style="border-width: 1px;">
@@ -250,11 +250,11 @@ if ($_SESSION ['account_level'] == '0') {
         <span class="filter_title">颜色<br />color
         </span>
         <ul>
-          <li class="filter_color" id="filter_colorD" onclick="filter_color('D')">Fancy Light</li>
-          <li class="filter_color" id="filter_colorE" onclick="filter_color('E')">Fancy</li>
-          <li class="filter_color" id="filter_colorF" onclick="filter_color('F')">Fancy Intence</li>
-          <li class="filter_color" id="filter_colorG" onclick="filter_color('G')">Fancy Deep</li>
-          <li class="filter_color" id="filter_colorH" onclick="filter_color('H')">Fancy Vivld</li>
+          <li class="filter_clarity filter_fancy" fancy="FL">Fancy Light</li>
+          <li class="filter_clarity filter_fancy" fancy="F">Fancy</li>
+          <li class="filter_clarity filter_fancy" fancy="FI">Fancy Intence</li>
+          <li class="filter_clarity filter_fancy" fancy="FD">Fancy Deep</li>
+          <li class="filter_clarity filter_fancy" fancy="FV">Fancy Vivld</li>
         </ul>
       </div>
       <div class="filter_line_inner" id="filter_line_clarity" style="border-width: 1px;">
@@ -461,75 +461,57 @@ function filter_shape(theshape){
 
 	if($theshape=='BR'){
 		if($shapeBR){
-			$shapeBR=false;
-			$('#filter_shapeBR').removeClass('btn-active');
+			$shapeBR=false; 
 		}else{
 			$shapeBR=true;
-			$('#filter_shapeBR').addClass('btn-active');
 		}
 	}else if($theshape=='PS'){
 		if($shapePS){
 			$shapePS=false;
-			$('#filter_shapePS').removeClass('btn-active');
 		}else{
 			$shapePS=true;
-			$('#filter_shapePS').addClass('btn-active');
 		}
 	}else if($theshape=='PR'){
 		if($shapePR){
 			$shapePR=false;
-			$('#filter_shapePR').removeClass('btn-active');
 		}else{
 			$shapePR=true;
-			$('#filter_shapePR').addClass('btn-active');
 		}
 	}else if($theshape=='HS'){
 		if($shapeHS){
 			$shapeHS=false;
-			$('#filter_shapeHS').removeClass('btn-active');
 		}else{
 			$shapeHS=true;
-			$('#filter_shapeHS').addClass('btn-active');
 		}
 	}else if($theshape=='MQ'){
 		if($shapeMQ){
 			$shapeMQ=false;
-			$('#filter_shapeMQ').removeClass('btn-active');
 		}else{
 			$shapeMQ=true;
-			$('#filter_shapeMQ').addClass('btn-active');
 		}
 	}else if($theshape=='OV'){
 		if($shapeOV){
 			$shapeOV=false;
-			$('#filter_shapeOV').removeClass('btn-active');
 		}else{
 			$shapeOV=true;
-			$('#filter_shapeOV').addClass('btn-active');
 		}
 	}else if($theshape=='EM'){
 		if($shapeEM){
 			$shapeEM=false;
-			$('#filter_shapeEM').removeClass('btn-active');
 		}else{
 			$shapeEM=true;
-			$('#filter_shapeEM').addClass('btn-active');
 		}
 	}else if($theshape=='RAD'){
 		if($shapeRAD){
 			$shapeRAD=false;
-			$('#filter_shapeRAD').removeClass('btn-active');
 		}else{
 			$shapeRAD=true;
-			$('#filter_shapeRAD').addClass('btn-active');
 		}
 	}else if($theshape=='CU'){
 		if($shapeCU){
 			$shapeCU=false;
-			$('#filter_shapeCU').removeClass('btn-active');
 		}else{
 			$shapeCU=true;
-			$('#filter_shapeCU').addClass('btn-active');
 		}
 	}
 
@@ -573,136 +555,7 @@ function filter_shape(theshape){
 	update();
 }
 function filter_color(thecolor){
-	var $thecolor=thecolor;
-	var $or='';
-	$color='';
-
-	if($thecolor=='D'){
-		if($colorD){
-			$colorD=false;
-			$('#filter_colorD').removeClass('btn-active');
-		}else{
-			$colorD=true;
-			$('#filter_colorD').addClass('btn-active');
-		}
-	}else if($thecolor=='E'){
-		if($colorE){
-			$colorE=false;
-			$('#filter_colorE').removeClass('btn-active');
-		}else{
-			$colorE=true;
-			$('#filter_colorE').addClass('btn-active');
-		}
-	}else if($thecolor=='F'){
-		if($colorF){
-			$colorF=false;
-			$('#filter_colorF').removeClass('btn-active');
-		}else{
-			$colorF=true;
-			$('#filter_colorF').addClass('btn-active');
-		}
-	}else if($thecolor=='G'){
-		if($colorG){
-			$colorG=false;
-			$('#filter_colorG').removeClass('btn-active');
-		}else{
-			$colorG=true;
-			$('#filter_colorG').addClass('btn-active');
-		}
-	}else if($thecolor=='H'){
-		if($colorH){
-			$colorH=false;
-			$('#filter_colorH').removeClass('btn-active');
-		}else{
-			$colorH=true;
-			$('#filter_colorH').addClass('btn-active');
-		}
-	}else if($thecolor=='I'){
-		if($colorI){
-			$colorI=false;
-			$('#filter_colorI').removeClass('btn-active');
-		}else{
-			$colorI=true;
-			$('#filter_colorI').addClass('btn-active');
-		}
-	}else if($thecolor=='J'){
-		if($colorJ){
-			$colorJ=false;
-			$('#filter_colorJ').removeClass('btn-active');
-		}else{
-			$colorJ=true;
-			$('#filter_colorJ').addClass('btn-active');
-		}
-	}else if($thecolor=='K'){
-		if($colorK){
-			$colorK=false;
-			$('#filter_colorK').removeClass('btn-active');
-		}else{
-			$colorK=true;
-			$('#filter_colorK').addClass('btn-active');
-		}
-	}else if($thecolor=='L'){
-		if($colorL){
-			$colorL=false;
-			$('#filter_colorL').removeClass('btn-active');
-		}else{
-			$colorL=true;
-			$('#filter_colorL').addClass('btn-active');
-		}
-	}else if($thecolor=='M'){
-		if($colorM){
-			$colorM=false;
-			$('#filter_colorM').removeClass('btn-active');
-		}else{
-			$colorM=true;
-			$('#filter_colorM').addClass('btn-active');
-		}
-	}
-
-	if($colorD){
-		$color+=' color = "D" ';
-		$or=' OR ';
-	}
-	if($colorE){
-		$color+=$or+' color = "E" ';
-		$or=' OR ';
-	}
-	if($colorF){
-		$color+=$or+' color = "F" ';
-		$or=' OR ';
-	}
-	if($colorG){
-		$color+=$or+' color = "G" ';
-		$or=' OR ';
-	}
-	if($colorH){
-		$color+=$or+' color = "H" ';
-		$or=' OR ';
-	}
-	if($colorI){
-		$color+=$or+' color = "I" ';
-		$or=' OR ';
-	}
-	if($colorJ){
-		$color+=$or+' color = "J" ';
-		$or=' OR ';
-	}
-	if($colorK){
-		$color+=$or+' color = "K" ';
-		$or=' OR ';
-	}
-	if($colorL){
-		$color+=$or+' color = "L" ';
-		$or=' OR ';
-	}
-	if($colorM){
-		$color+=$or+' color = "M" ';
-	}
-
-	update();
 }
-
-
 
 function filter_clarity(theclarity){
 	var $theclarity=theclarity;
@@ -712,66 +565,50 @@ function filter_clarity(theclarity){
 	if($theclarity=='FL'){
 		if($clarityFL){
 			$clarityFL=false;
-			$('#filter_clarityFL').removeClass('btn-active');
 		}else{
 			$clarityFL=true;
-			$('#filter_clarityFL').addClass('btn-active');
 		}
 	}else if($theclarity=='IF'){
 		if($clarityIF){
 			$clarityIF=false;
-			$('#filter_clarityIF').removeClass('btn-active');
 		}else{
 			$clarityIF=true;
-			$('#filter_clarityIF').addClass('btn-active');
 		}
 	}else if($theclarity=='WS1'){
 		if($clarityWS1){
 			$clarityWS1=false;
-			$('#filter_clarityWS1').removeClass('btn-active');
 		}else{
 			$clarityWS1=true;
-			$('#filter_clarityWS1').addClass('btn-active');
 		}
 	}else if($theclarity=='WS2'){
 		if($clarityWS2){
 			$clarityWS2=false;
-			$('#filter_clarityWS2').removeClass('btn-active');
 		}else{
 			$clarityWS2=true;
-			$('#filter_clarityWS2').addClass('btn-active');
 		}
 	}else if($theclarity=='VS1'){
 		if($clarityVS1){
 			$clarityVS1=false;
-			$('#filter_clarityVS1').removeClass('btn-active');
 		}else{
 			$clarityVS1=true;
-			$('#filter_clarityVS1').addClass('btn-active');
 		}
 	}else if($theclarity=='VS2'){
 		if($clarityVS2){
 			$clarityVS2=false;
-			$('#filter_clarityVS2').removeClass('btn-active');
 		}else{
 			$clarityVS2=true;
-			$('#filter_clarityVS2').addClass('btn-active');
 		}
 	}else if($theclarity=='SI1'){
 		if($claritySI1){
 			$claritySI1=false;
-			$('#filter_claritySI1').removeClass('btn-active');
 		}else{
 			$claritySI1=true;
-			$('#filter_claritySI1').addClass('btn-active');
 		}
 	}else if($theclarity=='SI2'){
 		if($claritySI2){
 			$claritySI2=false;
-			$('#filter_claritySI2').removeClass('btn-active');
 		}else{
 			$claritySI2=true;
-			$('#filter_claritySI2').addClass('btn-active');
 		}
 	}
 	if($clarityFL){
@@ -820,34 +657,26 @@ function filter_cut(thegrade){
 	if($thecutgrade=='EX'){
 		if($cutEX){
 			$cutEX=false;
-			$('#filter_cutEX').removeClass('btn-active');
 		}else{
 			$cutEX=true;
-			$('#filter_cutEX').addClass('btn-active');
 		}
 	}else if($thecutgrade=='VG'){
 		if($cutVG){
 			$cutVG=false;
-			$('#filter_cutVG').removeClass('btn-active');
 		}else{
 			$cutVG=true;
-			$('#filter_cutVG').addClass('btn-active');
 		}
 	}else if($thecutgrade=='G'){
 		if($cutG){
 			$cutG=false;
-			$('#filter_cutG').removeClass('btn-active');
 		}else{
 			$cutG=true;
-			$('#filter_cutG').addClass('btn-active');
 		}
 	}else if($thecutgrade=='F'){
 		if($cutF){
 			$cutF=false;
-			$('#filter_cutF').removeClass('btn-active');
 		}else{
 			$cutF=true;
-			$('#filter_cutF').addClass('btn-active');
 		}
 	}
 
@@ -884,34 +713,26 @@ function filter_polish(thegrade){
 	if($thepolishgrade=='EX'){
 		if($polishEX){
 			$polishEX=false;
-			$('#filter_polishEX').removeClass('btn-active');
 		}else{
 			$polishEX=true;
-			$('#filter_polishEX').addClass('btn-active');
 		}
 	}else if($thepolishgrade=='VG'){
 		if($polishVG){
 			$polishVG=false;
-			$('#filter_polishVG').removeClass('btn-active');
 		}else{
 			$polishVG=true;
-			$('#filter_polishVG').addClass('btn-active');
 		}
 	}else if($thepolishgrade=='G'){
 		if($polishG){
 			$polishG=false;
-			$('#filter_polishG').removeClass('btn-active');
 		}else{
 			$polishG=true;
-			$('#filter_polishG').addClass('btn-active');
 		}
 	}else if($thepolishgrade=='F'){
 		if($polishF){
 			$polishF=false;
-			$('#filter_polishF').removeClass('btn-active');
 		}else{
 			$polishF=true;
-			$('#filter_polishF').addClass('btn-active');
 		}
 	}
 
@@ -942,34 +763,26 @@ function filter_sym(thegrade){
 	if($thesymgrade=='EX'){
 		if($symEX){
 			$symEX=false;
-			$('#filter_symEX').removeClass('btn-active');
 		}else{
 			$symEX=true;
-			$('#filter_symEX').addClass('btn-active');
 		}
 	}else if($thesymgrade=='VG'){
 		if($symVG){
 			$symVG=false;
-			$('#filter_symVG').removeClass('btn-active');
 		}else{
 			$symVG=true;
-			$('#filter_symVG').addClass('btn-active');
 		}
 	}else if($thesymgrade=='G'){
 		if($symG){
 			$symG=false;
-			$('#filter_symG').removeClass('btn-active');
 		}else{
 			$symG=true;
-			$('#filter_symG').addClass('btn-active');
 		}
 	}else if($thesymgrade=='F'){
 		if($symF){
 			$symF=false;
-			$('#filter_symF').removeClass('btn-active');
 		}else{
 			$symF=true;
-			$('#filter_symF').addClass('btn-active');
 		}
 	}
 
@@ -1000,26 +813,20 @@ function filter_certi(thelab){
 	if($thecerti=='IGI'){
 		if($certiIGI){
 			$certiIGI=false;
-			$('#filter_certiIGI').removeClass('btn-active');
 		}else{
 			$certiIGI=true;
-			$('#filter_certiIGI').addClass('btn-active');
 		}
 	}else if($thecerti=='GIA'){
 		if($certiGIA){
 			$certiGIA=false;
-			$('#filter_certiGIA').removeClass('btn-active');
 		}else{
 			$certiGIA=true;
-			$('#filter_certiGIA').addClass('btn-active');console.log($('#filter_certiGIA').hasClass('btn-active'));
 		}
 	}else if($thecerti=='HRD'){
 		if($certiHRD){
 			$certiHRD=false;
-			$('#filter_certiHRD').removeClass('btn-active');
 		}else{
 			$certiHRD=true;
-			$('#filter_certiHRD').addClass('btn-active');
 		}
 	}
 
@@ -1047,42 +854,32 @@ function filter_fluo(thegrade){
 	if($thefluo=='VST'){
 		if($fluoVST){
 			$fluoVST=false;
-			$('#filter_fluoVST').removeClass('btn-active');
 		}else{
 			$fluoVST=true;
-			$('#filter_fluoVST').addClass('btn-active');
 		}
 	}else if($thefluo=='STG'){
 		if($fluoSTG){
 			$fluoSTG=false;
-			$('#filter_fluoSTG').removeClass('btn-active');
 		}else{
 			$fluoSTG=true;
-			$('#filter_fluoSTG').addClass('btn-active');
 		}
 	}else if($thefluo=='MED'){
 		if($fluoMED){
 			$fluoMED=false;
-			$('#filter_fluoMED').removeClass('btn-active');
 		}else{
 			$fluoMED=true;
-			$('#filter_fluoMED').addClass('btn-active');
 		}
 	}else if($thefluo=='FNT'){
 		if($fluoFNT){
 			$fluoFNT=false;
-			$('#filter_fluoFNT').removeClass('btn-active');
 		}else{
 			$fluoFNT=true;
-			$('#filter_fluoFNT').addClass('btn-active');
 		}
 	}else if($thefluo=='NON'){
 		if($fluoNON){
 			$fluoNON=false;
-			$('#filter_fluoNON').removeClass('btn-active');
 		}else{
 			$fluoNON=true;
-			$('#filter_fluoNON').addClass('btn-active');
 		}
 	}
 
@@ -1198,8 +995,45 @@ function arrowDirection(){
 		$('#arrow_sorting_price').attr('src','../images/site_elements/arrow-up.png');
 	}
 }
-
+function count(o){
+	var t = typeof o;
+	if(t == 'string'){
+	return o.length;
+	}else if(t == 'object'){
+	var n = 0;
+	for(var i in o){
+	n++;
+	}
+	return n;
+	}
+	return false;
+}
 function update(){
+	$colorArr = new Array();
+	$('.filter_color').each(function(){
+		if($(this).hasClass('btn-active'))
+			$colorArr.push('"'+$(this).text()+'"');
+	});
+	if($("#btn_dia_fancy").hasClass('btn_selected')) {
+		$color = $fancy;
+		$('.filter_fancy_color').each(function(){
+			if($(this).hasClass('btn-active')) {
+				$colorArr.push('color like "F%'+$(this).attr("fancy")+'"');
+			}
+		});
+		if(count($colorArr)>0)
+			$color += " and ( "+$colorArr.join(" or ")+")";
+		$colorArr = new Array();
+		$('.filter_fancy').each(function(){
+			if($(this).hasClass('btn-active')) {
+				$colorArr.push('color like "'+$(this).attr("fancy")+'%"');
+			}
+		});
+		if(count($colorArr)>0)
+			$color += " and ( "+$colorArr.join(" or ")+")";
+	}
+	else if(count($colorArr)>0) 
+		$color = " color in ("+$colorArr.join(",")+")";
 	$weight_from=$('#weight_from').val();
 	$weight_to=$('#weight_to').val();
 	$price_from=$('#price_from').val();
@@ -1312,7 +1146,14 @@ function searchbystockref(){
 </script>
 <script type="text/javascript">
 $(document).ready(function(){
-	$("#fromCompanySelect").change(function() { filterFromCompany(); });
+	$(".filter_clarity").click(function () {
+		if($(this).hasClass("btn-active"))
+        		$(this).removeClass("btn-active");
+		else
+			$(this).addClass("btn-active");
+		update();
+	});
+    $("#fromCompanySelect").change(function() { filterFromCompany(); });
 	$("#checkAll").click(function(){
 		var c = this.checked;
 		$("input.selectcheckbox").each(function(){
@@ -1528,13 +1369,23 @@ $('button#visiable-'+stockref).html('修改中...');
 $allEX=false;
 $diaChoose=true;
 $diaFancyChoose=false;
+$fancy="";
+function clearChoose() {
+	$(".filter_clarity").removeClass("btn_selected");
+	$fromCompany="";$fancy="";
+	$shape=""; $color="";$clarity="";$cut="";$polish="";$sym="";$fluo="";$certi="";
+	$weight_from="";$weight_to="";$price_from="";$price_to="";
+	$featured="";$sorting="";$sorting_direction="";;
+	
+}
 $(function() {
 	$("#btn_dia_fancy").click(function(){
 		$("#btn_dia_fancy").addClass("btn_selected");
 		$("#dia_choose_box").hide();
 		$("#dia_fancy_box").show();
 		$("#btn_dia").removeClass("btn_selected");
-		$color='length(color)>1 and color like "F%"';
+		clearChoose();
+		$fancy=' length(color)>1 and color like "F%"';
 		update();
 	});
 	$("#btn_dia").click(function(){
@@ -1542,6 +1393,7 @@ $(function() {
 		$("#dia_choose_box").show();
 		$("#dia_fancy_box").hide();
 		$("#btn_dia").addClass("btn_selected");
+		clearChoose();
 		update();
 	});
 	$(".inputChg").change(function(){

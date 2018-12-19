@@ -179,7 +179,7 @@ switch ($sorting){
 
 }
 
-$queryClause = $query_shape.$query_fromCompany.$query_color.$query_clarity.$query_cut.$query_polish.$query_sym.$query_fluo.$query_certi.$and.'(carat >= '.$query_weight_from.' AND carat <= '.$query_weight_to.') AND (price BETWEEN '.$query_price_from.' AND '.$query_price_to.') AND status = "AVAILABLE" '.$featured;
+$queryClause = " 1=1 and ".$query_shape.$query_fromCompany.$query_color.$query_clarity.$query_cut.$query_polish.$query_sym.$query_fluo.$query_certi.$and.'(carat >= '.$query_weight_from.' AND carat <= '.$query_weight_to.') AND (price BETWEEN '.$query_price_from.' AND '.$query_price_to.') AND status = "AVAILABLE" '.$featured;
 $_SESSION['queryClause']=$queryClause;
 //$query_sorting =' ORDER BY price ASC';
 
