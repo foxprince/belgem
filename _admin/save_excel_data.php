@@ -134,13 +134,17 @@ for ($i = 1; $i <= $totalrow; $i++) {
 	if($percentage==NULL || $percentage==''){
 		$percentage=0;
 	}
-	if(strlen($color)>1&&substr($color,0,1)=='F')
+	if(strlen($color)>1&&substr($color,0,1)=='F') {
 		$raw_price_total_novalue = $raw_price_total_proceeded;
+		$percentage = 0;
+	}
 	else
 		$raw_price_total_novalue=$raw_price_total_proceeded*($percentage+100)/100;//for retail raw price(without the ratio)
-	
+
 	$price=processPrice($carat, $color, $clarity, $cut_grade, $polish, $symmetry, $grading_lab, $shape, $fluorescence_intensity, $raw_price_total_proceeded, $percentage, 'excel', 'agency');
 	$retail_price=processPrice($carat, $color, $clarity, $cut_grade, $polish, $symmetry, $grading_lab, $shape, $fluorescence_intensity, $raw_price_total_proceeded, $percentage, 'excel', 'retail');
+	//$feedbackmessage.="<br/>".$color."::".$raw_price_total_proceeded."::".$raw_price_total_novalue.",".$retail_price.",".$price."<br/>";
+	
 	$from_company='-';
 	################################################################### 检查数据可用性
 	
