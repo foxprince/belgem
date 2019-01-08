@@ -298,7 +298,7 @@ while(! feof($file)){
 				/**/
 				$insertTotal = 0;
 				if($price>0 && $retail_price>0){
-					$sql_insert='INSERT INTO diamonds (stock_ref, stock_num_rapnet, shape, carat, color, fancy_color, clarity, grading_lab, certificate_number, cut_grade, polish, symmetry, fluorescence_intensity, country, raw_price, raw_price_retail, price, retail_price, from_company, clarity_number, cut_number, added_at, source) VALUES (:stock_ref, :stock_num_rapnet, :shape, :carat, :color, :fancy_color, :clarity, :grading_lab, :certificate_number, :cut_grade, :polish, :symmetry, :fluorescence_intensity, :country, :raw_price, :raw_price_retail, :price, :retail_price, :from_company, :clarity_number, :cut_number, NOW(), :source)';
+					$sql_insert='INSERT INTO diamonds (stock_ref, stock_num_rapnet, shape, carat, color, fancy_color, clarity, grading_lab, certificate_number,certificatelink, cut_grade, polish, symmetry, fluorescence_intensity, country, raw_price, raw_price_retail, price, retail_price, from_company, clarity_number, cut_number, added_at, source) VALUES (:stock_ref, :stock_num_rapnet, :shape, :carat, :color, :fancy_color, :clarity, :grading_lab, :certificate_number, :certificatelink,:cut_grade, :polish, :symmetry, :fluorescence_intensity, :country, :raw_price, :raw_price_retail, :price, :retail_price, :from_company, :clarity_number, :cut_number, NOW(), :source)';
 					$stmt=$conn->prepare($sql_insert);	  
 // 					$stmt->bindParam(':stock_ref', $DiamondID, PDO::PARAM_STR);
 // 					$stmt->bindParam(':stock_num_rapnet', $StockNumber, PDO::PARAM_STR);
@@ -333,6 +333,7 @@ while(! feof($file)){
 							'clarity'=>$Clarity,
 							'grading_lab'=>$Lab,
 							'certificate_number'=>$CertificateNumber,
+							'certificatelink'=>$CertificateURL,
 							'cut_grade'=>$cut,
 							'polish'=>$polish,
 							'symmetry'=>$symmetry,

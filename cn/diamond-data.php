@@ -337,9 +337,9 @@ if('GIA'==$thelab){
 }
 ?>
 <td align="center" class="value_certificate" style="width:94px;">
-<span class="valuetxt"><a target="_blank" style="color:#000; font-weight:bold;" href="<?php echo $certi_link; ?>"><?php echo $thelab; ?></a></span><br />
-<span class="lab-num" style="font-size:10px;">(<?php echo $certi_num; ?>)</span>
-
+<span class="valuetxt"><?php echo $thelab; ?></span><br />
+<span class="lab-num" style="font-size:10px;"><a target="_blank" style="color:#000; font-weight:bold;" href="<?php echo $certi_link; ?>">(<?php echo $certi_num; ?>)</a></span>
+<?php if($row['certificatelink']!=null){?><a target="_blank" style="color:#000; font-weight:bold;" href="<?php $row['certificatelink'];?>">Report</a><?php }?>
 </td>
 
 
