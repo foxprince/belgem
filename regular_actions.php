@@ -182,7 +182,7 @@ while(! feof($file)){
 			if (in_array($DiamondID, $records_in_db)) {
 				//echo '<br>*************** found in db: '.$DiamondID.' do nothing';
 			}else{
-				//echo '<br>not in db: '.$DiamondID.' now insert ::<br>';
+				echo '<br>not in db: '.$DiamondID.' now insert ::<br>';
 				$sellername=$crr_row_content_array[$sellername_col_num];
 				$RapNetAccountID=$crr_row_content_array[$RapNetAccountID_col_num];
 				//echo '<br>NameCode :'.$crr_row_content_array[$NameCode_col_num];
@@ -207,6 +207,7 @@ while(! feof($file)){
 				//echo '<br>State :'.$crr_row_content_array[$State_col_num];
 				$Country=$crr_row_content_array[$Country_col_num];
 				$CertificateURL=$crr_row_content_array[$CertificateURL_col_num];
+				echo $CertificateURL.'\r';
 				$ImageURL=$crr_row_content_array[$ImageURL_col_num];
 					
 				$fancy_color_dominant_color='';
@@ -381,12 +382,12 @@ echo 'records_from_rapnet:'.$records_from_rapnet;
 
 
 //$sql_gothroug='SELECT stock_ref FROM diamonds WHERE source = "RAPNET" AND ordered_by IS NULL AND wholesale_ordered_by IS NULL';
+/*
 $sql_gothroug='SELECT stock_ref, ordered_by, wholesale_ordered_by FROM diamonds WHERE source = "RAPNET" AND status = "AVAILABLE"';
 foreach($conn->query($sql_gothroug) as $row){
 	$crr_dia=$row['stock_ref'];
 	$ordered_by=$row['ordered_by'];
 	$wholesale_ordered_by=$row['wholesale_ordered_by'];
-	//echo 'checking: '.$crr_dia;
 	if(!in_array($crr_dia, $records_from_rapnet)){
 		if(($ordered_by!=NULL && $ordered_by!='') || ($wholesale_ordered_by!='' && $wholesale_ordered_by!=NULL)){
 			$sql_update_sold='UPDATE diamonds SET status = "SOLD" WHERE stock_ref = "'.$crr_dia.'"';
@@ -403,7 +404,7 @@ foreach($conn->query($sql_gothroug) as $row){
 		//echo ' in array. stays.<br>';
 	}
 }
-
+*/
 $status='ok except currency';
 
 
