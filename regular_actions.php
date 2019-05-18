@@ -382,7 +382,7 @@ echo 'records_from_rapnet:'.$records_from_rapnet;
 
 
 //$sql_gothroug='SELECT stock_ref FROM diamonds WHERE source = "RAPNET" AND ordered_by IS NULL AND wholesale_ordered_by IS NULL';
-/*
+
 $sql_gothroug='SELECT stock_ref, ordered_by, wholesale_ordered_by FROM diamonds WHERE source = "RAPNET" AND status = "AVAILABLE"';
 foreach($conn->query($sql_gothroug) as $row){
 	$crr_dia=$row['stock_ref'];
@@ -404,7 +404,7 @@ foreach($conn->query($sql_gothroug) as $row){
 		//echo ' in array. stays.<br>';
 	}
 }
-*/
+
 $status='ok except currency';
 
 
