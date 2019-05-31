@@ -364,6 +364,16 @@ if ($superAdmin) {
       style="position: relative; left: 8px; display: inline-block; margin-top: 12px;">载入中...</span>
   </p>
 </div>
+<script>
+$(document).ready(function(){
+$('input[name="saleBeginDate"]').datepicker({
+    format: "yyyy-mm-dd",
+    language: "zh-CN",
+    autoclose: true,
+    todayHighlight: true,
+    startDate: moment().format()
+});})
+</script>
 <script type="text/javascript">
 var $featured='NO';
 var $shapeBR=false;
@@ -1289,18 +1299,46 @@ function makeorder(theRef){
 	}
 	?>
 }
-
-function confirmorder(){
-	var stockref='';
+function appointment(){
+	$('#appointment').show();
+	$('#makeAppointmentBtn').text('确定预约');
+	$('#makeAppointmentBtn').attr('onClick','appointmentConfirm()');
+}
+function appointmentConfirm(){
+	var stockref='(';
 	$('span.an_order').each(function(){
-		stockref+='|'+$(this).html();
+		stockref+="'"+$(this).html()+"',";
+	});stockref = stockref.substring(0,stockref.length-1);
+	stockref+=')';
+	$.post(
+			"../_admin/saveorder.php",
+			{action:'appointment',stock_ref: stockref,customer:$('#customer').val(),appointment_time:$('#appointmentTime').val()},
+			function(data){
+				if($.trim(data)=='OK'){
+					alert('已经成功预约，客户：'+$('#customer').val()+"，时间："+$('#appointmentTime').val());
+					$('#alreadyordered').prepend($('#theorders').html());
+					$('#theorders').html('');
+				}else{
+					alert('Server is busy, please try later!');
+				}
+				$('#indication').fadeOut('fast');
+			}
+		);
+	$('#appointment').hide();
+	$('#makeAppointmentBtn').text('预约');
+	$('#makeAppointmentBtn').attr('onClick','appointment()');
+}
+function confirmorder(){
+	var stockref='(';
+	$('span.an_order').each(function(){
+		stockref+="'"+$(this).html()+"',";
 	});
-	//alert(stockref);
+	stockref = stockref.substring(0,stockref.length-1);
+	stockref+=')';
 	$.post(
 		"../_admin/saveorder.php",
-		{stock_ref: stockref},
+		{stock_ref: stockref,action:'order'},
 		function(data){
-			//alert(data);
 			if($.trim(data)=='OK'){
 				alert('已经成功预定');
 				$('#alreadyordered').prepend($('#theorders').html());

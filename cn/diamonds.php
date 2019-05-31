@@ -670,19 +670,22 @@ include_once('includes/footer.php');
 ?>
 
 
-<div id="bgbox">
-<div id="bginner">
-</div>
-</div>
 <?php
 if($permit){
 ?>
-<div id="order_basket" style="position:fixed; top:168px; right:28px; width:150px; height:200px; background-color:#e3dac5; border-style:solid; border-width:3px; box-shadow:0 0 3px #666; border-color:#960; padding:10px; overflow:auto; z-index:8;">
+<div id="order_basket" style="position:fixed; top:168px; right:28px; width:300px; height:200px; background-color:#e3dac5; border-style:solid; border-width:3px; box-shadow:0 0 3px #666; border-color:#960; padding:10px; overflow:auto; z-index:8;">
 购物车(已选钻石):
 <div id="theorders" style="position:relative; background-color:#FFF; min-height:20px; margin:5px 0">
 
 </div>
+		<div id="appointment" style="display:none;position:relative; background-color:#FFF; min-height:20px; margin:5px 0">
+			<p>客户：<input type="text" id="customer"name="customer"/></p>
+			<p>预约时间：
+			<input type="text" id="appointmentTime"name="appointmentTime" value="yyyy-mm-dd hh:mi"/></p>
+		</div>
+
 <button id="makeorderbtn" onClick="confirmorder()" style="font-size:18px; color:#FFF; background-color:#960; padding:3px 12px; border-width:1px;">预定</button>
+<button id="makeAppointmentBtn" onClick="appointment()" style="font-size:18px; color:#FFF; background-color:#290; padding:3px 12px; border-width:1px;">预约</button>
 <button id="hiddenButton" onclick="hide()">隐藏</button> 
 <div id="alreadyorderedbox" style="position:relative; margin-top:5px; border-top-style:solid; border-width:1px; border-color:#06F; padding-top:8px;">
 已经预定:<br>

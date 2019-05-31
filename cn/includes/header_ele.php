@@ -14,8 +14,14 @@
 <link href="../styles/main.css?v=<?php echo strtotime('now'); ?>" media="screen" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="/styles/jquery-ui.css" />
 <link href="/styles/multiple-select.css" rel="stylesheet"/>
+<link href="/js/timepicker/bootstrap-timepicker.min.css" rel="stylesheet">
+<link href="/js/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" rel="stylesheet">
 <script src="/js/jquery-1.11.2.min.js"></script>
 <script src="/js/jquery-ui.min.js"></script>
+<script src="/js/moment.js"></script>
+<script type="text/javascript" src="/js/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="/js/bootstrap-datepicker/js/bootstrap-datepicker.zh-CN.min.js"></script>
+<script type="text/javascript" src="/js/timepicker/bootstrap-timepicker.min.js"></script>
 <script type="text/javascript" src="../jscontrol.js?v=<?php echo strtotime('now'); ?>"></script>
 <!--  
 <script>

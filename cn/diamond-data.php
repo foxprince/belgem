@@ -204,19 +204,11 @@ $sql = $sql.' '.$query_sorting.' LIMIT '.$startfrom.', 35';
 logger($sql);
 //exit($sql);
 
-
 $stmt=$conn->query($sql);
 $error=$conn->errorInfo();
 if(isset($error[2])) exit($error[2]);
 ?>
-
-
-
-
 <table cellpadding="2" cellspacing="0" border="0">
-
-
-
 <?php
 $r=0;
 foreach($stmt as $row){
