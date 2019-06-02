@@ -366,13 +366,9 @@ if ($superAdmin) {
 </div>
 <script>
 $(document).ready(function(){
-$('input[name="saleBeginDate"]').datepicker({
-    format: "yyyy-mm-dd",
-    language: "zh-CN",
-    autoclose: true,
-    todayHighlight: true,
-    startDate: moment().format()
-});})
+  	$("#appointmentTime").val(moment().format("YYYY-MM-DD hh:mm"));
+  	$('#appointmentTime').datetimepicker({format:'Y-m-d H:i'});
+})
 </script>
 <script type="text/javascript">
 var $featured='NO';
