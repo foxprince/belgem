@@ -42,9 +42,12 @@ if(isset($_POST['filter_company']) && $_POST['filter_company']!='all'){
 }
 if(isset($_REQUEST['filter_orderDate']) && $_REQUEST['filter_orderDate']!='all'){
 	$crr_orderDate=$_REQUEST['filter_orderDate'];
-	logger($crr_orderDate);
-	//$orderDateCondition=' AND DATE_FORMAT(diamonds.ordered_time,\'%Y-%m-%d\')  = "'.$orderDate.'" ';
-	$orderDateCondition=' AND diamonds.ordered_time in ('.$crr_orderDate.')';
+	if($_REQUEST['filter_orderDate']!='null')
+		$orderDateCondition=' AND diamonds.ordered_time in ('.$crr_orderDate.')';
+	if(isset($_REQUEST['customer']) && $_REQUEST['customer']!='all'&& $_REQUEST['customer']!='null')
+		$orderDateCondition .= ' and diamonds.customer in('.$_REQUEST['customer'].')';
+	if(isset($_REQUEST['appointment_time']) && $_REQUEST['appointment_time']!='all'&& $_REQUEST['appointment_time']!='null')
+		$orderDateCondition .= ' and diamonds.appointment_time in('.$_REQUEST['appointment_time'].')';
 }else{
 	$orderDateCondition='';
 	$crr_orderDate="all";
@@ -189,7 +192,6 @@ $(document).ready(function(){
 		$('form#companyfilterform').submit();
 	});
 	$('#filter_orderDate').change(function(){
-		console.log('dd');
 		$('form#orderDateForm').submit();
 	});
 	$('#filter_user').change(function(){
@@ -211,7 +213,10 @@ $(document).ready(function(){
 	$('#orderTable').DataTable();
 });
 function filterOrderDate() {
-	window.location.href="index.php?filter_orderDate="+$('#orderDateSelect').val();
+	window.location.href="index.php?filter_orderDate="+$('#orderDateSelect').val()+"&customer="+$('#customerSelect').val()+"&appointment_time="+$('#appointmentSelect').val();
+}
+function choosethispage(index) {
+	window.location.href="index.php?crr_page="+index;
 }
 function formcomplete(){
 	if($.trim($('#title').val())==''){
@@ -437,13 +442,13 @@ include('navi.php');
 	<option value='"<?php echo $row_orderDate['d'];?>"' <?php if(strpos($crr_orderDate, $row_orderDate['d'])) {echo 'selected="selected"';} ?>><?php echo $row_orderDate['d'];?></option>
 	<?php }?>
 </select>
-客户：<select multiple="multiple" id="orderDateSelect"  name="filter_customer" >
+客户：<select multiple="multiple" id="customerSelect"  name="filter_customer" >
 	<option value="all">全部</option>
 	<?php foreach($conn->query('select distinct  customer as d from diamonds where customer is not null ') as $row_orderDate){?>
 	<option value='"<?php echo $row_orderDate['d'];?>"' <?php if(strpos($crr_orderDate, $row_orderDate['d'])) {echo 'selected="selected"';} ?>><?php echo $row_orderDate['d'];?></option>
 	<?php }?>
 </select>
-预约时间：<select multiple="multiple" id="orderDateSelect"  name="filter_customer" >
+预约时间：<select multiple="multiple" id="appointmentSelect"  name="filter_appointment" >
 	<option value="all">全部</option>
 	<?php foreach($conn->query('select distinct  appointment_time as d from diamonds where customer is not null ') as $row_orderDate){?>
 	<option value='"<?php echo $row_orderDate['d'];?>"' <?php if(strpos($crr_orderDate, $row_orderDate['d'])) {echo 'selected="selected"';} ?>><?php echo $row_orderDate['d'];?></option>
@@ -527,16 +532,21 @@ if($account_level==0){
 </thead>
 <tbody>
 <?php	
-	$sql_orders='SELECT diamonds.customer,diamonds.appointment_time,diamonds.id, diamonds.stock_ref, stock_num_rapnet, shape, carat, color, fancy_color, clarity, 
-		grading_lab, certificate_number, cut_grade, polish, symmetry, fluorescence_intensity, raw_price_retail, price, 
-		raw_price,retail_price,diamonds.from_company, diamonds.ordered_time, paid_amount, comment, source, status, 
-		users.user_name, users.real_name, users.account_level, users.given_by 
-		FROM diamonds, users WHERE diamonds.ordered_by IS NOT NULL AND diamonds.ordered_by <> "" 
+	$sql_where =' WHERE diamonds.ordered_by IS NOT NULL AND diamonds.ordered_by <> ""
 		AND diamonds.ordered_by = users.user_name AND diamonds.order_sent IS NULL '.$companyfiltercondition.$userfiltercondition.$orderDateCondition.' ORDER BY ordered_time DESC';
+	if(isset($_REQUEST['crr_page'])){ $crr_page=$_REQUEST['crr_page']; }else{ $crr_page=1; }
+	$startfrom=($crr_page-1)*35;
+	$sql_total = 'select count(*) as num from diamonds, users'.$sql_where;
+	foreach($conn->query($sql_total) as $num){
+		$result_number=$num['num'];
+	}
+	$sql_orders='SELECT diamonds.customer,diamonds.appointment_time,diamonds.id, diamonds.stock_ref, stock_num_rapnet, shape, carat, color, fancy_color, clarity,
+		grading_lab, certificate_number, cut_grade, polish, symmetry, fluorescence_intensity, raw_price_retail, price,
+		raw_price,retail_price,diamonds.from_company, diamonds.ordered_time, paid_amount, comment, source, status,
+		users.user_name, users.real_name, users.account_level, users.given_by
+		FROM diamonds, users'.$sql_where.' LIMIT '.$startfrom.', 35';
 	logger($sql_orders);
-	$counter=0;
 	foreach($conn->query($sql_orders) as $row){
-		$counter++;
 		if(ceil($counter/2)>($counter/2)){
 			$cellclass='o';
 		}else{
@@ -693,7 +703,46 @@ if($row['comment']!=NULL || $row['comment']!=''){
 </tbody>
 <tfoot>
 	<tr>
-		<td colspan="20"></td>
+		<td colspan="20">
+		<p id="dia-page-navi-bottom">
+为您找到<span><?php echo $result_number; ?></span>条结果。
+
+<?php
+$total_page_NUM=ceil($result_number/35);
+$crr_page_Round=ceil($crr_page/10);
+if($crr_page_Round>1){
+?>
+<button class="pre-pages-btn" onclick="choosethispage('<?php echo ($crr_page_Round-1)*10-9; ?>')">前10页...</button>
+<?php
+}
+?>
+第
+<?php
+for ($x=1; $x<=10; $x++) {
+	$p=($crr_page_Round-1)*10+$x;
+	if($p<=$total_page_NUM){
+		if($p==$crr_page){
+			$crr_class=' crr-dia-p';
+		}else{
+			$crr_class='';
+		}
+?>
+<button class="gotopagebtn<?php echo $crr_class; ?>" onclick="choosethispage('<?php echo $p; ?>')"><?php echo $p; ?></button>
+<?php
+	}
+}
+?>
+页
+
+<?php
+if(($crr_page_Round*10)<$total_page_NUM){
+?>
+<button class="next-pages-btn" onclick="choosethispage('<?php echo ($crr_page_Round*10+1); ?>')">...后10页</button>
+<?php
+}
+?>
+</p>
+		</td>
 	</tr>
 </tfoot>
 </table>
