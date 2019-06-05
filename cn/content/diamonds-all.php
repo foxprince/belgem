@@ -367,7 +367,7 @@ if ($superAdmin) {
 <script>
 $(document).ready(function(){
   	$("#appointmentTime").val(moment().format("YYYY-MM-DD hh:mm"));
-  	$('#appointmentTime').datetimepicker({format:'Y-m-d H:i'});
+  	$('#appointmentTime').datetimepicker({format:'Y-m-d H:i',step: 30});
 })
 </script>
 <script type="text/javascript">
