@@ -57,7 +57,8 @@ if(isset($_GET['newprice']) && $_GET['newprice']=='tobeupdated'){
 	$stmt_bak = $conn->prepare ( $sql_bak );
 	$stmt_bak->execute();
 	
-	$sql_del_imcomplete='DELETE FROM diamonds WHERE  source = "RAPNET" and visiable!=1';
+	//$sql_del_imcomplete='DELETE FROM diamonds WHERE  source = "RAPNET" and visiable!=1';
+	$sql_del_imcomplete='DELETE FROM diamonds WHERE  source = "RAPNET" ';
 	$stmt_del_incomplete=$conn->query($sql_del_imcomplete);
 	$del_incomplete_num=$stmt_del_incomplete->rowCount();
 	echo '<br>deleted records with wrong price: '.$del_incomplete_num;
