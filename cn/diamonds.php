@@ -679,7 +679,17 @@ if($permit){
 
 </div>
 		<div id="appointment" style="display:none;position:relative; background-color:#FFF; min-height:20px; margin:5px 0">
-			<p>客户：<input type="text" id="customer"name="customer"/></p>
+			<p>客户：<input type="text" id="customer"name="customer"/>
+			<select class="customerSel" name="customerSel">
+				<option value="">--请选择--</option>
+				<?php 
+				foreach($conn->query('select distinct customer as customer from diamonds where customer is not null') as $num){
+					$result_number=$num['customer'];?>
+					<option value="<?php echo $result_number;?>"><?php echo $result_number;?></option>
+				<?php }
+				?>
+			</select>
+			</p>
 			<p>预约时间：
 			<input type="text" id="appointmentTime"name="appointmentTime" value="yyyy-mm-dd hh:mi"/></p>
 		</div>

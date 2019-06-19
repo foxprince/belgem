@@ -1413,6 +1413,9 @@ function clearChoose() {
 	
 }
 $(function() {
+	$('.customerSel').change(function(){
+		$('#customer').val($(this).val());
+	});
 	$("#btn_dia_fancy").click(function(){
 		$("#btn_dia_fancy").addClass("btn_selected");
 		$("#dia_choose_box").hide();
