@@ -673,7 +673,7 @@ include_once('includes/footer.php');
 <?php
 if($permit){
 ?>
-<div id="order_basket" style="position:fixed; top:168px; right:28px; width:300px; height:200px; background-color:#e3dac5; border-style:solid; border-width:3px; box-shadow:0 0 3px #666; border-color:#960; padding:10px; overflow:auto; z-index:8;">
+<div id="order_basket" style="position:fixed; top:168px; right:28px; width:30%; height:200px; background-color:#e3dac5; border-style:solid; border-width:3px; box-shadow:0 0 3px #666; border-color:#960; padding:10px; overflow:auto; z-index:8;">
 购物车(已选钻石):
 <div id="theorders" style="position:relative; background-color:#FFF; min-height:20px; margin:5px 0">
 
