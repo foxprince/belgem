@@ -458,7 +458,7 @@ function filterFromCompany() {
 	$fromCompany = ""+$('#fromCompanySelect').val();
 	if($fromCompany=="all"||$fromCompany=="null")
 		$fromCompany = null;
-	update();
+	//update();
 }
 function filter_shape(theshape){
 	var $theshape=theshape;
@@ -558,7 +558,7 @@ function filter_shape(theshape){
 		$or = ' OR ';
 	}
 
-	update();
+	//update();
 }
 function filter_color(thecolor){
 }
@@ -651,7 +651,7 @@ function filter_clarity(theclarity){
 	}
 
 
-	update();
+	//update();
 }
 
 
@@ -704,7 +704,7 @@ function filter_cut(thegrade){
 	}
 
 
-	update();
+	//update();
 }
 
 //filter polish =============================
@@ -758,7 +758,7 @@ function filter_polish(thegrade){
 		$polish+=$or+' polish = "F" ';
 		$or= ' OR ';
 	}
-	update();
+	//update();
 }
 
 function filter_sym(thegrade){
@@ -808,7 +808,7 @@ function filter_sym(thegrade){
 		$sym+=$or+' symmetry = "F" ';
 		$or= ' OR ';
 	}
-	update();
+	//update();
 }
 
 function filter_certi(thelab){
@@ -849,7 +849,7 @@ function filter_certi(thelab){
 		$or= ' OR ';
 	}
 
-	update();
+	//update();
 }
 
 function filter_fluo(thegrade){
@@ -909,7 +909,7 @@ function filter_fluo(thegrade){
 		$fluo+=$or+' fluorescence_intensity = "NON" OR fluorescence_intensity = "None"';
 		$or= ' OR ';
 	}
-	update();
+	//update();
 }
 
 
@@ -923,7 +923,7 @@ function sorting_weight(){
 		$('#arrow_sorting_weight').attr('src','../images/site_elements/arrow-up.png?v=2');
 	}
 	$sorting_direction=$sorting_weight_direction;
-	update();
+	//update();
 }
 function sorting_color(){
 	$sorting = 'color';
@@ -935,7 +935,7 @@ function sorting_color(){
 		$('#arrow_sorting_color').attr('src','../images/site_elements/arrow-up.png');
 	}
 	$sorting_direction=$sorting_color_direction;
-	update();
+	//update();
 }
 function sorting_clarity(){
 	$sorting = 'clarity';
@@ -947,7 +947,7 @@ function sorting_clarity(){
 		$('#arrow_sorting_clarity').attr('src','../images/site_elements/arrow-up.png');
 	}
 	$sorting_direction=$sorting_clarity_direction;
-	update();
+	//update();
 }
 function sorting_cut(){
 	$sorting = 'cut';
@@ -959,7 +959,7 @@ function sorting_cut(){
 		$('#arrow_sorting_cut').attr('src','../images/site_elements/arrow-up.png');
 	}
 	$sorting_direction=$sorting_cut_direction;
-	update();
+	//update();
 }
 function sorting_price(){
 	$sorting = 'price';
@@ -971,7 +971,7 @@ function sorting_price(){
 		$('#arrow_sorting_price').attr('src','../images/site_elements/arrow-up.png?v=2');
 	}
 	$sorting_direction=$sorting_price_direction;
-	update();
+	//update();
 }
 
 function arrowDirection(){
@@ -1070,7 +1070,7 @@ function update(){
 
 function choosethispage(page){
 	$crr_page=page;
-	update();
+	//update();
 }
 
 var crrlistnavipage=0;
@@ -1127,6 +1127,7 @@ function fetchCompanies(){
 function searchbystockref(){
 	var theStockRef=$('input#stockreftosearch').val();
 	if($.trim(theStockRef)==''){
+		update();
 		return;
 	}
 	$.post(
@@ -1157,7 +1158,7 @@ $(document).ready(function(){
         		$(this).removeClass("btn-active");
 		else
 			$(this).addClass("btn-active");
-		update();
+		//update();
 	});
     $("#fromCompanySelect").change(function() { filterFromCompany(); });
 	$("#checkAll").click(function(){
@@ -1194,7 +1195,7 @@ if (isset ( $_GET ['ref'] ) && $_GET ['ref'] == 'round') {
 	?>
 	$('#featuredbtn').css({'border-bottom-style':'solid','border-width':'2px'});
 	$featured='YES';
-	update();
+	//update();
 <?php
 } else if (isset ( $_GET ['ref'] ) && $_GET ['ref'] == 'special') {
 	?>
@@ -1219,7 +1220,7 @@ if (isset ( $_GET ['ref'] ) && $_GET ['ref'] == 'round') {
 <?php
 } else {
 	?>
-	update();
+	//update();
 <?php
 }
 ?>
@@ -1235,7 +1236,7 @@ function addlisteners(){
 		$weight_from=$('#weight_from').val();
 		$weight_to=$('#weight_to').val();
 
-		update();
+		//update();
 	});
 
 	$('#btn_price').click(function(){
@@ -1243,9 +1244,8 @@ function addlisteners(){
 		$price_from=$('#price_from').val();
 		$price_to=$('#price_to').val();
 
-		update();
+		//update();
 	});
-
 
 	$('span#more').click(function(){
 		crrlistnavipage++;//$intotalhowmanyrecords
@@ -1393,7 +1393,7 @@ $('button#visiable-'+stockref).html('修改中...');
 						}
 						else {
 							alert('共删除了'+data+'条纪录。');
-							update();
+							//update();
 						}
 					}
 			);
@@ -1423,7 +1423,7 @@ $(function() {
 		$("#btn_dia").removeClass("btn_selected");
 		clearChoose();
 		$fancy=' length(color)>1 and color like "F%"';
-		update();
+		//update();
 	});
 	$("#btn_dia").click(function(){
 		$("#btn_dia_fancy").removeClass("btn_selected");
@@ -1431,10 +1431,10 @@ $(function() {
 		$("#dia_fancy_box").hide();
 		$("#btn_dia").addClass("btn_selected");
 		clearChoose();
-		update();
+		//update();
 	});
 	$(".inputChg").change(function(){
-		update();
+		//update();
 	});
 	$("#btn_3ex").click(function(){
 		if($allEX){
@@ -1454,7 +1454,7 @@ $(function() {
 			$('#filter_cutEX').addClass('btn-active');$('#filter_symEX').addClass('btn-active');
 			$('#filter_polishEX').addClass('btn-active');
 		}
-		update();
+		//update();
 	});
     $( "#slider-range-weight" ).slider({
       range: true,
@@ -1468,7 +1468,7 @@ $(function() {
 		$('#weight_to').val(ui.values[ 1 ]);
 		$weight_from=$('#weight_from').val();
 		$weight_to=$('#weight_to').val();
-		update();
+		//update();
       }
     });
   });
@@ -1486,7 +1486,7 @@ $(function() {
 		$('#price_to').val(ui.values[ 1 ]);
 		$price_from=$('#price_from').val();
 		$price_to=$('#price_to').val();
-		update();
+		//update();
       }
     });
   });

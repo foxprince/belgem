@@ -41,7 +41,7 @@ if(!isset($_POST['sorting'])){
 if($_POST || $_GET){include('../includes/nuke_magic_quotes.php');}
 
 
-$and='';
+$and=' and ';
 
 if($_POST['shape']==''){
 	$query_shape='';
