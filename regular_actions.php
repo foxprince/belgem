@@ -212,7 +212,6 @@ while(! feof($file)){
 				$fancy_color_dominant_color='';
 				$source='RAPNET';
 				
-				
 				if($TotalCashPrice!=''){
 					$raw_price_total=floatval($TotalCashPrice);
 				}else if($TotalPrice!=''){

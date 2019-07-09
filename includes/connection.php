@@ -48,7 +48,7 @@ class MyPDOStatement extends PDOStatement
 	}
 }
 function dbConnect($usertype='write', $connectionType = 'pdo') {
-  $host = '127.0.0.1';
+  $host = 'www.lumiagem.com';//127.0.0.1';
   $db = 'limei';
 	$user = 'lmhuser';
 	$pwd = 'p@ss0Day!';

@@ -36,34 +36,24 @@ if(!isset($_POST['featured'])){
 if(!isset($_POST['sorting'])){
 	exit('no data posted - sorting');
 }
-
-
 if($_POST || $_GET){include('../includes/nuke_magic_quotes.php');}
-
-
 $and=' and ';
-
 if($_POST['shape']==''){
 	$query_shape='';
 }else{
-	$query_shape=' ('.$_POST['shape'].')';
-	$and=' AND ';
-}
-
+	$query_shape=$and.' ('.$_POST['shape'].')';}
 if($_POST['color']==''){
 	$query_color='';
 }else{
 	$query_color=$and.' ('.$_POST['color'].')';
 	$and=' AND ';
 }
-
 if($_POST['clarity']==''){
 	$query_clarity='';
 }else{
 	$query_clarity=$and.' ('.$_POST['clarity'].')';
 	$and=' AND ';
 }
-
 if($_POST['cut']==''){
 	$query_cut='';
 }else{
@@ -98,7 +88,6 @@ if($_POST['certi']==''){
 	$query_certi=$and.' ('.$_POST['certi'].')';
 	$and=' AND ';
 }
-
 if($_POST['fromCompany']==''){
 	$query_fromCompany='';
 }else{
@@ -179,7 +168,7 @@ switch ($sorting){
 
 }
 
-$queryClause = " 1=1 and ".$query_shape.$query_fromCompany.$query_color.$query_clarity.$query_cut.$query_polish.$query_sym.$query_fluo.$query_certi.$and.'(carat >= '.$query_weight_from.' AND carat <= '.$query_weight_to.') AND (price BETWEEN '.$query_price_from.' AND '.$query_price_to.') AND status = "AVAILABLE" '.$featured;
+$queryClause = " 1=1 ".$query_shape.$query_fromCompany.$query_color.$query_clarity.$query_cut.$query_polish.$query_sym.$query_fluo.$query_certi.$and.'(carat >= '.$query_weight_from.' AND carat <= '.$query_weight_to.') AND (price BETWEEN '.$query_price_from.' AND '.$query_price_to.') '.$featured;
 $_SESSION['queryClause']=$queryClause;
 //$query_sorting =' ORDER BY price ASC';
 
@@ -232,17 +221,17 @@ foreach($stmt as $row){
 <?php } ?>
 <br />
 <?php
-$sock_color=='#999';
+$sock_color='#999';
 if($row['stock_num_rapnet']==''){
 	$stock_num_rapnet='# -';
 }else{
-	$stock_num_rapnet=$row['stock_num_rapnet'];
+	$stock_num_rapnet='# '.$row['stock_num_rapnet'];
 	if($row['sold_status']=='SOLD') {
-		$sock_color=='red';$stock_num_rapnet="已售:".$row['stock_num_rapnet'];
+		$sock_color='red';$stock_num_rapnet="▪ ️️".$row['stock_num_rapnet'];
 	}
 }
 ?>
-<span style="font-size:10px; color:<?php echo $sock_color;?>">(# <?php echo $stock_num_rapnet; ?>)</span>
+<span style="font-size:10px; color:<?php echo $sock_color;?>">(<?php echo $stock_num_rapnet; ?>)</span>
 </td>
 <td align="center" style="width:40px;">
 <?php
