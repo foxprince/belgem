@@ -1,4 +1,5 @@
 <?php
+
 ###################### download the data and save it to the csv file #############################
 //1 - Authenticate with TechNet. The authentication ticket will be stored in $auth_ticket. Note this MUST be HTTPS.
 $auth_url = "https://technet.rapaport.com/HTTP/Authenticate.aspx";
@@ -58,10 +59,11 @@ if(isset($_GET['newprice']) && $_GET['newprice']=='tobeupdated'){
 	$stmt_bak->execute();
 	
 	//$sql_del_imcomplete='DELETE FROM diamonds WHERE  source = "RAPNET" and visiable!=1';
-	$sql_del_imcomplete='DELETE FROM diamonds WHERE  source = "RAPNET" ';
-	$stmt_del_incomplete=$conn->query($sql_del_imcomplete);
-	$del_incomplete_num=$stmt_del_incomplete->rowCount();
-	echo '<br>deleted records with wrong price: '.$del_incomplete_num;
+	//$sql_del_imcomplete='DELETE FROM diamonds WHERE  source = "RAPNET" ';
+	//$stmt_del_incomplete=$conn->query($sql_del_imcomplete);
+	//$del_incomplete_num=$stmt_del_incomplete->rowCount();
+	//echo '<br>deleted records with wrong price: '.$del_incomplete_num;
+	
 }
 // first put the existing records in an array
 $records_in_db=array();
@@ -70,14 +72,10 @@ $stmt_ids=$conn->query($sql_ids);
 foreach($stmt_ids as $row_id){
 	$records_in_db[]=$row_id['stock_ref'];
 }
-
-
 $file = fopen("rapnetfeed.csv","r");
 
 $crr_row=0;
 $col_counter=0;
-
-
 $sellername_col_num=-1;
 $RapNetAccountID_col_num=-1;
 $NameCode_col_num=-1;
@@ -181,9 +179,9 @@ while(! feof($file)){
 			$DiamondID=$crr_row_content_array[$DiamondID_col_num];
 			$records_from_rapnet[]=$DiamondID;
 			if (in_array($DiamondID, $records_in_db)) {
-				//echo '<br>*************** found in db: '.$DiamondID.' do nothing';
+				
 			}else{
-				echo '<br>not in db: '.$DiamondID.' now insert ::<br>';
+				echo '<br>'.$DiamondID.' now insert ::<br>';
 				$sellername=$crr_row_content_array[$sellername_col_num];
 				$RapNetAccountID=$crr_row_content_array[$RapNetAccountID_col_num];
 				//echo '<br>NameCode :'.$crr_row_content_array[$NameCode_col_num];
@@ -300,6 +298,10 @@ while(! feof($file)){
 				/**/
 				$insertTotal = 0;
 				if($price>0 && $retail_price>0){
+					$sql_del_imcomplete='DELETE FROM diamonds WHERE  source = "RAPNET" and stock_ref="'.$DiamondID.'"';
+					$stmt_del_incomplete=$conn->query($sql_del_imcomplete);
+					$del_incomplete_num=$stmt_del_incomplete->rowCount();
+					
 					$sql_insert='INSERT INTO diamonds (stock_ref, stock_num_rapnet, shape, carat, color, fancy_color, clarity, grading_lab, certificate_number,certificatelink, cut_grade, polish, symmetry, fluorescence_intensity, country, raw_price, raw_price_retail, price, retail_price, from_company, clarity_number, cut_number, added_at, source) VALUES (:stock_ref, :stock_num_rapnet, :shape, :carat, :color, :fancy_color, :clarity, :grading_lab, :certificate_number, :certificatelink,:cut_grade, :polish, :symmetry, :fluorescence_intensity, :country, :raw_price, :raw_price_retail, :price, :retail_price, :from_company, :clarity_number, :cut_number, NOW(), :source)';
 					$stmt=$conn->prepare($sql_insert);	  
 // 					$stmt->bindParam(':stock_ref', $DiamondID, PDO::PARAM_STR);
@@ -378,12 +380,19 @@ echo 'finish inserting, now deleting...<br><br><br>-------------------------<br>
 //print_r($diamond_ids);
 
 echo 'records_from_rapnet:'.$records_from_rapnet;
-
-
-
-
+//保留rapnet里没有的记录，表明已经在rapnet上售出
+$array = array_diff($records_in_db, $records_from_rapnet);
+foreach($array as $value){
+	$sql_update='update diamonds set sold_status="SOLD" WHERE  source = "RAPNET" and stock_ref="'.$value.'"';
+	$stmt_del_incomplete=$conn->query($sql_update);
+	echo '<br>update records sold for rapnet: '.$value;
+}
+//删除90天之前的记录
+$sql_update='delete from diamonds where sold_status="SOLD" and  source = "RAPNET" and DATE_SUB(now(),INTERVAL 90 DAY)>added_at';
+$stmt_del_incomplete=$conn->query($sql_update);
+echo '<br>delete records sold for rapnet: '.$value.':'.$stmt_del_incomplete->rowCount();;
+/*
 //$sql_gothroug='SELECT stock_ref FROM diamonds WHERE source = "RAPNET" AND ordered_by IS NULL AND wholesale_ordered_by IS NULL';
-
 $sql_gothroug='SELECT stock_ref, ordered_by, wholesale_ordered_by FROM diamonds WHERE source = "RAPNET" AND status = "AVAILABLE"';
 foreach($conn->query($sql_gothroug) as $row){
 	$crr_dia=$row['stock_ref'];
@@ -405,15 +414,8 @@ foreach($conn->query($sql_gothroug) as $row){
 		//echo ' in array. stays.<br>';
 	}
 }
-
+*/
 $status='ok except currency';
-
-
-
-
-
-
-
 
 //###################################################################################################################
 //###################################################################################################################
@@ -477,20 +479,13 @@ if($c_done){
 	$status='all ok';
     echo '<br><br><br><br><br><br><br>**********<br>**********<br>**********<br>fini... currency updated succefull (-_-) <br>**********<br>**********<br>**********<br><br><br><br><br><br><br>';
 }
-
-
 */
-
-
 $status='all ok';
     echo '<br><br><br><br><br><br><br>**********<br>**********<br>**********<br>fini... currency updated succefull (-_-) <br>**********<br>**********<br>**********<br><br><br><br><br><br><br>';
 
 $sql_log='INSERT INTO dataupdate_log (status) VALUES (:status)';
-		
-			
 $stmt_log=$conn->prepare($sql_log);	  
 $stmt_log->bindParam(':status', $status, PDO::PARAM_STR);
-					
 $stmt_log->execute();
 
 

@@ -232,13 +232,17 @@ foreach($stmt as $row){
 <?php } ?>
 <br />
 <?php
+$sock_color=='#999';
 if($row['stock_num_rapnet']==''){
-	$stock_num_rapnet='-';
+	$stock_num_rapnet='# -';
 }else{
 	$stock_num_rapnet=$row['stock_num_rapnet'];
+	if($row['sold_status']=='SOLD') {
+		$sock_color=='red';$stock_num_rapnet="已售:".$row['stock_num_rapnet'];
+	}
 }
 ?>
-<span style="font-size:10px; color:#999;">(# <?php echo $stock_num_rapnet; ?>)</span>
+<span style="font-size:10px; color:<?php echo $sock_color;?>">(# <?php echo $stock_num_rapnet; ?>)</span>
 </td>
 <td align="center" style="width:40px;">
 <?php
