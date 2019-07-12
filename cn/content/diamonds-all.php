@@ -1074,7 +1074,7 @@ function update(){
 
 function choosethispage(page){
 	$crr_page=page;
-	//update();
+	update();
 }
 
 var crrlistnavipage=0;
@@ -1130,29 +1130,30 @@ function fetchCompanies(){
 
 function searchbystockref(){
 	var theStockRef=$('input#stockreftosearch').val();
-	if($.trim(theStockRef)==''){
+	if($.trim(theStockRef)==''){$crr_page=1;
 		update();
 		return;
+	}else {
+		$.post(
+			"diamond-data-byref.php",
+			{stockref:theStockRef},
+			function(data){
+				var contentLoaded=data;
+				//alert(data);
+				$('div#loading_indi').fadeOut('fast');
+				$('div#diamondsdata').html(data);
+				//var howmanyrecords=$("div#howmanyrecords").html();
+				//$('span#resulthowmany').html(howmanyrecords);
+				//dia-page-navi-bottom
+				$('p#listdescription').html($('#dia-page-navi-bottom').html());
+				diamondlistpagenavi(howmanyrecords);
+				arrowDirection();
+				addlisteners();
+				//fetchCompanies();
+				update_selected();
+			}
+		);
 	}
-	$.post(
-		"diamond-data-byref.php",
-		{stockref:theStockRef},
-		function(data){
-			var contentLoaded=data;
-			//alert(data);
-			$('div#loading_indi').fadeOut('fast');
-			$('div#diamondsdata').html(data);
-			//var howmanyrecords=$("div#howmanyrecords").html();
-			//$('span#resulthowmany').html(howmanyrecords);
-			//dia-page-navi-bottom
-			$('p#listdescription').html($('#dia-page-navi-bottom').html());
-			diamondlistpagenavi(howmanyrecords);
-			arrowDirection();
-			addlisteners();
-			//fetchCompanies();
-			update_selected();
-		}
-	);
 }
 </script>
 <script type="text/javascript">
