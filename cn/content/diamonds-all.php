@@ -148,6 +148,9 @@ if ($_SESSION ['account_level'] == '0') {
       <div class="filter_line_inner" id="filter_line_symm" style="border-width: 1px;">
         <button type="button" id="btn_3ex" >3EX</button>
       </div>
+      <div class="filter_line_inner" id="filter_line_symm" style="border-width: 1px;">
+        <input type="checkbox" name="sold_status" value="SOLD">rapnet已售出
+      </div>
     </div>
     <div class="filter_line">
       <div class="filter_line_inner" id="filter_line_lab" style="border-width: 1px;">
@@ -1044,11 +1047,12 @@ function update(){
 	$weight_to=$('#weight_to').val();
 	$price_from=$('#price_from').val();
 	$price_to=$('#price_to').val();
+	$sold_status=$('input[name="sold_status"]').is(':checked')?"SOLD":"";
 	nowworkingonfilter=true;
 	$('div#loading_indi').fadeIn('fast');
 	$.post(
 		"diamond-data.php",
-		{fromCompany:$fromCompany, shape:$shape, color:$color, clarity:$clarity, cut:$cut, polish:$polish, sym:$sym, fluo:$fluo, certi:$certi, weight_from:$weight_from, weight_to:$weight_to, price_from:$price_from, price_to:$price_to, featured: $featured, sorting:$sorting, sorting_direction:$sorting_direction, crr_page:$crr_page},
+		{sold_status:$sold_status,fromCompany:$fromCompany, shape:$shape, color:$color, clarity:$clarity, cut:$cut, polish:$polish, sym:$sym, fluo:$fluo, certi:$certi, weight_from:$weight_from, weight_to:$weight_to, price_from:$price_from, price_to:$price_to, featured: $featured, sorting:$sorting, sorting_direction:$sorting_direction, crr_page:$crr_page},
 		function(data){
 			var contentLoaded=data;
 			//alert(data);
