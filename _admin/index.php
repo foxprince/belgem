@@ -444,13 +444,13 @@ include('navi.php');
 </select>
 客户：<select multiple="multiple" id="customerSelect"  name="filter_customer" >
 	<option value="all">全部</option>
-	<?php foreach($conn->query('select distinct  customer as d from diamonds where customer is not null ') as $row_orderDate){?>
+	<?php foreach($conn->query('select distinct  customer as d from diamonds where customer is not null order by CONVERT(trim(d) USING gbk)') as $row_orderDate){?>
 	<option value='"<?php echo $row_orderDate['d'];?>"' <?php if(strpos($crr_orderDate, $row_orderDate['d'])) {echo 'selected="selected"';} ?>><?php echo $row_orderDate['d'];?></option>
 	<?php }?>
 </select>
 预约时间：<select multiple="multiple" id="appointmentSelect"  name="filter_appointment" >
 	<option value="all">全部</option>
-	<?php foreach($conn->query('select distinct  appointment_time as d from diamonds where customer is not null ') as $row_orderDate){?>
+	<?php foreach($conn->query('select distinct  appointment_time as d from diamonds where customer is not null order by d desc') as $row_orderDate){?>
 	<option value='"<?php echo $row_orderDate['d'];?>"' <?php if(strpos($crr_orderDate, $row_orderDate['d'])) {echo 'selected="selected"';} ?>><?php echo $row_orderDate['d'];?></option>
 	<?php }?>
 </select>
