@@ -126,7 +126,7 @@ if($_POST['price_to']==''){
 if($_REQUEST['sold_status'])
 	$query_sold_status = ' and sold_status="'.$_REQUEST['sold_status'].'"';
 else 
-	$query_sold_status = '';
+	$query_sold_status = ' and sold_status ="AVAILABLE"';
 
 $featured=$_POST['featured'];
 if($featured=='YES'){
