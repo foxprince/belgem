@@ -76,7 +76,7 @@ foreach ( $listarray as $ref ) {
 <?php echo $row['stock_ref']; ?>
 </span> <br />
 <?php
-$sock_color='#959';
+$sock_color='#999';
 if($row['stock_num_rapnet']==''){
 	$stock_num_rapnet='# -';
 }else{
