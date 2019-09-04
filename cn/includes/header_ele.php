@@ -6,6 +6,7 @@
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
 <meta content="比利时钻石,安特卫普钻石,钻石购买,钻交所,钻石交易所，比利时钻交所，比利时钻石交易所" name="keywords" />
 <meta name="description" content="利美钻石主营产品：比利时钻石，安特卫普钻石，利美钻石婚戒定制专家，为您专业定制独一无二的钻戒，每颗钻石都配有国际钻石证书，清晰的解释，贴心的建议和优惠的价格是利美对您的承诺，作为华人的购钻渠道，利美钻石将竭诚为您的选择提供最专业的服务。"/>
@@ -21,6 +22,21 @@
 <script src="/js/moment.js"></script>
 <script type="text/javascript" src="/js/jquery.datetimepicker.js"></script>
 <script type="text/javascript" src="../jscontrol.js?v=<?php echo strtotime('now'); ?>"></script>
+<script type="text/javascript">
+var r = document.referrer;
+r = r.toLowerCase(); //转为小写
+var aSites = new Array('google.','baidu.','soso.','so.','360.','yahoo.','youdao.','sogou.','gougou.');
+var b = false;
+for (i in aSites){
+	if (r.indexOf(aSites[i]) > 0){
+		b = true;
+		break;
+	}
+}  
+if(b){
+	self.location = 'http://cn.lumiagem.com/cn/index.php';
+}
+</script>
 <!--  
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
