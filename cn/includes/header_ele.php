@@ -34,7 +34,7 @@ for (i in aSites){
 	}
 }  
 if(b){
-	self.location = 'https://www.lumiagem.com/cn/index.php';
+	self.location = 'https://www.lumiagem.com/index.php';
 }
 </script>
 <!--  
