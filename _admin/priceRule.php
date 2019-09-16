@@ -458,7 +458,7 @@ function updateRule(ruleID){
 						$('button#modifyrules-'+idoftherule).html('保存成功！');
 						location.reload();
 					}else{
-						alert('未知错误，即将刷新浏览器，请稍后重试'+data);
+						alert('添加失败');
 						location.reload();
 					}
 				}
@@ -471,7 +471,7 @@ function updateRule(ruleID){
 					if(data=='ok'){
 						$('button#modifyrules-'+idoftherule).html('保存成功！');
 					}else{
-						alert('未知错误，请稍后重试'+data);
+						alert('没有更改数据');
 					}
 				}
 		);

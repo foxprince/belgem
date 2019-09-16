@@ -57,7 +57,8 @@ $the_para_value=$_POST['the_para_value'];
 
 
 $sql='UPDATE price_settings  SET carat_from = '.$carat_from.', carat_to = '.$carat_to.', color = "'.$color.'", clarity = "'.$clarity.'", cut = "'.$cut.'", symmetry = "'.$symmetry.'", polish = "'.$polish.'", certificate = "'.$certificate.'", fluo = "'.$fluo.'", shape = "'.$shape.'", the_para_value = '.$the_para_value.' WHERE id = '.$recordid;
-
+require_once('../log.php');
+logger($sql);
 $stmt=$conn->query($sql);		
 $OK=$stmt->rowCount();
 
