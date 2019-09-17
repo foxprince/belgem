@@ -103,8 +103,6 @@ function processPrice($thecarat, $thecolor, $theclarity, $thecut, $thepolish, $t
 }
 if(!isset($crr_rule_value)){
 	echo 'not set rule for '.$thecarat.','.$thecolor.','.$theclarity.','.$thecut.','.$thepolish.','.$thesymmetry.','.$thecertificate.','.$theshape.','.$thefluo.','.$source.','.$target.'<br/>';
-	logger('not set rule for '.$thecarat.'<br/>');
-	logger($thecarat.','.$thecolor.','.$theclarity.','.$thecut.','.$thepolish.','.$thesymmetry.','.$thecertificate.','.$theshape.','.$thefluo.','.$rawprice.','.$sellerdiscount.','.$source.','.$target);
 	if($target=='retail'){
 		$crr_rule_value=1.35;
 	}else{

@@ -256,8 +256,8 @@ for ($i = 1; $i <= $totalrow; $i++) {
 			$OK=$stmt->rowCount();
 			
 			$error=$conn->errorInfo();
-			$log.='<br/>result:'.$OK.',id:'.$available_line.' --shape:'.$shape.' --stock_ref: '.$stock_ref_raw.' --cert_num:'.$certificate_number.'err:';
-			logger($log);
+			//$log.='<br/>result:'.$OK.',id:'.$available_line.' --shape:'.$shape.' --stock_ref: '.$stock_ref_raw.' --cert_num:'.$certificate_number.'err:';
+			//logger($log);
 			if(isset($error[2])){
 				//echo($error[2]);
 				$feedbackmessage.="<br />EXCEL文件中第 $i 条纪录导入数据库出现未知错误。";
