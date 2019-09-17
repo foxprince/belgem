@@ -52,6 +52,8 @@ if (isset ( $_POST ['login'] ) && isset ( $_POST ['pwd'] )) {
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script src="../js/jquery-1.11.2.min.js"></script>
+<script src="../js/jquery-ui.min.js"></script>
 <style>
 body {
 	font-family: Georgia, "Times New Roman", Times, serif;
@@ -335,7 +337,7 @@ if (isset ( $wrongmessage )) {
 <form id="loginform" method="post" action="">
     <p style="text-align: center;">
       <input type="text" name="login" id="login" placeholder="用户名"><br /> <input type="password" name="pwd" id="pwd"
-        placeholder="密码"><br /> <input name="denglu" type="submit" id="login" value="登陆"
+        placeholder="密码"><br /> <input name="denglu" type="submit"  value="登陆"
           style="background-color: #000; margin-top: 55px;">
     
     </p>
