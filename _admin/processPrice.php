@@ -111,7 +111,7 @@ if(!isset($crr_rule_value)){
 }
 $final_price=$very_raw_price*(100+$sellerdiscount-$discount)/100*$crr_rule_value;
 echo($source.' '.$target.' price of '.$thecertificate.' calu : '.$very_raw_price.'*(100+'.$sellerdiscount.'-'.$discount.')/100*'.$crr_rule_value.'*'.$thecarat);
-logger($source.' '.$target.' price of '.$thecertificate.' calu : '.$very_raw_price.'*(100+'.$sellerdiscount.'-'.$discount.')/100*'.$crr_rule_value.'*'.$thecarat);
+//logger($source.' '.$target.' price of '.$thecertificate.' calu : '.$very_raw_price.'*(100+'.$sellerdiscount.'-'.$discount.')/100*'.$crr_rule_value.'*'.$thecarat);
 if($source=='rapnet')
 	return $final_price;
 else if(strlen($thecolor)>1&&substr($thecolor,0,1)=='F') 
