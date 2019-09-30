@@ -1047,7 +1047,7 @@ function update(){
 	$weight_to=$('#weight_to').val();
 	$price_from=$('#price_from').val();
 	$price_to=$('#price_to').val();
-	$sold_status=$('input[name="status"]').is(':checked')?"SOLD":"";
+	$status=$('input[name="status"]').is(':checked')?"SOLD":"";
 	nowworkingonfilter=true;
 	$('div#loading_indi').fadeIn('fast');
 	$.post(
