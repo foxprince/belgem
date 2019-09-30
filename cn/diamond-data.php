@@ -123,10 +123,10 @@ if($_POST['price_to']==''){
 }else{
 	$query_price_to=$_POST['price_to'];
 }
-if($_REQUEST['sold_status'])
-	$query_sold_status = ' and sold_status="'.$_REQUEST['sold_status'].'"';
+if($_REQUEST['status'])
+	$query_status = ' and status="'.$_REQUEST['status'].'"';
 else 
-	$query_sold_status = ' and sold_status ="AVAILABLE"';
+	$query_status = ' and status ="AVAILABLE"';
 
 $featured=$_POST['featured'];
 if($featured=='YES'){
@@ -172,7 +172,7 @@ switch ($sorting){
 
 }
 
-$queryClause = " 1=1 ".$query_sold_status.$query_shape.$query_fromCompany.$query_color.$query_clarity.$query_cut.$query_polish.$query_sym.$query_fluo.$query_certi.$and.'(carat >= '.$query_weight_from.' AND carat <= '.$query_weight_to.') AND (price BETWEEN '.$query_price_from.' AND '.$query_price_to.') '.$featured;
+$queryClause = " 1=1 ".$query_status.$query_shape.$query_fromCompany.$query_color.$query_clarity.$query_cut.$query_polish.$query_sym.$query_fluo.$query_certi.$and.'(carat >= '.$query_weight_from.' AND carat <= '.$query_weight_to.') AND (price BETWEEN '.$query_price_from.' AND '.$query_price_to.') '.$featured;
 $_SESSION['queryClause']=$queryClause;
 //$query_sorting =' ORDER BY price ASC';
 
@@ -230,7 +230,7 @@ if($row['stock_num_rapnet']==''){
 	$stock_num_rapnet='# -';
 }else{
 	$stock_num_rapnet='# '.$row['stock_num_rapnet'];
-	if($row['sold_status']=='SOLD') {
+	if($row['status']=='SOLD') {
 		$sock_color='red';$stock_num_rapnet="▪ ️️".$row['stock_num_rapnet'];
 	}
 }

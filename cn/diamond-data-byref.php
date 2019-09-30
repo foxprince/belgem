@@ -81,7 +81,7 @@ if($row['stock_num_rapnet']==''){
 	$stock_num_rapnet='# -';
 }else{
 	$stock_num_rapnet='# '.$row['stock_num_rapnet'];
-	if($row['sold_status']=='SOLD') {
+	if($row['status']=='SOLD') {
 		$sock_color='red';$stock_num_rapnet="▪️ ".$row['stock_num_rapnet'];
 	}
 }

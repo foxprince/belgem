@@ -380,17 +380,17 @@ echo 'finish inserting, now deleting...<br><br><br>-------------------------<br>
 
 echo 'records_from_rapnet:'.$records_from_rapnet;
 //保留rapnet里没有的记录，表明已经在rapnet上售出
-// $array = array_diff($records_in_db, $records_from_rapnet);
-// foreach($array as $value){
-// 	$sql_update='update diamonds set sold_status="SOLD" WHERE  source = "RAPNET" and stock_ref="'.$value.'"';
-// 	$stmt_del_incomplete=$conn->query($sql_update);
-// 	echo '<br>update records sold for rapnet: '.$value;
-// }
+$array = array_diff($records_in_db, $records_from_rapnet);
+foreach($array as $value){
+	$sql_update='update diamonds set status="SOLD" WHERE  source = "RAPNET" and stock_ref="'.$value.'"';
+	$stmt_del_incomplete=$conn->query($sql_update);
+	echo '<br>update records sold for rapnet: '.$value;
+}
 //删除90天之前的记录
-$sql_update='delete from diamonds where sold_status="SOLD" and  source = "RAPNET" and DATE_SUB(now(),INTERVAL 90 DAY)>added_at';
+$sql_update='delete from diamonds where status="SOLD" and  source = "RAPNET" and DATE_SUB(now(),INTERVAL 90 DAY)>added_at';
 $stmt_del_incomplete=$conn->query($sql_update);
 echo '<br>delete records sold for rapnet: '.$value.':'.$stmt_del_incomplete->rowCount();;
-
+/*
 //$sql_gothroug='SELECT stock_ref FROM diamonds WHERE source = "RAPNET" AND ordered_by IS NULL AND wholesale_ordered_by IS NULL';
 $sql_gothroug='SELECT stock_ref, ordered_by, wholesale_ordered_by FROM diamonds WHERE source = "RAPNET" AND status = "AVAILABLE"';
 foreach($conn->query($sql_gothroug) as $row){
@@ -413,7 +413,7 @@ foreach($conn->query($sql_gothroug) as $row){
 		//echo ' in array. stays.<br>';
 	}
 }
-
+*/
 $status='ok except currency';
 
 //###################################################################################################################
