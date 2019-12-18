@@ -520,7 +520,8 @@ if($stock_ref_label_found){
 				$_SESSION['col_raw_price_total']=$iii;//----------------------//
 		}else if((strpos($crr_label,'back') !== false)){
 				$_SESSION['col_percentage']=$iii;//----------------------//
-		}*/else if(strpos($crr_label,'certificate no') !== false|| strpos($crr_label,'certi') !== false || strpos($crr_label,'cert.no') !== false){
+		}*/
+		else if(strpos($crr_label,'certificate no') !== false|| strpos($crr_label,'certi') !== false || strpos($crr_label,'cert. no') !== false){
 				$_SESSION['col_certificate_number']=$iii;//----------------------
 		}
 	}
