@@ -491,7 +491,7 @@ if($stock_ref_label_found){
 		//$crr_label_raw=$data->raw($row_label,$iii); non-number values, if use raw function, returns empty value. so mush use val() function.
 		if((strpos($crr_label,'shape') !== false)||(strpos($crr_label,'shp') !== false)){
 				$_SESSION['col_shape']=$iii;//----------------------
-		}else if((strpos($crr_label,'weight') !== false) || (strpos($crr_label,'carat') !== false || (strpos($crr_label,'crt.') !== false)){
+		}else if((strpos($crr_label,'weight') !== false) || strpos($crr_label,'carat') !== false || strpos($crr_label,'crt.') !== false){
 				$_SESSION['col_carat']=$iii;//----------------------			
 		}else if((strpos($crr_label,'lab') !== false)){
 				$_SESSION['col_grading_lab']=$iii;//----------------------
