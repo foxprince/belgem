@@ -489,19 +489,19 @@ if($stock_ref_label_found){
 	for($iii = 1; $iii<=$total_cols; $iii++){
 		$crr_label=trim(strtolower($data->val($row_label,$iii)));
 		//$crr_label_raw=$data->raw($row_label,$iii); non-number values, if use raw function, returns empty value. so mush use val() function.
-		if((strpos($crr_label,'shape') !== false)){
+		if((strpos($crr_label,'shape') !== false)||(strpos($crr_label,'shp') !== false)){
 				$_SESSION['col_shape']=$iii;//----------------------
-		}else if((strpos($crr_label,'weight') !== false) || (strpos($crr_label,'carat') !== false)){
+		}else if((strpos($crr_label,'weight') !== false) || (strpos($crr_label,'carat') !== false || (strpos($crr_label,'crt.') !== false)){
 				$_SESSION['col_carat']=$iii;//----------------------			
 		}else if((strpos($crr_label,'lab') !== false)){
 				$_SESSION['col_grading_lab']=$iii;//----------------------
-		}else if((strpos($crr_label,'color') !== false) && $_SESSION['col_color']<0){
+		}else if((strpos($crr_label,'color') !== false||strpos($crr_label,'col') !== false) ){
 				$_SESSION['col_color']=$iii;//----------------------
-		}else if((strpos($crr_label,'clarity') !== false)){
+		}else if((strpos($crr_label,'clarity') !== false||strpos($crr_label,'cla') !== false)){
 				$_SESSION['col_clarity']=$iii;//----------------------
 		}else if((strpos($crr_label,'cut') !== false)){
 				$_SESSION['col_cut_grade']=$iii;//----------------------//
-		}else if((strpos($crr_label,'polish') !== false)){
+		}else if((strpos($crr_label,'polish') !== false||strpos($crr_label,'pol') !== false)){
 				$_SESSION['col_polish']=$iii;//----------------------//
 		}else if((strpos($crr_label,'symmetry') !== false)){
 				$_SESSION['col_symmetry']=$iii;//----------------------//
@@ -520,7 +520,7 @@ if($stock_ref_label_found){
 				$_SESSION['col_raw_price_total']=$iii;//----------------------//
 		}else if((strpos($crr_label,'back') !== false)){
 				$_SESSION['col_percentage']=$iii;//----------------------//
-		}*/else if((strpos($crr_label,'certificate no') !== false) || (strpos($crr_label,'certi') !== false && strpos($crr_label,'no') !== false)){
+		}*/else if(strpos($crr_label,'certificate no') !== false|| strpos($crr_label,'certi') !== false || strpos($crr_label,'cert.no') !== false){
 				$_SESSION['col_certificate_number']=$iii;//----------------------
 		}
 	}
