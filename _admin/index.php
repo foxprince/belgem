@@ -431,6 +431,9 @@ $('#orderDateSelect').multiselect();
 include('navi.php');
 ?>
 <div id="maincontent">
+<?php
+if($account_level==0){
+?>
 <p id="contentNavi"><span style="font-size:18px; font-weight:bold; display:inline-block; margin-right:35px;">订单管理</span>
 <button onclick="printingmode()" id="printingmodebtn">
 <img style="width:20px; position:relative; top:3px; left:-3px;" src="../images/print.ico" />打印布局</button>
@@ -456,9 +459,7 @@ include('navi.php');
 </select>
 <button id="filterOrderBtn" onclick="filterOrderDate()" value="筛选">筛选</button>
 </p>
-<?php
-if($account_level==0){
-?>
+
 <table cellpadding="0" cellspacing="0" id="orderTable">
 <thead>
 <tr id="tablehead">

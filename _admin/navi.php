@@ -52,8 +52,6 @@ if($account_level==0&&$_SESSION['username']!='gnkf'){
 ?>
 <a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/_admin/users.php">用户管理</a>
 
-<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/_admin/index.php">订单处理</a>
-
 <a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/_admin/history.php">历史记录</a>
 
 <a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/">回到网站</a>
