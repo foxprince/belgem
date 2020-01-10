@@ -926,7 +926,7 @@ function sorting_weight(){
 		$('#arrow_sorting_weight').attr('src','../images/site_elements/arrow-up.png?v=2');
 	}
 	$sorting_direction=$sorting_weight_direction;
-	//update();
+	update();
 }
 function sorting_color(){
 	$sorting = 'color';
@@ -974,7 +974,7 @@ function sorting_price(){
 		$('#arrow_sorting_price').attr('src','../images/site_elements/arrow-up.png?v=2');
 	}
 	$sorting_direction=$sorting_price_direction;
-	//update();
+	update();
 }
 
 function arrowDirection(){
