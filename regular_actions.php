@@ -178,9 +178,9 @@ while(! feof($file)){
 		}else{
 			$DiamondID=$crr_row_content_array[$DiamondID_col_num];
 			$records_from_rapnet[]=$DiamondID;
-			if (in_array($DiamondID, $records_in_db)) {
+			//if (in_array($DiamondID, $records_in_db)) {
 				
-			}else{
+			//}else{
 				echo '<br>'.$DiamondID.' now insert ::<br>';
 				$sellername=$crr_row_content_array[$sellername_col_num];
 				$RapNetAccountID=$crr_row_content_array[$RapNetAccountID_col_num];
@@ -291,7 +291,7 @@ while(! feof($file)){
 				//echo $DiamondID.',weight:'.$Weight.':rapnet price:'.$raw_price_total.'-';
 				//echo ':agency price:'.$price.'-';
 				//echo ':retail price:'.$retail_price;
-			//	echo '网上价格：'.$TotalCashPrice.'---------------- the total price cash <br> '.$DiamondID;
+			    //	echo '网上价格：'.$TotalCashPrice.'---------------- the total price cash <br> '.$DiamondID;
 				
 				//echo '<br>++++++++++++++++++++++++++<br><br>++++++++++++++++++++++++++<br>';
 				/**/
@@ -303,29 +303,6 @@ while(! feof($file)){
 					
 					$sql_insert='INSERT INTO diamonds (stock_ref, stock_num_rapnet, shape, carat, color, fancy_color, clarity, grading_lab, certificate_number,certificatelink, cut_grade, polish, symmetry, fluorescence_intensity, country, raw_price, raw_price_retail, price, retail_price, from_company, clarity_number, cut_number, added_at, source) VALUES (:stock_ref, :stock_num_rapnet, :shape, :carat, :color, :fancy_color, :clarity, :grading_lab, :certificate_number, :certificatelink,:cut_grade, :polish, :symmetry, :fluorescence_intensity, :country, :raw_price, :raw_price_retail, :price, :retail_price, :from_company, :clarity_number, :cut_number, NOW(), :source)';
 					$stmt=$conn->prepare($sql_insert);	  
-// 					$stmt->bindParam(':stock_ref', $DiamondID, PDO::PARAM_STR);
-// 					$stmt->bindParam(':stock_num_rapnet', $StockNumber, PDO::PARAM_STR);
-// 					$stmt->bindParam(':shape', $shape, PDO::PARAM_STR);
-// 					$stmt->bindParam(':carat', $Weight, PDO::PARAM_STR);
-// 					$stmt->bindParam(':color', $Color, PDO::PARAM_STR);
-// 					$stmt->bindParam(':fancy_color', $fancy_color_dominant_color, PDO::PARAM_STR);
-// 					$stmt->bindParam(':clarity', $Clarity, PDO::PARAM_STR);
-// 					$stmt->bindParam(':grading_lab', $Lab, PDO::PARAM_STR);
-// 					$stmt->bindParam(':certificate_number', $CertificateNumber, PDO::PARAM_STR);
-// 					$stmt->bindParam(':cut_grade', $cut, PDO::PARAM_STR);
-// 					$stmt->bindParam(':polish', $polish, PDO::PARAM_STR);
-// 					$stmt->bindParam(':symmetry', $symmetry, PDO::PARAM_STR);
-// 					$stmt->bindParam(':fluorescence_intensity', $FluorescenceIntensity, PDO::PARAM_STR);
-// 					$stmt->bindParam(':country', $Country, PDO::PARAM_STR);
-// 					$stmt->bindParam(':raw_price', $percentage, PDO::PARAM_STR);	
-// 					$stmt->bindParam(':raw_price_retail', $raw_price_retail, PDO::PARAM_STR);
-// 					$stmt->bindParam(':retail_price', $retail_price, PDO::PARAM_STR);	
-// 					$stmt->bindParam(':price', $price, PDO::PARAM_INT);
-// 					$stmt->bindParam(':from_company', $sellername, PDO::PARAM_STR);
-// 					$stmt->bindParam(':clarity_number', $clarity_number, PDO::PARAM_STR);
-// 					$stmt->bindParam(':cut_number', $cut_number, PDO::PARAM_STR);
-// 					$stmt->bindParam(':source', $source, PDO::PARAM_STR);
-// 					$stmt->execute();
 					$stmt->execute(array(
 							'stock_ref'=>$DiamondID,
 							'stock_num_rapnet'=>$StockNumber,
@@ -356,7 +333,7 @@ while(! feof($file)){
 				}else{
 					echo ' inserted NO !!!: no price for this diamond :'.$DiamondID.'<br>';
 				}
-			}
+			//}
 			
 		}
 	}
