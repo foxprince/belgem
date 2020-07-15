@@ -534,7 +534,7 @@ if($account_level==0){
 <tbody>
 <?php	
 	$sql_where =' WHERE diamonds.ordered_by IS NOT NULL AND diamonds.ordered_by <> ""
-		AND diamonds.ordered_by = users.user_name AND diamonds.order_sent IS NULL '.$companyfiltercondition.$userfiltercondition.$orderDateCondition.' ORDER BY ordered_time DESC';
+		 AND diamonds.order_sent IS NULL '.$companyfiltercondition.$userfiltercondition.$orderDateCondition.' ORDER BY ordered_time DESC';
 	if(isset($_REQUEST['crr_page'])){ $crr_page=$_REQUEST['crr_page']; }else{ $crr_page=1; }
 	$startfrom=($crr_page-1)*35;
 	$sql_total = 'select count(*) as num from diamonds, users'.$sql_where;
