@@ -533,11 +533,11 @@ if($account_level==0){
 </thead>
 <tbody>
 <?php	
-	$sql_where =' WHERE diamonds.ordered_by IS NOT NULL AND diamonds.ordered_by <> ""
-		AND diamonds.ordered_by = users.user_name  AND diamonds.order_sent IS NULL '.$companyfiltercondition.$userfiltercondition.$orderDateCondition.' ORDER BY ordered_time DESC';
+	$sql_where ='  diamonds.ordered_by IS NOT NULL AND diamonds.ordered_by <> ""
+		 AND diamonds.order_sent IS NULL '.$companyfiltercondition.$userfiltercondition.$orderDateCondition.' ORDER BY ordered_time DESC';
 	if(isset($_REQUEST['crr_page'])){ $crr_page=$_REQUEST['crr_page']; }else{ $crr_page=1; }
 	$startfrom=($crr_page-1)*35;
-	$sql_total = 'select count(*) as num from diamonds, users'.$sql_where;
+	$sql_total = 'select count(*) as num from diamonds diamonds where '.$sql_where;
 	foreach($conn->query($sql_total) as $num){
 		$result_number=$num['num'];
 	}
@@ -545,7 +545,7 @@ if($account_level==0){
 		grading_lab, certificate_number, cut_grade, polish, symmetry, fluorescence_intensity, raw_price_retail, price,
 		raw_price,retail_price,diamonds.from_company, diamonds.ordered_time, paid_amount, comment, source, status,
 		users.user_name, users.real_name, users.account_level, users.given_by
-		FROM diamonds, users'.$sql_where.' LIMIT '.$startfrom.', 35';
+		FROM diamonds diamonds left join  users diamonds on diamonds.ordered_by = users.user_name and '.$sql_where.' LIMIT '.$startfrom.', 35';
 	logger($sql_orders);
 	foreach($conn->query($sql_orders) as $row){
 		if(ceil($counter/2)>($counter/2)){
