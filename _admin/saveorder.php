@@ -23,8 +23,6 @@ if($_SESSION['authenticated']!='SiHui'){
 $username=$_SESSION['username'];
 $account_level=$_SESSION['account_level'];
 
-
-
 require_once('../includes/connection.php');
 $conn=dbConnect('write','pdo');
 $conn->query("SET NAMES 'utf8'");

@@ -34,9 +34,6 @@ if($_SESSION['authenticated']=='SiHui'){
 	$username=$_SESSION['username'];
 	$account_level=$_SESSION['account_level'];
 }
-
-
-
 $crr_page='diamonds';
 include_once('includes/header_ele.php');
 ?>
@@ -409,10 +406,6 @@ button#updateBTN{
 	border-style:solid;
 	padding:5px 12px;
 }
-
-
-
-
 
 div.videobox{
 	position:relative;

@@ -545,7 +545,7 @@ if($account_level==0){
 		grading_lab, certificate_number, cut_grade, polish, symmetry, fluorescence_intensity, raw_price_retail, price,
 		raw_price,retail_price,diamonds.from_company, diamonds.ordered_time, paid_amount, comment, source, status,
 		users.user_name, users.real_name, users.account_level, users.given_by
-		FROM diamonds diamonds left join  users users on diamonds.ordered_by = users.user_name and '.$sql_where.' LIMIT '.$startfrom.', 35';
+		FROM diamonds diamonds,users users where diamonds.ordered_by = users.user_name and '.$sql_where.' LIMIT '.$startfrom.', 35';
 	logger($sql_orders);
 	foreach($conn->query($sql_orders) as $row){
 		if(ceil($counter/2)>($counter/2)){
