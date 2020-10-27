@@ -326,7 +326,7 @@ input {
     <img src="../images/belgemlogo.png" style="width: 128px;" />
   </p>
   <h1 style="margin-top: 20px; text-align: center; color: #FFF;">
-    比利时BELGEM钻石公司<br />国际钻石交易平台
+    BELGEM BVBA<br />Jewelry products and new design
   </h1>
 <?php
 if (isset ( $wrongmessage )) {
