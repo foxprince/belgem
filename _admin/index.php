@@ -8,7 +8,6 @@ if(isset($_POST['logout'])){
      exit;
 }
 // if session variable not set, redirect to login page
-logger('login user: '.$_SESSION ['username']);
 if(!isset($_SESSION['username'])) {
   header('Location: login.php');
   exit;

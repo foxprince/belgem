@@ -41,7 +41,6 @@ if (isset ( $_POST ['login'] ) && isset ( $_POST ['pwd'] )) {
 		$stmt->bindParam ( ':the_action', $the_action, PDO::PARAM_STR );
 		$stmt->execute ();
 		$insertOK = $stmt->rowCount ();
-		logger($sql.' '.$_SESSION ['username']);
 
 		header ( 'Location: index.php' );
 		exit ( '' );
