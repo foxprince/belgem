@@ -1,18 +1,14 @@
 <?php
 /*===================session========================*/
 session_start();
+require_once('../log.php');
 if(isset($_POST['logout'])){
-	if(isset($_SESSION['authenticated'])){
-			$_SESSION=array();
-			if (isset($_COOKIE[session_name()])){
-			    setcookie(session_name(), '', time()-86400, '/');
-			}
-			session_destroy();
-	 }
+	 session_unset();
 	 header('Location: login.php');
      exit;
 }
 // if session variable not set, redirect to login page
+logger('login user: '.$_SESSION ['username']);
 if(!isset($_SESSION['username'])) {
   header('Location: login.php');
   exit;
