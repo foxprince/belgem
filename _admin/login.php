@@ -11,7 +11,6 @@ if (isset ( $_POST ['login'] ) && isset ( $_POST ['pwd'] )) {
 	$conn->query ( "SET NAMES 'utf8'" );
 	
 	$sql = 'SELECT * FROM users WHERE disable=0 and user_name = binary "' . $username . '" AND pass_word = binary "' . $password . '"';
-	logger($sql);
 	$stmt = $conn->query ( $sql );
 	$userexits = $stmt->rowCount ();
 	
@@ -26,6 +25,7 @@ if (isset ( $_POST ['login'] ) && isset ( $_POST ['pwd'] )) {
 		$wrongmessage = '用户名密码不正确，请重试';
 	} else {
 		foreach ( $stmt as $row_account ) {
+			$username = $row_account['user_name'];
 			$account_level = $row_account ['account_level'];
 		}
 		$_SESSION ['username'] = $username;
@@ -40,7 +40,8 @@ if (isset ( $_POST ['login'] ) && isset ( $_POST ['pwd'] )) {
 		$stmt->bindParam ( ':the_action', $the_action, PDO::PARAM_STR );
 		$stmt->execute ();
 		$insertOK = $stmt->rowCount ();
-		
+		logger($sql.' '.$_SESSION ['username']);
+
 		header ( 'Location: index.php' );
 		exit ( '' );
 	}
