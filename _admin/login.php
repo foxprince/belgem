@@ -25,9 +25,6 @@ if (isset ( $_POST ['login'] ) && isset ( $_POST ['pwd'] )) {
 		session_destroy ();
 		$wrongmessage = '用户名密码不正确，请重试';
 	} else {
-		$_SESSION ['authenticated'] = 'SiHui';
-		session_regenerate_id ();
-		
 		foreach ( $stmt as $row_account ) {
 			$account_level = $row_account ['account_level'];
 		}

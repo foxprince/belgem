@@ -13,18 +13,9 @@ if(isset($_POST['logout'])){
      exit;
 }
 // if session variable not set, redirect to login page
-if(!isset($_SESSION['authenticated'])) {
+if(!isset($_SESSION['username'])) {
   header('Location: login.php');
   exit;
-}
-if($_SESSION['authenticated']!='SiHui'){
-	$_SESSION=array();
-	if (isset($_COOKIE[session_name()])){
-		setcookie(session_name(), '', time()-86400, '/');
-	}
-	session_destroy();
-	header('Location: login.php');
-    exit;
 }
 $username=$_SESSION['username'];
 $account_level=$_SESSION['account_level'];
