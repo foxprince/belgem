@@ -75,7 +75,7 @@ if(isset($_POST['filter_price'])){
 <!-- <link rel="stylesheet" href="../styles/multi-select.css"> -->
 <link rel="stylesheet" href="../styles/jquery.multiselect.css">
 
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="../styles/jquery.dataTables.min.css">
 
 <style>
 body{
@@ -176,7 +176,7 @@ button#normalmodebtn{
 <script src="../js/jquery-1.11.2.min.js"></script>
 <script src="../js/jquery-ui.min.js"></script>
 
-<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+<script src="../js/jquery.dataTables.min.js"></script>
 <!-- <script src="../js/jquery.multi-select.js"></script> -->
 <script src="../js/jquery.multiselect.js"></script>
 

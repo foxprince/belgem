@@ -1,7 +1,7 @@
 <div id="headerbox" class="headerbox">
 <div class="header">
 
-<a id="logolinker" href="/"><img id="logo" src="http://happyeurope.eu/images/belgemlogo.png" /></a>
+<a id="logolinker" href="/"><img id="logo" src="../images/belgemlogo.png" /></a>
 
 <div id="navi">
 <ul>
