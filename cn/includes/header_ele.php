@@ -1,8 +1,13 @@
 <?php
+if(!isset($_SESSION['username'])) {
+  header('Location: login.php');
+  exit;
+}
+$username=$_SESSION['username'];
+$account_level=$_SESSION['account_level'];
 	require_once('../includes/connection.php');
 	$conn=dbConnect('write','pdo');
 	$conn->query("SET NAMES 'utf8'");
-
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

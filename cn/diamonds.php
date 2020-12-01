@@ -1,39 +1,6 @@
 <?php
 session_start();
 
-if(isset($_POST['logout'])){
-	if(isset($_SESSION['authenticated'])){
-			$_SESSION=array();
-			if (isset($_COOKIE[session_name()])){
-			    setcookie(session_name(), '', time()-86400, '/');
-			}
-			session_destroy();
-	 }
-	 header('Location: login.php');
-     exit;
-}
-
-// if session variable not set, redirect to login page
-//$permit=true;
-
-if(!isset($_SESSION['authenticated'])) {
-  $permit=false;
-}
-
-if($_SESSION['authenticated']!='SiHui'){
-	$_SESSION=array();
-	if (isset($_COOKIE[session_name()])){
-		setcookie(session_name(), '', time()-86400, '/');
-	}
-	session_destroy();
-	$permit=false;
-}
-
-if($_SESSION['authenticated']=='SiHui'){
-	$permit=true;
-	$username=$_SESSION['username'];
-	$account_level=$_SESSION['account_level'];
-}
 $crr_page='diamonds';
 include_once('includes/header_ele.php');
 ?>
@@ -635,16 +602,7 @@ switch($p){
 	default:
 	$the_page='content/diamonds-all.php';
 }
-
-if($permit){
-	include_once("$the_page");
-}else{
-?>
-<div style="position:relative; height:266px;">
-<a href="../_admin" style="display:inline-block; margin:50px; text-decoration:none; padding:5px 20px; background-color:#CCC; border-style:solid; border-width:1px; border-color:#999; color:#000;">请先登陆</a>
-</div>
-<?
-}
+include_once("$the_page");
 ?>
 
 
