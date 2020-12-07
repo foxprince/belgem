@@ -417,8 +417,7 @@ $('#orderDateSelect').multiselect();
 include('navi.php');
 ?>
 <div id="maincontent">
-<?php
-if($account_level==0){
+<?php if($account_level==0){
 ?>
 <p id="contentNavi"><span style="font-size:18px; font-weight:bold; display:inline-block; margin-right:35px;">订单管理</span>
 <button onclick="printingmode()" id="printingmodebtn">
@@ -548,34 +547,28 @@ if($account_level==0){
 <td class="cell_dia_id"><?php echo $row['customer']; ?></td><td class="cell_dia_id"><?php echo $row['appointment_time']; ?></td>
 <td class="cell_dia_id">
 <?php echo $row['stock_ref']; ?>
-<?php
-if($row['status']=='SOLD'){
-?>
-<br /><span style="color:#F00;">已售出</span>
+<?php if($row['status']=='SOLD'){ ?>
+    <br /><span style="color:#F00;">已售出</span>
 <?
 }else if($row['status']=='RESERVED'){
 ?>
-<br /><span style="color:#F00;">已预留</span>
-<?php
-}
-?>
+    <br /><span style="color:#F00;">已预留</span>
+<?php } ?>
 </td>
 <td class="cell_stock_ref">
 <?php
 if(($row['stock_num_rapnet']=='-' || $row['stock_num_rapnet']=='') && $row['source']=="RAPNET"){
 ?>
-<p class="Stock_Num stocknum_to_fetch" title="<?php echo $row['stock_ref']; ?>">
-调取中...
-</p>
+    <p class="Stock_Num stocknum_to_fetch" title="<?php echo $row['stock_ref']; ?>">
+    调取中...
+    </p>
 <?php
 }else{
 ?>
-<p class="Stock_Num">
-<?php echo $row['stock_num_rapnet']; ?>
-</p>
-<?php
-}
-?>
+    <p class="Stock_Num">
+    <?php echo $row['stock_num_rapnet']; ?>
+    </p>
+<?php } ?>
 </td>
 <td><?php echo $row['shape']; ?></td>
 <td><?php echo $row['carat']; ?></td>
@@ -616,19 +609,13 @@ if('GIA'==$thelab){
 if($row['from_company']=='-' || $row['from_company']=='' || $row['from_company']==NULL){
 	if($row['source']=='EXCEL'){
 	?>
-<td>K</td>
-    <?php
-	}else{
-?>
-<td class="fromcampanytofetch" title="<?php echo $row['stock_ref']; ?>">正在调取数据...</td>
-<?php
-	}
-}else{
-?>
-<td><?php echo $row['from_company']; ?></td>
-<?php
-}
-?>
+        <td>K</td>
+    <?php }else{ ?>
+        <td class="fromcampanytofetch" title="<?php echo $row['stock_ref']; ?>">正在调取数据...</td>
+    <?php }
+}else{ ?>
+    <td><?php echo $row['from_company']; ?></td>
+<?php } ?>
 <td>
 <?php if($crr_searching_price=="price"){echo $row['price'];}else if ($crr_searching_price=="retail_price"){echo $row['retail_price'];}?>
 （<?php echo $row['raw_price']; ?>）
@@ -733,11 +720,6 @@ if(($crr_page_Round*10)<$total_page_NUM){
 </table>
 <?php
 }else if($account_level==1){
-	############################################################################
-	############################################################################
-	############################################################################
-	############################################################################
-	############################################################################	
 ?>
 <button onclick="hidefinido()" style="display:inline-block; margin:25px; padding:5px 20px; background-color:#e3dac5; border-width:1px; font-size:16px;">隐藏/显示 已经发货的纪录</button>
 <script type="text/javascript">
@@ -855,137 +837,6 @@ if($row['paid_amount']==0){
 <?php
 }else{
 	echo "已收到付款金额为".$row['paid_amount']."欧元。<br />";
-}
-if($row['order_sent']=="YES"){
-	echo "已经发货。";
-}else{
-	echo "尚未发货。";
-}
-?>
-</td>
-</tr>
-<?php
-	}
-?>
-</table>
-<?php
-} else {
-?>
-<button onclick="hidefinido()" style="display:inline-block; margin:25px; padding:5px 20px; background-color:#e3dac5; border-width:1px; font-size:16px;">隐藏/显示 已经发货的纪录</button>
-<script type="text/javascript">
-var showfinido=true;
-function hidefinido(){
-	if(showfinido){
-		$('tr.finido').fadeOut('fast');
-		showfinido=false;
-	}else{
-		$('tr.finido').fadeIn('fast');
-		showfinido=true;
-	}
-}
-</script>
-<table cellpadding="0" cellspacing="0">
-<tr id="tablehead">
-<td width="68">钻石ID</td>
-<td width="30">形状</td>
-<td width="38">重量</td>
-<td width="38">颜色</td>
-<td width="38">净度</td>
-<td width="88">切工</td>
-<td width="58">荧光</td>
-<td width="78" align="center">证书</td>
-<td width="78">价格(美元)</td>
-<td width="88">预定时间</td>
-<td width="78">操作</td>
-<td width="158" class="lastcell">订单状态</td>
-</tr>
-<?php
-$sql_orders='SELECT diamonds.id, diamonds.stock_ref, shape, carat, color, fancy_color, clarity, grading_lab, certificate_number, cut_grade, polish, symmetry, fluorescence_intensity, price, diamonds.from_company, diamonds.ordered_time, paid_amount, order_sent, comment, status, users.user_name, users.real_name, users.account_level, users.given_by FROM 
-		diamonds, users WHERE diamonds.ordered_by IS NOT NULL AND diamonds.ordered_by <> "" AND diamonds.ordered_by = users.user_name AND diamonds.ordered_by = "'.$username.'" ORDER BY ordered_time DESC';
-$counter=0;
-	foreach($conn->query($sql_orders) as $row){
-		$counter++;
-		if($row['order_sent']==NULL){
-			$classofrow='';
-		}else{
-			$classofrow=' class="finido" ';
-		}
-		if(ceil($counter/2)>($counter/2)){
-			$cellclass='o';
-		}else{
-			$cellclass='d';
-		}
-?>
-<tr<?php echo $classofrow; ?> id="record_<?php echo $row['stock_ref']; ?>" class="<?php echo $cellclass; ?>">
-<td class="cell_dia_id">
-<?php echo $row['stock_ref']; ?>
-<?php
-if($row['status']=='SOLD'){
-?>
-<br /><span style="color:#F00;">已售出</span>
-<?
-}
-?>
-</td>
-<td><?php echo $row['shape']; ?></td>
-<td><?php echo $row['carat']; ?></td>
-<td>
-<?php
-if($row['color']!=NULL && $row['color']!=''){
-	echo $row['color'];
-}
-if($row['fancy_color']!=NULL && $row['fancy_color']!=''){
-    echo $row['fancy_color'];
-}
-?>
-</td>
-<td><?php echo $row['clarity']; ?></td>
-<td><?php echo $row['cut_grade']; ?> <?php echo $row['polish']; ?> <?php echo $row['symmetry']; ?></td>
-<td><?php echo $row['fluorescence_intensity']; ?></td>
-<td align="center">
-<?php 
-	$thelab=$row['grading_lab']; 
-?>
-<span class="lab-title"><?php echo $thelab; ?></span><br />
-<?php
-$certi_num=$row['certificate_number'];
-if('GIA'==$thelab){
-	$certi_link='http://www.gia.edu/cs/Satellite?pagename=GST%2FDispatcher&childpagename=GIA%2FPage%2FReportCheck&c=Page&cid=1355954554547&reportno='.$certi_num;
-}else if('IGI'==$thelab){
-	//$certi_link='http://www.igiworldwide.com/igi/verify.php?r='.$certi_num;
-	$certi_link='http://www.igiworldwide.com/verify.php?r='.$certi_num;
-}else if('HRD'==$thelab){
-	$certi_link='http://www.hrdantwerplink.be/index.php?record_number='.$certi_num;
-}else{
-	$certi_link='#not-available';
-}
-?>
-<a target="_blank" style="color:#000; font-size:9px;" href="<?php echo $certi_link; ?>"><?php echo $certi_num; ?></a>
-</td>
-<td>
-<?php echo $row['price']; ?>
-</td>
-<td><?php echo $row['ordered_time']; ?></td>
-<td>
-<?php
-if($row['order_sent']==NULL){
-?>
-<p style="margin:2px 0 5px 0; border-bottom-style:dashed; border-width:1px; border-color:#666; padding:5px;">
-<button class="cancelorderbtn" id="cancelorderbtn_<?php echo $row['stock_ref']; ?>" type="button" onclick="cancelorder('<?php echo $row['stock_ref']; ?>')" >取消预定</button>
-</p>
-<?php
-}
-?>
-</td>
-<td class="lastcell">
-预定已经收到。<br />
-<?php
-if($row['paid_amount']==0){
-?>
-尚未收到付款。<br />
-<?php
-}else{
-	echo "已收到付款。<br />";
 }
 if($row['order_sent']=="YES"){
 	echo "已经发货。";
