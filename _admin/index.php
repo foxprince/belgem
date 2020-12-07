@@ -700,9 +700,7 @@ $crr_page_Round=ceil($crr_page/10);
 if($crr_page_Round>1){
 ?>
 <button class="pre-pages-btn" onclick="choosethispage('<?php echo ($crr_page_Round-1)*10-9; ?>')">前10页...</button>
-<?php
-}
-?>
+<?php } ?>
 第
 <?php
 for ($x=1; $x<=10; $x++) {
