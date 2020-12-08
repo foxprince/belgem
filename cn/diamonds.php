@@ -611,7 +611,7 @@ include_once("$the_page");
 <div id="wechatscanboxinner">
 <span id="wechatscanboxclosebtn" onClick="closeWechatbox()">X</span>
 <p>请加微信询问价格</p>
-<p><img style="width:128px;" src="http://lumiagem.com/images/site_elements/wechat_scan.jpg"></p>
+<p><img style="width:128px;" src="../images/site_elements/wechat_scan.jpg"></p>
 </div>
 </div>
 </div>

@@ -3,6 +3,7 @@ if(!isset($_SESSION['username'])) {
   header('Location: login.php');
   exit;
 }
+$permit=true;
 $username=$_SESSION['username'];
 $account_level=$_SESSION['account_level'];
 	require_once('../includes/connection.php');
