@@ -1,5 +1,4 @@
 <?php
-//======================onlineserver====================================
 class MyPDOStatement extends PDOStatement
 {
 	protected $_debugValues = null;
