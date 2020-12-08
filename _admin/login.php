@@ -16,7 +16,8 @@ if (isset ( $_POST ['login'] ) && isset ( $_POST ['pwd'] )) {
 	$userexits = $stmt->rowCount ();
 	
 	// exit($userexits);
-	
+	logger($sql.':'.$userexits );
+
 	if (! $userexits) {
 		$_SESSION = array ();
 		if (isset ( $_COOKIE [session_name ()] )) {
@@ -31,7 +32,7 @@ if (isset ( $_POST ['login'] ) && isset ( $_POST ['pwd'] )) {
 		}
 		$_SESSION ['username'] = $username;
 		$_SESSION ['account_level'] = $account_level;
-		
+		logger($_SESSION ['username'].':'.$_SESSION ['account_level'] );
 		$the_action = '登陆';
 		
 		$sql_record_login = 'INSERT INTO login_history (theuser, the_action, action_time) VALUES(:theuser, :the_action, NOW())';
