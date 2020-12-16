@@ -1283,8 +1283,7 @@ function makeorder(theRef){
 	return;
 	var refnumber=theRef;
 	$('#indication').fadeIn('fast');
-	$.post(
-		"../_admin/saveorder.php",
+	$.post( "../_admin/saveorder.php",
 		{stock_ref: refnumber},
 		function(data){
 			if($.trim(data)=='OK'){
