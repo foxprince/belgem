@@ -2,7 +2,6 @@
 /*===================session========================*/
 session_start();
 
-require_once ('../cn/includes/header_ele.php');
 
 if(!isset($_POST['source']) || !isset($_POST['target']) || !isset($_POST['carat_from']) || !isset($_POST['carat_to'])){
 	exit('error');
