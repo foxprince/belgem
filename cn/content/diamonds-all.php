@@ -1287,7 +1287,7 @@ function makeorder(theRef){
 		"../_admin/saveorder.php",
 		{stock_ref: refnumber},
 		function(data){
-			logger("save order result:".data);
+			console.log("save order result:"+data);
 			if($.trim(data)=='OK'){
 				alert('ordered');
 			}else{
