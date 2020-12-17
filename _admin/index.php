@@ -814,19 +814,20 @@ include('navi.php');
     </td>
     <td><?php echo $row['real_name']; ?></td>
     <td><?php echo $row['ordered_time']; ?></td>
-    <td>
-        <?php
-        if($row['order_sent']==NULL){
-        ?>
-        <p style="margin:2px 0 5px 0; border-bottom-style:dashed; border-width:1px; border-color:#666; padding:5px;">
-        <button class="cancelorderbtn" id="cancelorderbtn_<?php echo $row['stock_ref']; ?>" type="button" onclick="cancelorder('<?php echo $row['stock_ref']; ?>')" >取消预定</button>
-        </p>
-        <?php
-        }
-        ?>
-    </td>
     <td class="lastcell">
     预定已经收到。<br />
+        <?php
+        if($row['paid_amount']==0){
+            echo "尚未收到付款。<br />";
+        }else{
+            echo "已收到付款金额为".$row['paid_amount']."欧元。<br />";
+        }
+        if($row['order_sent']=="YES"){
+            echo "已经发货。";
+        }else{
+            echo "尚未发货。";
+        }
+        ?>
     </td>
     </tr>
     <?php } ?>
