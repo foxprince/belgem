@@ -827,18 +827,6 @@ include('navi.php');
     </td>
     <td class="lastcell">
     预定已经收到。<br />
-        <?php
-        if($row['paid_amount']==0){
-            echo "尚未收到付款。<br />";
-        }else{
-            echo "已收到付款金额为".$row['paid_amount']."欧元。<br />";
-        }
-        if($row['order_sent']=="YES"){
-            echo "已经发货。";
-        }else{
-            echo "尚未发货。";
-        }
-        ?>
     </td>
     </tr>
     <?php } ?>
