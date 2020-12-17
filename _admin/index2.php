@@ -419,7 +419,6 @@ include('navi.php');
 <div id="maincontent">
 <?php if($account_level==1){ ?>
 
-
     <button onclick="hidefinido()" style="display:inline-block; margin:25px; padding:5px 20px; background-color:#e3dac5; border-width:1px; font-size:16px;">隐藏/显示 已经发货的纪录</button>
     <script type="text/javascript">
     var showfinido=true;
