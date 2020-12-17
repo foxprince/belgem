@@ -715,7 +715,45 @@ include('navi.php');
     </table>
 
 
+<?php } elseif($account_level==1){ ?>
+
+
+    <button onclick="hidefinido()" style="display:inline-block; margin:25px; padding:5px 20px; background-color:#e3dac5; border-width:1px; font-size:16px;">隐藏/显示 已经发货的纪录</button>
+    <script type="text/javascript">
+    var showfinido=true;
+    function hidefinido(){
+        if(showfinido){
+            $('tr.finido').fadeOut('fast');
+            showfinido=false;
+        }else{
+            $('tr.finido').fadeIn('fast');
+            showfinido=true;
+        }
+    }
+    </script>
+    <table cellpadding="0" cellspacing="0">
+    <tr id="tablehead">
+    <td width="68">钻石ID</td>
+    <td width="30">形状</td>
+    <td width="38">重量</td>
+    <td width="38">颜色</td>
+    <td width="38">净度</td>
+    <td width="88">切工</td>
+    <td width="58">荧光</td>
+    <td width="78" align="center">证书</td>
+    <td width="78">价格(美元)</td>
+    <td width="88">预定代理</td>
+    <td width="88">预定时间</td>
+    <td width="78">操作</td>
+    <td width="128" class="lastcell">订单状态</td>
+    </tr>
+    <?php
+    $sql_orders='SELECT diamonds.id, diamonds.stock_ref, shape, carat, color, fancy_color, clarity, grading_lab, certificate_number, cut_grade, polish, symmetry, fluorescence_intensity, price, diamonds.from_company, diamonds.ordered_time, paid_amount, order_sent, comment, status, users.user_name, users.real_name, users.account_level, users.given_by FROM diamonds, users WHERE diamonds.ordered_by IS NOT NULL AND diamonds.ordered_by <> "" AND diamonds.ordered_by = users.user_name AND (diamonds.ordered_by = "'.$username.'" OR (diamonds.ordered_by = users.user_name AND users.given_by = "'.$username.'")) ORDER BY diamonds.ordered_time DESC';
+    $counter=0;
+        ?>
+    </table>
 <?php } ?>
+
 
 
 </div><!-- end maincontent -->
