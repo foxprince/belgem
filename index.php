@@ -1,5 +1,5 @@
 <?php
-header('Location: cn/about.php');
+header('Location: _admin/login.php');
 
 exit('');
 
