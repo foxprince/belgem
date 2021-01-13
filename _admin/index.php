@@ -769,7 +769,7 @@ include('navi.php');
                 if($row['status']=='SOLD'){
                 ?>
                 <br /><span style="color:#F00;">已售出</span>
-                <?
+                <?php
                 }
                 ?>
             </td>
