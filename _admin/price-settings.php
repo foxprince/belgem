@@ -18,12 +18,8 @@ $price_ratio_003=1.2;
 
 /*===================session========================*/
 session_start();
-
-require_once ('../cn/includes/header_ele.php');
-
 $username=$_SESSION['username'];
 $account_level=$_SESSION['account_level'];
-
 
 if($account_level!=0){
 	exit;

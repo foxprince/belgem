@@ -183,6 +183,8 @@ while(! feof($file)){
 			//}else{
 				echo '<br>'.$DiamondID.' now insert ::<br>';
 				$sellername=$crr_row_content_array[$sellername_col_num];
+				if($sellername=='Uniglo BV')
+				    continue;
 				$RapNetAccountID=$crr_row_content_array[$RapNetAccountID_col_num];
 				//echo '<br>NameCode :'.$crr_row_content_array[$NameCode_col_num];
 				$shape=$crr_row_content_array[$Shape_col_num];
