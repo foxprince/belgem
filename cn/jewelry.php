@@ -1,39 +1,7 @@
 <?php
 session_start();
 
-if(isset($_POST['logout'])){
-	if(isset($_SESSION['authenticated'])){
-			$_SESSION=array();
-			if (isset($_COOKIE[session_name()])){
-			    setcookie(session_name(), '', time()-86400, '/');
-			}
-			session_destroy();
-	 }
-	 header('Location: login.php');
-     exit;
-}
 
-// if session variable not set, redirect to login page
-//$permit=true;
-
-if(!isset($_SESSION['authenticated'])) {
-  $permit=false;
-}
-
-if($_SESSION['authenticated']!='SiHui'){
-	$_SESSION=array();
-	if (isset($_COOKIE[session_name()])){
-		setcookie(session_name(), '', time()-86400, '/');
-	}
-	session_destroy();
-	$permit=false;
-}
-
-if($_SESSION['authenticated']=='SiHui'){
-	$permit=true;
-	$username=$_SESSION['username'];
-	$account_level=$_SESSION['account_level'];
-}
 
 
 
