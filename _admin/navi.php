@@ -7,7 +7,7 @@
 <ul>
 <li><a id="aboutbtn" href="/cn/about.php">Brand</a></li>
 
-<li><a id="diamondsbtn" href="/cn/diamonds.php">Diamond</a></li>
+<!--<li><a id="diamondsbtn" href="/cn/diamonds.php">Diamond</a></li>-->
 <li><a id="diamondsbtn" href="/cn/jewelry.php">Jewelry</a></li>
 <li><a id="contactmainbtn" href="/cn/contact.php">Contact</a></li>
 <li id="lastnavibtn"><a id="myaccountbtn" href="/_admin">MyAccount</a></li>
@@ -30,7 +30,7 @@ if($account_level==0&&$_SESSION['username']!='gnkf'){
 ?>
 <a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/_admin/users.php">用户管理</a>
 
-<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/_admin/index.php">订单处理</a>
+<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/_admin/index.php">Order Mng</a>
 
 <a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/_admin/history.php">交易历史记录</a>
 
@@ -44,7 +44,7 @@ if($account_level==0&&$_SESSION['username']!='gnkf'){
 <?php
 }else if($account_level==0&&$_SESSION['username']=='gnkf'){
 ?>
-<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/_admin/index.php">订单处理</a>
+<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/_admin/index.php">Order Mng</a>
 <a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="http://www.lumiagem.com/cn/jewMng/ivtMng.html" target="_blank">首饰管理</a>
 <a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/">回到网站</a>
 <?php
@@ -59,9 +59,9 @@ if($account_level==0&&$_SESSION['username']!='gnkf'){
 }else{
 ?>
 
-<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/_admin/index.php">订单处理</a>
+<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/_admin/index.php">Order Mng</a>
 
-<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/">回到网站</a>
+<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/">GoToWebsite</a>
 <?php
 }
 ?>
