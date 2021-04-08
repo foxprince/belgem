@@ -3,8 +3,6 @@ $crr_page='about';
 include_once('includes/header_ele.php');
 ?>
 
-
-
 <style type="text/css">
 #navi ul li a#aboutbtn{
 	color:#FFF;
