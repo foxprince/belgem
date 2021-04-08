@@ -5,7 +5,7 @@ exit('');
 
 $theRequestedURL="$_SERVER[HTTP_HOST]";
 if(trim($theRequestedURL)=='sigway.be' || trim($theRequestedURL)=='www.sigway.be'){
-	$location='http://lumiagem.com/cn';
+	$location='http://www.lumiagem.com/cn';
 	header("HTTP/1.1 301 Moved Permanently"); 
 	header("location:$location");
 	exit();

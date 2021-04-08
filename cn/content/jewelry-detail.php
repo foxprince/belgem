@@ -60,8 +60,8 @@ if($row['category']=='ring'){
 <div id="thumbsbox">
 
 
-<a class="thumb" href="http://lumiagem.com/images/sitepictures/<?php echo $row['image1']; ?>" rel="pics">
-<span class="thumbpicbox" style="background-image:url(http://lumiagem.com/images/sitepictures/thumbs/<?php echo $row['image1']; ?>);">
+<a class="thumb" href="http://www.lumiagem.com/images/sitepictures/<?php echo $row['image1']; ?>" rel="pics">
+<span class="thumbpicbox" style="background-image:url(http://www.lumiagem.com/images/sitepictures/thumbs/<?php echo $row['image1']; ?>);">
 </span>
 </a>
 
@@ -69,8 +69,8 @@ if($row['category']=='ring'){
 if($row['image2']!=NULL && $row['image2']!=''){
 ?>
 
-<a class="thumb" href="http://lumiagem.com/images/sitepictures/<?php echo $row['image2']; ?>" rel="pics">
-<span class="thumbpicbox" style="background-image:url(http://lumiagem.com/images/sitepictures/thumbs/<?php echo $row['image2']; ?>);">
+<a class="thumb" href="http://www.lumiagem.com/images/sitepictures/<?php echo $row['image2']; ?>" rel="pics">
+<span class="thumbpicbox" style="background-image:url(http://www.lumiagem.com/images/sitepictures/thumbs/<?php echo $row['image2']; ?>);">
 </span>
 </a>
 
@@ -81,8 +81,8 @@ if($row['image2']!=NULL && $row['image2']!=''){
 if($row['image3']!=NULL && $row['image3']!=''){
 ?>
 
-<a class="thumb" href="http://lumiagem.com/images/sitepictures/<?php echo $row['image3']; ?>" rel="pics">
-<span class="thumbpicbox" style="background-image:url(http://lumiagem.com/images/sitepictures/thumbs/<?php echo $row['image3']; ?>);">
+<a class="thumb" href="http://www.lumiagem.com/images/sitepictures/<?php echo $row['image3']; ?>" rel="pics">
+<span class="thumbpicbox" style="background-image:url(http://www.lumiagem.com/images/sitepictures/thumbs/<?php echo $row['image3']; ?>);">
 </span>
 </a>
 
@@ -93,8 +93,8 @@ if($row['image3']!=NULL && $row['image3']!=''){
 if($row['image4']!=NULL && $row['image4']!=''){
 ?>
 
-<a class="thumb" href="http://lumiagem.com/images/sitepictures/<?php echo $row['image4']; ?>" rel="pics">
-<span class="thumbpicbox" style="background-image:url(http://lumiagem.com/images/sitepictures/thumbs/<?php echo $row['image4']; ?>);">
+<a class="thumb" href="http://www.lumiagem.com/images/sitepictures/<?php echo $row['image4']; ?>" rel="pics">
+<span class="thumbpicbox" style="background-image:url(http://www.lumiagem.com/images/sitepictures/thumbs/<?php echo $row['image4']; ?>);">
 </span>
 </a>
 
@@ -105,8 +105,8 @@ if($row['image4']!=NULL && $row['image4']!=''){
 if($row['image5']!=NULL && $row['image5']!=''){
 ?>
 
-<a class="thumb" href="http://lumiagem.com/images/sitepictures/<?php echo $row['image5']; ?>" rel="pics">
-<span class="thumbpicbox" style="background-image:url(http://lumiagem.com/images/sitepictures/thumbs/<?php echo $row['image5']; ?>);">
+<a class="thumb" href="http://www.lumiagem.com/images/sitepictures/<?php echo $row['image5']; ?>" rel="pics">
+<span class="thumbpicbox" style="background-image:url(http://www.lumiagem.com/images/sitepictures/thumbs/<?php echo $row['image5']; ?>);">
 </span>
 </a>
 
@@ -117,8 +117,8 @@ if($row['image5']!=NULL && $row['image5']!=''){
 if($row['image6']!=NULL && $row['image6']!=''){
 ?>
 
-<a class="thumb" href="http://lumiagem.com/images/sitepictures/<?php echo $row['image6']; ?>" rel="pics">
-<span class="thumbpicbox" style="background-image:url(http://lumiagem.com/images/sitepictures/thumbs/<?php echo $row['image6']; ?>);">
+<a class="thumb" href="http://www.lumiagem.com/images/sitepictures/<?php echo $row['image6']; ?>" rel="pics">
+<span class="thumbpicbox" style="background-image:url(http://www.lumiagem.com/images/sitepictures/thumbs/<?php echo $row['image6']; ?>);">
 </span>
 </a>
 
@@ -129,8 +129,8 @@ if($row['image6']!=NULL && $row['image6']!=''){
 if($row['image7']!=NULL && $row['image7']!=''){
 ?>
 
-<a class="thumb" href="http://lumiagem.com/images/sitepictures/<?php echo $row['image7']; ?>" rel="pics">
-<span class="thumbpicbox" style="background-image:url(http://lumiagem.com/images/sitepictures/thumbs/<?php echo $row['image7']; ?>);">
+<a class="thumb" href="http://www.lumiagem.com/images/sitepictures/<?php echo $row['image7']; ?>" rel="pics">
+<span class="thumbpicbox" style="background-image:url(http://www.lumiagem.com/images/sitepictures/thumbs/<?php echo $row['image7']; ?>);">
 </span>
 </a>
 
@@ -141,8 +141,8 @@ if($row['image7']!=NULL && $row['image7']!=''){
 if($row['image8']!=NULL && $row['image8']!=''){
 ?>
 
-<a class="thumb" href="http://lumiagem.com/images/sitepictures/<?php echo $row['image8']; ?>" rel="pics">
-<span class="thumbpicbox" style="background-image:url(http://lumiagem.com/images/sitepictures/thumbs/<?php echo $row['image8']; ?>);">
+<a class="thumb" href="http://www.lumiagem.com/images/sitepictures/<?php echo $row['image8']; ?>" rel="pics">
+<span class="thumbpicbox" style="background-image:url(http://www.lumiagem.com/images/sitepictures/thumbs/<?php echo $row['image8']; ?>);">
 </span>
 </a>
 
