@@ -92,16 +92,16 @@ include_once('header.php');
 
 
 if($row['category']=='ring'){
-	$cate='戒指';
+	$cate='Ring';
 	$cate_linker='ring.php';
 }else if($row['category']=='necklace'){
-	$cate='项链';
+	$cate='Necklace';
 	$cate_linker='necklace.php';
 }else if($row['category']=='earring'){
-	$cate='耳环';
+	$cate='Earring';
 	$cate_linker='earring.php';
 }else if($row['category']=='bracelet'){
-	$cate='手链';
+	$cate='Bracelet';
 	$cate_linker='bracelet.php';
 }
 ?>

@@ -1,5 +1,5 @@
 <ul>
-<li class="submenu-cate"><a href="jewelry.php">全部</a></li>
+<li class="submenu-cate"><a href="jewelry.php">All</a></li>
 <?php
 $sql_jewelry_cate='SELECT * FROM jewelry_category';
 foreach($conn->query($sql_jewelry_cate) as $row){
@@ -10,7 +10,7 @@ foreach($conn->query($sql_jewelry_cate) as $row){
 <?php echo $crr_cate_cn; ?>
 
 <ul class="brands-submenu">
-<li><a href="jewelry.php?p=all&ref=<?php echo $crr_cate_en; ?>">全部</a></li>
+<li><a href="jewelry.php?p=all&ref=<?php echo $crr_cate_en; ?>">All</a></li>
 <?php
 $sql_jewelry_brand='SELECT * FROM jewelry_brands';
 foreach($conn->query($sql_jewelry_brand) as $row_b){
