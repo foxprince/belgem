@@ -40,7 +40,7 @@ foreach($conn->query($sql) as $row){
 </a>
 <a class="j_linker_txt" href="jewelry.php?p=detail&id=<?php echo $row['id']; ?>">
 <span class="jewlery_name">
-<?php echo $row['name_ch']; ?>
+<?php echo $row['name_en']; ?>
 </span>
 </a>
 </div>
