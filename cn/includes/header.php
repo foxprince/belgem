@@ -5,12 +5,12 @@
 
 <div id="navi">
 <ul>
-<li><a id="aboutbtn" href="about.php">品牌故事</a></li>
+<li><a id="aboutbtn" href="about.php">Brand</a></li>
 
-<li><a id="jewelrybtn" href="jewelry.php">精品首饰</a></li>
+<li><a id="jewelrybtn" href="jewelry.php">Jewelry</a></li>
 
-<li><a id="contactmainbtn" href="contact.php">联系我们</a></li>
-<li id="lastnavibtn"><a id="myaccountbtn" href="../_admin/index.php">我的账户</a></li>
+<li><a id="contactmainbtn" href="contact.php">Conatct</a></li>
+<li id="lastnavibtn"><a id="myaccountbtn" href="../_admin/index.php">MyAccount</a></li>
 <li style="width:100%; height:0" id="naviplaceholder"></li>
 </ul>
 
