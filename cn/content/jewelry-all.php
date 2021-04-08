@@ -34,9 +34,9 @@ foreach($conn->query($sql) as $row){
 <div class="r_box">
 <a class="j_linker" href="jewelry.php?p=detail&id=<?php echo $row['id']; ?>">
 <!--
-<img class="thumb" src="http://lumiagem.com/images/sitepictures/thumbs/<?php echo $row['image1']; ?>" />
+<img class="thumb" src="http://www.lumiagem.com/images/sitepictures/thumbs/<?php echo $row['image1']; ?>" />
 -->
-<span class="jewelrypic" style="background-image:url(http://lumiagem.com/images/sitepictures/thumbs/<?php echo $row['image1']; ?>);"></span>
+<span class="jewelrypic" style="background-image:url(http://www.lumiagem.com/images/sitepictures/thumbs/<?php echo $row['image1']; ?>);"></span>
 </a>
 <a class="j_linker_txt" href="jewelry.php?p=detail&id=<?php echo $row['id']; ?>">
 <span class="jewlery_name">
