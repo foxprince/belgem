@@ -26,16 +26,16 @@ foreach($conn->query($sql) as $row){}
 
 
 if($row['category']=='ring'){
-	$cate='戒指';
+	$cate='Ring';
 	$cate_linker='ring.php';
 }else if($row['category']=='necklace'){
-	$cate='项链';
+	$cate='Necklace';
 	$cate_linker='necklace.php';
 }else if($row['category']=='earring'){
-	$cate='耳环';
+	$cate='Earring';
 	$cate_linker='earring.php';
 }else if($row['category']=='bracelet'){
-	$cate='手链';
+	$cate='Bracelet';
 	$cate_linker='bracelet.php';
 }
 ?>
@@ -43,14 +43,14 @@ if($row['category']=='ring'){
 
 
 
-<h3 class="blocktitle"><?php echo $row['name_ch']; ?></h3>
+<h3 class="blocktitle"><?php echo $row['name_en']; ?></h3>
 
 
 
 
 
 <div id="txt_box" style="margin-top:12px;">
-<?php echo $row['text_ch']; ?>
+<?php echo $row['text_en']; ?>
 </div>
 
 
