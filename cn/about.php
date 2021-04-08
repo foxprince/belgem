@@ -1,6 +1,8 @@
 <?php
+session_start();
 $crr_page='about';
 include_once('includes/header_ele.php');
+
 ?>
 
 <style type="text/css">
