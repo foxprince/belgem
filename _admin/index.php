@@ -417,6 +417,7 @@ $('#orderDateSelect').multiselect();
 include('navi.php');
 ?>
 <div id="maincontent">
+<a id="diamondsbtn" href="/cn/diamonds.php">d</a>
 <?php if($account_level==0){ ?>
     <p id="contentNavi"><span style="font-size:18px; font-weight:bold; display:inline-block; margin-right:35px;">订单管理</span>
     <button onclick="printingmode()" id="printingmodebtn">
