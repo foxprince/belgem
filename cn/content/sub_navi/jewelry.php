@@ -7,7 +7,7 @@ foreach($conn->query($sql_jewelry_cate) as $row){
 	$crr_cate_cn=$row['category_cn'];
 ?>
 <li class="submenu-cate">
-<?php echo $crr_cate_cn; ?>
+<?php echo $crr_cate_en; ?>
 
 <ul class="brands-submenu">
 <li><a href="jewelry.php?p=all&ref=<?php echo $crr_cate_en; ?>">All</a></li>
@@ -16,7 +16,7 @@ $sql_jewelry_brand='SELECT * FROM jewelry_brands';
 foreach($conn->query($sql_jewelry_brand) as $row_b){
 ?>
 <li class="submenu-br">
-<a href="jewelry.php?p=all&ref=<?php echo $crr_cate_en; ?>&brand=<?php echo $row_b['brand_en']; ?>"><?php echo $row_b['brand_cn']; ?></a>
+<a href="jewelry.php?p=all&ref=<?php echo $crr_cate_en; ?>&brand=<?php echo $row_b['brand_en']; ?>"><?php echo $row_b['brand_en']; ?></a>
 </li>
 <?php
 }
