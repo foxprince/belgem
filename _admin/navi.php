@@ -40,13 +40,13 @@ if($account_level==0&&$_SESSION['username']!='gnkf'){
 
 <a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/_admin/price-settings.php">价格管理</a>
 <a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="http://www.lumiagem.com/cn/jewMng/ivtMng.html" target="_blank">首饰管理</a>
-<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/">回到网站</a>
+<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/">Home</a>
 <?php
 }else if($account_level==0&&$_SESSION['username']=='gnkf'){
 ?>
 <a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/_admin/index.php">Order Mng</a>
 <a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="http://www.lumiagem.com/cn/jewMng/ivtMng.html" target="_blank">首饰管理</a>
-<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/">回到网站</a>
+<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/">Home</a>
 <?php
 }else if($account_level==1){
 ?>
@@ -54,7 +54,7 @@ if($account_level==0&&$_SESSION['username']!='gnkf'){
 
 <a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/_admin/history.php">历史记录</a>
 
-<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/">回到网站</a>
+<a style="color:#000; text-decoration:none; font-weight:900; font-size:20px; position:relative; top:-5px;" href="/">Home</a>
 <?php
 }else{
 ?>

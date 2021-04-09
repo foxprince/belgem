@@ -733,7 +733,7 @@ include('navi.php');
             </script>
             <table cellpadding="0" cellspacing="0">
             <tr id="tablehead">
-            <td width="68">钻石ID</td>
+            <!--<td width="68">钻石ID</td>
             <td width="30">形状</td>
             <td width="38">重量</td>
             <td width="38">颜色</td>
@@ -745,7 +745,8 @@ include('navi.php');
             <td width="88">预定代理</td>
             <td width="88">预定时间</td>
             <td width="78">操作</td>
-            <td width="128" class="lastcell">订单状态</td>
+            <td width="128" class="lastcell">订单状态</td>-->
+            <td colspan="13"> Make selection from the Jewelry please</td>
             </tr>
             <?php
             $sql_orders='SELECT diamonds.id, diamonds.stock_ref, shape, carat, color, fancy_color, clarity, grading_lab, certificate_number, cut_grade, polish, symmetry, fluorescence_intensity, price, diamonds.from_company, diamonds.ordered_time, paid_amount, order_sent, comment, status, users.user_name, users.real_name, users.account_level, users.given_by FROM diamonds, users WHERE diamonds.ordered_by IS NOT NULL AND diamonds.ordered_by <> "" AND diamonds.ordered_by = users.user_name AND (diamonds.ordered_by = "'.$username.'" OR (diamonds.ordered_by = users.user_name AND users.given_by = "'.$username.'")) ORDER BY diamonds.ordered_time DESC';
