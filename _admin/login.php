@@ -336,8 +336,8 @@ if (isset ( $wrongmessage )) {
 
 <form id="loginform" method="post" action="">
     <p style="text-align: center;">
-      <input type="text" name="login" id="login" placeholder="用户名"><br /> <input type="password" name="pwd" id="pwd"
-        placeholder="密码"><br /> <input name="denglu" type="submit"  value="登陆"
+      <input type="text" name="login" id="login" placeholder="username"><br /> <input type="password" name="pwd" id="pwd"
+        placeholder="password"><br /> <input name="denglu" type="submit"  value="singin"
           style="background-color: #000; margin-top: 55px;">
     
     </p>
