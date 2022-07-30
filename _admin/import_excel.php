@@ -420,7 +420,7 @@ function excelupload(){
 <?php
 if(($new_file_uploaded || $_SESSION['col_stock_ref']>0) && !isset($_POST['confirmed'])){
 	require_once 'excelreader/excel_reader2.php';
-    $data = new Spreadsheet_Excel_Reader("/home/lumia/website/belgem/_admin/excelfile/file.xls");
+    $data = new Spreadsheet_Excel_Reader("excelfile/file.xls");
 
 //####################################################################################################
 //####################################################################################################	
