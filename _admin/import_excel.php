@@ -445,11 +445,8 @@ for ($i = 1; $i <= 8; $i++) {
 			
 			if((strpos($searchforRow_LabelofLotID,'stock id') !== false)||(strpos($searchforRow_LabelofLotID,'lotid') !== false) || (strpos($searchforRow_LabelofLotID,'lot id') !== false) || ((strpos($searchforRow_LabelofLotID,'stock') !== false) && (strpos($searchforRow_LabelofLotID,'ref') !== false))){
 				$stock_ref_label_found=true;
-				if(isset($_SESSION['authenticated'])){
-					$_SESSION['col_stock_ref']=$ii;
-				}else{
-					exit('error: session expired!');
-				}
+				$_SESSION['col_stock_ref']=$ii;
+
 				break;
 			}
 		}
