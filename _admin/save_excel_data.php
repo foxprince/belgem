@@ -138,9 +138,9 @@ for ($i = 1; $i <= $totalrow; $i++) {
 	}else if(trim(strtoupper($clarity))!='FL' && trim(strtoupper($clarity))!='IF' && trim(strtoupper($clarity))!='VVS1' && trim(strtoupper($clarity))!='VVS2' && trim(strtoupper($clarity))!='VS1' && trim(strtoupper($clarity))!='VS2' && trim(strtoupper($clarity))!='SI1' && trim(strtoupper($clarity))!='SI2' && trim(strtoupper($clarity))!='I1' && trim(strtoupper($clarity))!='I2' && trim(strtoupper($clarity))!='I3'){
 		$total_skipped++;
 		$feedbackmessage.="<br />第 $i 条纪录没有导入数据库，因为数据格式不正确: 钻石净度参数缺失或不正确:".trim(strtoupper($clarity)).":".$stock_ref;
-	}else if($carat<0.90){
+	}/*else if($carat<0.90) {
 		$total_ignored++;
-	}else if($price<35 || $price==NULL || $price==''){
+	}*/else if($price<35 || $price==NULL || $price==''){
 		$feedbackmessage.="<br />第 $i 条纪录没有导入数据库，因为价格不正确: 价格为".$price;
 		$total_skipped++;
 	}else{
@@ -306,7 +306,7 @@ $feedback_main='fini';
 <p id="messagemain"><?php echo $feedback_main; ?></p>
 <p id="total_records"><?php echo $totalrow; ?></p>
 <p id="fmessage">
-共处理<?php echo $i; ?>条纪录。其中<?php echo $total_new;  ?>条导入；<?php echo $total_repeated+$total_skipped; ?>条因数据不完整而略过；<?php echo $total_ignored; ?>条因为钻石克拉数不足0.9而略过。
+共处理<?php echo $i; ?>条纪录。其中<?php echo $total_new;  ?>条导入；<?php echo $total_repeated+$total_skipped; ?>条因数据不完整而略过。
 <br />
 有<?php echo $total_status_updated; ?>条被预订钻石的纪录已经不存在，已标注为下架。
 <br />
